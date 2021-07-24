@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;Service_InsuranceProviderSoap&quot; /&gt;" bindingType="basicHttpBinding" name="Service_InsuranceProviderSoap" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:2637/AWMS/AWMS_WebServices/Service_InsuranceProvider.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;Service_InsuranceProviderSoap&quot; contract=&quot;ServiceInsurance.Service_InsuranceProviderSoap&quot; name=&quot;Service_InsuranceProviderSoap&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:2637/AWMS/AWMS_WebServices/Service_InsuranceProvider.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;Service_InsuranceProviderSoap&quot; contract=&quot;ServiceInsurance.Service_InsuranceProviderSoap&quot; name=&quot;Service_InsuranceProviderSoap&quot; /&gt;" contractName="ServiceInsurance.Service_InsuranceProviderSoap" name="Service_InsuranceProviderSoap" />
+  </endpoints>
+</configurationSnapshot>

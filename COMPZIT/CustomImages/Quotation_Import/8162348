@@ -1,0 +1,30 @@
+ITEM NAME ,DESCRIPTION,UNIT,QTY,Cost Price,Margin,Selling Price
+"S,-252W1-450-3000-S","Perforated cable Tray, Cable Tray Straight height 50 Thickness =  1 mm, Width=450 mm, Length=3000 mm, RM=Steel HDG",Pcs.,40,65,10,72
+S-25W18-100-3000-S-1,"Covers for Perforated and Channel Tray, Plain Cover Solid, Width=100 mm, Length=3000 mm, RM -steel HDG Thickness 1mm",Pcs.,40,28,10,31
+S-252W1-300-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness =  1 mm, Width=300 mm, Length = 3000mm RM=Steel HDG",Pcs.,17,79,10,87
+S-25W18-300-3000-S-1,"Covers for Perforated and Channel Tray, Plain Cover Solid, Width=300 mm, Length=3000 mm, RM=Steel HDG, Thickness 1mm",Pcs.,17,53,10,58
+S-252W1-225-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness =  1 mm, Width=225 mm, Length = 3000 mm, RM-Steel HDG",Pcs.,14,71,10,78
+S-25W18-225-3000-S-1,"Covers for Perforated and Channel Tray, Plain Cover Solid, Width=225 mm, Length=3000 mm, M=Steel HDG, Thickness 1mm",Pcs.,14,44,10,48
+S-252W1-150-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness =  1 mm, Width=150 mm, Length = 3000 mm RM-Steel HDG",Pcs.,50,62,10,68
+S-25W18-150-3000-S-1,"Covers for Perforated and Channel Tray, Plain Cover Solid, Width=150 mm, Length=3000 mm, RM=Steel HDG, Thickness 1mm",Pcs.,50,34,10,37
+S-252W1-150-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness =  1 mm, Width=150 mm, Length - 3000mm RM=Steel HDG",Pcs.,4,62,10,68
+S-25W18-150-3000-S-1,"Covers for Perforated and Channel Tray, Plain Cover Solid, Width=150 mm, Length=3000 mm, RM=Steel HDG, Thickness 1mm",Pcs.,3,34,10,37
+S-25W19-GI-S,"Perforated Accessories, Cover Lock Device, Hardware Material=Electro Galvanized, RM=Steel HDG",Pcs.,2,5.5,10,6
+S-252W2-600-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness = Length = 3000mm RM-Steel HDG",Pcs.,30,173,10,190
+S-252W1-225-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness = Length = 3000mm RM-Steel HDG",Pcs.,15,71,10,78
+S-252W12-S,"Perforated Accessories, Straight Joint Piece Height 50, RM=Steel HDG",Pcs.,2,1.5,10,2
+S-HW02-GI-06-12,"Cable Support Rack, Roofing Bolt, Material=Electro Galvanized, Diameter=M6, Length=12 mm",Pcs.,2,0.05,10,0
+S-HW05-GI-06,"Cable Support Rack, Hexagonal Nut, Material=Electro Galvanized, Diameter=M6",Pcs.,1,0.2,10,0
+S-HW07-GI-06,"Cable Support Rack, Washer Plain, Material=Electro Galvanized, Diameter=M6",Pcs.,2,0.05,10,0
+S-252W17-3000-S-1,"Perforated Accessories, Separator Strip Height 50, Length=3000 mm, RM=Steel HDG, Thickness = 1mm",Pcs.,3,30,10,33
+S-25W18-300-3000-S-1,"Covers for Perforated and Channel Tray, Plain Cover Solid, Width=300 mm, Length=3000 mm, RM=Steel HDG, Thickness 1mm",Pcs.,1,53,10,58
+S-25W19-GI-S,"Perforated Accessories, Cover Lock Device, Hardware Material=Electro Galvanized, RM=Steel HDG",Pcs.,2,5.5,10,6
+"S-252W9-600-300-S-90-1,5","Perforated fittings, Vertical Inside Elbow Height 50, Width=600 mm, Radius=300mm(12in.), RM-Steel HDG Degree = 90, Thcikness 1.5mm",Pcs.,12,41,10,45
+S-252W8-600-300-S-90-1,"Perforated fittings, Vertical Outside Elbow Height 50, Width=600 mm, Radius=300mm(12in.), RM - Steel HDG, Degree = 90, Thickness = 1mm",Pcs.,12,33,10,36
+"S-252w5-600-300-S-1,5","Perforated fittings, 90° Horizontal Elbow Height 50, Width=600 mm, Radius=300mm(12in.), RM = Steel HDG  , Thickness = 1.5mm",Pcs.,12,71,10,78
+S-252w5-450-300-S-1,"Perforated fittings, 90° Horizontal Elbow Height 50, Width=450 mm, Radius=300mm(12in.), RM=Steel HDG, Thickness=1 mm",Pcs.,7,42,10,46
+S-252w5-150-300-S-1,"Perforated fittings, 90° Horizontal Elbow Height 50, Width=150 mm, Radius=300mm(12in.), RM = Steel HDG Thcikness = 1mm",Pcs.,15,27,10,30
+L-MG44,"Cable Trunking Straight, BSEN 50085 - RM=Galvanized, Width=100 mm, Height=100 mm, Thickness = 0.9mm, Length 3000m",Pcs.,90,59,10,65
+L-MG44 - SC,"Cable Trunking Accessories, Standard connector, Width= 100 mm; Height = 100 mm; RM-Galvanized",Pcs.,21,4.5,10,5
+S-252W1-150-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness =  1 mm, Width=150 mm, Lenth=3000mm RM-Steel HDG",Pcs.,54,62,10,68
+S-252W1-300-3000-S,"Perforated cable Tray, Cable Tray Straight height 50 Thickness =  1 mm, Width=300 mm, Length = 3000mm RM=Steel HDG",Pcs.,54,79,10,87

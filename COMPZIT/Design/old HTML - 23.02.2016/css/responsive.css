@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all and (max-width: 1366px) {/*min-width:1281px*/
+
+.auto{width:92%}
+
+/*sub-1*/
+.auto1{width:92%}
+.bottomheader_sub {width: 76%;}
+.cont_rght {width: 76%;}
+
+}
+
+
+@media all and (max-width: 1280px) {/*min-width:1161px*/
+
+/*sub-1*/
+.bottomheader_sub {width: 73%;}
+.cont_rght {width: 73%;}
+.bh_sub_lft h1{margin:17px 12px 0 0}
+.mailalrt{margin:0 0 0 10px}
+}
+
+@media all and (max-width: 1160px) {/*min-width:1081px*/
+
+/*sub-1*/
+.bottomheader_sub {width: 72%;}
+.cont_rght {width: 72%;}
+.bh_sub_lft h1{margin:17px 9px 0 0}
+.mailalrt{margin:0 0 0 7px}
+.mailalrt_sub{width:43px}
+}
+@media all and (max-width: 1080px) {/*min-width:981px*/
+
+.loginarea {display: block; float: none; margin: 39px auto 110px; width: 517px;}
+
+/*sub-1*/
+.sub_logo{width:23%}
+.sub_logo img{padding:46px 0 60px 20%}
+.bh_sub_lft{width:100% !important}
+.bh_sub_lft h1{margin:17px 6% 0 0}
+.mailalrt{float:right; width:144px}
+.mailalrt_sub{width:48px}
+.menu0 {width: 100%;} 
+.cont_lft{width: 25%;} 
+.foot h1{ margin-left: 25%;} 
+.foot h2{ margin-left: 25%;} 
+}
+
+@media all and (max-width: 980px) {/*min-width:901px*/
+/*sub-1*/
+.sub_logo img{padding:46px 0 60px 15%}
+
+}
+
+@media all and (max-width: 900px) {/*min-width:801px*/
+
+/*sub-1*/
+.menu_bar li{padding:10px 0 11px 12px}
+.sub_logo img {padding: 46px 0 60px 12%;}
+.app_sales{width:408px; margin:60px 0 75px}
+.app_sales img {float: none; margin:0;}
+}
+
+
+@media all and (max-width: 850px) {/*min-width:701px*/
+.sub_logo img {padding: 46px 0 60px 9%;}
+}
+
+
+@media all and (max-width: 800px) {/*min-width:701px*/
+.nav_bttn_bt {display: block; left: 4%; position: absolute; top: 144px;}
+
+/*sub-1*/
+.cont_lft{width: 100%;}
+.cont_rght{width: 100%;}
+.foot h1{ margin-left:0;} 
+.foot h2{ margin-left:0;}
+.sub_logo{width:auto}
+.sub_logo img {padding: 24px 11% 33px 9%;} 
+.bh_sub_lft h2{margin:17px 0px 15px}
+.bh_sub_lft h1 {margin: 17px 6% 9px 0;}
+.mailalrt {float: left; margin:0}
+.bottomheader_sub { width: 67%;}
+.bh_sub_rght { margin: -53px 0 0;}
+.bh_sub_rght h6{position:absolute; top:35px; right:4%}
+}
+
+@media all and (max-width: 700px) {/*min-width:601px*/
+.search1{margin:3px 13px 0 0}
+.bottomheader_sub {width: 65%;}
+.mailalrt { width: 142px;}
+.mailalrt_sub { width: 42px;}
+}
+
+@media all and (max-width: 600px) {/*min-width:501px*/
+/*sub-1*/
+.sub_logo{margin:47px 0 0}
+.nav_bttn_bt {top: 14px;}
+.bottomheader_sub {width: 56%;}
+.bh_sub_lft h2 {margin: 17px 0 15px;    width: 100%;}
+.mailalrt {float: left; margin: 0; width:150px}
+.mailalrt_sub {margin: 0 12px 0 0; width: 36px;}
+.bh_sub_rght {width: 100%; margin:0}
+.datepick{float:left}
+}
+
+
+
+@media all and (max-width: 560px) {/*min-width:501px*/
+.loginarea {margin: 39px 0 110px; width: 100%;}
+.login{width: 100%;}
+
+}
+
+@media all and (max-width: 500px) {/*min-width:501px*/
+
+/*sub-1*/
+.bottomheader_sub {margin: 100px 0 0; width: 100%;}
+.bh_sub_lft h2 {width: 120px;}
+.bh_sub_rght {margin:-47px 0 0 0; width: 62%;}
+.search1{width:207px}
+.search_area_1{width:165px}
+
+.bh_sub_rght {width: 56%;}
+
+}
+@media all and (max-width: 480px) {/*min-width:401px*/
+.txt{width:100%}
+.eachfield{margin-left:22%}
+
+.eachfield{margin:0 0 10px 13%}
+.login h1{margin:0 0 20px 13%}
+
+}
+
+@media all and (max-width: 450px) {/*min-width:401px*/
+
+.app_sales{width:100%; margin:60px 0 75px}
+.app_sales img { width:100%; float: none; margin:0 !important;}
+}
+
+@media all and (max-width: 400px) {
+.search1{width:100%; margin:8px 0 0; padding:0}
+.search_area_1 {width: 206px;}
+.sub_logo { margin: 81px 0 0;}
+.bh_sub_rght {margin: 0;width: 100%;}
+.bh_sub_lft h1{width:100%; float:none; text-align:center}
+.mailalrt {float: right;}
+.datepick{float:none; margin:13px auto 0;}
+.bh_sub_rght { margin: 0 auto;text-align: center; width: 100%;}
+
+
+.mailalrt {float: none;margin: 0; padding: 0; text-align: center; width: 100%;}
+.mailalrt_sub { float: none; margin: 0 12px 0 0; width: 36px;}
+
+.bh_sub_lft h2 {   margin: 0 33% 20px 30%;text-align: center;  width: 34%;}}
+
+
+
+
+
+@media all and (max-width: 380px) {
+
+.eachfield {
+    margin: 0 0 10px 13%;
+    width: 77% !important}
+	
+.eachfield h2{ margin-bottom:6px}
+.submit_btn{float:left; margin:0} 
+.rginput{width:96%}
+
+
+.bh_sub_lft h2 {   margin: 0 33% 20px 24%;text-align: center;  width: 42%;}
+
+}
+
+
+@media all and (max-width: 360px) {
+
+}
+
+@media all and (max-width: 325px) {
+}
+
+

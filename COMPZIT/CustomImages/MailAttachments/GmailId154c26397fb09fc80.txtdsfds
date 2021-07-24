@@ -1,0 +1,42 @@
+Email: testing@volviartechnologies.in
+Password: T6s7i234*
+Server: mail.volviartechnologies.in
+
+------------------------------------------------------------
+jaisonplouis@yahoo.com
+iso3ig7s   
+Server: imap.mail.yahoo.com
+Server: pop.mail.yahoo.com
+
+------------------------------------------------------------
+
+Email: sfademo@albalagh.com
+Password: Wuno1903
+
+POP Setting
+Mail Server: outlook.office365.com
+Port: 995
+Encryption Method: SSL
+
+IMAP Setting
+Mail Server: outlook.office365.com
+Port: 993
+Encryption Method: SSL
+
+SMTP Setting
+Mail Server: outlook.office365.com
+Port: 587
+Encryption Method: TLS
+
+-----------------------------------------------------
+
+Common Port Numbers without Server Encryption
+
+IMAP        145   
+POP        110   
+SMTP        25   
+
+Port Numbers with Server Encryption
+IMAP        993
+POP        995
+SMTP        465

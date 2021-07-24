@@ -1,0 +1,7 @@
+D:\References_ERP\EL_Compzit.dll
+D:\References_ERP\EL_Compzit.pdb
+D:\ERP\EL_Compzit\obj\Debug\EL_Compzit.dll
+D:\ERP\EL_Compzit\obj\Debug\EL_Compzit.pdb
+D:\ERP\EL_Compzit\obj\Debug\EL_Compzit.csprojResolveAssemblyReference.cache
+D:\COMPZIT\EL_Compzit\obj\Debug\EL_Compzit.dll
+D:\COMPZIT\EL_Compzit\obj\Debug\EL_Compzit.pdb

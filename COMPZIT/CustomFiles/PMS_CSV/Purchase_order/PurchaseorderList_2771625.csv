@@ -1,0 +1,8 @@
+PURCHASE ORDER LIST, ,  ,   ,    ,     ,      ,       
+"","","","","","","",
+PURCHASE ORDER TYPE  :,All,"","","","","",
+PURCHASE ORDER STATUS  :,All,"","","","","",
+"","","","","","","",
+DATE,PURCHASE ORDER,PURCHASE ORDER TYPE,VENDOR NAME,DOCUMENT,STATUS,EXPECTED DELIVERY DATE,AMOUNT
+"09-07-2020","23","PRODUCTS","ABBB","new1","Reopened","","21.20"
+"08-07-2020","22","PRODUCTS","AXXX","a","Pending","08-07-2020","36666.00"

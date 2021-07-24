@@ -1,0 +1,952 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageCompzit_AWMS.master.cs" Inherits="WMS_Wms_MasterPage_MasterPageCompzit_Wms" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>Compzit</title>
+     <link rel="shortcut icon" href="/css/Login/image/short-icon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="/css/Design-CSS/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/Design-CSS/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/css/Design-CSS/menu.css" media="all" />
+          <link href="/css/New%20Plugins/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="/js/side-menu/sidebar-menu.css" rel="stylesheet" />
+
+    <script src="/JavaScript/Design-Javascript/jquery-1.11.2.min.js"></script>
+        <script src="/JavaScript/Design-Javascript/jquery.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function UserLogoutConfirmation() {
+            if (confirm("Are you Sure you want to Sign Out?")) {
+
+                return true;
+            }
+
+            else
+                return false;
+        }
+        function UserLogout() {
+            if (confirm("Are you Sure you want to Sign Out?")) {
+
+                window.location = "/Security/Login.aspx";
+            }
+        }
+        function ChangePwd() {
+            //   alert(window.location);
+            window.location = "/Security/gen_ChangePassword_Awms.aspx";
+        }
+        function isNoEntry(evt) {
+
+            evt = (evt) ? evt : window.event;
+            var keyCodes = evt.keyCode ? evt.keyCode : evt.which ? evt.which : evt.charCode;
+
+            //   if (keyCodes ==13) {
+            return false;
+            // }
+        }
+    </script>
+  
+     <style>
+        #divMessageArea {
+            border-radius: 8px;
+            background: #fff;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color:#53844E;
+            margin-top: 0%;
+            font-family: Calibri;
+            border: 2px solid #53844E;
+        }
+
+        #imgMessageArea {
+            float: left;
+            margin-left: 1%;
+            margin-top: -0.2%;
+        }
+
+        #divErrorRsn {
+            border-radius: 4px;
+            background: #fff;
+            color: #53844E;
+            font-size: 12.5px;
+            font-family: Calibri;
+            font-weight: bold;
+            border: 2px solid #53844E;
+        }
+
+        #imgErrorRsn {
+            float: left;
+            margin-left: 1%;
+            margin-top: -0.2%;
+        }
+    </style>
+    <style>
+        .cont_rght {
+            min-height: 500px;
+        }
+
+        .header {
+            background-color: white;
+        }
+
+        .bottomheader {
+            padding-bottom: 1px;
+        }
+
+        .foot h4 {
+            width: 50%;
+            text-align: right;
+        }
+
+        .foot h3 {
+            width: 50%;
+            text-align: left;
+        }
+
+        /*.mob-btn {
+            margin-left: 0px;
+            height: 30px;
+            padding-top: 4px;
+        }*/
+         .mob-btn {
+            margin-left: 0px;
+            height: 45px;
+            padding-top: 4px;
+            border-radius: 0px;
+            box-shadow: 0px 0px 3px #4a5569;
+        }
+        .bh_sub_lft h1 {
+        margin-right:80px;
+        color: #38b3a0;
+        }
+        .cont_rght {
+            padding-bottom:2%;
+            padding-top: 2%;
+        }
+        .main_table {
+        border: 1px solid #c9c9c9;
+        }
+        table.dataTable.no-footer {
+            border-bottom: 1px solid #c9c9c9;
+        }
+        table.dataTable tbody td {
+            padding-top:0px;
+            padding-bottom:0px;
+            padding-left:1%;
+            padding-right:1%;
+        }
+         #ReportTable_length select {
+            width: 50px;
+             font-weight:bold;
+             font-family: calibri;
+             color: #336B16;
+               font-size:14px;
+        }
+        #ReportTable_length  {
+              font-family:Calibri;
+               font-weight:bold;
+                  font-size:14px;
+                  padding-bottom: 0.7%;
+        }
+        #ReportTable_filter input {
+            height: 23px;
+            width: 200px;
+                 color: #336B16;
+                    font-size:14px;
+        }
+        #ReportTable_filter  {
+            font-family:Calibri;
+            font-weight:bold;
+               font-size:14px;
+          
+        }
+        #ReportTable_paginate {
+               font-family:Calibri;
+                  font-size:13px;
+            
+        }
+        #ReportTable_info {
+             font-family:Calibri;
+             font-weight: 600;
+             font-size:14px;
+            
+        }
+         #divErrorTotal {
+            border-radius: 8px;
+            background: #edf6dc;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color: #53844E;
+           margin-top:-3.5%;
+           font-family:Calibri;
+        } 
+          #divSuccessUpd {
+            border-radius: 8px;
+            background: #edf6dc;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color: #53844E;
+            margin-top: -3%;
+            margin-left: 2%;
+            width: 89.5%;
+            font-family:Calibri;
+        }
+           #divErrorRsn {
+            border-radius: 4px;
+            background: #edf6dc none repeat scroll 0% 0%;
+            color: #53844E;
+            font-size: 12.5px;
+            font-family:Calibri;
+        }
+        table.dataTable td.dataTables_empty {
+            font-family:Calibri;
+        }
+
+           input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            padding: 300em;
+            border: 1px solid #369;
+            vertical-align: middle;
+        }
+
+         input[type="checkbox"]:hover {
+            background: #bbf2cf;
+            outline: 3px solid #72c08e;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:focus {
+            background: #bbf2cf;
+            outline: 3px solid #72c08e;
+            cursor: pointer;
+        }
+        table.dataTable {
+            width: 99.9%;
+        }
+        #cphMain_divReport {
+        
+        overflow-x:auto;
+        }
+           .form1:focus {
+            /*border: 1px solid #72c08e;*/
+            border: 1px solid #bbf2cf;
+        }
+        .topheader {
+            background: #26ace2;
+              z-index:102;
+        }
+          
+        .mailalrt {
+            width: 209px;
+        }
+
+        .bottomheader_sub {
+            width: 84%;
+        }
+
+      
+        #divAccntSetting {
+            visibility:hidden;
+            position:fixed;
+            z-index: 33;
+        }
+        #imgProPic:hover {
+        
+        cursor:pointer;
+        }
+        #cphMain_txtCnclReason {
+        font-family:Calibri;
+        }
+      
+
+        /* Make the badge float in the top right corner of the button */
+.button__badge {
+  background-color: #fa3e3e;
+  border-radius: 3px;
+  color: white;
+ 
+  padding: 1px 3px;
+  font-size: 15px;
+  position: absolute; /* Position the badge within the relatively positioned button */
+margin-left: 1.2%;
+margin-top: -0.6%;
+font-weight: bold;
+}
+    </style>
+    <style>
+       /*--------------------------------------------------for modal CorpList------------------------------------------------------*/
+        .modalCorpList {
+            display: none;
+            position: absolute;
+            z-index: 30;
+            padding-top: 3.5%;
+            left: 0;
+            top: 0;
+            width: 61%;
+            overflow: auto;
+            background-color: transparent;
+            padding-left: 28%;
+        }
+
+        /* Modal Content */
+        .modal-contentCorpList {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .modalCorpList ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            min-height: 280px;
+            background-color: rgb(58, 58, 58);
+            width: 63%;
+        }
+
+        .modalCorpList li {
+            font-family: Calibri;
+            font-size: 18px;
+            padding-bottom: 1%;
+            margin-bottom: 1%;
+            padding-left: 1%;
+            background-color: #4b7200;
+            border-radius: 7px;
+            border: 2px solid #dbdbdb;
+        }
+
+            .modalCorpList li a {
+                color:#FFF;
+                display: block;
+            }
+
+                .modalCorpList li:hover {
+                   background-color: #2b98c3;
+                     border:2px solid #fff;
+                }
+
+        .modalCorpList h2 {
+            font-size: 25px;
+            color: white;
+            margin-left: 16%;
+            font-family:Calibri;
+        }
+
+    </style>
+
+    <script>
+
+        function ShowCorpList() {
+
+            //  hiddenCorpList.Value
+            if (document.getElementById("<%=hiddenCorpList.ClientID%>").value != "") {
+                      document.getElementById("myModalCorpList").style.display = "block";
+
+                      document.getElementById("Masterfreezelayer").style.display = "";
+                  }
+              }
+              function CloseBusnessUnit() {
+
+                  //  hiddenCorpList.Value
+
+                  document.getElementById("myModalCorpList").style.display = "none";
+
+                  document.getElementById("Masterfreezelayer").style.display = "none";
+
+              }
+        function ShowAccntSetting() {
+            if (document.getElementById("divAccntSetting").style.visibility == "hidden") {
+                document.getElementById("divAccntSetting").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("divAccntSetting").style.visibility = "hidden";
+
+            }
+        }
+        //  var $Mo = jQuery.noConflict();
+        window.onclick = function (event) {
+
+            if (document.getElementById("divAccntSetting").style.visibility == "visible") {
+                //   alert('clicked');
+                // alert(event.target.id);
+                //   var classname = $Mo("#" + event.target.id).attr('class');
+
+                //if (classname != "QuotnEntryFieldCopy") {
+                if (event.target == document.getElementById("divAccntSetting")) {
+
+                }
+                else if (event.target == document.getElementById("imgProPic")) {
+
+                }
+                    //    else if (event.target == document.getElementById("ModalBody")) {
+
+                    //    } else if (event.target == document.getElementById("txtareaMoreInfo")) {
+
+                    //    }
+                    //    else if (event.target == document.getElementById("pModal")) {
+
+                    //    }
+                    //    else if (event.target == document.getElementById("hHeaderModalText")) {
+
+                    //    }
+                    //    else if (event.target == document.getElementById("imgGreenArrow")) {
+
+                    //    }
+                    //    else if (event.target == document.getElementById("Msubform")) {
+
+                    //    }
+
+                else {
+                    //  document.getElementById("divAccntSetting").style.visibility = "hidden";
+                }
+                //}
+
+
+            }
+
+            //if (event.target == document.getElementById("freezelayer")) {
+            //    $Mo("#myModal").effect("shake", { times: 3, direction: "left", distance: 13 }, 1000);
+            //}
+        }
+        </script>
+    
+   
+
+</head>
+<body>
+   
+    <div>
+
+        <div class="header">
+            <div id="divHeaderTop" class="topheader">
+
+
+                <div id="divheaderName" runat="server" style="color: white;font-family:Calibri;  font-weight: bold; padding-top: 1%; font-size: 18px; padding-left: 4%; padding-right: 1%; float: left; width: 36%;">
+                </div>
+
+                <div class="auto1">
+                    <%--<img src="/Images/Icons/wlcm.png" class="profile_pic" />--%>
+
+                       <asp:Image ID="imgProPic" class="profile_pic" runat="server" onclick="ShowAccntSetting();"/>
+                        
+
+
+                    <h6>Welcome<br />
+                        <span>
+                            <asp:Label ID="lblUserName" runat="server" Text="Label" Height="25px"></asp:Label>
+                        </span></h6>
+                   <%-- <div class="search1">
+                        <button class="search_btn_1"></button>
+                        <input type="text" class="search_area_1" />
+                    </div>--%>
+                </div>
+            </div>
+            <div class="bottomheader">
+                <div class="auto1">
+                    <div class="sub_logo">
+                        <a id="aCompzit" runat="server" href="/Home/Compzit_Home/Compzit_Home_Awms.aspx">
+                            <img style="width: 80%;" src="/Images/Design_Images/images/Compztlogo.png" /></a>
+                    </div>
+                    <div class="bottomheader_sub">
+                        <div class="bh_sub_lft">
+                            <h1 id="hMaster" runat="server">Auto Workshop Management System</h1>
+                            </div>
+                           <div class="mailalrt_sub">
+                                   <a id="aHome" runat="server" href="/Home/Compzit_Home/Compzit_Home_Awms.aspx">
+                                         <img src="/Images/Icons/home-32x32.png" />
+                                        <h3>HOME</h3>
+                                    </a>
+                                 
+                             </div>
+                        <div class="mailalrt_sub" style="padding-left: 0.5%; width: 70px;">
+                                 <a id="aDashboard" runat="server" href="/Home/Compzit_Home/Compzit_Home_Awms.aspx">
+                            <img src="/Images/Icons/bi-32x32.png" />
+                                       <h3>DASHBOARD</h3>
+                                 </a>
+                            </div>
+                        
+                        <div class="bh_sub_rght">
+                            <div class="mailalrt" id="divIconsRight" runat="server">
+
+                                   <style>
+.Mastertooltip {
+    position: relative;
+    display: inline-block;
+
+}
+
+.Mastertooltip .Mastertooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: #9f9a9a;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.Mastertooltip:hover .Mastertooltiptext {
+    visibility: visible;
+}
+</style>
+                                 <div id="divBussnsUnit" runat="server" onclick="ShowCorpList();" class="mailalrt_sub" style="cursor: pointer;">
+                                         
+  
+
+                                 <%--  <a href="/Home/Compzit_LandingPage/Compzit_LandingPage.aspx">--%>
+                                     
+<div class="Mastertooltip">
+  <span class="Mastertooltiptext">BUSINESS UNIT</span>
+
+                                        <img src="/Images/Design_Images/images/BussinesUnit_icon.png" />
+                                        <h3>BU</h3></div>
+                                  <%--  </a>--%>
+                                </div>
+
+
+
+                                   <div id="divApp" runat="server" class="mailalrt_sub">
+                                    <a href="/Home/Compzit_LandingPage/Compzit_LandingPage.aspx">
+                                        <img src="/Images/Design_Images/images/apps.png" />
+                                        <h3>apps</h3>
+                                    </a>
+                                </div>
+                                <div id="divMailIcon" runat="server" class="mailalrt_sub">
+                                    <a href="/Transaction/Compzit_Mailbox/Compzit_Mailbox.aspx">
+                                      <span id="spanCountUnreadMail" runat="server">    </span>
+                                        <img src="/Images/Design_Images/images/mail.png" />
+                                        <h3>mail</h3>
+                                    </a>
+                                     
+                                </div>
+                              <%--  <div class="mailalrt_sub">
+                                    <a href="">
+                                        <img src="/Images/Design_Images/images/alert.png" />
+                                        <h3>alert</h3>
+                                    </a>
+                                </div>--%>
+                                <div id="divTaskIcon" runat="server" class="mailalrt_sub">
+                                    <a href="/Transaction/gen_Lead/gen_TaskManipulation.aspx?T_MODE=O">
+                                         <span id="spanCountOpenTask" runat="server">    </span>
+                                        <img src="/Images/Design_Images/images/tasks.png" />
+                                        <h3>tasks</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <h6><a href="/Security/Login.aspx" onclick="return UserLogoutConfirmation();">Sign Out</a></h6>
+                            <input id="divRightDatepick" runat="server" type="text" class="datepick" style="float:right;" onkeypress="return isNoEntry(event);" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentarea">
+            <div class="auto1">
+                <div class="cont_lft">
+                    <div class="menuarea">
+                        
+<%--<div style="position: fixed; z-index: 27; top: 215px; box-shadow: 3px 0px 5px rgb(221, 221, 221); text-align: center; left: 0px; color: rgb(255, 255, 255); line-height: 12px; padding: 1px 1px 1px 2px; cursor: pointer;">
+
+                        <button id="btnMenuIcon" runat="server" class="mob-btn icon-bar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+    </div>
+                        <nav class="main-menu">
+                            <div runat="server" id="divmenu"></div>
+                            <div class="overlay"></div>
+                        </nav>--%>
+
+                                                                        <div runat="server" id="Menuselect">
+                                                                             <div id="overlay"></div>
+                              <div   class="toggler" id="showLeft">
+	<span class="fa fa-chevron-right" id="chevron-right" style="display: block;">&nbsp;</span> 
+    <span class="fa fa-chevron-left" id="chevron-left" style="display: none;">&nbsp;</span>
+</div>
+                            </div>
+                       <section   class="animate-menu animate-menu-left scroll-pane"  style="height:100%; z-index:500;background-color:#222d32;overflow-y: auto;"> 
+  <li class="sidebar-header" style="padding:10px;list-style:none;padding-top: 23px;
+padding-bottom:11px;">
+ <form class="form-inline">
+    <input type="text" class="form-control" id="MastermyInput"  style="width:100%;border-radius: 2px;height:22px;" placeholder="Search.." >
+    </form>
+    </li>
+                             <nav class="main-menu">
+
+                                <div id="divRecent" runat="server"></div>
+                                <div id="divFrequent" runat="server"></div>
+
+                                <div id="divmenu"  runat="server"></div>
+                                 </nav>
+
+  </section>
+                    </div>
+                </div>
+                <div class="cont_rght">
+
+                    	<div id="divAccntSetting" class="mail" >
+                               <img  src="/Images/Icons/white-arrowUp-20x20.png" style="float: right; margin-left: -6.35%; margin-top: -4.5%;">
+                	<div class="top_mail_area">
+                           <asp:Image ID="imgAccntSetting"  runat="server" />
+                    	<%--<img src="/Images/Icons/wlcm.png" />--%>
+                        <h1 id="h1AccntSettingName" runat="server"></h1>
+                        <h2 id="h2AccntSettingEmail" runat="server"></h2>
+                        <button onclick="ChangePwd();">Change Password</button>
+                    </div>
+                    <div class="bottom_mail_area">
+                        <%--<button class="addacc">Add Account</button>--%>
+                        <button class="signout" onclick="UserLogout();">Sign out</button>
+                    </div>
+                </div>
+
+                    <form id="form1" runat="server">
+                      
+                        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                                  <asp:HiddenField ID="hiddenHeaderColor" runat="server" />
+                            <asp:HiddenField ID="hiddenFooterColor" runat="server" /> 
+                             <asp:HiddenField ID="hiddenCorporateId" runat="server" />
+                           <asp:HiddenField ID="hiddenOrganizationId" runat="server" />
+                           <asp:HiddenField ID="hiddenUserId" runat="server" />
+                          <asp:HiddenField ID="hiddenMailIconVisible" runat="server" />
+                        <asp:HiddenField ID="hiddenCorpList" runat="server" />
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- Trigger/Open The Modal -->
+
+            <!-- The Modal Loading MAIL -->
+            <div id="myModalCorpList" class="modalCorpList" >
+    
+                <%--<div style="background-color: rgb(92, 111, 103); position: absolute; height: 53%; width: 39.5%;">j</div>--%>
+                <div>
+                    <img title="CLOSE" class="closeCancelView" style= "cursor:pointer;margin-top: 2.6%; margin-right: 24.6%;float: right;/*! color: #2f2f24; */background-color: #b04949;width: 2.5%;height: 1%;" cursor: pointer;" onclick="CloseBusnessUnit();" src="/Images/Icons/Cancel-flat-white-color-icon.jpg" alt="X" height="15px" width="15px" />
+                    <!-- Modal content -->
+                    <div id="divCorpList" runat="server">
+
+                        <%--   <img src="../../Images/Other Images/LoadingMail.gif" style="width:12%;"  />--%>
+                    </div>
+                </div>
+            </div>
+
+          <div style="display:none;width: 100% !important; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(57, 57, 57) none repeat scroll 0% 0%; opacity: 0.9; z-index: 29; height: auto !important;"
+                class="Masterfreezelayer" id="Masterfreezelayer">
+            </div>
+
+        <div id="footerBottom" class="foot">
+            <div class="auto1">
+                <h3 id="divcopyright" runat="server">© 2016 Copyright</h3>
+                <h4 id="divdevelop" runat="server">Developed by</h4>
+            </div>
+        </div>
+        
+     
+  
+        <%--<script src="/JavaScript/Design-Javascript/jquery-1.11.2.min.js"></script>--%>
+        <%--<script src="/JavaScript/Design-Javascript/jquery.min.js"></script>--%>
+
+
+        
+         <script src="/js/side-menu/sidebar-menu.js" type="text/javascript"></script>
+        <!-- import -->
+    
+                
+        <script type="text/javascript">
+            var $noCon = jQuery.noConflict();
+            $noCon('.mob-btn').click(function (event) {
+
+                $noCon('body').toggleClass('open');
+                event.stopPropagation();
+
+            })
+
+            $noCon('.menu').click(function (event) {
+
+                event.stopPropagation();
+
+            })
+            $noCon('.overlay').click(function () {
+                if ($noCon('body').hasClass('open')) {
+                    $noCon('body').removeClass('open');
+                }
+            });
+
+
+            $noCon('ul.menu li:has(ul)').addClass('submenu');
+            $noCon('ul.menu li:has(ul)').append("<i></i>");
+
+            $noCon('ul.menu i').click(function () {
+                $noCon(this).parent('li').toggleClass('open');
+            })
+
+
+
+
+
+            // MOBILE MENU
+
+        </script>
+
+         
+           <script type="text/javascript">
+               var $MstrnoCon = jQuery.noConflict();
+               $MstrnoCon(window).load(function () {
+                   // Run code
+                   // alert('loaded statr');
+                   if (document.getElementById("<%=hiddenHeaderColor.ClientID%>").value != "") {
+                       document.getElementById("divHeaderTop").style.backgroundColor = document.getElementById("<%=hiddenHeaderColor.ClientID%>").value;
+
+                   }
+                   if (document.getElementById("<%=hiddenFooterColor.ClientID%>").value != "") {
+                       document.getElementById("footerBottom").style.backgroundColor = document.getElementById("<%=hiddenFooterColor.ClientID%>").value;
+                   }
+                   var OrgId = document.getElementById("<%=hiddenOrganizationId.ClientID%>").value;
+                   var CorpId = document.getElementById("<%=hiddenCorporateId.ClientID%>").value;
+                   var UserId = document.getElementById("<%=hiddenUserId.ClientID%>").value;
+
+                
+
+                   document.getElementById("myModalCorpList").style.display = "none";
+
+                   document.getElementById("Masterfreezelayer").style.display = "none";
+               });
+
+               $MstrnoCon(window).ready(function () {
+                   var FramewrkTyp = '<%= Session["FRMWRK_TYPE"] %>';
+                   if (document.getElementById("<%=hiddenMailIconVisible.ClientID%>").value == "true" && FramewrkTyp != "1") {
+                         setTimeout(MailCountService, 3000)
+                         setInterval(MailCountService, 300000);
+                     }
+
+                 });
+
+               function MailCountService() {
+
+                   //web method for drop down of narrations for common narration
+                   var OrgId = document.getElementById("<%=hiddenOrganizationId.ClientID%>").value;
+                      var CorpId = document.getElementById("<%=hiddenCorporateId.ClientID%>").value;
+                      var UserId = document.getElementById("<%=hiddenUserId.ClientID%>").value;
+                      if (CorpId != '' && CorpId != null && OrgId != '' && OrgId != null && UserId != '' && UserId != null) {
+                          //   alert('hi entered');
+                          $MstrnoCon.ajax({
+                              type: "POST",
+                              async: false,
+                              contentType: "application/json; charset=utf-8",
+                              url: "/MasterPage/WebServiceMaster.asmx/IconMailCountDetails",
+                              data: '{corporateId: "' + CorpId + '",organisationId:"' + OrgId + '" ,UserId:"' + UserId + '"}',
+                              //    data: '{corporateId: 162,organisationId:102 ,UserId:10027}',
+                              dataType: "json",
+                              success: function (response) {
+                                  //  alert(response.d);
+                                  document.getElementById("<%=spanCountUnreadMail.ClientID%>").InnerHtml = response.d;
+
+                                  if (response.d != 0) {
+                                      $MstrnoCon("#spanCountUnreadMail").empty();
+                                      // button__badge is made button__badge1 ass it is comming twice   
+                                      $MstrnoCon("#spanCountUnreadMail").html('<span class="button__badge1">' + response.d + '</span>');
+                                      //  $MstrnoCon("#spanCountUnreadMail").html( 3 );
+                                  }
+                                  else {
+                                      $MstrnoCon("#spanCountUnreadMail").empty();
+                                      $MstrnoCon("#spanCountUnreadMail").html('');
+                                  }
+
+                                //    $MstrnoCon("#spanCountUnreadMail").load(location.href + " #spanCountUnreadMail");
+                            },
+                            error: function (result) {
+                                // alert(result.responseText);
+                                //  alert("Error");
+                            }
+                        });
+
+                        }
+
+                    }
+            </script>   
+
+            <script>
+                var $auMenu = jQuery.noConflict();
+                //$auMenu.sidebarMenu
+
+                $auMenu('#showLeft').click(function () {
+                    //alert('hii');
+                    var wid = $auMenu('.animate-menu-left').width();
+
+                    var marle = $auMenu('.toggler').offset().left;
+
+                    if (marle >= 256) {
+                        $auMenu('.toggler').css("margin-left", "0px");
+                        $auMenu('.animate-menu-left').toggleClass('animate-menu-open');
+                        $auMenu('#chevron-left').css("display", "none");
+                        $auMenu('#chevron-right').css("display", "block");
+
+                        $auMenu('#MastermyInput').each(function () {
+                            /* alert('nun');*/
+                            $auMenu(this).val('');
+                        });
+                        $auMenu('#overlay').hide();
+                    }
+                    else {
+
+                        $auMenu('.toggler').css("margin-left", "256px");
+                        $auMenu('.animate-menu-left').toggleClass('animate-menu-open');
+                        $auMenu('#chevron-left').css("display", "block");
+                        $auMenu('#chevron-right').css("display", "none");
+                        $auMenu('#overlay').show();
+                    }
+                });
+
+                $auMenu("#overlay").click(function () {
+                    $auMenu('.animate-menu-left').toggleClass('animate-menu-open');
+                    $auMenu('.toggler').css("margin-left", "0px");
+                    $auMenu('#chevron-left').css("display", "none");
+                    $auMenu('#chevron-right').css("display", "block");
+                    $auMenu('#overlay').hide();
+                    $auMenu('#MastermyInput').each(function () {
+                        /* alert('nun');*/
+                        $auMenu(this).val('');
+                    });
+                    $auMenu('#MastermyInput').each(function () {
+                        var value = $auMenu(this).val().toLowerCase();
+                        $auMenu("#divmenu ul li").filter(function () {
+                            var a = $auMenu(this).toggle($auMenu(this).text().toLowerCase().indexOf(value) > -1);
+                            if (($auMenu("#MastermyInput").val()) == "") {
+                                /*alert('null');*/
+                                // $auMenu(".sidebar-submenu").css("display", "none");
+                            }
+                            else {
+                                /*alert('notnull');*/
+                                $auMenu(".sidebar-submenu li").css("display", "block");
+                            }
+
+                        });
+                    });
+
+                });
+
+                $.sidebarMenu($('.sidebar-menu'));
+
+
+</script>
+
+
+        <script>
+          
+          $auMenu(document).ready(function () {
+
+              $auMenu("#MastermyInput").on("keyup", function () {
+
+                  var value = $auMenu(this).val().toLowerCase();
+                  $auMenu("#divmenu ul li").filter(function () {
+                      var a = $auMenu(this).toggle($auMenu(this).text().toLowerCase().indexOf(value) > -1);
+                      if (($auMenu("#MastermyInput").val()) == "") {
+                          /*alert('null');*/
+                          // $auMenu(".sidebar-submenu").css("display", "none");
+                      }
+                      else {
+                          /*alert('notnull');*/
+                          $auMenu(".sidebar-submenu li").css("display", "block");
+                      }
+
+                  });
+
+              });
+
+             
+
+          });
+
+          function InsertRecent(menuid, url) {
+
+              var OrgId = document.getElementById("<%=hiddenOrganizationId.ClientID%>").value;
+                var CorpId = document.getElementById("<%=hiddenCorporateId.ClientID%>").value;
+                var UserId = document.getElementById("<%=hiddenUserId.ClientID%>").value;
+
+                if (CorpId != '' && CorpId != null && OrgId != '' && OrgId != null && UserId != '' && UserId != null) {
+                    if (menuid != "" && url != "") {
+                        $.ajax({
+                            type: "POST",
+                            async: false,
+                            contentType: "application/json; charset=utf-8",
+                            url: "/MasterPage/WebServiceMaster.asmx/InsertRecentMenu",
+                            data: '{menuid: "' + menuid + '"}',
+                            dataType: "json",
+                            success: function (data) {
+
+                            }
+                        });
+                    }
+                }
+
+            }
+
+
+</script>
+
+          <style>
+.toggler {
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    width:25px;
+    height: 48px;
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+	position: fixed;
+	transition: all 0.3s ease;
+    left: 0;
+	z-index:100;
+	background-color: #222d32;
+color: white;
+border: none;
+}
+.toggler > span {
+    margin:17px 6px;
+}
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:transparent; /* Black background with opacity */
+    z-index:110; /* Specify a stack order in case you're using a different order for other elements */
+ 
+}
+</style>
+    </div>
+
+</body>
+</html>
+

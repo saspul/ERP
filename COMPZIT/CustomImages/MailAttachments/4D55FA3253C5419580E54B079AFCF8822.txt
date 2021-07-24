@@ -1,0 +1,9 @@
+
+
+1. Lead individual- 1.Change "LEAD STATUS :QUOTATION DELIVERED" to "LEAD STATUS : QUOTATION DELIVERED"
+                   
+                    2.When save the follow up there have another message
+		  
+                    3.can edit the new lead ,it does not have the user role
+                     
+                    4.In google , Avoid "PM" to next row if it is long "Last Update date"

@@ -1,0 +1,141 @@
+D:\ERP\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+D:\References_ERP\MailUtility_ERP.dll
+D:\References_ERP\MailUtility_ERP.pdb
+D:\ERP\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\ERP\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\Project\References_ERP\MailUtility_ERP.dll
+D:\Project\References_ERP\MailUtility_ERP.pdb
+D:\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+D:\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\Compzit\References_ERP\MailUtility_ERP.dll
+E:\Compzit\References_ERP\MailUtility_ERP.pdb
+E:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\Compzit\References_ERP\MailUtility_ERP.dll
+D:\Compzit\References_ERP\MailUtility_ERP.pdb
+D:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+D:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+D:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+F:\References_ERP\MailUtility_ERP.dll
+F:\References_ERP\MailUtility_ERP.pdb
+F:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+F:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+F:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+F:\Compzit\References_ERP\MailUtility_ERP.dll
+F:\Compzit\References_ERP\MailUtility_ERP.pdb
+F:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+F:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+F:\Compzit\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+F:\AWMS\References_ERP\MailUtility_ERP.dll
+F:\AWMS\References_ERP\MailUtility_ERP.pdb
+F:\AWMS\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+F:\AWMS\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+F:\AWMS\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+F:\AWMS\Final Project\References_ERP\MailUtility_ERP.dll
+F:\AWMS\Final Project\References_ERP\MailUtility_ERP.pdb
+F:\AWMS\Final Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+F:\AWMS\Final Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+F:\AWMS\Final Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+F:\Compzit\Final Project\References_ERP\MailUtility_ERP.dll
+F:\Compzit\Final Project\References_ERP\MailUtility_ERP.pdb
+F:\Compzit\Final Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+F:\Compzit\Final Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+F:\Compzit\Final_Project\References_ERP\MailUtility_ERP.dll
+F:\Compzit\Final_Project\References_ERP\MailUtility_ERP.pdb
+F:\Compzit\Final_Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+F:\Compzit\Final_Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+F:\COMPZIT FOR QC\References_ERP\MailUtility_ERP.dll
+F:\COMPZIT FOR QC\References_ERP\MailUtility_ERP.pdb
+F:\COMPZIT FOR QC\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+F:\COMPZIT FOR QC\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+F:\COMPZIT FOR QC\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\integration\References_ERP\MailUtility_ERP.dll
+E:\integration\References_ERP\MailUtility_ERP.pdb
+E:\integration\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\integration\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\integration\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\work\References_ERP\MailUtility_ERP.dll
+D:\work\References_ERP\MailUtility_ERP.pdb
+D:\work\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+D:\work\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\work\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\Final\References_ERP\MailUtility_ERP.dll
+E:\Final\References_ERP\MailUtility_ERP.pdb
+E:\Final\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\Final\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\Final\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\Final\16\References_ERP\MailUtility_ERP.dll
+E:\Final\16\References_ERP\MailUtility_ERP.pdb
+E:\Final\16\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\Final\16\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\Final\16\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\References_ERP\MailUtility_ERP.dll
+E:\References_ERP\MailUtility_ERP.pdb
+E:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\CompztWelfare&Conduct\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\31-3-18CompztFinal\References_ERP\MailUtility_ERP.dll
+E:\31-3-18CompztFinal\References_ERP\MailUtility_ERP.pdb
+E:\31-3-18CompztFinal\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\31-3-18CompztFinal\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\FINALPUBLISH\References_ERP\MailUtility_ERP.dll
+E:\FINALPUBLISH\References_ERP\MailUtility_ERP.pdb
+E:\FINALPUBLISH\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\FINALPUBLISH\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+C:\Users\volviar\Desktop\References_ERP\MailUtility_ERP.dll
+C:\Users\volviar\Desktop\References_ERP\MailUtility_ERP.pdb
+C:\Users\volviar\Desktop\Service\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+C:\Users\volviar\Desktop\Service\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\Release\References_ERP\MailUtility_ERP.dll
+D:\Release\References_ERP\MailUtility_ERP.pdb
+D:\Release\Service\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\Release\Service\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\Release\Service\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\compzitFinal\References_ERP\MailUtility_ERP.dll
+E:\compzitFinal\References_ERP\MailUtility_ERP.pdb
+E:\compzitFinal\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\compzitFinal\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\compzitFinal\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+E:\COMPZIT\COMPZIT - FINAL\References_ERP\MailUtility_ERP.dll
+E:\COMPZIT\COMPZIT - FINAL\References_ERP\MailUtility_ERP.pdb
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+C:\Users\user\CompzitNew\Project\References_ERP\MailUtility_ERP.dll
+C:\Users\user\CompzitNew\Project\References_ERP\MailUtility_ERP.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+C:\Users\user\CompzitNew\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\MailUtility_ERP.dll
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\MailUtility_ERP.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+C:\Users\software-demo\CompzitNew\Project\References_ERP\MailUtility_ERP.dll
+C:\Users\software-demo\CompzitNew\Project\References_ERP\MailUtility_ERP.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\MailUtility_ERP.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\MailUtility_ERP.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojResolveAssemblyReference.cache
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csprojAssemblyReference.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csproj.CoreCompileInputs.cache
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\MailUtility_ERP.dll
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\MailUtility_ERP.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.csproj.CopyComplete
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\MailUtility_ERP\obj\Debug\MailUtility_ERP.pdb

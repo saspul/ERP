@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta charset="utf-8">
+    <title>Compzit</title>
+    <meta http-equiv="Content-Encoding" content="gzip" />
+
+      <link rel="shortcut icon" href="../images/promitz_001.ico" />
+
+    <meta http-equiv="Accept-Encoding" content="gzip, deflate" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Encoding" content="gzip" />
+    <meta http-equiv="Accept-Encoding" content="gzip, deflate" />
+
+    <%--<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>--%>
+     <link href="../css/RobotoFont.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../css/stylesheet.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/responsive_stylesheet.css" rel="stylesheet" type="text/css">
+    <link src="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+
+    
+   
+
+    <%--<link rel="icon" href="" type="image/x-icon">--%>
+
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+
+
+    <script type="text/javascript">
+       
+        //(function () {
+        //    if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        //        var msViewportStyle = document.createElement("style");
+        //        msViewportStyle.appendChild(
+        //            document.createTextNode("@-ms-viewport{width:auto!important}")
+        //        );
+        //        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        //    }
+        //})();
+        </script>
+
+     <script type="text/javascript">
+         function UserLogoutConfirmation() {
+             if (confirm("Are you Sure you want to Logout ?")) {
+
+                 return true;
+             }
+
+             else
+                 return false;
+         }
+    </script>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<%--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">--%>
+    <%-- <link src="../css/bootstrap.min.3.3.5.css" rel="stylesheet" type="text/css">--%>
+  <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>--%>
+  <%--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--%>
+    <%--<script src="../../JavaScript/bootstrap3.3.5.min.js" type="text/javascript"></script>--%>
+
+    <asp:ContentPlaceHolder id="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+     
+<body>
+
+    <form id="form1" runat="server">
+        <div>
+          <header class="header_main">
+                <div class="header_top">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a href="../../Home.aspx">
+                                <img src="../../Images/Compztlogo.png"></a>
+                        </div>
+                        
+                        <div class="welcome_area">
+                       
+                            <div class="user_info">
+                                
+                                <div  class="image dropdown" >
+                                   <input type="image"  class="btn-primary dropdown-toggle" data-toggle="dropdown" src="../../Images/user.jpg" alt="UserImage"  width="29" height="29"  />
+                                    <span class="caret"  data-toggle="dropdown" style="float: right; cursor:pointer"></span> 
+                                 <%--  for more information http://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp--%>
+    <ul class="dropdown-menu">
+    <%--     <li class="dropdown-header">Dropdown header 1</li>--%>
+      <li><a href="../../Security/gen_ChangePassword/gen_ChangePassword.aspx">Change Password</a></li>
+        
+  <%--    <li><a href="#">Setting</a></li>--%>
+  <%--    <li><a href="#" >Send Feedback</a> </li>--%>
+     
+     
+         <li><a href="/Default.aspx" onclick="return UserLogoutConfirmation();">Logout</a></li>
+          <li class="divider"></li>
+          <li><a href="/FINANCE/Home/Fn_Home/Fn_Home.aspx">Finance</a></li>
+     <%--    <li class="dropdown-header">Dropdown header 2</li>--%>
+     <%-- <li><a href="#">Help</a> </li>--%>
+    
+    </ul>
+                                </div>
+                              
+                                <span class="user_name margin_right_sm margin_left_sm"> <asp:Label ID="lblUserName" runat="server" Text="Label"  Height="25px"></asp:Label> <span class="margin_left_sm">|</span> </span>
+                                <span class="login margin_left_sm"><a href="/Default.aspx" onclick="return UserLogoutConfirmation();" >Logout</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="divheaderName" runat="server" style="padding-right: 8%; padding-top: 10px; padding-left: 8%; font-size: 13px; color: rgb(48, 195, 195);">
+                   
+                        </div>
+                </div>
+                <div class="nav_area">
+                    <div class="container">
+                        <div class="navigatn">
+                            <nav class="applePie">
+                                <div class="menubtn"><i class="fa fa-bars"></i></div>
+                              <div runat="server" id="divmenu"></div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="breadcrumb_area">
+                    <div class="container">
+                      
+                      
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div class="container">
+           
+        <asp:ContentPlaceHolder id="cphMain" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+              </div>
+            </section>
+            <footer>
+                <div class="container">
+                    <span id="divcopyright" runat="server" class="copyright">© 2015 Copyright</span>
+                    <span id="divdevelop" runat="server" class="dvlpdBy">Developed by</span>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+
+<script src="../../JavaScript/jquery.min.js"></script>
+<script src="../../JavaScript/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- dropdown -->
+
+<script src="../../JavaScript/superfish.js"></script>
+<script src="../../JavaScript/easyaspie.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.navigatn nav').easyPie();
+    });
+</script>
+
+</html>

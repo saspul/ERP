@@ -1,0 +1,125 @@
+D:\References_ERP\VolviarMail_ERP.exe.config
+D:\References_ERP\VolviarMail_ERP.exe
+D:\References_ERP\VolviarMail_ERP.pdb
+D:\ERP\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+D:\ERP\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+D:\ERP\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+D:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+D:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+D:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+D:\Project\References_ERP\VolviarMail_ERP.exe.config
+D:\Project\References_ERP\VolviarMail_ERP.exe
+D:\Project\References_ERP\VolviarMail_ERP.pdb
+D:\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+D:\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+D:\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+E:\Compzit\References_ERP\VolviarMail_ERP.exe.config
+E:\Compzit\References_ERP\VolviarMail_ERP.exe
+E:\Compzit\References_ERP\VolviarMail_ERP.pdb
+E:\Compzit\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\Compzit\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+E:\Compzit\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+E:\References_ERP\VolviarMail_ERP.exe.config
+E:\References_ERP\VolviarMail_ERP.exe
+E:\References_ERP\VolviarMail_ERP.pdb
+E:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+E:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+F:\References_ERP\VolviarMail_ERP.exe.config
+F:\References_ERP\VolviarMail_ERP.exe
+F:\References_ERP\VolviarMail_ERP.pdb
+F:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+F:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+F:\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+F:\AWMS\References_ERP\VolviarMail_ERP.exe.config
+F:\AWMS\References_ERP\VolviarMail_ERP.exe
+F:\AWMS\References_ERP\VolviarMail_ERP.pdb
+F:\AWMS\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+F:\AWMS\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+F:\AWMS\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+F:\AWMS\Final Project\References_ERP\VolviarMail_ERP.exe.config
+F:\AWMS\Final Project\References_ERP\VolviarMail_ERP.exe
+F:\AWMS\Final Project\References_ERP\VolviarMail_ERP.pdb
+F:\AWMS\Final Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+F:\AWMS\Final Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+F:\AWMS\Final Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+F:\COMPZIT FOR QC\References_ERP\VolviarMail_ERP.exe.config
+F:\COMPZIT FOR QC\References_ERP\VolviarMail_ERP.exe
+F:\COMPZIT FOR QC\References_ERP\VolviarMail_ERP.pdb
+F:\COMPZIT FOR QC\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+F:\COMPZIT FOR QC\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+F:\COMPZIT FOR QC\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\integration\References_ERP\VolviarMail_ERP.exe.config
+E:\integration\References_ERP\VolviarMail_ERP.exe
+E:\integration\References_ERP\VolviarMail_ERP.pdb
+E:\integration\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\integration\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+E:\integration\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+D:\work\References_ERP\VolviarMail_ERP.exe.config
+D:\work\References_ERP\VolviarMail_ERP.exe
+D:\work\References_ERP\VolviarMail_ERP.pdb
+D:\work\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+D:\work\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+D:\work\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+E:\Final\References_ERP\VolviarMail_ERP.exe.config
+E:\Final\References_ERP\VolviarMail_ERP.exe
+E:\Final\References_ERP\VolviarMail_ERP.pdb
+E:\Final\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\Final\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+E:\Final\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+E:\Final\16\References_ERP\VolviarMail_ERP.exe.config
+E:\Final\16\References_ERP\VolviarMail_ERP.exe
+E:\Final\16\References_ERP\VolviarMail_ERP.pdb
+E:\Final\16\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\Final\16\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+E:\Final\16\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+E:\CompztWelfare&Conduct\References_ERP\VolviarMail_ERP.exe.config
+E:\CompztWelfare&Conduct\References_ERP\VolviarMail_ERP.exe
+E:\CompztWelfare&Conduct\References_ERP\VolviarMail_ERP.pdb
+E:\CompztWelfare&Conduct\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+E:\CompztWelfare&Conduct\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+E:\31-3-18CompztFinal\References_ERP\VolviarMail_ERP.exe.config
+E:\31-3-18CompztFinal\References_ERP\VolviarMail_ERP.exe
+E:\31-3-18CompztFinal\References_ERP\VolviarMail_ERP.pdb
+E:\31-3-18CompztFinal\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+E:\31-3-18CompztFinal\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+E:\31-3-18CompztFinal\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+C:\Users\user\CompzitNew\Project\References_ERP\VolviarMail_ERP.exe.config
+C:\Users\user\CompzitNew\Project\References_ERP\VolviarMail_ERP.exe
+C:\Users\user\CompzitNew\Project\References_ERP\VolviarMail_ERP.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+C:\Users\user\CompzitNew\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+C:\Users\user\CompzitNew\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+C:\Users\varsh\Compzit\Project\References_ERP\VolviarMail_ERP.exe.config
+C:\Users\varsh\Compzit\Project\References_ERP\VolviarMail_ERP.exe
+C:\Users\varsh\Compzit\Project\References_ERP\VolviarMail_ERP.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+C:\Users\varsh\Compzit\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+C:\Users\varsh\Compzit\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\VolviarMail_ERP.exe.config
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\VolviarMail_ERP.exe
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\VolviarMail_ERP.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+C:\Users\software-demo\CompzitNew\Project\References_ERP\VolviarMail_ERP.exe.config
+C:\Users\software-demo\CompzitNew\Project\References_ERP\VolviarMail_ERP.exe
+C:\Users\software-demo\CompzitNew\Project\References_ERP\VolviarMail_ERP.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojResolveAssemblyReference.cache
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\VolviarMail_ERP.exe.config
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\VolviarMail_ERP.exe
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\VolviarMail_ERP.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csprojAssemblyReference.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csproj.CoreCompileInputs.cache
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\VolviarMail_ERP.exe.config
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\VolviarMail_ERP.exe
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\VolviarMail_ERP.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.csproj.CopyComplete
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.exe
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\VolviarMail_ERP\obj\Debug\VolviarMail_ERP.pdb

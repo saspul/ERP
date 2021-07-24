@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageEmpty.master.cs" Inherits="MasterPage_MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+ 
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="cphMain" runat="server">       
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+</body>
+</html>

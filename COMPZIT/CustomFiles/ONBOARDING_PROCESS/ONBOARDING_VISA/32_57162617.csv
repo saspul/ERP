@@ -1,0 +1,4 @@
+Record Sequence,Employee QID,Employee VisaID,Employee Name,Employee Bank Short Name,Employee Acoount,Salary Frequency,Number Of Working Days,NetSalary,Basic Salary,Extra Hours,Extra Income,Deductions,Payment Type,Notes/Comments
+2,,234566767,AJAYGHOSH,FEDERAL BANK,1,M,10118,17444.00,1000,3,5000.00,1004.00,end of settlement,
+Employer EID,File Creation Date,File Creation Time,Payer EID,Payer QID ,Payer Bank Short Name,Payer IBAN,Salary Year and Month,Total Salaries,Total Records
+122333333333333,05-12-2017,19:22 PM,122333333333333,123456,FEDERAL BANK,4555556126,2022,17444.00,1

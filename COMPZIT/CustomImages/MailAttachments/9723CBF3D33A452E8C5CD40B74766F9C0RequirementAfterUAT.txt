@@ -1,0 +1,53 @@
+
+EMPLOYEE MASTER
+
+Font to be changed for the "Alert Message' nearby fields such as "valid email.." etc.
+Give style for File Upload Button using CSS.
+No notification to employee with their username and password. This should be done.
+Division should not be visible when organization administrator tries to add an employee. Now division label will be visible, but it is not having any use.
+There should be a provision for password visibility checkbox. If it is checked then New Password should be visible.
+Keep a permanent message nearby New Password Textbox. “...6-16 characters, numbers and alphabets..”
+Avoid Page Refreshing while selecting designation, Corporate Office.
+Telephone number should accept international format. Not able to add numbers with Qatar Code. IF we can auto embed the country code on selecting the country, it will be really good
+A button or link to jump to view Listing Page (eg: Corporate Pack Listing) will be good. Else we will need to press Cancel. Just a thought.
+I am able to double click the submit button and then it shows there is a duplicate entry because the first click inserts the required entry. Should we disable this?
+
+DESIGNATION MASTER
+
+If the designation type doesn’t have the user role specified, a text saying, no role listed would be good. When we choose Department Group Manager, and click on User Role, it feels like something is not loading
+Refreshing to be avoided while user selects Designation Type.
+A button or link to jump to view Listing Page (eg: Corporate Pack Listing) will be good. Else we will need to press Cancel. Just a thought.
+I am able to double click the submit button and then it shows there is a duplicate entry because the first click inserts the required entry. Should we disable this?
+
+DIVISION MASTER
+
+Font to be changed for the "Alert Message" nearby fields such as "valid email" & Division code must have 3 Letters".
+Give style for File Upload Button using CSS
+A button or link to jump to view Listing Page (eg: Corporate Pack Listing) will be good. Else we will need to press Cancel. Just a thought.
+I am able to double click the submit button and then it shows there is a duplicate entry because the first click inserts the required entry. Should we disable this?
+
+UNREGISTERED USER
+
+No option to reset password; we will send a mail while approval. User name will also include in this notification mail. There will be a 'Forgot Password' link in the notification mail.
+
+ORGANIZATION MAIL VERIFICATION
+
+On confirmation of the company by admin, there is no notification to the registered user. One email with those details will be good. Also it would be good if we can include the username at least in this email, because after this, I tried logging in, it is saying wrong username / password. No way to confirm if its by email or something else
+No need to ask Registered Email ID, if an organization trying to verify their registration.
+"Congratulations AL-BALAGH TRADING AND CONTRACTING WLL. You can Login to COMPZIT after Approval from VOLVIAR TECHNOLOGIES.Thank You" - Change the font of this message.
+
+ORGANIZATION REGISTRATION
+
+Only a popup comes after submission of registration, and then it shows the same page. For Company registration, I feel we can have a redirection to login page
+Include contact name field in Organization Registration
+Mobile number should accept international format. Not able to add numbers with Qatar Code. IF we can auto embed the country code on selecting the country, it will be really good
+Avoid Refreshing while selecting Country, State
+Avoid Refreshing while select License Pack and Corporate Pack
+Keep a permanent message nearby New Password Textbox. “...6-16 characters, numbers and alphabets..”
+
+CORPORATE OFFICE
+
+Mobile number should accept international format. Not able to add numbers with Qatar Code. IF we can auto embed the country code on selecting the country, it will be really good
+A button or link to jump to view Listing Page (eg: Corporate Pack Listing) will be good. Else we will need to press Cancel. Just a thought.
+I am able to double click the submit button and then it shows there is a duplicate entry because the first click inserts the required entry. Should we disable this?
+Avoid Refreshing the Page while Selecting Country and State.

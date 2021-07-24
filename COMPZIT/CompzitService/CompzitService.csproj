@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C54F75F8-D352-47EB-BFCC-638D9F841DC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompzitService</RootNamespace>
+    <AssemblyName>CompzitService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>services-32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MailUtility_ERP">
+      <HintPath>..\..\References_ERP\MailUtility_ERP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompzitMailClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompzitMailClient.Designer.cs">
+      <DependentUpon>CompzitMailClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompzitMailClient_Test.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompzitMailClient_Test.Designer.cs">
+      <DependentUpon>CompzitMailClient_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompzitService.exe.config" />
+    <None Include="CompzitService.v11.suo" />
+    <None Include="CompzitService.vshost.exe.config" />
+    <None Include="CompzitService.vshost.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BL_Compzit.dll" />
+    <Content Include="BL_Compzit.pdb" />
+    <Content Include="CL_Compzit.dll" />
+    <Content Include="CL_Compzit.pdb" />
+    <Content Include="CompzitService.exe" />
+    <Content Include="CompzitService.pdb" />
+    <Content Include="CompzitService.vshost.exe" />
+    <Content Include="DataLayerMailUtility.dll" />
+    <Content Include="DL_Compzit.dll" />
+    <Content Include="DL_Compzit.pdb" />
+    <Content Include="EL_Compzit.dll" />
+    <Content Include="EL_Compzit.pdb" />
+    <Content Include="HashingUtility.dll" />
+    <Content Include="HashingUtility.pdb" />
+    <Content Include="itextsharp.dll" />
+    <Content Include="MailUtility_ERP.dll" />
+    <Content Include="MailUtility_ERP.pdb" />
+    <Content Include="OpenPop.dll" />
+    <Content Include="OpenPop.pdb" />
+    <Content Include="Oracle.DataAccess.dll" />
+    <Content Include="ServiceError\GMS_Mail.txt" />
+    <Content Include="ServiceError\MailTimer.txt" />
+    <Content Include="services-32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

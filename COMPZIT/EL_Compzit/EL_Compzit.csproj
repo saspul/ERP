@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B690E3BA-825B-4F48-AA3A-6FD4DE56C341}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EL_Compzit</RootNamespace>
+    <AssemblyName>EL_Compzit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\References_ERP\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsEntityAccommodation.cs" />
+    <Compile Include="clsEntityAccommodationType.cs" />
+    <Compile Include="clsEntityApprovalConsole.cs" />
+    <Compile Include="clsEntityApprovalHierarchyTemp.cs" />
+    <Compile Include="clsEntityAppSetting.cs" />
+    <Compile Include="clsEntityCancel.cs" />
+    <Compile Include="clsEntityCategory.cs" />
+    <Compile Include="clsEntityCityMaster.cs" />
+    <Compile Include="clsEntityCommon.cs" />
+    <Compile Include="clsEntityComplaint.cs" />
+    <Compile Include="clsEntityCorpDept.cs" />
+    <Compile Include="clsEntityCorpDivision.cs" />
+    <Compile Include="clsEntityCorpOffice.cs" />
+    <Compile Include="clsEntityCorporatePack.cs" />
+    <Compile Include="clsEntityCorpPartners.cs" />
+    <Compile Include="clsEntityCountry.cs" />
+    <Compile Include="clsEntityCustomer.cs" />
+    <Compile Include="clsEntityCustomerGroup.cs" />
+    <Compile Include="clsEntityDashBoard.cs" />
+    <Compile Include="clsEntityEmpRoleAllocation.cs" />
+    <Compile Include="clsEntityException.cs" />
+    <Compile Include="clsEntityHelpDoc.cs" />
+    <Compile Include="clsEntityItemGrp.cs" />
+    <Compile Include="clsEntityLayerBank.cs" />
+    <Compile Include="clsEntityLayerContactDtls.cs" />
+    <Compile Include="clsEntityLayerDependent.cs" />
+    <Compile Include="clsEntityLayerEmpSalary.cs" />
+    <Compile Include="clsEntityLayerJobRole.cs" />
+    <Compile Include="clsEntityLayerLeadAttchmntDtl.cs" />
+    <Compile Include="clsEntityLayerLicenseType.cs" />
+    <Compile Include="clsEntityLayerQuotation.cs" />
+    <Compile Include="clsEntityLayerQuotationAttchmntDtl.cs" />
+    <Compile Include="clsEntityLayerQuotationDtl.cs" />
+    <Compile Include="clsEntityLayerRecentMenu.cs" />
+    <Compile Include="ClsEntityLayerWorkExperience.cs" />
+    <Compile Include="clsEntityLeadCreation.cs" />
+    <Compile Include="clsEntityLeadRating.cs" />
+    <Compile Include="clsEntityMailConsole.cs" />
+    <Compile Include="clsEntityOrganization.cs" />
+    <Compile Include="clsEntityPartner.cs" />
+    <Compile Include="clsEntityPersonalDtls.cs" />
+    <Compile Include="clsEntityProductBrand.cs" />
+    <Compile Include="clsEntityProductGrp.cs" />
+    <Compile Include="clsEntityProductRateAmendment.cs" />
+    <Compile Include="clsEntityProduct_Master.cs" />
+    <Compile Include="clsEntityLayer.cs" />
+    <Compile Include="clsEntityLayerApproval.cs" />
+    <Compile Include="clsEntityLayerDesignation.cs" />
+    <Compile Include="clsEntityLayerLogin.cs" />
+    <Compile Include="clsEntityLayerOrgVerification.cs" />
+    <Compile Include="clsEntityLayerTeamHierarchy.cs" />
+    <Compile Include="clsEntityLayerUserRegistration.cs" />
+    <Compile Include="clsEntityLicensePack.cs" />
+    <Compile Include="clsEntityOrg.cs" />
+    <Compile Include="clsEntityOrgParking.cs" />
+    <Compile Include="clsEntityOrgType.cs" />
+    <Compile Include="clsEntityPremise.cs" />
+    <Compile Include="clsEntityProject.cs" />
+    <Compile Include="clsEntityReportBuilder.cs" />
+    <Compile Include="clsEntityReports.cs" />
+    <Compile Include="clsEntityResetPassword.cs" />
+    <Compile Include="clsEntityStateMaster.cs" />
+    <Compile Include="clsEntityTaxMaster.cs" />
+    <Compile Include="clsEntityTermsTemplate.cs" />
+    <Compile Include="clsEntityTimeslot.cs" />
+    <Compile Include="clsEntityUomMaster.cs" />
+    <Compile Include="clsEntityWorkArea.cs" />
+    <Compile Include="clsEntityWorkStation.cs" />
+    <Compile Include="clsEntity_Joining_Intimation.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityInsuranceAndPermitAttchmntDtl.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityInsuranceAndPermitExp.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerDutyOff.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerDutyRoster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerDutyRosterReports.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerEmployeeOffDuty.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerFuelType.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerHolidayMaster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerInsuranceCoverageType.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerInsuranceProvider.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerJobMaster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerJobSchedule.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerJobScheduleDtl.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerLeaveAllocationMaster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerLeaveTypeMaster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerTimeSheetReport.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerTrafficViolation.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerTrafficViolationDtl.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerTrafficViolationReport.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerVehicleClass.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerVehicleMaster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerWaterBilling.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerWaterBillingDtl.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerWaterCardMaster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityLayerWaterCardRecharge.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityTrafficViolationSettlement.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityVehicleStatusMaster.cs" />
+    <Compile Include="EntityLayer_AWMS\clsEntityVehicleStatusMngmnt.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityAccountGroup.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityBalanceSheet.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityBankReconciliation.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityChequeTemplate.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityCostGrpPerfAnalysis.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityJournal.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLayerAuditClosing.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLayerBudget.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLayer_Account_Close.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLayer_Cost_Center.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLayer_Cost_Group.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLayer_Tax_CollectedAt_Source.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLedger.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityLedgerStatement.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityOutstandingAgeing.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityPaymentAccount.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityProfitAndLossAccount.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntityPurchaseMaster.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntitySales.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntitySupplier.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntitySupplierOutstanding.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntity_Account_Setting.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntity_Credit_Note.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntity_DayBook.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntity_Debit_Note.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntity_Postdated_Cheque.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntity_Receipt_Account.cs" />
+    <Compile Include="EntityLayer_FMS\clsEntity_Trial_Bal.cs" />
+    <Compile Include="EntityLayer_FMS\cls_EntityCustomer_Outstanding.cs" />
+    <Compile Include="EntityLayer_GMS\classEntityLayerContractCategory.cs" />
+    <Compile Include="EntityLayer_GMS\classEntityLayerContractMaster.cs" />
+    <Compile Include="EntityLayer_GMS\classEntityLayerGuaranteType.cs" />
+    <Compile Include="EntityLayer_GMS\classEntityLayerJobCategory.cs" />
+    <Compile Include="EntityLayer_GMS\classEntityLayerNotifi_Temp.cs" />
+    <Compile Include="EntityLayer_GMS\classEntityLayerRequestForGrnte.cs" />
+    <Compile Include="EntityLayer_GMS\clsEntityInsuraceReports.cs" />
+    <Compile Include="EntityLayer_GMS\clsEntityLayerBankGuarantee.cs" />
+    <Compile Include="EntityLayer_GMS\clsEntityLayerInsuranceMaster.cs" />
+    <Compile Include="EntityLayer_GMS\clsEntityLayerInsuranceTypMaster.cs" />
+    <Compile Include="EntityLayer_GMS\Entity_Template_Mail_Service.cs" />
+    <Compile Include="EntityLayer_HCM\CllsEntityManpowerRecruitment.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityAppointmentLtrParameter.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityAttendanceReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityCandidatelogin.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityCandidateOtherDetails.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityCandidateSelection.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityConsultancyMaster.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityEmployeeAddDedReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityEmployeeDailyWorkHour.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntityEmployeeDeduction.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityEmployeeDetailsReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityEmployee_DeductionDetails_Report.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityEmplyeeAccessMgmt.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntityExpiryNotificationReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityImmigration.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityImmigrationTasks.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityImmigratnRound.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityInterviewCategory.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityInterviewEvaltnReport.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntityJobCostSummary_Report.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityJobDetails.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityJoiningWorker.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerClearanceFormStaff.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerClearanceFormWorker.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerDutyRejoin.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerEmployeeSponsorMaster.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerEndOfServiceLeaveStlmnt.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerExitPartialProcess.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerExitProcess.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerFamilyDetails.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerImgrtnAsgnmnt.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerInterviewProcess.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerLeaveApproval.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerLeaveSettlmt.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerNoticePeriod.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerPayroll.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerPayslipGeneratn.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerResignation.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerresignationApproval.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerSalaryCertificate.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerSalaryStatement.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerVisaProfession.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayerVisaType.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntityLayerWps_List.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayer_Candidate_ShortList.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayer_Exit_Intrvw_Process.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayer_Exit_Intrvw_Qstn.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayer_InterViewPanel.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayer_JobNotification.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLayer_Payment_Closing.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLeaveApplicationReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLeaveApplicationStatusReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityLeaveRequest.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityManpwrJobAsignment_Report.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityManpwrReqmt_Status_Report.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityManualAddDedEntry.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityMonthlySalaryStatement.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityOnBoardingPartialProcess.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntityOnBoardingProcess.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityOnBoarding_Status_Report.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityOpeningLeaveAlloc.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityPayrollProcess.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityQualification.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityRequirementAllocation.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntitySalaryEntryProcess.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityStaffImmigration.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityStaffPersonalDtls.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityVisaBundleReports.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityVisaQuotaStatusReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntityWelfareServiceTransaction.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Accommodation_Cat.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Accomodation_Report.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_AccountSettings.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Arrivl_Confrmtn.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Certificate_Bundel_Template.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Crtfct_Verfctn_Process.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Emp_conduct_Incident.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Emp_perfomance_Evaluation.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Emp_perfomance_Template.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Emp_Transfer.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Emp_Welfare_Service.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Emp_Welfare_Service_category.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Exit_Procedure_List.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntity_Experiance_Certificate.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntity_HCM_Common.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntity_HCM_Reports.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_ImmigrationTaskReport.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Interview_Temp.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Issue_Performance.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Job_Description_Master.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_LeaveFacltyAssmntList.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Leave_PartialProcess.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Leave_Type.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Memo_Reason_Master.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Mess_Bill.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Mess_Exemption.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_OverTime_Category.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntity_Passport_Handover_Sts.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_Pay_Grade_Master .cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntity_Performance_Evaluation_Analysis.cs" />
+    <Compile Include="EntityLayer_HCM\ClsEntity_Staff_Contact_Details.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_UserRol_ChilDefntion.cs" />
+    <Compile Include="EntityLayer_HCM\clsEntity_visa_quota_info.cs" />
+    <Compile Include="EntityLayer_HCM\cls_Entity_Bulk_LabourCard_Print.cs" />
+    <Compile Include="EntityLayer_HCM\cls_Entity_Monthly_Salary_Process.cs" />
+    <Compile Include="EntityLayer_PMS\clsEntityApprovalAssign.cs" />
+    <Compile Include="EntityLayer_PMS\clsEntityChargeHeads.cs" />
+    <Compile Include="EntityLayer_PMS\clsEntityPurchaseOrder.cs" />
+    <Compile Include="EntityLayer_PMS\clsEntityVendorCategory.cs" />
+    <Compile Include="EntityLayer_PMS\clsEntityWarehouse.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\EL_Compzit.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EL_Compzit.dll" />
+    <Content Include="obj\Debug\EL_Compzit.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

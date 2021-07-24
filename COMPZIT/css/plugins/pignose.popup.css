@@ -1,0 +1,138 @@
+.pignose-popup {
+	display: none;
+	position: absolute;
+	top:0;
+	left: 0;
+	/*max-width:579px;*/
+    height:auto;
+	background-color: #ffffff;
+	border: 1px solid #99ca3c;
+	border-radius:3px;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+    overflow: hidden;
+
+}
+
+.pignose-popup .item_header {
+	padding: 1.2em 1.6em;
+	font-family: inherit;
+	font-size: 100%;
+	font-weight: 600;
+	background-color:#99ca3c;
+	color: #ffffff;
+	border-bottom: 1px solid #d8d8d8;
+	overflow: hidden;
+}
+
+.pignose-popup
+ {
+			font-family: 'Raleway', 'helvetica', 'sans-serif';
+ }
+
+.pignose-popup pre 
+ {
+			margin: 0;
+			padding: 0;
+			background-color: transparent;
+			border: none;
+			text-align: center;
+}
+
+.pignose-popup pre code,
+.pignose-popup pre code span
+ {
+		font-family: 'Raleway', 'helvetica', 'sans-serif' !important;
+		font-size: 115%;
+ }
+.pignose-popup .item_header .txt_title {
+	float: left;
+}
+
+.pignose-popup .item_header .btn_close {
+	float: right;
+}
+.scroll_design
+{
+   height:350px;
+   overflow-y:scroll;
+}
+.pignose-popup .item_content {
+	padding: 2em 1.6em;
+	font-size: 100%;
+	color: #555555;
+	text-align: center;
+	
+	
+}
+
+.pignose-popup.black {
+	border: 1px solid #222222;
+}
+
+.pignose-popup.black .item_header {
+	background-color: #222222;
+}
+
+.pignose-popup.blue {
+	border: 1px solid #155fa1;
+}
+
+.pignose-popup.blue .item_header {
+	background-color: #155fa1;
+}
+
+.pignose-popup.orange {
+	border: 1px solid #da7024;
+}
+
+.pignose-popup.orange .item_header {
+	background-color: #da7024;
+}
+
+.pignose-popup.mint {
+	border: 1px solid #16aa91;
+}
+
+.pignose-popup.mint .item_header {
+	background-color: #16aa91;
+}
+    .pignose-popup tdT {
+    height: 30px;
+    padding: 0 0 0 14px;
+    border-right: 1px solid #c9c9c9;
+    font-family: Calibri;
+    font-size: 14px;
+}
+
+ .pignose-popup >tr td {
+ 
+    border: 1.5px  solid;
+        border-right-width: 1.5px;
+        border-right-style: solid;
+        border-right-color: rgb(21, 192, 210);
+}
+ .pignose-popup td,th {
+    border: none;
+   
+    padding: 8px;
+}
+ .pignose-popup td,th {
+    padding: 0;
+}
+
+.pop_button
+{
+    width:100px;
+    height:35px;
+    background-color:white;
+    border:solid 1px rgb(128, 128, 128);
+    font-family: 'Raleway', 'helvetica', 'sans-serif';
+}
+ .pop_button:hover
+ {
+     border-color:rgb(153, 202, 60);
+     background-color:rgb(153, 202, 60);
+     color:white;
+ }

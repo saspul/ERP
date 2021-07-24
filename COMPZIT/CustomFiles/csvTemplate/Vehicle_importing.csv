@@ -1,0 +1,4 @@
+Vehicle Class,Fuel Type,Registration Number,Make,Model,Model Year,Registration Type,Ownership,Vehicle Purchase Date,RF ID Tag Number*,Current Mileage,Istamara Expiry Date,Insurance Number,Insurance Provider,Insurance Expiry Date,Insurance Amount,Insurance Coverage Type,Trailer registrtn no/Tanker Capacity,Registrtn expiry date/Amount per barrel,Trailer insurance no,Insurance provider,Insurance expiry date,Insurance amount,Coverage type
+VAN ORDINARY,DIESEL,REG-12,Make Name,Model Name,2017,PRIVATE,CONTRACT,03-03-2017,A1,219,03-03-2018,INS 1,Provider Name,03-03-2018,12364.25,FULL BODY,,,,,,,
+TANKER,DIESEL,REG-13,Make Name,Model Name,2017,PRIVATE,CONTRACT,03-03-2017,A2,219,03-03-2018,INS 2,Provider Name,03-03-2018,12364.25,FULL BODY,20,50,,,,,
+TRAILER,DIESEL,REG-14,Make Name,Model Name,2017,PRIVATE,CONTRACT,03-03-2017,A3,219,03-03-2018,INS 3,Provider Name,03-03-2018,12364.25,FULL BODY,TRL-1,13-08-2019,INS-1,Ins provider name,13-08-2019,900,FULL BODY

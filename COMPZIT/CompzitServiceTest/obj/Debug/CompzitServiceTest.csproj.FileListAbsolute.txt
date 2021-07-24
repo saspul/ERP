@@ -1,0 +1,124 @@
+F:\Compzit\Final_Project\References_ERP\CompzitServiceTest.exe.config
+F:\Compzit\Final_Project\References_ERP\CompzitServiceTest.exe
+F:\Compzit\Final_Project\References_ERP\CompzitServiceTest.pdb
+F:\Compzit\Final_Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+F:\Compzit\Final_Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+F:\Compzit\Final_Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+F:\Compzit\Final_Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+F:\Compzit\Final_Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\References_ERP\CompzitServiceTest.exe.config
+E:\References_ERP\CompzitServiceTest.exe
+E:\References_ERP\CompzitServiceTest.pdb
+E:\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+E:\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+E:\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+E:\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+F:\COMPZIT FOR QC\References_ERP\CompzitServiceTest.exe.config
+F:\COMPZIT FOR QC\References_ERP\CompzitServiceTest.exe
+F:\COMPZIT FOR QC\References_ERP\CompzitServiceTest.pdb
+F:\COMPZIT FOR QC\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+F:\COMPZIT FOR QC\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+F:\COMPZIT FOR QC\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+F:\COMPZIT FOR QC\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+F:\COMPZIT FOR QC\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\integration\References_ERP\CompzitServiceTest.exe.config
+E:\integration\References_ERP\CompzitServiceTest.exe
+E:\integration\References_ERP\CompzitServiceTest.pdb
+E:\integration\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+E:\integration\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+E:\integration\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+E:\integration\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+E:\integration\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+D:\work\References_ERP\CompzitServiceTest.exe.config
+D:\work\References_ERP\CompzitServiceTest.exe
+D:\work\References_ERP\CompzitServiceTest.pdb
+D:\work\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+D:\work\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+D:\work\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+D:\work\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+D:\work\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\Final\References_ERP\CompzitServiceTest.exe.config
+E:\Final\References_ERP\CompzitServiceTest.exe
+E:\Final\References_ERP\CompzitServiceTest.pdb
+E:\Final\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+E:\Final\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+E:\Final\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+E:\Final\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+E:\Final\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\Final\16\References_ERP\CompzitServiceTest.exe.config
+E:\Final\16\References_ERP\CompzitServiceTest.exe
+E:\Final\16\References_ERP\CompzitServiceTest.pdb
+E:\Final\16\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+E:\Final\16\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+E:\Final\16\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+E:\Final\16\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\Final\16\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\References_ERP\CompzitServiceTest.exe.config
+E:\CompztWelfare&Conduct\References_ERP\CompzitServiceTest.exe
+E:\CompztWelfare&Conduct\References_ERP\CompzitServiceTest.pdb
+E:\CompztWelfare&Conduct\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+E:\CompztWelfare&Conduct\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+E:\CompztWelfare&Conduct\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+E:\CompztWelfare&Conduct\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\31-3-18CompztFinal\References_ERP\CompzitServiceTest.exe.config
+E:\31-3-18CompztFinal\References_ERP\CompzitServiceTest.exe
+E:\31-3-18CompztFinal\References_ERP\CompzitServiceTest.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+E:\31-3-18CompztFinal\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+E:\31-3-18CompztFinal\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+E:\31-3-18CompztFinal\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+E:\COMPZIT FINAL\References_ERP\CompzitServiceTest.exe.config
+E:\COMPZIT FINAL\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+E:\COMPZIT FINAL\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+C:\Users\user\CompzitNew\Project\References_ERP\CompzitServiceTest.exe.config
+C:\Users\user\CompzitNew\Project\References_ERP\CompzitServiceTest.exe
+C:\Users\user\CompzitNew\Project\References_ERP\CompzitServiceTest.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+C:\Users\varsh\Compzit\Project\References_ERP\CompzitServiceTest.exe.config
+C:\Users\varsh\Compzit\Project\References_ERP\CompzitServiceTest.exe
+C:\Users\varsh\Compzit\Project\References_ERP\CompzitServiceTest.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\CompzitServiceTest.exe.config
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\CompzitServiceTest.exe
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\CompzitServiceTest.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+C:\Users\software-demo\CompzitNew\Project\References_ERP\CompzitServiceTest.exe.config
+C:\Users\software-demo\CompzitNew\Project\References_ERP\CompzitServiceTest.exe
+C:\Users\software-demo\CompzitNew\Project\References_ERP\CompzitServiceTest.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\CompzitServiceTest.exe.config
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\CompzitServiceTest.exe
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\CompzitServiceTest.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csprojAssemblyReference.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.ProjectInstaller.resources
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.GenerateResource.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.CoreCompileInputs.cache
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\CompzitServiceTest.exe.config
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\CompzitServiceTest.exe
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\CompzitServiceTest.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.csproj.CopyComplete
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.exe
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitServiceTest\obj\Debug\CompzitServiceTest.pdb

@@ -1,0 +1,8 @@
+F:\Compzit\Final_Project\References_ERP\CompzitService.exe.config
+F:\Compzit\Final_Project\References_ERP\CompzitService.exe
+F:\Compzit\Final_Project\References_ERP\CompzitService.pdb
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitServiceTest.csproj.GenerateResource.Cache
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitServiceTest.csprojResolveAssemblyReference.cache

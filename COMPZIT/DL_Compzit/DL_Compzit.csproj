@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{474EAE6A-C061-4122-9146-2AE3421A48DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DL_Compzit</RootNamespace>
+    <AssemblyName>DL_Compzit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\References_ERP\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CL_Compzit">
+      <HintPath>..\Bin\CL_Compzit.dll</HintPath>
+    </Reference>
+    <Reference Include="EL_Compzit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References_ERP\EL_Compzit.dll</HintPath>
+    </Reference>
+    <Reference Include="HashingUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References_ERP\HashingUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ExternalRef\64Bit\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDataLayerAccommodation.cs" />
+    <Compile Include="clsDataLayerAccommodationType.cs" />
+    <Compile Include="clsDataLayerApprovalConsole.cs" />
+    <Compile Include="clsDataLayerApprovalHierarchyTemp.cs" />
+    <Compile Include="clsDataLayerAppSetting.cs" />
+    <Compile Include="clsDataLayerBank.cs" />
+    <Compile Include="clsDataLayerComplaint.cs" />
+    <Compile Include="clsDataLayerContactDtls.cs" />
+    <Compile Include="clsDataLayerDependent.cs" />
+    <Compile Include="clsDataLayerEmpRoleAllocation.cs" />
+    <Compile Include="clsDataLayerEmpSalary.cs" />
+    <Compile Include="clsDataLayerHelpDoc.cs" />
+    <Compile Include="clsDataLayerJobRole.cs" />
+    <Compile Include="clsDataLayerLeadRating.cs" />
+    <Compile Include="clsDataLayerLicenseType.cs" />
+    <Compile Include="clsDataLayerOrganization.cs" />
+    <Compile Include="clsDataLayerPartner.cs" />
+    <Compile Include="clsDataLayerPersonalDtls.cs" />
+    <Compile Include="clsDataLayerRecentMenu.cs" />
+    <Compile Include="clsDataLayerReportBuilder.cs" />
+    <Compile Include="clsDataLayerTermsTemplate.cs" />
+    <Compile Include="clsDataLayer.cs" />
+    <Compile Include="clsDataLayerApproval.cs" />
+    <Compile Include="clsDataLayerCategory.cs" />
+    <Compile Include="clsDataLayerChangePassword.cs" />
+    <Compile Include="clsDataLayerCityMaster.cs" />
+    <Compile Include="clsDataLayerCorpDept.cs" />
+    <Compile Include="clsDataLayerCorpDivision.cs" />
+    <Compile Include="clsDataLayerCorporateoffice.cs" />
+    <Compile Include="clsDataLayerCorporatePack.cs" />
+    <Compile Include="clsDataLayerCountry.cs" />
+    <Compile Include="clsDataLayerCustomer.cs" />
+    <Compile Include="clsDataLayerCustomerGroup.cs" />
+    <Compile Include="clsDataLayerDashboard.cs" />
+    <Compile Include="clsDataLayerDateAndTime.cs" />
+    <Compile Include="clsDataLayerDesignation.cs" />
+    <Compile Include="clsDataLayerException.cs" />
+    <Compile Include="clsDataLayerItemGrp.cs" />
+    <Compile Include="clsDataLayerLeadCreation.cs" />
+    <Compile Include="clsDataLayerLeadIndividual.cs" />
+    <Compile Include="clsDataLayerMailConsole.cs" />
+    <Compile Include="clsDataLayerPrdctBrand.cs" />
+    <Compile Include="clsDataLayerProductGrp.cs" />
+    <Compile Include="clsDataLayerProductMaster.cs" />
+    <Compile Include="clsDataLayerLicensePack.cs" />
+    <Compile Include="clsDataLayerLogin.cs" />
+    <Compile Include="clsDataLayerMail.cs" />
+    <Compile Include="clsDataLayerOrgMaster.cs" />
+    <Compile Include="clsDataLayerOrgParking.cs" />
+    <Compile Include="clsDataLayerOrgType.cs" />
+    <Compile Include="clsDataLayerOrgVerification.cs" />
+    <Compile Include="clsDataLayerPremise.cs" />
+    <Compile Include="clsDataLayerProductRateAmendment.cs" />
+    <Compile Include="clsDataLayerProject.cs" />
+    <Compile Include="clsDataLayerQuotation.cs" />
+    <Compile Include="clsDataLayerReports.cs" />
+    <Compile Include="clsDataLayerResetPassword.cs" />
+    <Compile Include="clsDataLayerStateMaster.cs" />
+    <Compile Include="clsDataLayerTaxMaster.cs" />
+    <Compile Include="clsDataLayerTeamHierarchy.cs" />
+    <Compile Include="clsDataLayerTimeslot.cs" />
+    <Compile Include="clsDataLayerUomMaster.cs" />
+    <Compile Include="clsDataLayerWorkArea.cs" />
+    <Compile Include="ClsDataLayerWorkExperience.cs" />
+    <Compile Include="clsDataLayerWorkStation.cs" />
+    <Compile Include="clsDataLayeUserRegisteration.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerDutyOff.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerDutyRoster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerDutyRosterReports.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerFuelType.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerHolidayMaster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerInsuranceAndPermitExp.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerInsuranceCoverageType.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerInsuranceProvider.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerJobMaster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerJobShdl.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerLeaveAllocationMaster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerLeaveTypeMaster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerTimeSheetReport.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerTrafficViolation.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerTrafficViolationReport.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerTrafficViolationSettlement.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerVehicleClass.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerVehicleMaster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerVehicleStatusMaster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerVehicleStatusMngmnt.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerWaterBilling.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerWaterCardMaster.cs" />
+    <Compile Include="DataLayer_AWMS\clsDataLayerWaterCardRecharge.cs" />
+    <Compile Include="DataLayer_FMS\clsDalaLayerLedger.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerAccountGroup.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerBalanceSheet.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerBudget.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerChequeTemplate.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerCostGrpPerfAnalysis.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerCustomer_Outstanding.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerFinanceHome.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerJournal.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerLedgerStatement.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerOutstandingAgeing.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerSupplier.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayerSupplierOutstaning.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Account_Close.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Account_Setting.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Audit_Closing.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_BankReconciliation.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Cost_Center.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Cost_Group.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Credit_Note.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_DayBook.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Debit_Note.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_PaymentAccount.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Postdated_Cheque.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_PurchaseMaster.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Receipt_Account.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Sales.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Tax_CollectedAt_Source.cs" />
+    <Compile Include="DataLayer_FMS\clsDataLayer_Trial_Bal.cs" />
+    <Compile Include="DataLayer_FMS\clsDataProfitAndLossAccount.cs" />
+    <Compile Include="DataLayer_FMS\clsDL_Tax_CollectedAt_Source.cs" />
+    <Compile Include="DataLayer_GMS\classDatalayerContractCategory.cs" />
+    <Compile Include="DataLayer_GMS\classDatalayerContractMaster.cs" />
+    <Compile Include="DataLayer_GMS\classDatalayerGuaranteType.cs" />
+    <Compile Include="DataLayer_GMS\classDatalayerJobCategory.cs" />
+    <Compile Include="DataLayer_GMS\classDatalayerNotifi_Temp.cs" />
+    <Compile Include="DataLayer_GMS\classDataLayerRequestForGrnte.cs" />
+    <Compile Include="DataLayer_GMS\clsDataLayerBankGuarantee.cs" />
+    <Compile Include="DataLayer_GMS\clsDataLayerGmsReports.cs" />
+    <Compile Include="DataLayer_GMS\clsDataLayerGms_Home.cs" />
+    <Compile Include="DataLayer_GMS\clsDataLayerInsReports.cs" />
+    <Compile Include="DataLayer_GMS\clsDataLayerInsuranceMaster.cs" />
+    <Compile Include="DataLayer_GMS\clsDataLayerInsuranceReports.cs" />
+    <Compile Include="DataLayer_GMS\clsDataLayerInsuranceTypMaster.cs" />
+    <Compile Include="DataLayer_GMS\clsData_Template_Mail_Service.cs" />
+    <Compile Include="DataLayer_HCM\clsDataEmployeeAddDedReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataEmployee_DeductionDetails_Report.cs" />
+    <Compile Include="DataLayer_HCM\ClsDataExpiryNotificationReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataImmigratnRound.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerAppointmentLtrParameter.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerAttendanceReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDatalayerCandidateOtherDetails.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerCandidateSelection.cs" />
+    <Compile Include="DataLayer_HCM\clsDatalayerCandidate_ShortList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataLayer_HCM\clsDataLayerClearanceFormStaff.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerClearanceFormWorker.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerConsultancyMaster.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerDutyRejoin.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerEmpAccessMgmt.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerEmployeeDailyWorkHour.cs" />
+    <Compile Include="DataLayer_HCM\clsDatalayerEmployeeDeduction.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerEmployeeDetailsReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerEmployeeSponsorMaster.cs" />
+    <Compile Include="DataLayer_HCM\clsDatalayerEndOfServiceLeaveStlmnt.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerExitPartialProcess.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerExitProcess.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerImmigration.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerImmigrationTasks.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerInterviewCategory.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerInterviewEvaltnReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerInterviewProcesscs.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerJobDetails.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerJoiningWorker.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerLeaveApplicationReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerLeaveRequest.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerLeaveSettlmt.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerManpowerRecruitment.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerManpwrJobAssignmentReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerManpwr_Reqmt_Status_Report.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerManualAddDedEntry.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerMonthlySalaryStatement.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerNoticePeriod.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerOnBoardingPartialProcess.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerOnBoard_Status_Report.cs" />
+    <Compile Include="DataLayer_HCM\clsDatalayerOpeningLeaveAlloc.cs" />
+    <Compile Include="DataLayer_HCM\clsDatalayerPayroll.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerPayrollProcessReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerPayslipGeneratn.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerQualification.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerRequirementAllocationcs.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerResignation.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerSalaryCertificate.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerSalaryEntryProcess.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerSalaryStatemnt.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerStaffImmigration.cs" />
+    <Compile Include="DataLayer_HCM\ClsDataLayerStaffPersonalDtls.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerVisaProfession.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerVisaQuotaStatusReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayerVisaType.cs" />
+    <Compile Include="DataLayer_HCM\clsDatalayerWelfareServiceTransaction.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_AccntSetting.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Arrivl_Confrmtn.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Crtfct_Verfctn_Process.cs" />
+    <Compile Include="DataLayer_HCM\ClsDataLayer_Employee_Recruitment_Report.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Emp_Conduct_Incident.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Emp_Welfare_service.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Emp_Wlefare_Service_category.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Exit_Intrvw_Process.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Exit_Intrvw_Qstn.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Exit_Procedure_List.cs" />
+    <Compile Include="DataLayer_HCM\ClsDataLayer_Experiance_Certificate.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Imgrtn_Asgnmnt.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_InterView_Panel.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Interview_Temp.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Issue_Performance.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_JobCostSummary_Report.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_JobNotification.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Joining_Intimation.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Leave_PartialProcess.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Mess_Exemption.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_OnBoardingProcess.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_OverTime_Category.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Payment_Closing.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_Pay_Grade_Master .cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_VisaBundleReports.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLayer_visa_quota_info.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLeaveApplicationStatusReport.cs" />
+    <Compile Include="DataLayer_HCM\clsDataLeave_Approval.cs" />
+    <Compile Include="DataLayer_HCM\clsDataResignation_Approval.cs" />
+    <Compile Include="DataLayer_HCM\clsDataStaffFamily.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Accommodation_Category.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Candidate_Login.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Emp_Perfomance_Evaluation.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Emp_Perfomance_Template.cs" />
+    <Compile Include="DataLayer_HCM\ClsData_HCM_Reports.cs" />
+    <Compile Include="DataLayer_HCM\clsData_ImmigrationTaskReport.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Job_Description_Master.cs" />
+    <Compile Include="DataLayer_HCM\clsData_LeaveFacltyAssmntList.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Leave_Type.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Memo_Reason_Master.cs" />
+    <Compile Include="DataLayer_HCM\clsData_Mess_Bill.cs" />
+    <Compile Include="DataLayer_HCM\ClsData_Passport_Hand_Over_Sts.cs" />
+    <Compile Include="DataLayer_HCM\ClsData_Performance_Evaluation_Analysis.cs" />
+    <Compile Include="DataLayer_HCM\clsData_UserRol_ChilDefntion.cs" />
+    <Compile Include="DataLayer_HCM\ClsData_WPS_LIst.cs" />
+    <Compile Include="DataLayer_HCM\cls_DataLayer_Accomodation_Report.cs" />
+    <Compile Include="DataLayer_HCM\cls_DataLayer_Emp_Transfer.cs" />
+    <Compile Include="DataLayer_HCM\cls_Data_Bulk_LabourCard_Print.cs" />
+    <Compile Include="DataLayer_HCM\cls_Data_Certificate_Bundel_Template.cs" />
+    <Compile Include="DataLayer_HCM\cls_Data_Monthly_Salary_Process.cs" />
+    <Compile Include="DataLayer_HCM\Cls_Data_Staff_Contact_Details.cs" />
+    <Compile Include="DataLayer_PMS\clsDataLayerApprovalAssignment.cs" />
+    <Compile Include="DataLayer_PMS\clsDataLayerApprovalset.cs" />
+    <Compile Include="DataLayer_PMS\clsDataLayerChargeHeads.cs" />
+    <Compile Include="DataLayer_PMS\clsDataLayerPMS.cs" />
+    <Compile Include="DataLayer_PMS\clsDataLayerPurchaseOrder.cs" />
+    <Compile Include="DataLayer_PMS\clsDataLayerVendorCategory.cs" />
+    <Compile Include="DataLayer_PMS\clsDataLayerWarehouse.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\DL_Compzit.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\DL_Compzit.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DL_Compzit.dll" />
+    <Content Include="obj\Debug\DL_Compzit.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

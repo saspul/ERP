@@ -1,0 +1,3922 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using BL_Compzit;
+using System.Data;
+using CL_Compzit;
+using System.Text;
+using System.Collections;
+using EL_Compzit;
+using System.IO;
+using System.Web.Mail;
+using BL_Compzit.BusinessLayer_AWMS;
+using EL_Compzit.EntityLayer_AWMS;
+public partial class Master_gen_UserRegistration_gen_UserRegistration : System.Web.UI.Page
+{
+    #region Enumerations;
+    //Enumeration for identifying apllication typeid 
+    private enum APPS
+    {
+        APP_ADMINSTRATION = 1,
+        SALES_FORCE_AUTOMATION = 2,
+        AUTO_WORKSHOP_MANAGEMENT_SYSTEM = 3,
+        GUARANTEE_MANAGEMENT_SYSTEM = 4
+
+    }
+    private enum USERLIMITED
+    {
+        ISLIMITED = 1,
+        NOTLIMITED = 2
+
+    }
+
+    #endregion
+
+    //Created objects for business layer
+    clsBusinessLayerUserRegisteration objBusinessLayerUserRegisteration = new clsBusinessLayerUserRegisteration();
+
+    DataTable dtCorpDivVisibility = new DataTable();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        txtUsrName.Attributes.Add("onkeypress", "return isTag(event)");
+        txtUsrName.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        ddlUsrDsgn.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        ddlUsrDsgn.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtJoiningDate.Attributes.Add("onkeypress", "return isTag(event)");
+        txtJoiningDate.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        ddlEmpType.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        ddlEmpType.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtNationalIdNmbr.Attributes.Add("onkeypress", "return isTag(event)");
+        txtNationalIdNmbr.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtEmployeeCode.Attributes.Add("onkeypress", "return isTag(event)");
+        txtEmployeeCode.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtUsrMob.Attributes.Add("onkeydown", "return isNumber(event)");
+        txtUsrMob.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        txtUsrMob.Attributes.Add("onblur", "return BlurNotNumber('" + txtUsrMob.ClientID + "')");
+        txtUsrMob.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtUsrEmail.Attributes.Add("onkeypress", "return isTag(event)");
+        txtUsrEmail.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxMailSendStatus.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        cbxMailSendStatus.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxStatus.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        cbxStatus.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxReadMail.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        cbxReadMail.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        ddlUsrCorporate.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        ddlUsrCorporate.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+        //0013
+        //ddlDepartment.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        //ddlDepartment.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtLoginName.Attributes.Add("onkeypress", "return isTagAndAT(event)");
+        txtLoginName.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtUsrPwd.Attributes.Add("onkeypress", "return Password_Strength(event)");
+        txtUsrPwd.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtUsrConPwd.Attributes.Add("onkeypress", "return isTag(event)");
+        txtUsrConPwd.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxLimitedUser.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        cbxLimitedUser.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxPswdVisible.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        // cbxPswdVisible.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtLicenceNumbr.Attributes.Add("onkeypress", "return isTag(event)");
+        txtLicenceNumbr.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        txtLicenseExpDate.Attributes.Add("onkeypress", "return isTag(event)");
+        txtLicenseExpDate.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        ddlAccommodatn.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        ddlAccommodatn.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxDutyRoster.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        cbxDutyRoster.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxPswExpiry.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        cbxPswExpiry.Attributes.Add("onchange", "IncrmntConfrmCounter()");
+
+        cbxMustLogin.Attributes.Add("onkeypress", "return DisableEnter(event)");
+        cbxMustAutoWorkshop.Attributes.Add("onkeypress", "return DisableEnter(event)");
+
+        int intImageMaxSize = Convert.ToInt32(CL_Compzit.clsCommonLibrary.IMAGE_SIZE.USER_PROFILEPIC);
+        hiddenUserImageSize.Value = intImageMaxSize.ToString();
+        //On not is post back
+        if (!IsPostBack)
+        {
+            //divUserRoll.Visible = false;//0013
+            int intUserLimited = Convert.ToInt32(USERLIMITED.ISLIMITED);
+
+            clsEntityLayerDesignation objEntityDsgnation = new clsEntityLayerDesignation();
+            clsBusinessLayerDesignation objBusinessLayerDsgnMaster = new clsBusinessLayerDesignation();
+            DataTable dtUserDetails = new DataTable();
+            int intUserId = 0 ,intUsrRolMstrId, intEnableAdd = 0;
+            clsBusinessLayer objBusinessLayer = new clsBusinessLayer();
+            clsCommonLibrary objCommon = new clsCommonLibrary();
+            if (Session["USERID"] != null)
+            {
+                intUserId = Convert.ToInt32(Session["USERID"].ToString());
+            }
+            else
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+            objEntityDsgnation.DesignationUserId = intUserId;
+            dtUserDetails = objBusinessLayerDsgnMaster.ReadIfUserLimitedByUsrId(objEntityDsgnation);
+            if (dtUserDetails.Rows.Count > 0)
+            {
+                intUserLimited = Convert.ToInt32(dtUserDetails.Rows[0]["USR_LMTD"].ToString());
+
+            }
+            if (intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED))
+            {
+
+                cbxLimitedUser.Enabled = true;
+            }
+            else
+            {
+
+                cbxLimitedUser.Enabled = false;
+            }
+
+            divAutoWorkshopSection.Style.Add("display", "none");
+            divLoginDetailsSection.Style.Add("display", "none");
+            //string s = "";
+            //if (divAutoWorkshopSection.Style["display"] == "block")
+            //{ 
+
+            //s = "t";
+            //}
+            //if (divAutoWorkshopSection.Style["display"] == "none")
+            //{
+            //    s = "f";
+
+            //}
+            //  string sd = s;
+
+            divDiv.Visible = false;
+            //0013
+            bussiDiv.Visible = false;
+            divDept.Visible = false;
+            //0013
+            hiddenDsgnContrl.Value = "";
+            UserTypeLoad();
+            BindCompzitModules();
+            //when editing 
+            if (Request.QueryString["Id"] != null)
+            {
+                lblEntry.Text = "Edit Employee";
+                btnAdd.Visible = false;
+                btnAddClose.Visible = false;
+                btnUpdate.Visible = true;
+                btnUpdateClose.Visible = true;
+               
+                LoadUsr();
+                string strRandomMixedId = Request.QueryString["Id"].ToString();
+                string strLenghtofId = strRandomMixedId.Substring(0, 2);
+                int intLenghtofId = Convert.ToInt16(strLenghtofId);
+                string strId = strRandomMixedId.Substring(2, intLenghtofId);
+               
+                Update(strId, "EDIT");
+
+            }
+            //when  viewing
+            else if (Request.QueryString["ViewId"] != null)
+            {
+                lblEntry.Text = "View Employee";
+                btnAdd.Visible = false;
+                btnAddClose.Visible = false;
+                btnUpdate.Visible = false;
+                btnUpdateClose.Visible = false;
+                divShowPassword.Visible = false;
+                divCPassword.Visible = false;
+                divPassword.Visible = false;
+
+                txtUsrName.Enabled = false;
+                ddlUsrDsgn.Enabled = false;
+                txtJoiningDate.Enabled = false;
+                ddlEmpType.Enabled = false;
+                txtNationalIdNmbr.Enabled = false;
+                txtEmployeeCode.Enabled = false;
+                txtUsrMob.Enabled = false;
+                txtUsrEmail.Enabled = false;
+                cbxStatus.Enabled = false;
+                cbxReadMail.Enabled = false;
+                cbxMailSendStatus.Enabled = false;
+
+                cbxlCorporateOffc.Enabled = false;
+                cbxlCorporateDvsn.Enabled = false;
+                ddlUsrCorporate.Enabled = false;
+                //ddlDepartment.Enabled = false;
+
+                txtLoginName.Enabled = false;
+                cbxLimitedUser.Enabled = false;
+                cbxPswExpiry.Enabled = false;
+
+                txtLicenceNumbr.Enabled = false;
+                txtLicenseExpDate.Enabled = false;
+                ddlAccommodatn.Enabled = false;
+                cbxDutyRoster.Enabled = false;
+
+                string strRandomMixedId = Request.QueryString["ViewId"].ToString();
+                string strLenghtofId = strRandomMixedId.Substring(0, 2);
+                int intLenghtofId = Convert.ToInt16(strLenghtofId);
+                string strId = strRandomMixedId.Substring(2, intLenghtofId);
+
+                Update(strId, "VIEW");
+
+
+            }
+
+            else
+            {
+                lblEntry.Text = "Add Employee";
+
+
+                btnUpdate.Visible = false;
+                btnUpdateClose.Visible = false;
+                btnAdd.Visible = true;
+                btnAddClose.Visible = true;
+
+                divShowPassword.Visible = true;
+                divCPassword.Visible = true;
+                divPassword.Visible = true;
+
+
+
+                LoadUsr();
+                DropDownBind();
+                if (Request.QueryString["InsUpd"] != null)
+                {
+                    string strInsUpd = Request.QueryString["InsUpd"].ToString();
+                    if (strInsUpd == "Ins")
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "SuccessConfirmation", "SuccessConfirmation();", true);
+                    }
+                    else if (strInsUpd == "Upd")
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "SuccessUpdation", "SuccessUpdation();", true);
+                    }
+                    //code 005 start
+                    else if (strInsUpd == "Ipsd")
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "MailsendFail", "MailsendFail();", true);
+                    }
+                    else if (strInsUpd == "IpRMSsd")
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "MailsendFailReviewMailStng", "MailsendFailReviewMailStng();", true);
+                    }
+
+                }
+            }
+            //Allocating child roles
+            intUsrRolMstrId = Convert.ToInt32(clsCommonLibrary.USR_ROLE_MSTR.User_Registration);
+            DataTable dtChildRol = objBusinessLayer.LoadChildRoleDefnDetail(intUserId, intUsrRolMstrId);
+            if (dtChildRol.Rows.Count > 0)
+            {
+                string strChildRolDeftn = dtChildRol.Rows[0]["USRROL_CHLDRL_DEFN"].ToString();
+
+                string[] strChildDefArrWords = strChildRolDeftn.Split('-');
+                foreach (string strC_Role in strChildDefArrWords)
+                {
+                    if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Add).ToString())
+                    {
+                        intEnableAdd = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Find).ToString())
+                    {
+                        //future
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Rate_Updation).ToString())
+                    {
+                        //future
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Confirm).ToString())
+                    {
+                        //future
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Approve).ToString())
+                    {
+                        //future
+
+                    }
+
+                }
+            }
+
+            if (intEnableAdd == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+            {
+
+
+            }
+            else
+            {
+
+                btnUpdate.Visible = false;
+
+            }
+            txtUsrName.Focus();
+
+        }
+
+    }
+    //Assign Compzit module against user.
+    public void BindCompzitModules()
+    {
+        cbxlCompzitModules.Items.Clear();
+        clsBusinessLayerEmpRoleAllocation objBusinessEmpRoleAllocation = new clsBusinessLayerEmpRoleAllocation();
+        clsEntityEmpRoleAllocation objEmpRoleAllocation = new clsEntityEmpRoleAllocation();
+        DataTable dtModuleDetails = new DataTable();
+        if (Session["USERID"] == null)
+        {
+            Response.Redirect("../../Default.aspx");
+
+        }
+        else
+        {
+            objEmpRoleAllocation.UserId = Convert.ToInt32(Session["USERID"].ToString());
+        }
+        //BL 
+        dtModuleDetails = objBusinessEmpRoleAllocation.DisplayCompzitModuleByUsrId(objEmpRoleAllocation);
+        if (dtModuleDetails.Rows.Count > 0)
+        {
+            divCompzitModuleList.Visible = true;
+            divCompzitModuleNoList.Visible = false;
+            cbxlCompzitModules.DataSource = dtModuleDetails;
+            cbxlCompzitModules.DataTextField = "PRTZAPP_NAME";
+            cbxlCompzitModules.DataValueField = "PRTZAPP_ID";
+            cbxlCompzitModules.DataBind();
+        }
+        else
+        {
+
+            divCompzitModuleList.Visible = false;
+            divCompzitModuleNoList.Visible = true;
+        }
+    }
+    protected void AccommodationLoad(int intCorpId)
+    {
+        ddlAccommodatn.Items.Clear();
+        clsCommonLibrary objCommon = new clsCommonLibrary();
+
+        clsEntityLayerUserRegistration objEntityUserReg = new clsEntityLayerUserRegistration();
+
+        objEntityUserReg.UserCrprtId = intCorpId;
+
+
+        if (Session["ORGID"] != null)
+        {
+            objEntityUserReg.UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+
+        }
+        else if (Session["ORGID"] == null)
+        {
+            Response.Redirect("/Default.aspx");
+        }
+
+
+        DataTable dtAccommodation = new DataTable();
+        dtAccommodation = objBusinessLayerUserRegisteration.ReadAccommodationMstr(objEntityUserReg);
+        if (dtAccommodation.Rows.Count > 0)
+        {
+            ddlAccommodatn.DataSource = dtAccommodation;
+            ddlAccommodatn.DataTextField = "ACCMDTN_NAME";
+            ddlAccommodatn.DataValueField = "ACCMDTN_ID";
+            ddlAccommodatn.DataBind();
+        }
+        ddlAccommodatn.Items.Insert(0, "--SELECT--");
+
+    }
+    protected void LicenseTypeLoad(int intCorpId,int intUserId=0)
+    {
+        clsCommonLibrary objCommon = new clsCommonLibrary();
+
+        clsEntityLayerUserRegistration objEntityUserReg = new clsEntityLayerUserRegistration();
+
+        objEntityUserReg.UserCrprtId = intCorpId;
+
+        objEntityUserReg.UsrRegistrationId = intUserId;
+
+        if (Session["ORGID"] != null)
+        {
+            objEntityUserReg.UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+
+        }
+        else if (Session["ORGID"] == null)
+        {
+            Response.Redirect("/Default.aspx");
+        }
+
+        string strImagePath = (objCommon.GetImagePath(clsCommonLibrary.IMAGE_SECTION.APP_ICON_IMAGES));
+
+        DataTable dtLicenseType = new DataTable();
+        dtLicenseType = objBusinessLayerUserRegisteration.ReadLicenseType(objEntityUserReg);
+        string strHtml = "";
+        if (dtLicenseType.Rows.Count > 0)
+        {
+
+            for (int intRowcount = 0; intRowcount < dtLicenseType.Rows.Count; intRowcount++)
+            {
+                string TypeName = dtLicenseType.Rows[intRowcount]["VHCLLCNSTYP_NAME"].ToString();
+                string strImageName = dtLicenseType.Rows[intRowcount]["GNIMGSCT_IMGNAME"].ToString();
+                string strTypeId = dtLicenseType.Rows[intRowcount]["VHCLLCNSTYP_ID"].ToString();
+                strHtml += "<div class=\"divImageLicenseType\" id=\"divImageLicenseType-" + strTypeId + "\" onclick=\"SelectLicenseType('" + strTypeId + "');\" style=\"float:left;cursor: pointer;\">";
+                strHtml += "<label style=\"color: #2476A4;display: block;text-align:center;width: 100%;font-family: calibri;font-size: 15px;\" >" + TypeName + "</label>";
+
+                strHtml += "<img style=\"margin-left: 40%;margin-top: -0.5%;padding-bottom: 2%;\"  id=\"Veh-" + strTypeId + "\" src=" + strImagePath + "" + strImageName + " alt=\"vehicle\" />";
+                strHtml += "</div>";
+            }
+
+
+        }
+        divLicenseType.InnerHtml = strHtml;
+    }
+    public void LoadUsr()
+    {
+        int intUserId = 0, intUsrRolMstrLoginSectionId, intUsrRolMstrAutoWrkShopSectionId;
+        clsBusinessLayer objBusinessLayer = new clsBusinessLayer();
+
+
+
+        if (Session["USERID"] != null)
+        {
+            intUserId = Convert.ToInt32(Session["USERID"]);
+
+        }
+        else if (Session["USERID"] == null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+
+
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+        if (Session["ORGID"] != null)
+        {
+
+            objEntityUsrRegistr.UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+        }
+        else if (Session["ORGID"] == null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+
+        string strDsgControlLoginUsr = "C";
+        if (Session["DSGN_CONTROL"] != null)
+        {
+            strDsgControlLoginUsr = Session["DSGN_CONTROL"].ToString();
+        }
+        else
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+
+        if (strDsgControlLoginUsr == "O")
+        {
+            DataTable dtCrptDetails = new DataTable();
+            dtCrptDetails = objBusinessLayerUserRegisteration.ReadCrptOfficeDetails(objEntityUsrRegistr);
+
+            ddlUsrCorporate.DataSource = dtCrptDetails;
+            ddlUsrCorporate.DataTextField = "CORPRT_NAME";
+            ddlUsrCorporate.DataValueField = "CORPRT_ID";
+            ddlUsrCorporate.DataBind();
+            ddlUsrCorporate.Items.Insert(0, "--SELECT--");
+            cbxlCorporateOffc.DataSource = dtCrptDetails;
+            cbxlCorporateOffc.DataTextField = "CORPRT_NAME";
+            cbxlCorporateOffc.DataValueField = "CORPRT_ID";
+            cbxlCorporateOffc.DataBind();
+
+           
+
+        }
+        else
+        {
+            // Here we create a DataTable with 2 columns.
+            DataTable dtCorpControl = new DataTable();
+            dtCorpControl.Columns.Add("CORPRT_NAME", typeof(string));
+            dtCorpControl.Columns.Add("CORPRT_ID", typeof(int));
+            string strCorpId = "";
+
+            if (Session["CORPOFFICEID"] != null)
+            {
+                strCorpId = Session["CORPOFFICEID"].ToString();
+            }
+            else
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+
+            if (strCorpId != "" && strCorpId != null)
+            {
+
+
+                int intCorpId = Convert.ToInt32(strCorpId);
+                string strCorpName = "";
+
+                if (Session["CORPORATENAME"] != null)
+                {
+                    strCorpName = Session["CORPORATENAME"].ToString();
+                }
+                else
+                {
+                    Response.Redirect("~/Default.aspx");
+                }
+                // Here we add 1 DataRows.
+                dtCorpControl.Rows.Add(strCorpName, intCorpId);
+
+                if (dtCorpControl.Rows.Count > 0)
+                {
+                    ddlUsrCorporate.DataSource = dtCorpControl;
+                    ddlUsrCorporate.DataTextField = "CORPRT_NAME";
+                    ddlUsrCorporate.DataValueField = "CORPRT_ID";
+                    ddlUsrCorporate.DataBind();
+                    //     ddlUsrCorporate.Items.Insert(0, "--SELECT--");
+                }
+                DropDownBindDepartment(strCorpId);
+                //it add divisions based on current corrporate
+
+                divDiv.Visible = true;
+                ChangeDDLCorpOffc();
+                mvUsrCorporate.Visible = true;
+                mvUsrCorporate.SetActiveView(vSingle);
+                LicenseTypeLoad(intCorpId);
+                AccommodationLoad(intCorpId);
+            }
+            else
+            {
+
+
+
+            }
+        }
+
+
+        // for showing and hidding Login Section and AutoWorkShop Section
+        intUsrRolMstrLoginSectionId = Convert.ToInt32(clsCommonLibrary.USR_ROLE_MSTR.Login_Details);
+        DataTable dtLoginSection = objBusinessLayer.LoadChildRoleDefnDetail(intUserId, intUsrRolMstrLoginSectionId);
+        if (dtLoginSection.Rows.Count > 0)
+        {
+            divLoginDetailsSection.Style.Add("display", "block");
+        }
+        else
+        {
+            divLoginDetailsSection.Style.Add("display", "none");
+        }
+
+        intUsrRolMstrAutoWrkShopSectionId = Convert.ToInt32(clsCommonLibrary.USR_ROLE_MSTR.Auto_Workshop);
+        DataTable dtAutoWrkShopSection = objBusinessLayer.LoadChildRoleDefnDetail(intUserId, intUsrRolMstrAutoWrkShopSectionId);
+
+        if (dtAutoWrkShopSection.Rows.Count > 0)
+        {
+            divAutoWorkshopSection.Style.Add("display", "block");
+
+        }
+        else
+        {
+            divAutoWorkshopSection.Style.Add("display", "none");
+
+        }
+    }
+
+    //Fetching the table from business layer and assign them in our fields.
+    public void Update(string strUsrId, string strEditOrView)
+    {
+
+        clsCommonLibrary objCommon = new clsCommonLibrary();
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+        objEntityUsrRegistr.UsrRegistrationId = Convert.ToInt32(strUsrId);
+        DataTable dtUsrMastr = objBusinessLayerUserRegisteration.ReadUsrMasterEdit(objEntityUsrRegistr);
+        txtUsrName.Text = dtUsrMastr.Rows[0]["USR_NAME"].ToString().Trim();
+        ddlUsrDsgn.Items.Clear();
+        DropDownBind();
+
+        UpdateTreeViewByUserId(strUsrId);
+        if (dtUsrMastr.Rows[0]["LOGIN_NAME"].ToString() != "")
+        { //FOR PASSWORD VISIBLITY
+            divShowPassword.Visible = false;
+            divCPassword.Visible = false;
+            divPassword.Visible = false;
+            hiddenUserEditId.Value = strUsrId;
+        
+        }
+        //0013 start
+        int intUserId=0, UserOrgId=0;
+        if (Session["USERID"] != null)
+        {
+            intUserId = Convert.ToInt32(Session["USERID"]);
+
+        }
+        else if (Session["USERID"] == null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+       
+        if (Session["ORGID"] != null)
+        {
+
+            UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+        }
+        else if (Session["ORGID"] == null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+        //0013 end
+
+        //ie IF  DESIGNATION IS ACTIVE
+        if (dtUsrMastr.Rows[0]["DSGN_STATUS"].ToString() == "1" && dtUsrMastr.Rows[0]["DSGN_CNCL_USR_ID"].ToString() == "")
+        {
+            if (ddlUsrDsgn.Items.FindByText(dtUsrMastr.Rows[0]["DSGN_NAME"].ToString()) != null)
+            {
+                ddlUsrDsgn.ClearSelection();
+                ddlUsrDsgn.Items.FindByText(dtUsrMastr.Rows[0]["DSGN_NAME"].ToString()).Selected = true;
+               
+                
+            }
+        }
+        else
+        {
+            ListItem lst = new ListItem(dtUsrMastr.Rows[0]["DSGN_NAME"].ToString(), dtUsrMastr.Rows[0]["DSGN_ID"].ToString());
+            ddlUsrDsgn.Items.Insert(1, lst);
+
+            SortDDL(ref this.ddlUsrDsgn);
+            ddlUsrDsgn.ClearSelection();
+            ddlUsrDsgn.Items.FindByText(dtUsrMastr.Rows[0]["DSGN_NAME"].ToString()).Selected = true;
+        }
+        //for job role 0013
+        int desig = Convert.ToInt32(ddlUsrDsgn.SelectedItem.Value);
+        objEntityUsrRegistr.UserDsgnId = desig;
+        ddlJobRole.Items.Clear();
+        if (dtUsrMastr.Rows[0]["JOBRL_ID"].ToString() != "" && dtUsrMastr.Rows[0]["JOBRL_NAME"].ToString() != "")
+        {
+            int intJobRleId = Convert.ToInt32(dtUsrMastr.Rows[0]["JOBRL_ID"].ToString());
+            DataTable dtJobRol = new DataTable();
+
+            dtJobRol = objBusinessLayerUserRegisteration.ReadJobRol(objEntityUsrRegistr);
+            if (dtJobRol.Rows.Count > 0)
+            {
+                for (int intcount = 0; intcount < dtJobRol.Rows.Count; intcount++)
+                {
+                    ddlJobRole.DataSource = dtJobRol;
+                    ddlJobRole.DataTextField = "JOBRL_NAME";
+                    ddlJobRole.DataValueField = "JOBRL_ID";
+                    ddlJobRole.DataBind();
+                    ddlJobRole.Items.FindByText(dtUsrMastr.Rows[0]["JOBRL_NAME"].ToString()).Selected = true;
+
+                }
+                ddlJobRole.Items.Insert(0, "--Select Job Role--");
+                ddlJobRole.Focus();
+            }
+            else
+            {
+                ddlJobRole.Items.Insert(0, "--No Job Role Avilable--");
+                ddlJobRole.Focus();
+            }
+        }
+        else
+        {
+            DataTable dtJobRol = new DataTable();
+
+            dtJobRol = objBusinessLayerUserRegisteration.ReadJobRol(objEntityUsrRegistr);
+            if (dtJobRol.Rows.Count > 0)
+            {
+                for (int intcount = 0; intcount < dtJobRol.Rows.Count; intcount++)
+                {
+                    ddlJobRole.DataSource = dtJobRol;
+                    ddlJobRole.DataTextField = "JOBRL_NAME";
+                    ddlJobRole.DataValueField = "JOBRL_ID";
+                    ddlJobRole.DataBind();
+
+                }
+                ddlJobRole.Items.Insert(0, "--Select Job Role--");
+                ddlJobRole.Focus();
+            }
+            else
+            {
+                ddlJobRole.Items.Insert(0, "--No Job Role Avilable--");
+                ddlJobRole.Focus();
+            }
+        }
+        int userRole = Convert.ToInt32(dtUsrMastr.Rows[0]["JOBRL_ID"].ToString());
+        //ReadUserRole(userRole,desig);
+        ///////////////
+        DesignationSelectIndexChange();
+
+        if (divLoginDetailsSection.Style["display"] != "none")
+        {
+            if (dtUsrMastr.Rows[0]["LOGIN_NAME"].ToString() != "")
+            {
+                cbxMustLogin.Checked = true;
+
+            }
+            else
+            {
+                cbxMustLogin.Checked = false;
+
+            }
+        }
+
+        if (divAutoWorkshopSection.Style["display"] != "none")
+        {
+            if (dtUsrMastr.Rows[0]["USR_DRVLIC_NUMBR"].ToString() != "")
+            {
+                cbxMustAutoWorkshop.Checked = true;
+
+            }
+            else
+            {
+                cbxMustAutoWorkshop.Checked = false;
+
+            }
+        }
+        ///////////////
+
+        txtJoiningDate.Text = dtUsrMastr.Rows[0]["JOINDATE"].ToString();
+
+        if (dtUsrMastr.Rows[0]["USRTYP_STATUS"].ToString() == "1")
+        {
+            if (ddlEmpType.Items.FindByValue(dtUsrMastr.Rows[0]["USRTYP_ID"].ToString()) != null)
+            {
+                ddlEmpType.ClearSelection();
+                ddlEmpType.Items.FindByValue(dtUsrMastr.Rows[0]["USRTYP_ID"].ToString()).Selected = true;
+
+            }
+        }
+        else
+        {
+            ListItem lst = new ListItem(dtUsrMastr.Rows[0]["USRTYP_NAME"].ToString(), dtUsrMastr.Rows[0]["USRTYP_ID"].ToString());
+            ddlEmpType.Items.Insert(1, lst);
+
+            SortDDL(ref this.ddlEmpType);
+            ddlEmpType.ClearSelection();
+            ddlEmpType.Items.FindByValue(dtUsrMastr.Rows[0]["USRTYP_ID"].ToString()).Selected = true;
+        }
+        txtNationalIdNmbr.Text = dtUsrMastr.Rows[0]["USR_NTNLID_NUMBR"].ToString().Trim();
+        txtEmployeeCode.Text = dtUsrMastr.Rows[0]["USR_CODE"].ToString().ToUpper().Trim();
+        txtUsrMob.Text = dtUsrMastr.Rows[0]["USR_MOBILE"].ToString().Trim();
+        txtUsrEmail.Text = dtUsrMastr.Rows[0]["USR_EMAIL"].ToString().Trim();
+        hiddenUserImage.Value = dtUsrMastr.Rows[0]["USR_IMAGE"].ToString();
+        hiddenImageName.Value = dtUsrMastr.Rows[0]["USR_IMAGE"].ToString();
+        if (hiddenUserImage.Value != null && hiddenUserImage.Value != "")
+        {
+            //    divImageEdit.Visible = true;
+            string strImagePath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC) + hiddenUserImage.Value;
+            // string strImage = "<a style=\"font-family: Calibri;font-size:13px;\" href=\"" + strImagePath + "\">Click to View Image Uploaded</a>";
+            string strImage = "<a style=\"font-family: Calibri;font-size:13px;\" class=\"lightbox\" href=\"#goofy\" >Click to View Image Uploaded</a>";
+            strImage += " <div class=\"lightbox-target\" id=\"goofy\">";
+            strImage += " <img src=\"" + strImagePath + "\"/>";
+            strImage += " <a class=\"lightbox-close\" href=\"#\"></a>";
+            strImage += "</div>";
+            divImageDisplay.InnerHtml = strImage;
+
+        }
+
+
+        int intUsrStatus = Convert.ToInt32(dtUsrMastr.Rows[0]["USR_STATUS"]);
+        int intMailSts = Convert.ToInt32(dtUsrMastr.Rows[0]["USR_MAILSND_STS"]);
+        int intMailReadSts = Convert.ToInt32(dtUsrMastr.Rows[0]["USR_MAILREAD_STS"]);
+
+
+        if (intUsrStatus == 1)
+        {
+            cbxStatus.Checked = true;
+        }
+        else
+        {
+            cbxStatus.Checked = false;
+        }
+
+        if (intMailSts == 1)
+        {
+            cbxMailSendStatus.Checked = true;
+        }
+        else
+        {
+            cbxMailSendStatus.Checked = false;
+        }
+        if (intMailReadSts == 1)
+        {
+            cbxReadMail.Checked = true;
+        }
+        else
+        {
+            cbxReadMail.Checked = false;
+        }
+
+
+        hiddenDsgnContrl.Value = dtUsrMastr.Rows[0]["DSGN_CONTROL"].ToString();
+
+        if (hiddenDsgnContrl.Value == "C")
+        {
+            if (dtUsrMastr.Rows[0]["CORPRT_STATUS"].ToString() == "1" && dtUsrMastr.Rows[0]["CORPRT_CNCL_USR_ID"].ToString() == "")
+            {
+                ddlUsrCorporate.ClearSelection();
+                ddlUsrCorporate.Items.FindByValue(dtUsrMastr.Rows[0]["CORPRT_ID"].ToString()).Selected = true;
+
+            }
+
+            else
+            {
+                ListItem lstc = new ListItem(dtUsrMastr.Rows[0]["CORPRT_NAME"].ToString(), dtUsrMastr.Rows[0]["CORPRT_ID"].ToString());
+                ddlUsrCorporate.Items.Insert(1, lstc);
+
+                SortDDL(ref this.ddlUsrCorporate);
+                ddlUsrCorporate.ClearSelection();
+                ddlUsrCorporate.Items.FindByText(dtUsrMastr.Rows[0]["CORPRT_NAME"].ToString()).Selected = true;
+            }
+
+            
+
+
+            if (dtUsrMastr.Rows[0]["CORPRT_ID"].ToString() != "")
+            {
+                int intCorpId = Convert.ToInt32(dtUsrMastr.Rows[0]["CORPRT_ID"].ToString());
+                LicenseTypeLoad(intCorpId, Convert.ToInt32(strUsrId));         //  This has already loaded in LoadUsr() when DsgnControl is 'C' of user but if user is dsgnContrl'o' and dsgn of user for editing is 'C' then not loaded
+                AccommodationLoad(intCorpId);
+                DropDownBindDepartment(dtUsrMastr.Rows[0]["CORPRT_ID"].ToString());
+                ChangeDDLCorpOffc();
+                divDept.Visible = true;
+                divDiv.Visible = true;//0013
+                bussiDiv.Visible = true;//0013
+
+                BindSubBusUnt(UserOrgId, intCorpId, intUserId);//0013
+            }
+            if (dtUsrMastr.Rows[0]["CPRDEPT_ID"].ToString() != "")
+            {
+                if (dtUsrMastr.Rows[0]["CPRDEPT_STATUS"].ToString() == "1" && dtUsrMastr.Rows[0]["CPRDEPT_CNCL_USR_ID"].ToString() == "")
+                {
+                    //0013
+                    //ddlDepartment.ClearSelection();
+                    //ddlDepartment.Items.FindByText(dtUsrMastr.Rows[0]["CPRDEPT_NAME"].ToString()).Selected = true;
+                    rbtnCropDept.Items.FindByText(dtUsrMastr.Rows[0]["CPRDEPT_NAME"].ToString()).Selected = true;
+                }
+                else
+                {
+                    ListItem lstD = new ListItem(dtUsrMastr.Rows[0]["CPRDEPT_NAME"].ToString(), dtUsrMastr.Rows[0]["CPRDEPT_ID"].ToString());
+                    //0013
+                    //ddlDepartment.Items.Insert(0, lstD);
+
+                    //SortDDL(ref this.ddlDepartment);
+                    //ddlDepartment.ClearSelection();
+                    //ddlDepartment.Items.FindByText(dtUsrMastr.Rows[0]["CPRDEPT_NAME"].ToString()).Selected = true;
+                    rbtnCropDept.Items.FindByText(dtUsrMastr.Rows[0]["CPRDEPT_NAME"].ToString()).Selected = true;
+                }
+            }
+            for (int intCount = 0; intCount < dtUsrMastr.Rows.Count; intCount++)
+            {
+                foreach (ListItem item in cbxlCorporateDvsn.Items)
+                {
+                    if (item.Value == dtUsrMastr.Rows[intCount]["CPRDIV_ID"].ToString())
+                    {
+                        item.Selected = true;
+                    }
+                }
+            }
+            mvUsrCorporate.Visible = true;
+            mvUsrCorporate.SetActiveView(vSingle);
+        }
+
+        else if (hiddenDsgnContrl.Value == "O")
+        {
+            for (int intCount = 0; intCount < dtUsrMastr.Rows.Count; intCount++)
+            {
+                foreach (ListItem item in cbxlCorporateOffc.Items)
+                {
+                    if (item.Text == dtUsrMastr.Rows[intCount]["CORPRT_NAME1"].ToString())
+                    {
+                        item.Selected = true;
+                    }
+                }
+            }
+            mvUsrCorporate.Visible = true;
+            mvUsrCorporate.SetActiveView(vMultiple);
+        }
+
+        if (divLoginDetailsSection.Style["display"] != "none")
+        {
+            txtLoginName.Text = dtUsrMastr.Rows[0]["LOGIN_NAME"].ToString();
+
+            int intLimitedUser = Convert.ToInt32(dtUsrMastr.Rows[0]["USR_LMTD"]);
+            int intPaswdExpiry = Convert.ToInt32(dtUsrMastr.Rows[0]["USR_PSWD_EXPIRY"]);
+
+            if (intLimitedUser == 1)
+            {
+                cbxLimitedUser.Checked = true;
+            }
+            else
+            {
+                cbxLimitedUser.Checked = false;
+            }
+            if (intPaswdExpiry == 1)
+            {
+                cbxPswExpiry.Checked = true;
+            }
+            else
+            {
+                cbxPswExpiry.Checked = false;
+            }
+        }
+        if (divAutoWorkshopSection.Style["display"] != "none")
+        {
+            txtLicenceNumbr.Text = dtUsrMastr.Rows[0]["USR_DRVLIC_NUMBR"].ToString().Trim();
+            txtLicenseExpDate.Text = dtUsrMastr.Rows[0]["LICEXPDATE"].ToString().Trim();
+
+            //ie IF  ACCOMMMODATION IS ACTIVE
+            if (dtUsrMastr.Rows[0]["ACCMDTN_ID"].ToString() != "")
+            {
+                if (dtUsrMastr.Rows[0]["ACCMDTN_STATUS"].ToString() == "1" && dtUsrMastr.Rows[0]["ACCMDTN_CNCL_USR_ID"].ToString() == "")
+                {
+                    if (ddlAccommodatn.Items.FindByValue(dtUsrMastr.Rows[0]["ACCMDTN_ID"].ToString()) != null)
+                    {
+                        ddlAccommodatn.ClearSelection();
+                        ddlAccommodatn.Items.FindByValue(dtUsrMastr.Rows[0]["ACCMDTN_ID"].ToString()).Selected = true;
+                    }
+                }
+                else
+                {
+                    ListItem lst = new ListItem(dtUsrMastr.Rows[0]["ACCMDTN_NAME"].ToString(), dtUsrMastr.Rows[0]["ACCMDTN_ID"].ToString());
+                    ddlAccommodatn.Items.Insert(1, lst);
+
+                    SortDDL(ref this.ddlAccommodatn);
+                    ddlAccommodatn.ClearSelection();
+                    ddlAccommodatn.Items.FindByValue(dtUsrMastr.Rows[0]["ACCMDTN_ID"].ToString()).Selected = true;
+                }
+            }
+            int intDutyRoster = Convert.ToInt32(dtUsrMastr.Rows[0]["ALLOW_DUTYROSTER"]);
+            if (intDutyRoster == 1)
+            {
+                cbxDutyRoster.Checked = true;
+            }
+            else
+            {
+                cbxDutyRoster.Checked = false;
+            }
+
+            hiddenUserLicenseCopy.Value = dtUsrMastr.Rows[0]["USR_DRVLIC_CPY"].ToString().Trim();
+            hiddenLicenseCopyName.Value = dtUsrMastr.Rows[0]["USR_DRVLIC_CPY"].ToString().Trim();
+
+            if (hiddenUserLicenseCopy.Value != null && hiddenUserLicenseCopy.Value != "")
+            {
+                string strFileExt;
+
+                strFileExt = hiddenUserLicenseCopy.Value.Substring(hiddenUserLicenseCopy.Value.LastIndexOf('.') + 1).ToLower();
+                //    divImageEdit.Visible = true;
+                string strImagePath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY) + hiddenUserLicenseCopy.Value;
+                string strHtmlLicCopy = "";
+                if (strFileExt == "png" || strFileExt == "gif" || strFileExt == "jpeg" || strFileExt == "jpg" || strFileExt == "bmp")
+                {
+                    strHtmlLicCopy = "<a style=\"font-family: Calibri;font-size:13px;\" class=\"lightbox\" href=\"#goofyLC\" >Click to View License Copy Uploaded</a>";
+                    strHtmlLicCopy += " <div class=\"lightbox-target\" id=\"goofyLC\">";
+                    strHtmlLicCopy += " <img src=\"" + strImagePath + "\"/>";
+                    strHtmlLicCopy += " <a class=\"lightbox-close\" href=\"#\"></a>";
+                    strHtmlLicCopy += "</div>";
+                }
+                else
+                {
+                    strHtmlLicCopy = "<a style=\"font-family: Calibri;font-size:13px;\" target=\"_blank\" href=\"" + strImagePath + "\" >Click to View License Copy Uploaded</a>";
+
+                }
+                divLicenseCopyDisplay.InnerHtml = strHtmlLicCopy;
+
+            }
+
+            DataTable dtLicType = objBusinessLayerUserRegisteration.ReadLicenseType_ByUsrId(objEntityUsrRegistr);
+
+            if (dtLicType.Rows.Count > 0)
+            {
+
+                for (int intCount = 0; intCount < dtLicType.Rows.Count; intCount++)
+                {
+
+                    hiddenLicenseTypeId.Value = hiddenLicenseTypeId.Value + dtLicType.Rows[intCount]["VHCLLCNSTYP_ID"].ToString().Trim() + ",";
+                }
+            }
+        }
+    }
+    public void UserTypeLoad()
+    {
+        ddlEmpType.Items.Clear();
+        clsBusinessLayer objBusiness = new clsBusinessLayer();
+        DataTable dtUserTypes = new DataTable();
+        dtUserTypes = objBusiness.ReadUserTypeMaster();
+        if (dtUserTypes.Rows.Count > 0)
+        {
+            ddlEmpType.DataSource = dtUserTypes;
+            ddlEmpType.DataTextField = "USRTYP_NAME";
+            ddlEmpType.DataValueField = "USRTYP_ID";
+            ddlEmpType.DataBind();
+        }
+        ddlEmpType.Items.Insert(0, "--SELECT--");
+
+    }
+    //Assign Designation details from GN_DESIGNATIONS table to dropdownlist based on control.
+    public void DropDownBind()
+    {
+        ddlUsrDsgn.Items.Clear();
+        string strUsrDsgnId = "", strUserDsgnName = "";
+        int intUserLimited = Convert.ToInt32(USERLIMITED.ISLIMITED);
+
+        clsEntityLayerDesignation objEntityDsgnation = new clsEntityLayerDesignation();
+        clsBusinessLayerDesignation objBusinessLayerDsgnMaster = new clsBusinessLayerDesignation();
+        DataTable dtUserDetails = new DataTable();
+
+
+
+        int intUserId = 0;
+        if (Session["USERID"] != null)
+        {
+            intUserId = Convert.ToInt32(Session["USERID"].ToString());
+        }
+        else
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+        objEntityDsgnation.DesignationUserId = intUserId;
+        dtUserDetails = objBusinessLayerDsgnMaster.ReadIfUserLimitedByUsrId(objEntityDsgnation);
+        if (dtUserDetails.Rows.Count > 0)
+        {
+            intUserLimited = Convert.ToInt32(dtUserDetails.Rows[0]["USR_LMTD"].ToString());
+            strUsrDsgnId = dtUserDetails.Rows[0]["DSGN_ID"].ToString();
+            strUserDsgnName = dtUserDetails.Rows[0]["DSGN_NAME"].ToString();
+        }
+        if (intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED))
+        {
+            clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+            DataTable dtDsgnDetails = new DataTable();
+            if (Session["DSGN_CONTROL"] != null)
+            {
+                objEntityUsrRegistr.DsgControl = Convert.ToChar(Session["DSGN_CONTROL"].ToString());
+            }
+            else
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+            if (Session["ORGID"] != null)
+            {
+
+                objEntityUsrRegistr.UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+            }
+            else if (Session["ORGID"] == null)
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+            dtDsgnDetails = objBusinessLayerUserRegisteration.ReadDsgnDetails(objEntityUsrRegistr);
+
+
+            ddlUsrDsgn.DataSource = dtDsgnDetails;
+            ddlUsrDsgn.DataTextField = "DSGN_NAME";
+            ddlUsrDsgn.DataValueField = "DSGN_ID";
+            ddlUsrDsgn.DataBind();
+            ddlUsrDsgn.Items.Insert(0, "--SELECT--");
+        }
+        else
+        {//IF LIMITED USER
+            clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+            ListItem liDsgn = new ListItem();
+            //string strUsrId = "";
+            liDsgn.Text = strUserDsgnName;
+            liDsgn.Value = strUsrDsgnId;
+            ddlUsrDsgn.Items.Add(liDsgn);
+            DesignationSelectIndexChange();
+            objEntityUsrRegistr.UsrRegistrationId = intUserId;
+            DataTable dtUsrMastr = objBusinessLayerUserRegisteration.ReadUsrMasterEdit(objEntityUsrRegistr);         
+            objEntityUsrRegistr.UserDsgnId = Convert.ToInt32(strUsrDsgnId);
+            DataTable dtJobRol= new DataTable();
+             dtJobRol = objBusinessLayerUserRegisteration.ReadJobRol(objEntityUsrRegistr);
+            if (dtJobRol.Rows.Count > 0)
+            {
+                for (int intcount = 0; intcount < dtJobRol.Rows.Count; intcount++)
+                {
+                    ddlJobRole.DataSource = dtJobRol;
+                    ddlJobRole.DataTextField = "JOBRL_NAME";
+                    ddlJobRole.DataValueField = "JOBRL_ID";
+                    ddlJobRole.DataBind();
+                    //ddlJobRole.Items.FindByText(dtUsrMastr.Rows[0]["JOBRL_NAME"].ToString()).Selected = true;
+
+                }
+                ddlJobRole.Items.Insert(0, "--Select Job Role--");
+                ddlJobRole.Focus();
+            }
+            else
+            {
+                ddlJobRole.Items.Insert(0, "--No Job Role Avilable--");
+                ddlJobRole.Focus();
+            }
+        }
+        
+    }
+    public void DropDownBindDepartment(string strCrptId = null)
+    {
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+        if (strCrptId == null)
+        {
+            if (ddlUsrCorporate.SelectedItem.Text.ToString() != "--SELECT--")
+            {
+                objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(ddlUsrCorporate.SelectedItem.Value.ToString());
+                DataTable dtDeptDetails = new DataTable();
+                dtDeptDetails = objBusinessLayerUserRegisteration.ReadCrptDeptDetails(objEntityUsrRegistr);
+                //radiobuttonlist binding 0013
+
+                rbtnCropDept.DataTextField = "CPRDEPT_NAME";
+                rbtnCropDept.DataValueField = "CPRDEPT_ID";
+                rbtnCropDept.DataSource = dtDeptDetails;
+                rbtnCropDept.DataBind();
+                rbtnCropDept.Enabled = true;
+                //ddlDepartment.DataSource = dtDeptDetails;
+                //ddlDepartment.DataTextField = "CPRDEPT_NAME";
+                //ddlDepartment.DataValueField = "CPRDEPT_ID";
+                //ddlDepartment.DataBind();
+                //ddlDepartment.Items.Insert(0, "--SELECT--");
+                //ddlDepartment.Enabled = true;
+            }
+            else
+            {
+                objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(ddlUsrCorporate.SelectedItem.Value.ToString());
+                DataTable dtDeptDetails = new DataTable();
+                dtDeptDetails = objBusinessLayerUserRegisteration.ReadCrptDeptDetails(objEntityUsrRegistr);
+                //radiobuttonlist binding 0013
+
+                rbtnCropDept.DataTextField = "CPRDEPT_NAME";
+                rbtnCropDept.DataValueField = "CPRDEPT_ID";
+                rbtnCropDept.DataSource = dtDeptDetails;
+                rbtnCropDept.DataBind();
+                rbtnCropDept.Enabled = true;
+
+
+                //ddlDepartment.Items.Clear();
+                //ddlDepartment.Items.Insert(0, "--SELECT--");
+            }
+        }
+        else
+        {
+            objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(strCrptId);
+            DataTable dtDeptDetails = new DataTable();
+            dtDeptDetails = objBusinessLayerUserRegisteration.ReadCrptDeptDetails(objEntityUsrRegistr);
+            //radiobuttonlist 0013
+            rbtnCropDept.DataTextField = "CPRDEPT_NAME";
+            rbtnCropDept.DataValueField = "CPRDEPT_ID";
+            rbtnCropDept.DataSource = dtDeptDetails;
+            rbtnCropDept.DataBind();
+            rbtnCropDept.Enabled = true;
+            //ddlDepartment.DataSource = dtDeptDetails;
+            //ddlDepartment.DataTextField = "CPRDEPT_NAME";
+            //ddlDepartment.DataValueField = "CPRDEPT_ID";
+            //ddlDepartment.DataBind();
+            //ddlDepartment.Items.Insert(0, "--SELECT--");
+            //ddlDepartment.Enabled = true;
+        }
+
+
+    }
+    //0013 sub bussiness unit checkboxlist bind
+    public void BindSubBusUnt(int orgId=0,int corpId=0,int usrId=0)
+    {
+        bussiDiv.Visible = true;
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+        if (orgId == 0 || corpId == 0 || usrId == 0)
+        {
+            if (ddlUsrCorporate.SelectedItem.Text.ToString() != "--SELECT--" && ddlUsrCorporate.SelectedItem.Text.ToString() !="")
+            {
+                objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(ddlUsrCorporate.SelectedItem.Value.ToString());
+                DataTable dtSubBussUnit = new DataTable();
+                dtSubBussUnit = objBusinessLayerUserRegisteration.ReadSubBusUnt(objEntityUsrRegistr);
+                if (dtSubBussUnit.Rows.Count > 0)
+                {
+                    cbxBussiness.DataSource = dtSubBussUnit;
+                    cbxBussiness.DataTextField = "CORPRT_NAME";
+                    cbxBussiness.DataValueField = "CORPRT_ID";
+                    cbxBussiness.DataBind();
+                    cbxBussiness.Enabled = true;
+                }
+                else
+                {
+                    bussiDiv.Visible = false;
+                }
+
+            }
+            else
+            {
+                bussiDiv.Visible = false;
+            }
+        }
+        else 
+        {
+            if (ddlUsrCorporate.SelectedItem.Text.ToString() != "--SELECT--")
+            {
+                objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(ddlUsrCorporate.SelectedItem.Value.ToString());
+                DataTable dtSubBussUnit = new DataTable();
+                dtSubBussUnit = objBusinessLayerUserRegisteration.ReadSubBusUnt(objEntityUsrRegistr);
+                if (dtSubBussUnit.Rows.Count > 0)
+                {
+                    cbxBussiness.DataSource = dtSubBussUnit;
+                    cbxBussiness.DataTextField = "CORPRT_NAME";
+                    cbxBussiness.DataValueField = "CORPRT_ID";
+                    cbxBussiness.DataBind();
+                    cbxBussiness.Enabled = true;
+                }
+                else
+                {
+                    bussiDiv.Visible = false;
+                }
+
+            }
+            else
+            {
+                bussiDiv.Visible = false;
+            }
+            DataTable dtSubBussUnit1 = new DataTable();
+            objEntityUsrRegistr.UserId = usrId;
+            objEntityUsrRegistr.UserOrgId = orgId;
+            objEntityUsrRegistr.UserCrprtId = corpId;
+            dtSubBussUnit1 = objBusinessLayerUserRegisteration.ReadSubBuss(objEntityUsrRegistr);
+            for (int intCount = 0; intCount < dtSubBussUnit1.Rows.Count; intCount++)
+            {
+                foreach (ListItem item in cbxBussiness.Items)
+                {
+                    if (item.Value == dtSubBussUnit1.Rows[intCount]["SUBCORPRT_ID"].ToString())
+                    {
+                        item.Selected = true;
+                    }
+                }
+            }
+        }
+    }
+    //0013
+    private List<clsEntityLayerJobRlRole> Merge(List<clsEntityLayerJobRlRole> objlisDsgnRolMainDtls, List<clsEntityLayerJobRlRole> objlisDsgnRolChildrenDtls)
+    {
+
+        List<clsEntityLayerJobRlRole> objlisDsgnRol = null;
+        objlisDsgnRol = new List<clsEntityLayerJobRlRole>();
+        foreach (clsEntityLayerJobRlRole objDsgnRolMainDtls in objlisDsgnRolMainDtls)
+        {
+            string strchild = "";
+            foreach (clsEntityLayerJobRlRole objDsgnRolChildrenDtls in objlisDsgnRolChildrenDtls)
+            {
+
+                if (objDsgnRolMainDtls.UsrRolId == objDsgnRolChildrenDtls.UsrRolId)
+                {
+                    if (strchild != "")
+                    {
+                        strchild = strchild + "-" + objDsgnRolChildrenDtls.strChildRolId;
+                    }
+                    else
+                    {
+
+                        strchild = objDsgnRolChildrenDtls.strChildRolId;
+                    }
+                }
+            }
+            objDsgnRolMainDtls.strChildRolId = strchild;
+
+        }
+        return objlisDsgnRolMainDtls;
+
+    }
+    //
+    protected void btnAdd_Click(object sender, EventArgs e)
+      {
+        Button clickedButton = sender as Button;
+
+
+        clsCommonLibrary objCommon = new clsCommonLibrary();
+
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+        
+        if (Session["ORGID"] != null)
+        {
+            objEntityUsrRegistr.UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+        }
+        else
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+        objEntityUsrRegistr.UserEmail = txtUsrEmail.Text.Trim();
+        if (divLoginDetailsSection.Style["display"] != "none")
+        {
+            if (cbxMustLogin.Checked == true)
+            {
+
+                objEntityUsrRegistr.LoginName = txtLoginName.Text.ToUpper().Trim();
+            }
+
+
+        }
+
+        objEntityUsrRegistr.UserCode = txtEmployeeCode.Text.ToUpper().Trim();
+        string strEmailCount = "0";
+        if (objEntityUsrRegistr.UserEmail != "")//EMAIL CAN BE NULL SO THIS CHECKING
+        {
+            strEmailCount = objBusinessLayerUserRegisteration.CheckDupUserEmailIns(objEntityUsrRegistr);
+        }
+
+        if (strEmailCount == "0")
+        {
+            string strLNameCount = "0";
+            if (objEntityUsrRegistr.LoginName != "")//LOGIN NAME CAN BE NULL SO THIS CHECKING
+            {
+                strLNameCount = objBusinessLayerUserRegisteration.CheckDupUserLoginName(objEntityUsrRegistr);
+            }
+
+
+            if (strLNameCount == "0")
+            {
+                string strEmpCodeCount = "0";
+                if (objEntityUsrRegistr.UserCode != "")//UserCode CAN BE NULL SO THIS CHECKING
+                {
+                    strEmpCodeCount = objBusinessLayerUserRegisteration.CheckDupUserCode(objEntityUsrRegistr);
+                }
+                if (strEmpCodeCount == "0")
+                {
+                    
+                    List<clsEntityLayerUserVhclType> objlisUsrVhclLicTypDtls = new List<clsEntityLayerUserVhclType>();
+
+                    objEntityUsrRegistr.UserName = txtUsrName.Text.ToUpper().Trim();
+                    objEntityUsrRegistr.UserDsgnId = Convert.ToInt32(ddlUsrDsgn.SelectedItem.Value.ToString());
+                    objEntityUsrRegistr.JoiningDate = objCommon.textToDateTime(txtJoiningDate.Text.Trim());
+                    objEntityUsrRegistr.UserRoleId = Convert.ToInt32(ddlJobRole.SelectedItem.Value.ToString());//0013
+
+                    objEntityUsrRegistr.EmployeeTypId = Convert.ToInt32(ddlEmpType.SelectedItem.Value.ToString());
+                    objEntityUsrRegistr.NationalIdNumber = txtNationalIdNmbr.Text.Trim();
+                    objEntityUsrRegistr.UserMobile = txtUsrMob.Text.Trim();
+
+
+
+                    if (Session["USERID"] != null)
+                    {
+                        objEntityUsrRegistr.UserId = Convert.ToInt32(Session["USERID"].ToString());
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Default.aspx");
+                    }
+
+                    if (cbxStatus.Checked)
+                    {
+                        objEntityUsrRegistr.UserStatus = 1;
+                    }
+                    else
+                    {
+                        objEntityUsrRegistr.UserStatus = 0;
+                    }
+                    if (cbxMailSendStatus.Checked)
+                    {
+                        objEntityUsrRegistr.MailSendSts = 1;
+                    }
+                    else
+                    {
+                        objEntityUsrRegistr.MailSendSts = 0;
+                    }
+
+
+                    if (cbxReadMail.Checked)
+                    {
+                        objEntityUsrRegistr.MailReadSts = 1;
+                    }
+                    else
+                    {
+                        objEntityUsrRegistr.MailReadSts = 0;
+                    }
+
+
+                    if (divLoginDetailsSection.Style["display"] != "none")
+                    {
+                        if (cbxMustLogin.Checked == true)
+                        {
+                            objEntityUsrRegistr.UserPsw = txtUsrPwd.Text.Trim();
+                            if (cbxLimitedUser.Checked)
+                            {
+                                objEntityUsrRegistr.LimitedUser = 1;
+                            }
+                            else
+                            {
+                                objEntityUsrRegistr.LimitedUser = 2;
+                            }
+                            if (cbxPswExpiry.Checked)
+                            {
+                                objEntityUsrRegistr.PasswordExpiry = 1;
+                            }
+                            else
+                            {
+                                objEntityUsrRegistr.PasswordExpiry = 2;
+                            }
+                        }
+                    }
+
+                    if (divAutoWorkshopSection.Style["display"] != "none")
+                    {
+                        if (cbxMustAutoWorkshop.Checked == true)
+                        {
+                            objEntityUsrRegistr.LicenseNumber = txtLicenceNumbr.Text.Trim();
+                            objEntityUsrRegistr.LicenseExpiryDate = objCommon.textToDateTime(txtLicenseExpDate.Text.Trim());
+                            if (ddlAccommodatn.SelectedValue.ToString() != "--SELECT--")
+                            {
+                                objEntityUsrRegistr.AccommodationId = Convert.ToInt32(ddlAccommodatn.SelectedValue.ToString());
+                            }
+                            if (cbxDutyRoster.Checked)
+                            {
+                                objEntityUsrRegistr.AllowDutyRoster = 1;
+                            }
+                            else
+                            {
+                                objEntityUsrRegistr.AllowDutyRoster = 0;
+                            }
+                            if (hiddenLicenseTypeId.Value != "")
+                            {
+
+                                string strLicTypList = hiddenLicenseTypeId.Value;
+                                // Split string on spaces.
+                                // ... This will separate all the words.
+                                string[] strArrLicenseTypes = strLicTypList.Split(',');
+                                foreach (string strLicTyp in strArrLicenseTypes)
+                                {
+                                    if (strLicTyp != "")
+                                    {
+                                        clsEntityLayerUserVhclType objEntityUsrVhclType = new clsEntityLayerUserVhclType();
+                                        objEntityUsrVhclType.LicTypeId = Convert.ToInt32(strLicTyp);
+                                        objlisUsrVhclLicTypDtls.Add(objEntityUsrVhclType);
+                                    }
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    //for sub business unit section 0013
+                    List<clsEntityLayerUserSubBusness> objlisUserSubBusnessDtls = new List<clsEntityLayerUserSubBusness>();
+                    int intDefaultCorpId = 0;
+                    foreach (ListItem item in cbxBussiness.Items)
+                    {
+                        if (item.Selected)
+                        {
+                            if (intDefaultCorpId == 0)
+                            {
+                                intDefaultCorpId = Convert.ToInt32(item.Value);
+                            }
+                            clsEntityLayerUserSubBusness objEntityUsrSubBus = new clsEntityLayerUserSubBusness();
+                            objEntityUsrSubBus.SubBusUntId = Convert.ToInt32(item.Value);
+                            objEntityUsrSubBus.DfltSubBusUntId = intDefaultCorpId;
+                            if (Session["ORGID"] != null)
+                            {
+                                objEntityUsrSubBus.OrgId = Convert.ToInt32(Session["ORGID"].ToString());
+                            }
+                            else
+                            {
+                                Response.Redirect("~/Default.aspx");
+                            }
+
+                            objlisUserSubBusnessDtls.Add(objEntityUsrSubBus);
+                        }
+                    }
+                    //////
+                    objEntityUsrRegistr.NextId = Convert.ToInt32(clsCommonLibrary.MasterId.UserId);
+                    DataTable dtNextId = objBusinessLayerUserRegisteration.ReadNextId(objEntityUsrRegistr);
+                    objEntityUsrRegistr.UsrRegistrationId = Convert.ToInt32(dtNextId.Rows[0]["MST_NEXT_VALUE"]);
+
+
+                    //FOR USER IMAGE
+                    if (FileUploadProPic.HasFile)
+                    {
+                        // GET FILE EXTENSION
+
+                        string strFileExt;
+
+                        strFileExt = FileUploadProPic.FileName.Substring(FileUploadProPic.FileName.LastIndexOf('.') + 1).ToLower();
+
+                        int intAppModSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.Section.USER_MASTER);
+                        int intImageSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                        string strImageName = intAppModSection.ToString() + "_" + intImageSection.ToString() + "_" + objEntityUsrRegistr.UsrRegistrationId.ToString() + "." + strFileExt;
+                        objEntityUsrRegistr.ImagePath = strImageName;
+
+                    }
+                    if (divAutoWorkshopSection.Style["display"] != "none")
+                    {
+                        if (cbxMustAutoWorkshop.Checked == true)
+                        {
+                            //FOR LICENSE COPY
+                            if (FileUploadLicenseCopy.HasFile)
+                            {
+                                // GET FILE EXTENSION
+
+                                string strFileExt;
+
+                                strFileExt = FileUploadLicenseCopy.FileName.Substring(FileUploadLicenseCopy.FileName.LastIndexOf('.') + 1).ToLower();
+
+                                int intAppModSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.Section.USER_MASTER);
+                                int intImageSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                                string strImageName = intAppModSection.ToString() + "_" + intImageSection.ToString() + "_" + objEntityUsrRegistr.UsrRegistrationId.ToString() + "." + strFileExt;
+                                objEntityUsrRegistr.LicenseCopyPath = strImageName;
+
+                            }
+                        }
+                    }
+
+                    int intTreeAppAdminVisible = 0, intTreeSFAVisible = 0, intTreeAWMSVisible = 0, intTreeGMSVisible = 0;
+                    List<clsEntityLayerEmployeeAppRole> objlisJobRlAppRol = new List<clsEntityLayerEmployeeAppRole>();
+                    foreach (ListItem itemCheckBoxModules in cbxlCompzitModules.Items)
+                    {
+
+                        if (itemCheckBoxModules.Selected)
+                        {
+                            clsEntityLayerEmployeeAppRole objEmpRlAppRol = new clsEntityLayerEmployeeAppRole();
+
+                            // If the item is selected.
+
+                            if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.APP_ADMINSTRATION))
+                            {
+                                intTreeAppAdminVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            else if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.SALES_FORCE_AUTOMATION))
+                            {
+                                intTreeSFAVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            else if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.AUTO_WORKSHOP_MANAGEMENT_SYSTEM))
+                            {
+                                intTreeAWMSVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            else if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.GUARANTEE_MANAGEMENT_SYSTEM))
+                            {
+                                intTreeGMSVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            objEmpRlAppRol.App_Id = Convert.ToInt32(itemCheckBoxModules.Value);
+                            objlisJobRlAppRol.Add(objEmpRlAppRol);
+                        }
+                        else
+                        {
+                            // Item is not selected, do something else.
+                        }
+                    }
+
+                    List<clsEntityLayerEmployeeRole> objlisDsgnRol = new List<clsEntityLayerEmployeeRole>();
+
+                    if (intTreeAppAdminVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_AppAdmin = TreeViewCompzit_AppAdminstration.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_AppAdmin.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_AppAdmin = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_AppAdmin = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_Online in objNodeCollection_COMPZIT_AppAdmin)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_Online.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_AppAdmin.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_AppAdmin.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolAppAdministration = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolAppAdministration = Merge(objlisDsgnRolMainDtls_AppAdmin, objlisDsgnRolChildrenDtls_AppAdmin);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolAppAdministration)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+                        else
+                        {
+                            // lblSelectedNodes.Text = "Select Node(s).";
+                        }
+
+                    }
+                    if (intTreeSFAVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_SalesAutmtn = TreeViewCompzit_SalesAutomation.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_SalesAutmtn.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_SFA = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_SFA = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_SFA in objNodeCollection_COMPZIT_SalesAutmtn)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_SFA.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_SFA.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_SFA.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolSFA = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolSFA = Merge(objlisDsgnRolMainDtls_SFA, objlisDsgnRolChildrenDtls_SFA);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolSFA)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+
+                    }
+                    if (intTreeAWMSVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_WorkshopMngmnt = TreeViewCompzit_AutoWorkshopManagement.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_WorkshopMngmnt.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_WMS = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_WMS = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_WMS in objNodeCollection_COMPZIT_WorkshopMngmnt)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_WMS.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_WMS.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_WMS.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolWMS = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolWMS = Merge(objlisDsgnRolMainDtls_WMS, objlisDsgnRolChildrenDtls_WMS);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolWMS)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+
+                    }
+                    if (intTreeGMSVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_GuaranteeManagement = TreeViewCompzit_GuaranteeManagement.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_GuaranteeManagement.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_GMS = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_GMS = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_GMS in objNodeCollection_COMPZIT_GuaranteeManagement)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_GMS.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_GMS.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_GMS.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolWMS = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolWMS = Merge(objlisDsgnRolMainDtls_GMS, objlisDsgnRolChildrenDtls_GMS);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolWMS)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+
+                    }
+
+
+                    // when designation Control is Organisation
+                    if (hiddenDsgnContrl.Value == "O")
+                    {
+
+                        List<clsEntityLayerUserCorporate> objlisUsrCrprtDtls = new List<clsEntityLayerUserCorporate>();
+                        foreach (ListItem item in cbxlCorporateOffc.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                clsEntityLayerUserCorporate objEntityUsrCrprt = new clsEntityLayerUserCorporate();
+                                objEntityUsrCrprt.UsrCrprtId = Convert.ToInt32(item.Value);
+                                if (Session["ORGID"] != null)
+                                {
+                                    objEntityUsrCrprt.UsrOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+                                }
+                                else
+                                {
+                                    Response.Redirect("~/Default.aspx");
+                                }
+
+                                objlisUsrCrprtDtls.Add(objEntityUsrCrprt);
+                            }
+                        }
+
+                        objBusinessLayerUserRegisteration.InsertUserRegisterationDetail(objEntityUsrRegistr, objlisUsrCrprtDtls, null, objlisUsrVhclLicTypDtls, objlisUserSubBusnessDtls, objlisDsgnRol, objlisJobRlAppRol);
+
+                        //FOR SAVING DOCUMENTS
+                        string strImagePath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                        if (FileUploadProPic.HasFile)
+                        {
+                            FileUploadProPic.SaveAs(Server.MapPath(strImagePath) + objEntityUsrRegistr.ImagePath);
+                        }
+                        string strLicenseCopyPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                        if (FileUploadLicenseCopy.HasFile)
+                        {
+                            FileUploadLicenseCopy.SaveAs(Server.MapPath(strLicenseCopyPath) + objEntityUsrRegistr.LicenseCopyPath);
+                        }
+
+
+                        if (divLoginDetailsSection.Style["display"] != "none")
+                        {
+                            if (cbxMustLogin.Checked == true)
+                            {
+                                //005 start
+                                if (Session["CORPOFFICEID"] != null)
+                                {
+                                    objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(Session["CORPOFFICEID"]);
+                                }
+                                else if (Session["CORPOFFICEID"] == null)
+                                {
+                                    if (clickedButton.ID == "btnAdd")
+                                    {
+                                        Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                                    }
+                                    else if (clickedButton.ID == "btnAddClose")
+                                    {
+                                        Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                                    }
+                                    // Response.Redirect("~/Default.aspx");
+                                }
+                                List<clsEntityMailAttachment> objEntityMailAttachList = new List<clsEntityMailAttachment>();
+                                clsBusinessLayer objBussinessLayer = new clsBusinessLayer();
+                                clsEntityMailConsole objEntityMail = new clsEntityMailConsole();
+                                MailMessage mail = new MailMessage();
+                                DataTable dtFromMail = objBussinessLayer.ReadFromMailDetails(objEntityUsrRegistr);
+                                DataTable dtUserDetails = new DataTable();
+                                dtUserDetails = objBusinessLayerUserRegisteration.ReadUsrDetails(objEntityUsrRegistr);
+                                string username = "";
+                                string designation = "";
+                                string corprtname = "";
+                                if (dtUserDetails.Rows.Count > 0)
+                                {
+                                    username = dtUserDetails.Rows[0]["USR_NAME"].ToString();
+                                    designation = dtUserDetails.Rows[0]["DSGN_NAME"].ToString();
+                                    corprtname = dtUserDetails.Rows[0]["CORPRT_NAME"].ToString();
+                                }
+                                string content = "\nDear " + txtUsrName.Text.ToUpper() + ",\n\nWelcome aboard our team! We are  pleased to have you working with COMPZIT. \nYou can use the following details to login into COMPZIT.\n\nEmail id : " + txtUsrEmail.Text + "\nLogin Name : " + txtLoginName.Text.ToUpper() + "\nPassword : " + txtUsrPwd.Text + "\n\nNOTE : You can use either Email Id/ Login Name\n\n\n" + username + "\n" + designation + "\n" + corprtname + "";
+
+                                if (dtFromMail.Rows.Count > 0)
+                                {
+                                    objEntityMail.To_Email_Address = txtUsrEmail.Text.Trim();
+                                    objEntityMail.Email_Subject = "Compzit - Login Details";
+                                    objEntityMail.Email_Content = content;
+                                    objEntityMail.From_Email_Address = dtFromMail.Rows[0]["MLCNFG_EMAIL"].ToString();
+                                    objEntityMail.Out_Service_Name = dtFromMail.Rows[0]["MLCNFG_OUT_SERVICE_NAME"].ToString();
+                                    objEntityMail.Out_Port_Number = Convert.ToInt32(dtFromMail.Rows[0]["MLCNFG_OUT_PORT_NUMBER"]);
+                                    objEntityMail.SSL_Status = Convert.ToInt32(dtFromMail.Rows[0]["MLCNFG_SSL_STATUS"]);
+                                    objEntityMail.Password = dtFromMail.Rows[0]["MLCNFG_PASSWORD"].ToString();
+                                    objEntityMail.Signature = dtFromMail.Rows[0]["MLCNFG_SIGNATURE"].ToString();
+
+
+                                    MailUtility_ERP.clsMail objMail = new MailUtility_ERP.clsMail();
+                                    List<clsEntityMailCcBCc> objEntityMailCcBCcList = new List<clsEntityMailCcBCc>();
+                                    List<classEntityToMailAddress> objEntityToMailAddressList = new List<classEntityToMailAddress>();
+                                    try
+                                    {
+                                        objMail.SendMail(objEntityMail, objEntityMailAttachList, objEntityMailCcBCcList, objEntityToMailAddressList);
+                                    }
+                                    catch
+                                    {
+                                        if (clickedButton.ID == "btnAdd")
+                                        {
+                                            Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ipsd");
+                                        }
+                                        else if (clickedButton.ID == "btnAddClose")
+                                        {
+                                            Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ipsd");
+                                        }
+
+                                    }
+                                    if (clickedButton.ID == "btnAdd")
+                                    {
+                                        Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                                    }
+                                    else if (clickedButton.ID == "btnAddClose")
+                                    {
+                                        Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                                    }
+                                }
+                                else
+                                {
+                                    if (clickedButton.ID == "btnAdd")
+                                    {
+                                        Response.Redirect("gen_UserRegistration.aspx?InsUpd=IpRMSsd");
+                                    }
+                                    else if (clickedButton.ID == "btnAddClose")
+                                    {
+                                        Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=IpRMSsd");
+                                    }
+
+                                }
+                            }
+
+                            else
+                            {
+                                if (clickedButton.ID == "btnAdd")
+                                {
+                                    Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                                }
+                                else if (clickedButton.ID == "btnAddClose")
+                                {
+                                    Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                                }
+
+
+                            }
+                        }
+                        else
+                        {
+                            if (clickedButton.ID == "btnAdd")
+                            {
+                                Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                            }
+                            else if (clickedButton.ID == "btnAddClose")
+                            {
+                                Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                            }
+
+
+                        }
+
+                    }
+                    // when designation Control is Corporate
+                    else if (hiddenDsgnContrl.Value == "C")
+                    {
+                        //0013 
+                        //radio  
+                        int count = 0;
+                        if (rbtnCropDept.SelectedValue != "")
+                        {
+                            count++;
+                        }
+                        if (count > 0)
+                        {
+
+
+                            List<clsEntityLayerUserCorporate> objlisUsrCrprtDtls = new List<clsEntityLayerUserCorporate>();
+                            foreach (ListItem item in cbxlCorporateOffc.Items)
+                            {
+                                if (item.Selected)
+                                {
+                                    clsEntityLayerUserCorporate objEntityUsrCrprt = new clsEntityLayerUserCorporate();
+                                    objEntityUsrCrprt.UsrCrprtId = Convert.ToInt32(item.Value);
+                                    if (Session["ORGID"] != null)
+                                    {
+                                        objEntityUsrCrprt.UsrOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+                                    }
+                                    else
+                                    {
+                                        Response.Redirect("~/Default.aspx");
+                                    }
+
+                                    objlisUsrCrprtDtls.Add(objEntityUsrCrprt);
+                                }
+                            }
+
+                            objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(ddlUsrCorporate.SelectedItem.Value.ToString());
+                            //objEntityUsrRegistr.UserCrprtDept = Convert.ToInt32(ddlDepartment.SelectedItem.Value.ToString());
+                            objEntityUsrRegistr.UserCrprtDept = Convert.ToInt32(rbtnCropDept.SelectedValue);
+
+                            List<clsEntityLayerUserDivision> objlisUsrDivisionDtls = new List<clsEntityLayerUserDivision>();
+                            int intDefultCorpId = 0;
+                            foreach (ListItem item in cbxlCorporateDvsn.Items)
+                            {
+                                if (item.Selected)
+                                {
+                                    if (intDefultCorpId == 0)
+                                    {
+                                        intDefultCorpId = Convert.ToInt32(item.Value);
+                                    }
+                                    clsEntityLayerUserDivision objEntityUsrdivsn = new clsEntityLayerUserDivision();
+                                    objEntityUsrdivsn.Divisn_Id = Convert.ToInt32(item.Value);
+                                    objEntityUsrdivsn.DfltCrpDivisnId = intDefultCorpId;
+                                    if (Session["ORGID"] != null)
+                                    {
+                                        objEntityUsrdivsn.OrgId = Convert.ToInt32(Session["ORGID"].ToString());
+                                    }
+                                    else
+                                    {
+                                        Response.Redirect("~/Default.aspx");
+                                    }
+
+                                    objlisUsrDivisionDtls.Add(objEntityUsrdivsn);
+                                }
+                            }
+
+                            //insert in to db.
+                            objBusinessLayerUserRegisteration.InsertUserRegisterationDetail(objEntityUsrRegistr, objlisUsrCrprtDtls, objlisUsrDivisionDtls, objlisUsrVhclLicTypDtls, objlisUserSubBusnessDtls, objlisDsgnRol, objlisJobRlAppRol);
+
+                            //FOR SAVING DOCUMENTS
+                            string strImagePath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                            if (FileUploadProPic.HasFile)
+                            {
+                                FileUploadProPic.SaveAs(Server.MapPath(strImagePath) + objEntityUsrRegistr.ImagePath);
+                            }
+                            string strLicenseCopyPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                            if (FileUploadLicenseCopy.HasFile)
+                            {
+                                FileUploadLicenseCopy.SaveAs(Server.MapPath(strLicenseCopyPath) + objEntityUsrRegistr.LicenseCopyPath);
+                            }
+                            if (divLoginDetailsSection.Style["display"] != "none")
+                            {
+                                if (cbxMustLogin.Checked == true)
+                                {
+
+                                    //005 start
+                                    if (Session["CORPOFFICEID"] != null)
+                                    {
+                                        objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(Session["CORPOFFICEID"]);
+                                    }
+                                    else if (Session["CORPOFFICEID"] == null)
+                                    {
+                                        if (clickedButton.ID == "btnAdd")
+                                        {
+                                            Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                                        }
+                                        else if (clickedButton.ID == "btnAddClose")
+                                        {
+                                            Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                                        }
+                                        // Response.Redirect("~/Default.aspx");
+                                    }
+                                    List<clsEntityMailAttachment> objEntityMailAttachList = new List<clsEntityMailAttachment>();
+                                    clsBusinessLayer objBussinessLayer = new clsBusinessLayer();
+                                    clsEntityMailConsole objEntityMail = new clsEntityMailConsole();
+                                    MailMessage mail = new MailMessage();
+                                    DataTable dtFromMail = objBussinessLayer.ReadFromMailDetails(objEntityUsrRegistr);
+                                    DataTable dtUserDetails = new DataTable();
+                                    dtUserDetails = objBusinessLayerUserRegisteration.ReadUsrDetails(objEntityUsrRegistr);
+                                    string username = "";
+                                    string designation = "";
+                                    string corprtname = "";
+                                    if (dtUserDetails.Rows.Count > 0)
+                                    {
+                                        username = dtUserDetails.Rows[0]["USR_NAME"].ToString();
+                                        designation = dtUserDetails.Rows[0]["DSGN_NAME"].ToString();
+                                        corprtname = dtUserDetails.Rows[0]["CORPRT_NAME"].ToString();
+                                    }
+                                    string content = "\nDear " + txtUsrName.Text.ToUpper() + ",\n\nWelcome aboard our team! We are  pleased to have you working with COMPZIT. \nYou can use the following details to login into COMPZIT.\n\nEmail id : " + txtUsrEmail.Text + "\nLogin Name : " + txtLoginName.Text.ToUpper() + "\nPassword : " + txtUsrPwd.Text + "\n\nNOTE : You can use either Email Id/ Login Name\n\n\n" + username + "\n" + designation + "\n" + corprtname + "";
+
+                                    if (dtFromMail.Rows.Count > 0)
+                                    {
+                                        objEntityMail.To_Email_Address = txtUsrEmail.Text.Trim();
+                                        objEntityMail.Email_Subject = "Compzit - Login Details";
+                                        objEntityMail.Email_Content = content;
+                                        objEntityMail.From_Email_Address = dtFromMail.Rows[0]["MLCNFG_EMAIL"].ToString();
+                                        objEntityMail.Out_Service_Name = dtFromMail.Rows[0]["MLCNFG_OUT_SERVICE_NAME"].ToString();
+                                        objEntityMail.Out_Port_Number = Convert.ToInt32(dtFromMail.Rows[0]["MLCNFG_OUT_PORT_NUMBER"]);
+                                        objEntityMail.SSL_Status = Convert.ToInt32(dtFromMail.Rows[0]["MLCNFG_SSL_STATUS"]);
+                                        objEntityMail.Password = dtFromMail.Rows[0]["MLCNFG_PASSWORD"].ToString();
+                                        objEntityMail.Signature = dtFromMail.Rows[0]["MLCNFG_SIGNATURE"].ToString();
+
+
+                                        MailUtility_ERP.clsMail objMail = new MailUtility_ERP.clsMail();
+                                        List<clsEntityMailCcBCc> objEntityMailCcBCcList = new List<clsEntityMailCcBCc>();
+                                        List<classEntityToMailAddress> objEntityToMailAddressList = new List<classEntityToMailAddress>();
+                                        try
+                                        {
+                                            objMail.SendMail(objEntityMail, objEntityMailAttachList, objEntityMailCcBCcList, objEntityToMailAddressList);
+                                        }
+                                        catch
+                                        {
+                                            if (clickedButton.ID == "btnAdd")
+                                            {
+                                                Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ipsd");
+                                            }
+                                            else if (clickedButton.ID == "btnAddClose")
+                                            {
+                                                Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ipsd");
+                                            }
+
+                                        }
+                                        if (clickedButton.ID == "btnAdd")
+                                        {
+                                            Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                                        }
+                                        else if (clickedButton.ID == "btnAddClose")
+                                        {
+                                            Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (clickedButton.ID == "btnAdd")
+                                        {
+                                            Response.Redirect("gen_UserRegistration.aspx?InsUpd=IpRMSsd");
+                                        }
+                                        else if (clickedButton.ID == "btnAddClose")
+                                        {
+                                            Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=IpRMSsd");
+                                        }
+
+                                    }
+                                }
+                                else
+                                {
+                                    if (clickedButton.ID == "btnAdd")
+                                    {
+                                        Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                                    }
+                                    else if (clickedButton.ID == "btnAddClose")
+                                    {
+                                        Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                                    }
+
+                                }
+                            }
+
+                            else
+                            {
+                                if (clickedButton.ID == "btnAdd")
+                                {
+                                    Response.Redirect("gen_UserRegistration.aspx?InsUpd=Ins");
+                                }
+                                else if (clickedButton.ID == "btnAddClose")
+                                {
+                                    Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Ins");
+                                }
+                            }
+
+
+
+
+                        }
+                        else
+                        {
+                            btnAdd.Enabled = true;
+                            btnAddClose.Enabled = true;
+                            ScriptManager.RegisterStartupScript(this, GetType(), "SuccessDep", "SuccessDep();", true);
+                        }
+
+                    }//radio
+                    
+                    
+                }
+                    
+                else
+                {
+                    btnAdd.Enabled = true;
+                    btnAddClose.Enabled = true;
+                    ScriptManager.RegisterStartupScript(this, GetType(), "DuplicationEmpCode", "DuplicationEmpCode();", true);
+                    txtEmployeeCode.Focus();
+                }
+            }
+            else
+            {
+                btnAdd.Enabled = true;
+                btnAddClose.Enabled = true;
+                ScriptManager.RegisterStartupScript(this, GetType(), "DuplicationName", "DuplicationName();", true);
+                txtLoginName.Focus();
+            }
+        }
+        else
+        {
+            btnAdd.Enabled = true;
+            btnAddClose.Enabled = true;
+            ScriptManager.RegisterStartupScript(this, GetType(), "DuplicationEmail", "DuplicationEmail();", true);
+            txtUsrEmail.Focus();
+        }
+    //}
+    //else
+    //    {
+    //        btnAdd.Enabled = true;
+    //        btnAddClose.Enabled = true;
+    //              ScriptManager.RegisterStartupScript(this, GetType(), "SuccessDep", "SuccessDep();", true);
+           
+    //    }
+
+    }//btn close.
+
+    private List<clsEntityLayerEmployeeRole> Merge(List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls, List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls)
+    {
+
+        List<clsEntityLayerEmployeeRole> objlisDsgnRol = null;
+        objlisDsgnRol = new List<clsEntityLayerEmployeeRole>();
+        foreach (clsEntityLayerEmployeeRole objDsgnRolMainDtls in objlisDsgnRolMainDtls)
+        {
+            string strchild = "";
+            foreach (clsEntityLayerEmployeeRole objDsgnRolChildrenDtls in objlisDsgnRolChildrenDtls)
+            {
+
+                if (objDsgnRolMainDtls.UsrRolId == objDsgnRolChildrenDtls.UsrRolId)
+                {
+                    if (strchild != "")
+                    {
+                        strchild = strchild + "-" + objDsgnRolChildrenDtls.strChildRolId;
+                    }
+                    else
+                    {
+
+                        strchild = objDsgnRolChildrenDtls.strChildRolId;
+                    }
+                }
+            }
+            objDsgnRolMainDtls.strChildRolId = strchild;
+
+        }
+        return objlisDsgnRolMainDtls;
+
+    }
+    // when updation button is clicked
+    protected void btnUpdate_Click(object sender, EventArgs e)
+    {
+        Button clickedButton = sender as Button;
+
+        clsCommonLibrary objCommon = new clsCommonLibrary();
+
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+
+
+        if (Session["ORGID"] != null)
+        {
+            objEntityUsrRegistr.UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+
+        }
+        else
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+        objEntityUsrRegistr.UserEmail = txtUsrEmail.Text;
+        if (divLoginDetailsSection.Style["display"] != "none")
+        {
+            if (cbxMustLogin.Checked == true)
+            {
+
+                objEntityUsrRegistr.LoginName = txtLoginName.Text.ToUpper().Trim();
+            }
+
+
+        }
+        objEntityUsrRegistr.UserCode = txtEmployeeCode.Text.ToUpper().Trim();
+
+        string strRandomMixedId = Request.QueryString["Id"].ToString();
+        string strLenghtofId = strRandomMixedId.Substring(0, 2);
+        int intLenghtofId = Convert.ToInt16(strLenghtofId);
+        string strId = strRandomMixedId.Substring(2, intLenghtofId);
+        objEntityUsrRegistr.UsrRegistrationId = Convert.ToInt32(strId);
+
+        string strEmailCount = "0";
+        if (objEntityUsrRegistr.UserEmail != "")//EMAIL CAN BE NULL SO THIS CHECKING
+        {
+            strEmailCount = objBusinessLayerUserRegisteration.CheckDupUserEmailUpd(objEntityUsrRegistr);
+        }
+
+
+        if (strEmailCount == "0")
+        {
+            string strLNameCount = "0";
+            if (objEntityUsrRegistr.LoginName != "")//LOGIN NAME CAN BE NULL SO THIS CHECKING
+            {
+                strLNameCount = objBusinessLayerUserRegisteration.CheckDupUserLoginName(objEntityUsrRegistr);
+            }
+
+            if (strLNameCount == "0")
+            {
+                string strEmpCodeCount = "0";
+                if (objEntityUsrRegistr.UserCode != "")//UserCode CAN BE NULL SO THIS CHECKING
+                {
+                    strEmpCodeCount = objBusinessLayerUserRegisteration.CheckDupUserCode(objEntityUsrRegistr);
+                }
+
+                if (strEmpCodeCount == "0")
+                {
+                    List<clsEntityLayerUserVhclType> objlisUsrVhclLicTypDtls = new List<clsEntityLayerUserVhclType>();
+
+                    objEntityUsrRegistr.UserName = txtUsrName.Text.ToUpper().Trim();
+                    objEntityUsrRegistr.UserDsgnId = Convert.ToInt32(ddlUsrDsgn.SelectedItem.Value.ToString());
+                    objEntityUsrRegistr.UserRoleId = Convert.ToInt32(ddlJobRole.SelectedItem.Value.ToString());
+                    objEntityUsrRegistr.JoiningDate = objCommon.textToDateTime(txtJoiningDate.Text.Trim());
+
+
+                    objEntityUsrRegistr.EmployeeTypId = Convert.ToInt32(ddlEmpType.SelectedItem.Value.ToString());
+                    objEntityUsrRegistr.NationalIdNumber = txtNationalIdNmbr.Text.Trim();
+                    objEntityUsrRegistr.UserMobile = txtUsrMob.Text.Trim();
+
+
+
+                    if (Session["USERID"] != null)
+                    {
+                        objEntityUsrRegistr.UserId = Convert.ToInt32(Session["USERID"].ToString());
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Default.aspx");
+                    }
+                    objEntityUsrRegistr.UserDate = System.DateTime.Now;
+                    if (cbxStatus.Checked)
+                    {
+                        objEntityUsrRegistr.UserStatus = 1;
+                    }
+                    else
+                    {
+                        objEntityUsrRegistr.UserStatus = 0;
+                    }
+                    if (cbxMailSendStatus.Checked)
+                    {
+                        objEntityUsrRegistr.MailSendSts = 1;
+                    }
+                    else
+                    {
+                        objEntityUsrRegistr.MailSendSts = 0;
+                    }
+
+
+                    if (cbxReadMail.Checked)
+                    {
+                        objEntityUsrRegistr.MailReadSts = 1;
+                    }
+                    else
+                    {
+                        objEntityUsrRegistr.MailReadSts = 0;
+                    }
+
+
+                    if (divLoginDetailsSection.Style["display"] != "none")
+                    {
+                        if (cbxMustLogin.Checked == true)
+                        {
+                            if (divPassword.Visible == true)
+                            {
+
+                                objEntityUsrRegistr.UserPsw = txtUsrPwd.Text.Trim();
+                            }
+                            objEntityUsrRegistr.LoginMust = true;
+                            if (cbxLimitedUser.Checked)
+                            {
+                                objEntityUsrRegistr.LimitedUser = 1;
+                            }
+                            else
+                            {
+                                objEntityUsrRegistr.LimitedUser = 2;
+                            }
+                            if (cbxPswExpiry.Checked)
+                            {
+                                objEntityUsrRegistr.PasswordExpiry = 1;
+                            }
+                            else
+                            {
+                                objEntityUsrRegistr.PasswordExpiry = 2;
+                            }
+                        }
+                    }
+
+                    if (divAutoWorkshopSection.Style["display"] != "none")
+                    {
+                        if (cbxMustAutoWorkshop.Checked == true)
+                        {
+                            objEntityUsrRegistr.AutoWrkShopMust = true;
+                            objEntityUsrRegistr.LicenseNumber = txtLicenceNumbr.Text.Trim();
+                            objEntityUsrRegistr.LicenseExpiryDate = objCommon.textToDateTime(txtLicenseExpDate.Text.Trim());
+                            if (ddlAccommodatn.SelectedValue.ToString() != "--SELECT--")
+                            {
+                                objEntityUsrRegistr.AccommodationId = Convert.ToInt32(ddlAccommodatn.SelectedValue.ToString());
+                            }
+                            if (cbxDutyRoster.Checked)
+                            {
+                                objEntityUsrRegistr.AllowDutyRoster = 1;
+                            }
+                            else
+                            {
+                                objEntityUsrRegistr.AllowDutyRoster = 0;
+                            }
+                            if (hiddenLicenseTypeId.Value != "")
+                            {
+
+                                string strLicTypList = hiddenLicenseTypeId.Value;
+                                // Split string on spaces.
+                                // ... This will separate all the words.
+                                string[] strArrLicenseTypes = strLicTypList.Split(',');
+                                foreach (string strLicTyp in strArrLicenseTypes)
+                                {
+                                    if (strLicTyp != "")
+                                    {
+                                        clsEntityLayerUserVhclType objEntityUsrVhclType = new clsEntityLayerUserVhclType();
+                                        objEntityUsrVhclType.LicTypeId = Convert.ToInt32(strLicTyp);
+                                        objlisUsrVhclLicTypDtls.Add(objEntityUsrVhclType);
+                                    }
+                                }
+
+                            }
+
+                        }
+                    }
+
+
+
+                    if (FileUploadProPic.HasFile)
+                    {
+                        // GET FILE EXTENSION
+
+                        string strFileExt;
+
+                        strFileExt = FileUploadProPic.FileName.Substring(FileUploadProPic.FileName.LastIndexOf('.') + 1).ToLower();
+
+                        int intAppModSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.Section.USER_MASTER);
+                        int intImageSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                        string strImageName = intAppModSection.ToString() + "_" + intImageSection.ToString() + "_" + objEntityUsrRegistr.UsrRegistrationId.ToString() + "." + strFileExt;
+                        objEntityUsrRegistr.ImagePath = strImageName;
+
+                        //    if (hiddenUserImage.Value != "")
+                        //    {
+                        string strImgPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                        string imageLocation = strImgPath + hiddenImageName.Value;
+                        if (File.Exists(MapPath(imageLocation)))
+                        {
+                            File.Delete(MapPath(imageLocation));
+                        }
+                        //    }
+
+                    }
+
+                    else
+                    {
+                        if (hiddenUserImage.Value != "")
+                        {
+                            objEntityUsrRegistr.ImagePath = hiddenUserImage.Value;
+                        }
+                        else
+                        {
+                            string strImgPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                            string imageLocation = strImgPath + hiddenImageName.Value;
+                            if (File.Exists(MapPath(imageLocation)))
+                            {
+                                File.Delete(MapPath(imageLocation));
+                            }
+
+                            objEntityUsrRegistr.ImagePath = null;
+                            //  lblMessage.Text = "Please select image file.";
+                        }
+                    }
+                    if (divAutoWorkshopSection.Style["display"] != "none")
+                    {
+                        if (cbxMustAutoWorkshop.Checked == true)
+                        {
+                            //FOR LICENSE COPY
+                            if (FileUploadLicenseCopy.HasFile)
+                            {
+                                // GET FILE EXTENSION
+
+                                string strFileExt;
+
+                                strFileExt = FileUploadLicenseCopy.FileName.Substring(FileUploadLicenseCopy.FileName.LastIndexOf('.') + 1).ToLower();
+
+                                int intAppModSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.Section.USER_MASTER);
+                                int intImageSection = Convert.ToInt32(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                                string strImageName = intAppModSection.ToString() + "_" + intImageSection.ToString() + "_" + objEntityUsrRegistr.UsrRegistrationId.ToString() + "." + strFileExt;
+                                objEntityUsrRegistr.LicenseCopyPath = strImageName;
+
+                                //     if (hiddenUserLicenseCopy.Value != "")
+                                //     {
+                                string strImgPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                                string imageLocation = strImgPath + hiddenLicenseCopyName.Value;
+                                if (File.Exists(MapPath(imageLocation)))
+                                {
+                                    File.Delete(MapPath(imageLocation));
+                                }
+                                //    }
+
+                            }
+                            else
+                            {
+                                if (hiddenUserLicenseCopy.Value != "")
+                                {
+                                    objEntityUsrRegistr.LicenseCopyPath = hiddenUserLicenseCopy.Value;
+                                }
+                                else
+                                {
+                                    string strImgPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                                    string imageLocation = strImgPath + hiddenLicenseCopyName.Value;
+                                    if (File.Exists(MapPath(imageLocation)))
+                                    {
+                                        File.Delete(MapPath(imageLocation));
+                                    }
+
+                                    objEntityUsrRegistr.LicenseCopyPath = null;
+                                    //  lblMessage.Text = "Please select image file.";
+                                }
+                            }
+                        }
+                    }
+                  
+
+
+
+                    ///////////////////////////////////
+                    //for sub business unit section 0013
+                    List<clsEntityLayerUserSubBusness> objlisUserSubBusnessDtls = new List<clsEntityLayerUserSubBusness>();
+                    int intDefultCorpId = 0;
+                    foreach (ListItem item in cbxBussiness.Items)
+                    {
+                        if (item.Selected)
+                        {
+                            if (intDefultCorpId == 0)
+                            {
+                                intDefultCorpId = Convert.ToInt32(item.Value);
+                            }
+                            clsEntityLayerUserSubBusness objEntityUsrSubBus = new clsEntityLayerUserSubBusness();
+                            objEntityUsrSubBus.SubBusUntId = Convert.ToInt32(item.Value);
+                            objEntityUsrSubBus.DfltSubBusUntId = intDefultCorpId;
+                            if (Session["ORGID"] != null)
+                            {
+                                objEntityUsrSubBus.OrgId = Convert.ToInt32(Session["ORGID"].ToString());
+                            }
+                            else
+                            {
+                                Response.Redirect("~/Default.aspx");
+                            }
+
+                            objlisUserSubBusnessDtls.Add(objEntityUsrSubBus);
+                        }
+                    }
+                    //////
+                    //0013 END
+
+
+                    //start-inserting jobroles userroles
+
+
+                    int intTreeAppAdminVisible = 0, intTreeSFAVisible = 0, intTreeAWMSVisible = 0, intTreeGMSVisible = 0;
+                    List<clsEntityLayerEmployeeAppRole> objlisJobRlAppRol = new List<clsEntityLayerEmployeeAppRole>();
+                    foreach (ListItem itemCheckBoxModules in cbxlCompzitModules.Items)
+                    {
+
+                        if (itemCheckBoxModules.Selected)
+                        {
+                            clsEntityLayerEmployeeAppRole objEmpRlAppRol = new clsEntityLayerEmployeeAppRole();
+
+                            // If the item is selected.
+
+                            if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.APP_ADMINSTRATION))
+                            {
+                                intTreeAppAdminVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            else if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.SALES_FORCE_AUTOMATION))
+                            {
+                                intTreeSFAVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            else if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.AUTO_WORKSHOP_MANAGEMENT_SYSTEM))
+                            {
+                                intTreeAWMSVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            else if (Convert.ToInt32(itemCheckBoxModules.Value) == Convert.ToInt32(APPS.GUARANTEE_MANAGEMENT_SYSTEM))
+                            {
+                                intTreeGMSVisible = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                            }
+                            objEmpRlAppRol.App_Id = Convert.ToInt32(itemCheckBoxModules.Value);
+                            objlisJobRlAppRol.Add(objEmpRlAppRol);
+                        }
+                        else
+                        {
+                            // Item is not selected, do something else.
+                        }
+                    }
+
+                    List<clsEntityLayerEmployeeRole> objlisDsgnRol = new List<clsEntityLayerEmployeeRole>();
+
+                    if (intTreeAppAdminVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_AppAdmin = TreeViewCompzit_AppAdminstration.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_AppAdmin.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_AppAdmin = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_AppAdmin = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_Online in objNodeCollection_COMPZIT_AppAdmin)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_Online.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_AppAdmin.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_AppAdmin.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolAppAdministration = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolAppAdministration = Merge(objlisDsgnRolMainDtls_AppAdmin, objlisDsgnRolChildrenDtls_AppAdmin);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolAppAdministration)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+                        else
+                        {
+                            // lblSelectedNodes.Text = "Select Node(s).";
+                        }
+
+                    }
+                    if (intTreeSFAVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_SalesAutmtn = TreeViewCompzit_SalesAutomation.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_SalesAutmtn.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_SFA = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_SFA = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_SFA in objNodeCollection_COMPZIT_SalesAutmtn)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_SFA.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_SFA.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_SFA.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolSFA = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolSFA = Merge(objlisDsgnRolMainDtls_SFA, objlisDsgnRolChildrenDtls_SFA);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolSFA)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+                        else
+                        {
+                            // lblSelectedNodes.Text = "Select Node(s).";
+                        }
+                    }
+                    if (intTreeAWMSVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_WorkshopMngmnt = TreeViewCompzit_AutoWorkshopManagement.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_WorkshopMngmnt.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_WMS = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_WMS = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_WMS in objNodeCollection_COMPZIT_WorkshopMngmnt)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_WMS.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_WMS.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_WMS.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolWMS = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolWMS = Merge(objlisDsgnRolMainDtls_WMS, objlisDsgnRolChildrenDtls_WMS);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolWMS)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+                        else
+                        {
+                            // lblSelectedNodes.Text = "Select Node(s).";
+                        }
+                    }
+                    if (intTreeGMSVisible == Convert.ToInt32(clsCommonLibrary.StatusAll.Active))
+                    {
+                        TreeNodeCollection objNodeCollection_COMPZIT_GuaranteeManagement = TreeViewCompzit_GuaranteeManagement.CheckedNodes;
+                        if (objNodeCollection_COMPZIT_GuaranteeManagement.Count > 0)
+                        {
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolMainDtls_GMS = new List<clsEntityLayerEmployeeRole>();
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolChildrenDtls_GMS = new List<clsEntityLayerEmployeeRole>();
+                            foreach (TreeNode objTreeNode_GMS in objNodeCollection_COMPZIT_GuaranteeManagement)
+                            {
+                                clsEntityLayerEmployeeRole objEntityDsgnRole = null;
+                                objEntityDsgnRole = new clsEntityLayerEmployeeRole();
+
+                                string[] strchild = objTreeNode_GMS.Value.Split('.');
+                                if ((strchild.Length - 1) > 0)
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objEntityDsgnRole.strChildRolId = strchild[1];
+                                    objlisDsgnRolChildrenDtls_GMS.Add(objEntityDsgnRole);
+                                }
+                                else
+                                {
+                                    objEntityDsgnRole.UsrRolId = Convert.ToInt32(strchild[0]);
+                                    objlisDsgnRolMainDtls_GMS.Add(objEntityDsgnRole);
+                                }
+
+                            }
+
+
+                            List<clsEntityLayerEmployeeRole> objlisDsgnRolWMS = new List<clsEntityLayerEmployeeRole>();
+                            objlisDsgnRolWMS = Merge(objlisDsgnRolMainDtls_GMS, objlisDsgnRolChildrenDtls_GMS);
+
+                            foreach (clsEntityLayerEmployeeRole objDsgnRol in objlisDsgnRolWMS)
+                            {
+                                objlisDsgnRol.Add(objDsgnRol);
+                            }
+
+                        }
+                        else
+                        {
+                            // lblSelectedNodes.Text = "Select Node(s).";
+                        }
+                    }
+
+
+                    //stop-inserting jobroles userroles
+
+                    // when designation Control is Organisation
+                    if (hiddenDsgnContrl.Value == "O")
+                    {
+
+                        List<clsEntityLayerUserCorporate> objlisUsrCrprtDtls = null;
+                        objlisUsrCrprtDtls = new List<clsEntityLayerUserCorporate>();
+                        foreach (ListItem item in cbxlCorporateOffc.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                clsEntityLayerUserCorporate objEntityUsrCrprt = new clsEntityLayerUserCorporate();
+                                objEntityUsrCrprt.UsrCrprtId = Convert.ToInt32(item.Value);
+                                if (Session["ORGID"] != null)
+                                {
+                                    objEntityUsrCrprt.UsrOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+                                }
+                                else
+                                {
+                                    Response.Redirect("~/Default.aspx");
+                                }
+
+                                objlisUsrCrprtDtls.Add(objEntityUsrCrprt);
+                            }
+                        }
+
+
+                        //objEntityUsrRegistr.NextId = Convert.ToInt32(clsCommonLibrary.MasterId.UserId);
+                        //DataTable dtNextId = objBusinessLayerUserRegisteration.ReadNextId(objEntityUsrRegistr);
+                        //objEntityUsrRegistr.UsrRegistrationId = Convert.ToInt32(dtNextId.Rows[0]["MST_NEXT_VALUE"]);
+
+
+
+                        objBusinessLayerUserRegisteration.UpdateUserRegisterationDetail(objEntityUsrRegistr, objlisUsrCrprtDtls, null, objlisUsrVhclLicTypDtls, objlisUserSubBusnessDtls,objlisDsgnRol, objlisJobRlAppRol);
+
+
+                        //FOR SAVING DOCUMENTS
+                        string strImagePath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                        if (FileUploadProPic.HasFile)
+                        {
+                            FileUploadProPic.SaveAs(Server.MapPath(strImagePath) + objEntityUsrRegistr.ImagePath);
+                        }
+                        if (divAutoWorkshopSection.Style["display"] != "none")
+                        {
+                            if (cbxMustAutoWorkshop.Checked == true)
+                            {
+                                string strLicenseCopyPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                                if (FileUploadLicenseCopy.HasFile)
+                                {
+                                    FileUploadLicenseCopy.SaveAs(Server.MapPath(strLicenseCopyPath) + objEntityUsrRegistr.LicenseCopyPath);
+                                }
+                            }
+                        }
+
+
+
+                        txtUsrName.Text = "";
+                        txtUsrMob.Text = "";
+                        txtUsrEmail.Text = "";
+                        txtUsrPwd.Text = "";
+                        txtUsrConPwd.Text = "";
+                        txtUsrName.Focus();
+                        // DropDownBind();
+
+                        // mvUsrCorporate.Visible = false;
+                        //  mvUsrCorporate.ActiveViewIndex = 0;
+                        cbxStatus.Checked = true;
+                        cbxMailSendStatus.Checked = false;
+                        if (clickedButton.ID == "btnUpdate")
+                        {
+                            Response.Redirect("gen_UserRegistration.aspx?InsUpd=Upd");
+                        }
+                        else if (clickedButton.ID == "btnUpdateClose")
+                        {
+                            Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Upd");
+                        }
+
+
+                    }
+                    // when designation Control is Corporate
+                    else if (hiddenDsgnContrl.Value == "C")
+                    {
+                        if (ddlUsrCorporate.SelectedItem.Text.ToString() != "--SELECT--")
+                        {
+                            //if (ddlDepartment.SelectedItem.Text.ToString() != "--SELECT--")
+                            if (rbtnCropDept.SelectedIndex > -1)
+                            {
+
+                                objEntityUsrRegistr.UserCrprtId = Convert.ToInt32(ddlUsrCorporate.SelectedItem.Value.ToString());
+                                objEntityUsrRegistr.UserCrprtDept = Convert.ToInt32(rbtnCropDept.SelectedItem.Value.ToString());
+
+                                int intDefaultCorpId = 0;
+                                List<clsEntityLayerUserDivision> objlisUsrDivisionDtls = new List<clsEntityLayerUserDivision>();
+                                foreach (ListItem item in cbxlCorporateDvsn.Items)
+                                {
+                                    if (item.Selected)
+                                    {
+                                        if (intDefaultCorpId == 0)
+                                        {
+                                            intDefaultCorpId = Convert.ToInt32(item.Value);
+                                        }
+                                        clsEntityLayerUserDivision objEntityUsrdivsn = new clsEntityLayerUserDivision();
+                                        objEntityUsrdivsn.Divisn_Id = Convert.ToInt32(item.Value);
+                                        objEntityUsrdivsn.DfltCrpDivisnId = intDefaultCorpId;
+                                        if (Session["ORGID"] != null)
+                                        {
+                                            objEntityUsrdivsn.OrgId = Convert.ToInt32(Session["ORGID"].ToString());
+                                        }
+                                        else
+                                        {
+                                            Response.Redirect("~/Default.aspx");
+                                        }
+
+                                        objlisUsrDivisionDtls.Add(objEntityUsrdivsn);
+                                    }
+                                }
+
+
+
+
+
+
+
+                                objBusinessLayerUserRegisteration.UpdateUserRegisterationDetail(objEntityUsrRegistr, null, objlisUsrDivisionDtls, objlisUsrVhclLicTypDtls, objlisUserSubBusnessDtls, objlisDsgnRol, objlisJobRlAppRol);
+                                //FOR SAVING DOCUMENTS
+                                string strImagePath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_PROFILEPIC);
+                                if (FileUploadProPic.HasFile)
+                                {
+                                    FileUploadProPic.SaveAs(Server.MapPath(strImagePath) + objEntityUsrRegistr.ImagePath);
+                                }
+                                if (divAutoWorkshopSection.Style["display"] != "none")
+                                {
+                                    if (cbxMustAutoWorkshop.Checked == true)
+                                    {
+                                        string strLicenseCopyPath = objCommon.GetImagePath(CL_Compzit.clsCommonLibrary.IMAGE_SECTION.USER_LICENSECOPY);
+                                        if (FileUploadLicenseCopy.HasFile)
+                                        {
+                                            FileUploadLicenseCopy.SaveAs(Server.MapPath(strLicenseCopyPath) + objEntityUsrRegistr.LicenseCopyPath);
+                                        }
+                                    }
+                                }
+                                txtUsrName.Text = "";
+                                txtUsrMob.Text = "";
+                                txtUsrEmail.Text = "";
+                                txtUsrPwd.Text = "";
+                                txtUsrConPwd.Text = "";
+                                txtUsrName.Focus();
+                                // DropDownBind();
+
+                                // mvUsrCorporate.Visible = false;
+                                // mvUsrCorporate.ActiveViewIndex = 0;
+                                cbxStatus.Checked = true;
+                                cbxMailSendStatus.Checked = false;
+
+                                if (clickedButton.ID == "btnUpdate")
+                                {
+                                    Response.Redirect("gen_UserRegistration.aspx?InsUpd=Upd");
+                                }
+                                else if (clickedButton.ID == "btnUpdateClose")
+                                {
+                                    Response.Redirect("gen_UserRegistrationList.aspx?InsUpd=Upd");
+                                }
+                            }
+                            else
+                            {
+
+                                ScriptManager.RegisterStartupScript(this, GetType(), "EmptyDepartment", "EmptyDepartment();", true);
+
+                                //ddlDepartment.Focus();
+                            }
+                        }
+                        else
+                        {
+
+                            ScriptManager.RegisterStartupScript(this, GetType(), "EmptyCorporate", "EmptyCorporate();", true);
+                            ddlUsrCorporate.Focus();
+
+                        }
+                    }
+                }
+                else
+                {
+
+                    ScriptManager.RegisterStartupScript(this, GetType(), "DuplicationEmpCode", "DuplicationEmpCode();", true);
+                    txtEmployeeCode.Focus();
+                }
+            }
+            else
+            {
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "DuplicationName", "DuplicationName();", true);
+                txtLoginName.Focus();
+            }
+        }
+        else
+        {
+
+            ScriptManager.RegisterStartupScript(this, GetType(), "DuplicationEmail", "DuplicationEmail();", true);
+            txtUsrEmail.Focus();
+        }
+    }
+    //when we select designation from dropdown
+    protected void ddlUsrDsgn_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        hiddenConfirmValue.Value = "IncrmntConfrmCounter";
+        DesignationSelectIndexChange();
+        txtJoiningDate.Focus();
+        //0013
+        divDept.Visible = true;
+        bussiDiv.Visible = true;
+        BindSubBusUnt();
+        ddlJobRole.Items.Clear();
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+        int desig = Convert.ToInt32(ddlUsrDsgn.SelectedItem.Value);
+        objEntityUsrRegistr.UserDsgnId = desig;
+        DataTable dtJobRol = new DataTable();
+        dtJobRol = objBusinessLayerUserRegisteration.ReadJobRol(objEntityUsrRegistr);
+        if (dtJobRol.Rows.Count > 0)
+        {
+            for (int intcount = 0; intcount < dtJobRol.Rows.Count; intcount++)
+            {
+                ddlJobRole.DataSource = dtJobRol;
+                ddlJobRole.DataTextField = "JOBRL_NAME";
+                ddlJobRole.DataValueField = "JOBRL_ID";
+                ddlJobRole.DataBind();
+
+            }
+            ddlJobRole.Items.Insert(0, "--Select Job Role--");
+            //ddlJobRole.Focus();
+        }
+        else
+        {
+            ddlJobRole.Items.Insert(0, "--No Job Role Avilable--");
+            //ddlJobRole.Focus();
+        }
+    }
+    private void DesignationSelectIndexChange()
+    {
+
+        int intDsgnId = 0, intUserId = 0, intUsrRolMstrLoginSectionId, intUsrRolMstrAutoWrkShopSectionId;
+        clsBusinessLayer objBusinessLayer = new clsBusinessLayer();
+
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+
+        if (Session["USERID"] != null)
+        {
+            intUserId = Convert.ToInt32(Session["USERID"]);
+
+        }
+        else if (Session["USERID"] == null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+
+        intUsrRolMstrLoginSectionId = Convert.ToInt32(clsCommonLibrary.USR_ROLE_MSTR.Login_Details);
+        DataTable dtLoginSection = objBusinessLayer.LoadChildRoleDefnDetail(intUserId, intUsrRolMstrLoginSectionId);
+        if (dtLoginSection.Rows.Count > 0)
+        {
+            divLoginDetailsSection.Style.Add("display", "block");
+        }
+        else
+        {
+            divLoginDetailsSection.Style.Add("display", "none");
+        }
+
+        intUsrRolMstrAutoWrkShopSectionId = Convert.ToInt32(clsCommonLibrary.USR_ROLE_MSTR.Auto_Workshop);
+        DataTable dtAutoWrkShopSection = objBusinessLayer.LoadChildRoleDefnDetail(intUserId, intUsrRolMstrAutoWrkShopSectionId);
+
+        if (dtAutoWrkShopSection.Rows.Count > 0)
+        {
+            divAutoWorkshopSection.Style.Add("display", "block");
+
+        }
+        else
+        {
+            divAutoWorkshopSection.Style.Add("display", "none");
+
+        }
+        if (ddlUsrDsgn.SelectedItem.Text != "--SELECT--")
+        {
+            //for login details section and auto workshop section
+            intDsgnId = Convert.ToInt32(ddlUsrDsgn.SelectedItem.Value.ToString());
+
+            objEntityUsrRegistr.UserDsgnId = intDsgnId;
+            hiddenDsgnContrl.Value = objBusinessLayerUserRegisteration.ReadDsgnCntrl(objEntityUsrRegistr);
+            if (hiddenDsgnContrl.Value == "C")
+            {
+                mvUsrCorporate.Visible = true;
+                mvUsrCorporate.SetActiveView(vSingle);
+                //----------
+                //  ddlUsrCorporate.SelectedIndex = 0;
+                //  cbxlCorporateDvsn.ClearSelection();
+                //it add divisions based on current corrporate
+                divDiv.Visible = true;
+                ChangeDDLCorpOffc();
+            }
+
+            else if (hiddenDsgnContrl.Value == "O")
+            {
+                mvUsrCorporate.Visible = true;
+                mvUsrCorporate.SetActiveView(vMultiple);
+                //it add divisions based on current corrporate
+                //   ChangeCbxlCorpOffc();
+                divAutoWorkshopSection.Style.Add("display", "none");
+                divDiv.Visible = false;
+            }
+        }
+        else
+        {
+
+            mvUsrCorporate.Visible = true;
+            mvUsrCorporate.ActiveViewIndex = -1;
+        }
+
+
+    }
+
+    protected void ddlUsrCorporate_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        // hiddenLicenseTypeId.Value = "";
+        hiddenConfirmValue.Value = "IncrmntConfrmCounter";
+        divDept.Visible = true;//0013
+        ddlUsrCorporate.Items.Insert(0, "--Select--");
+        DropDownBindDepartment();
+        ddlUsrCorporate.Focus();
+        //--------------
+
+        divDiv.Visible = true;
+        ChangeDDLCorpOffc();
+        bussiDiv.Visible = true;//0013
+        BindSubBusUnt();//0013
+        if (ddlUsrCorporate.SelectedItem.Value == "--SELECT--")
+        {
+            //0013
+            divDiv.Visible = false;
+            bussiDiv.Visible = false;
+            divDept.Visible = false;
+            //0013
+            divDiv.Visible = false;
+            LicenseTypeLoad(0);
+            AccommodationLoad(0);
+        }
+        else
+        {
+            divDept.Visible = true;
+            int intCorpId = Convert.ToInt32(ddlUsrCorporate.SelectedItem.Value);
+            LicenseTypeLoad(intCorpId);
+            AccommodationLoad(intCorpId);
+        }
+
+        ScriptManager.RegisterStartupScript(this, GetType(), "PartialLoad", "PartialLoad();", true);
+    }
+
+    //for sorting drop down
+    private void SortDDL(ref DropDownList objDDL)
+    {
+        ArrayList textList = new ArrayList();
+        ArrayList valueList = new ArrayList();
+
+
+        foreach (ListItem li in objDDL.Items)
+        {
+            textList.Add(li.Text);
+        }
+
+        textList.Sort();
+
+
+        foreach (object item in textList)
+        {
+            string value = objDDL.Items.FindByText(item.ToString()).Value;
+            valueList.Add(value);
+        }
+        objDDL.Items.Clear();
+
+        for (int i = 0; i < textList.Count; i++)
+        {
+            ListItem objItem = new ListItem(textList[i].ToString(), valueList[i].ToString());
+            objDDL.Items.Add(objItem);
+        }
+    }
+    private void ChangeDDLCorpOffc()
+    {
+        
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+
+        if (Session["ORGID"] != null)
+        {
+
+            objEntityUsrRegistr.UserOrgId = Convert.ToInt32(Session["ORGID"].ToString());
+        }
+        else if (Session["ORGID"] == null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+        if (ddlUsrCorporate.SelectedItem.Value != "--SELECT--"&& ddlUsrCorporate.SelectedItem.Value !="")
+        {
+            objEntityUsrRegistr.strCrprtId = ddlUsrCorporate.SelectedItem.Value;
+        }
+        else
+        {
+            objEntityUsrRegistr.strCrprtId = "0";
+        }
+        DataTable dtCrptDvsn = new DataTable();
+        dtCrptDvsn = objBusinessLayerUserRegisteration.ReadCrptDivisionsDetails(objEntityUsrRegistr);
+        dtCorpDivVisibility = dtCrptDvsn;
+        if (dtCrptDvsn.Rows.Count == 0)
+        {
+            divDiv.Visible = false;
+
+        }
+        //   if (dtCrptDvsn.Rows.Count > 0)
+        //   {
+
+        cbxlCorporateDvsn.DataSource = dtCrptDvsn;
+        cbxlCorporateDvsn.DataTextField = "CPRDIV_NAME";
+        cbxlCorporateDvsn.DataValueField = "CPRDIV_ID";
+        cbxlCorporateDvsn.DataBind();
+
+        //  }
+    }
+
+    private bool CompareArray(byte[] a1, byte[] a2)
+    {
+
+        if (a1.Length != a2.Length)
+
+            return false;
+
+
+
+        for (int i = 0; i < a1.Length; i++)
+        {
+
+            if (a1[i] != a2[i])
+
+                return false;
+
+        }
+
+
+
+        return true;
+
+    }
+    protected void ddlJobRole_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        hiddenConfirmValue.Value = "IncrmntConfrmCounter";
+        clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+
+        char charDsgTypCntrl = 'A';
+        if (ddlJobRole.SelectedItem.Value != "--No Job Role Avilable--" && ddlJobRole.SelectedItem.Value != "--Select Job Role--")
+        {
+            objEntityUsrRegistr.UserDsgnId = Convert.ToInt32(ddlUsrDsgn.SelectedItem.Value);
+            charDsgTypCntrl = Convert.ToChar(objBusinessLayerUserRegisteration.ReadDsgnCntrl(objEntityUsrRegistr));
+            Treefill(charDsgTypCntrl);
+        }
+        else
+        {
+            BindCompzitModules();
+            TreeViewCompzit_AppAdminstration.Nodes.Clear();
+            TreeViewCompzit_SalesAutomation.Nodes.Clear();
+            TreeViewCompzit_AutoWorkshopManagement.Nodes.Clear();
+            TreeViewCompzit_GuaranteeManagement.Nodes.Clear();
+        }
+        UpdateViewByDdl(ddlJobRole.SelectedItem.Value);
+        //cbxlCompzitModules.Focus();
+      
+    }
+    //For DDL
+    public void UpdateTreeViewByUserId(string strUserId)
+    {
+             clsEntityEmpRoleAllocation objEmpRoleAllocation = new clsEntityEmpRoleAllocation();
+            clsBusinessLayerEmpRoleAllocation objBusinessEmpRoleAllocation = new clsBusinessLayerEmpRoleAllocation();
+            objEmpRoleAllocation.EmployeeId = Convert.ToInt32(strUserId);
+            //BL
+            DataTable dtDsgnMastr = objBusinessEmpRoleAllocation.ReadDsgnMasterEdit(objEmpRoleAllocation);
+            //BL
+            DataTable dtDsgnAppRoles = objBusinessEmpRoleAllocation.ReadDsgnAppRoleByDsgnId(objEmpRoleAllocation);
+            for (int intcountApp = 0; intcountApp < dtDsgnAppRoles.Rows.Count; intcountApp++)
+            {
+
+                if (dtDsgnAppRoles.Rows[intcountApp]["PRTZAPP_ID"].ToString() != "")
+                {
+                    foreach (ListItem itemCheckBoxModules in cbxlCompzitModules.Items)
+                    {
+
+                        if (itemCheckBoxModules.Value == dtDsgnAppRoles.Rows[intcountApp]["PRTZAPP_ID"].ToString())
+                        {
+                            itemCheckBoxModules.Selected = true;
+                        }
+                        else
+                        {
+                            // Item is not selected, do something else.
+                        }
+                    }
+                }
+
+            }
+            char charDsgTypCntrl = 'A';
+
+
+            if (dtDsgnMastr.Rows.Count > 0)
+            {
+                //charDsgTypCntrl = Convert.ToChar(dtDsgnMastr.Rows[0]["DSGN_CONTROL"].ToString());
+                //Check
+                charDsgTypCntrl = 'C';
+                Treefill(charDsgTypCntrl);
+                //txtDesignationName.Text = dtDsgnMastr.Rows[0]["DSGN_NAME"].ToString();
+                //Check
+                Int32 intPrimary = 1;
+                //hiddenPrimaryDecision.Value = "1";
+
+                string strUsrRoleChildRole = "";
+                for (int intcount = 0; intcount < dtDsgnMastr.Rows.Count; intcount++)
+                {
+
+                    if (dtDsgnMastr.Rows[intcount]["USROL_ID"].ToString() != "")
+                    {
+                        if (intcount == 0)
+                        {
+                            strUsrRoleChildRole = dtDsgnMastr.Rows[intcount]["USROL_ID"].ToString();
+                            if (dtDsgnMastr.Rows[intcount]["USRROL_CHLDRL_DEFN"].ToString() != "")
+                            {
+                                string strchildRoleDefn = dtDsgnMastr.Rows[intcount]["USRROL_CHLDRL_DEFN"].ToString();
+
+                                string[] strChildren = strchildRoleDefn.Split('-');
+                                foreach (string strChild in strChildren)
+                                {
+                                    string strBind = dtDsgnMastr.Rows[intcount]["USROL_ID"].ToString() + "." + strChild;
+                                    strUsrRoleChildRole = strUsrRoleChildRole + "," + strBind;
+                                }
+
+                            }
+
+                        }
+                        else if (intcount > 0)
+                        {
+                            strUsrRoleChildRole = strUsrRoleChildRole + "," + dtDsgnMastr.Rows[intcount]["USROL_ID"].ToString();
+
+                            if (dtDsgnMastr.Rows[intcount]["USRROL_CHLDRL_DEFN"].ToString() != "")
+                            {
+
+                                string strchildRoleDefn = dtDsgnMastr.Rows[intcount]["USRROL_CHLDRL_DEFN"].ToString();
+
+                                string[] strChildren = strchildRoleDefn.Split('-');
+                                foreach (string strChild in strChildren)
+                                {
+                                    string strBind = dtDsgnMastr.Rows[intcount]["USROL_ID"].ToString() + "." + strChild;
+                                    strUsrRoleChildRole = strUsrRoleChildRole + "," + strBind;
+                                }
+
+
+                            }
+                        }
+
+                    }
+
+                }
+                if (strUsrRoleChildRole != "")
+                {
+                    foreach (TreeNode node in TreeViewCompzit_AppAdminstration.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+
+                    foreach (TreeNode node in TreeViewCompzit_SalesAutomation.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+                    foreach (TreeNode node in TreeViewCompzit_AutoWorkshopManagement.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+                    foreach (TreeNode node in TreeViewCompzit_GuaranteeManagement.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+                }
+
+            }
+        
+    }
+    public void UpdateViewByDdl(string strJobRoleId)
+    {
+
+        if (strJobRoleId == "--Select Job Role--")
+        {
+
+        }
+        else
+        {
+         
+            clsEntityLayerUserRegistration objEntityUsrRegistr = new clsEntityLayerUserRegistration();
+
+
+            int intJobRol = Convert.ToInt32(ddlJobRole.SelectedValue.ToString());
+            objEntityUsrRegistr.UserRoleId = intJobRol;
+            objEntityUsrRegistr.UserDsgnId = Convert.ToInt32(ddlUsrDsgn.SelectedValue.ToString());
+            //BL
+            DataTable dtDsgnMastr = objBusinessLayerUserRegisteration.ReadJobRlRoles(objEntityUsrRegistr);
+            //BL
+            DataTable dtDsgnAppRoles = objBusinessLayerUserRegisteration.ReadJobRlAppRoles(objEntityUsrRegistr);
+            for (int intcountApp = 0; intcountApp < dtDsgnAppRoles.Rows.Count; intcountApp++)
+            {
+
+                if (dtDsgnAppRoles.Rows[intcountApp]["PRTZAPP_ID"].ToString() != "")
+                {
+                    foreach (ListItem itemCheckBoxModules in cbxlCompzitModules.Items)
+                    {
+
+                        if (itemCheckBoxModules.Value == dtDsgnAppRoles.Rows[intcountApp]["PRTZAPP_ID"].ToString())
+                        {
+                            itemCheckBoxModules.Selected = true;
+                        }
+                        else
+                        {
+                            // Item is not selected, do something else.
+                        }
+                    }
+                }
+
+            }
+            char charDsgTypCntrl = 'A';
+
+
+            if (dtDsgnMastr.Rows.Count > 0)
+            {
+                //charDsgTypCntrl = Convert.ToChar(dtDsgnMastr.Rows[0]["DSGN_CONTROL"].ToString());
+                //Check
+                charDsgTypCntrl = 'C';
+                Treefill(charDsgTypCntrl);
+                //txtDesignationName.Text = dtDsgnMastr.Rows[0]["DSGN_NAME"].ToString();
+                //Check
+                Int32 intPrimary = 1;
+               // hiddenPrimaryDecision.Value = "1";            
+
+                string strUsrRoleChildRole = "";
+                for (int intcount = 0; intcount < dtDsgnMastr.Rows.Count; intcount++)
+                {
+
+                    if (dtDsgnMastr.Rows[intcount]["USRROL_ID"].ToString() != "")
+                    {
+                        if (intcount == 0)
+                        {
+                            strUsrRoleChildRole = dtDsgnMastr.Rows[intcount]["USRROL_ID"].ToString();
+                            if (dtDsgnMastr.Rows[intcount]["JOBRLROL_CHLDRL_DEFN"].ToString() != "")
+                            {
+                                string strchildRoleDefn = dtDsgnMastr.Rows[intcount]["JOBRLROL_CHLDRL_DEFN"].ToString();
+
+                                string[] strChildren = strchildRoleDefn.Split('-');
+                                foreach (string strChild in strChildren)
+                                {
+                                    string strBind = dtDsgnMastr.Rows[intcount]["USRROL_ID"].ToString() + "." + strChild;
+                                    strUsrRoleChildRole = strUsrRoleChildRole + "," + strBind;
+                                }
+
+                            }
+
+                        }
+                        else if (intcount > 0)
+                        {
+                            strUsrRoleChildRole = strUsrRoleChildRole + "," + dtDsgnMastr.Rows[intcount]["USRROL_ID"].ToString();
+
+                            if (dtDsgnMastr.Rows[intcount]["JOBRLROL_CHLDRL_DEFN"].ToString() != "")
+                            {
+
+                                string strchildRoleDefn = dtDsgnMastr.Rows[intcount]["JOBRLROL_CHLDRL_DEFN"].ToString();
+
+                                string[] strChildren = strchildRoleDefn.Split('-');
+                                foreach (string strChild in strChildren)
+                                {
+                                    string strBind = dtDsgnMastr.Rows[intcount]["USRROL_ID"].ToString() + "." + strChild;
+                                    strUsrRoleChildRole = strUsrRoleChildRole + "," + strBind;
+                                }
+
+
+                            }
+                        }
+
+                    }
+
+                }
+                if (strUsrRoleChildRole != "")
+                {
+                    foreach (TreeNode node in TreeViewCompzit_AppAdminstration.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+
+                    foreach (TreeNode node in TreeViewCompzit_SalesAutomation.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+                    foreach (TreeNode node in TreeViewCompzit_AutoWorkshopManagement.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+                    foreach (TreeNode node in TreeViewCompzit_GuaranteeManagement.Nodes)
+                    {
+
+                        SelectNodesRecursive(node, strUsrRoleChildRole);
+
+                    }
+                }
+
+            }
+        }
+    }
+    public void SelectNodesRecursive(TreeNode oParentNode, string strNodeValue)
+    {
+        string[] strValues = strNodeValue.Split(',');
+        foreach (string strSingleValue in strValues)
+        {
+            if (oParentNode.Value == strSingleValue)
+            {
+                oParentNode.Checked = true;
+
+            }
+        }
+        // Start recursion on all subnodes.
+        foreach (TreeNode oSubNode in oParentNode.ChildNodes)
+        {
+            SelectNodesRecursive(oSubNode, strNodeValue);
+        }
+    }
+    public void Treefill(char charDsgTypCntrl)
+    {
+        int intUserLimited = Convert.ToInt32(USERLIMITED.ISLIMITED);
+        int intUserId = 0;
+        clsEntityEmpRoleAllocation objEmpRoleAllocation = new clsEntityEmpRoleAllocation();
+        clsBusinessLayerEmpRoleAllocation objBusinessEmpRoleAllocation = new clsBusinessLayerEmpRoleAllocation();
+        DataTable dtUserDetails = new DataTable();
+        if (Session["USERID"] == null)
+        {
+            Response.Redirect("../../Default.aspx");
+
+        }
+        else
+        {
+            objEmpRoleAllocation.UserId = Convert.ToInt32(Session["USERID"].ToString());
+            // objEmpRoleAllocation.UserId = Convert.ToInt32(ddlEmployee.SelectedItem.Value);
+            intUserId = objEmpRoleAllocation.UserId;
+        }
+        //BL
+        dtUserDetails = objBusinessEmpRoleAllocation.ReadIfUserLimitedByUsrId(objEmpRoleAllocation);
+        if (dtUserDetails.Rows.Count > 0)
+        {
+            intUserLimited = Convert.ToInt32(dtUserDetails.Rows[0]["USR_LMTD"].ToString());
+        }
+        Treefill_CRM_App(charDsgTypCntrl, intUserLimited, intUserId);
+        Treefill_CRM_SFA(charDsgTypCntrl, intUserLimited, intUserId);
+        Treefill_CRM_AWMS(charDsgTypCntrl, intUserLimited, intUserId);
+        Treefill_CRM_GMS(charDsgTypCntrl, intUserLimited, intUserId);
+    }
+    public void Treefill_CRM_App(char charDsgTypCntrl, Int32 intUserLimited, Int32 intUserId)
+    {
+        TreeViewCompzit_AppAdminstration.Nodes.Clear();
+        TreeViewCompzit_SalesAutomation.Nodes.Clear();
+        TreeViewCompzit_AutoWorkshopManagement.Nodes.Clear();
+        TreeViewCompzit_GuaranteeManagement.Nodes.Clear();
+        PopulateRootLevel(1, 'W', APPS.APP_ADMINSTRATION, charDsgTypCntrl, intUserLimited, intUserId);
+
+
+    }
+    public void Treefill_CRM_SFA(char charDsgTypCntrl, Int32 intUserLimited, Int32 intUserId)
+    {
+        PopulateRootLevel(2, 'W', APPS.SALES_FORCE_AUTOMATION, charDsgTypCntrl, intUserLimited, intUserId);
+
+
+    }
+    public void Treefill_CRM_AWMS(char charDsgTypCntrl, Int32 intUserLimited, Int32 intUserId)
+    {
+        PopulateRootLevel(3, 'W', APPS.AUTO_WORKSHOP_MANAGEMENT_SYSTEM, charDsgTypCntrl, intUserLimited, intUserId);
+
+
+    }
+    public void Treefill_CRM_GMS(char charDsgTypCntrl, Int32 intUserLimited, Int32 intUserId)
+    {
+        PopulateRootLevel(4, 'W', APPS.GUARANTEE_MANAGEMENT_SYSTEM, charDsgTypCntrl, intUserLimited, intUserId);
+
+
+    }
+    private void PopulateRootLevel(int intAppId, char chAppType, APPS Appsid, char charUsrolCntrl, Int32 intUserLimited, Int32 intUserId)
+    {   //Created objects for business layer
+        clsEntityEmpRoleAllocation objEmpRoleAllocation = new clsEntityEmpRoleAllocation();
+        clsBusinessLayerEmpRoleAllocation objBusinessEmpRoleAllocation = new clsBusinessLayerEmpRoleAllocation();
+
+        objEmpRoleAllocation.ParentId = 0;
+        objEmpRoleAllocation.AppId = intAppId;
+        objEmpRoleAllocation.AppType = chAppType;
+        objEmpRoleAllocation.DsgControl = charUsrolCntrl;
+        objEmpRoleAllocation.UserId = intUserId;
+        objEmpRoleAllocation.UserLimited = intUserLimited;
+        DataTable dt = new DataTable();
+        dt = objBusinessEmpRoleAllocation.DisplayUserolMstr(objEmpRoleAllocation);
+        if (Appsid == APPS.APP_ADMINSTRATION)
+        {
+            PopulateNodes(dt, TreeViewCompzit_AppAdminstration.Nodes, intAppId, chAppType, charUsrolCntrl, intUserLimited, intUserId);
+        }
+
+        else if (Appsid == APPS.SALES_FORCE_AUTOMATION)
+        {
+
+            PopulateNodes(dt, TreeViewCompzit_SalesAutomation.Nodes, intAppId, chAppType, charUsrolCntrl, intUserLimited, intUserId);
+        }
+        else if (Appsid == APPS.AUTO_WORKSHOP_MANAGEMENT_SYSTEM)
+        {
+
+            PopulateNodes(dt, TreeViewCompzit_AutoWorkshopManagement.Nodes, intAppId, chAppType, charUsrolCntrl, intUserLimited, intUserId);
+        }
+        else if (Appsid == APPS.GUARANTEE_MANAGEMENT_SYSTEM)
+        {
+
+            PopulateNodes(dt, TreeViewCompzit_GuaranteeManagement.Nodes, intAppId, chAppType, charUsrolCntrl, intUserLimited, intUserId);
+        }
+    }
+    private void PopulateSubLevel(int parentid, TreeNode parentNode, int intAppId, char chAppType, char charUsrolCntrl, Int32 intUserLimited, Int32 intUserId)
+    { //Created objects for business layer
+
+        clsBusinessLayerEmpRoleAllocation objBusinessEmpRoleAllocation = new clsBusinessLayerEmpRoleAllocation();
+        clsEntityEmpRoleAllocation objEmpRoleAllocation = new clsEntityEmpRoleAllocation();
+        objEmpRoleAllocation.ParentId = parentid;
+        objEmpRoleAllocation.AppId = intAppId;
+        objEmpRoleAllocation.AppType = chAppType;
+        objEmpRoleAllocation.DsgControl = charUsrolCntrl;
+        objEmpRoleAllocation.UserId = intUserId;
+        objEmpRoleAllocation.UserLimited = intUserLimited;
+        DataTable dt = new DataTable();
+        dt = objBusinessEmpRoleAllocation.DisplayUserolMstr(objEmpRoleAllocation);
+        PopulateNodes(dt, parentNode.ChildNodes, intAppId, chAppType, charUsrolCntrl, intUserLimited, intUserId);
+    }
+    private void PopulateNodes(DataTable dt, TreeNodeCollection nodes, int intAppId, char chAppType, char charUsrolCntrl, Int32 intUserLimited, Int32 intUserId)
+    {
+        foreach (DataRow dr in dt.Rows)
+        {
+            int intUsrRolMstrId, intLimitedEnableAdd = 0, intLimitedEnableModify = 0, intLimitedEnableCancel = 0, intLimitedEnableFind = 0, intLimitedEnableRateUpdation = 0;
+            int intLimitedEnableConfirm = 0, intLimitedEnableApprove = 0, intLimitedEnableReOpen = 0, intLimitedEnableReturn = 0, intLimitedEnableWin = 0, intLimitedEnableLoss = 0;
+            int intLimitedEnableAllocate = 0, intLimitedEnableAllMails = 0, intLimitedEnableMailAllocate = 0, intLimitedEnableMailForword = 0, intLimitedEnableMailAttach = 0, intLimitedEnableClose = 0, intLimitedEnableSuplier_Guarantee_Permission = 0, intLimitedEnableClient_Guarantee_Permission = 0, intLimitedEnableRenew = 0;
+            int intLimitedEnableReissue = 0;
+            clsBusinessLayer objBusinessLayer = new clsBusinessLayer();
+            clsCommonLibrary objCommon = new clsCommonLibrary();
+
+            TreeNode tn = new TreeNode();
+            tn.Text = dr["USROL_NAME"].ToString();
+            tn.Value = dr["USROL_ID"].ToString();
+            tn.NavigateUrl = "javascript:void(0)";
+            nodes.Add(tn);
+
+
+
+            //Getting child roles based on user role maser id for cheching for the limited user case
+            intUsrRolMstrId = Convert.ToInt32(dr["USROL_ID"].ToString());
+            DataTable dtChildRolForLimited = objBusinessLayer.LoadChildRoleDefnDetail(intUserId, intUsrRolMstrId);
+
+            if (dtChildRolForLimited.Rows.Count > 0)
+            {
+                string strChildRolDeftn = dtChildRolForLimited.Rows[0]["USRROL_CHLDRL_DEFN"].ToString();
+
+                string[] strChildDefArrWords = strChildRolDeftn.Split('-');
+                foreach (string strC_Role in strChildDefArrWords)
+                {
+                    if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Add).ToString())
+                    {
+                        intLimitedEnableAdd = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Modify).ToString())
+                    {
+                        intLimitedEnableModify = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Cancel).ToString())
+                    {
+                        intLimitedEnableCancel = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Find).ToString())
+                    {
+                        intLimitedEnableFind = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Rate_Updation).ToString())
+                    {
+                        intLimitedEnableRateUpdation = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Confirm).ToString())
+                    {
+                        intLimitedEnableConfirm = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Approve).ToString())
+                    {
+                        intLimitedEnableApprove = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Re_Open).ToString())
+                    {
+                        intLimitedEnableReOpen = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Return).ToString())
+                    {
+                        intLimitedEnableReturn = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Win).ToString())
+                    {
+                        intLimitedEnableWin = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Loss).ToString())
+                    {
+                        intLimitedEnableLoss = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Allocate).ToString())
+                    {
+                        intLimitedEnableAllocate = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.All_Mails).ToString())
+                    {
+                        intLimitedEnableAllMails = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Allocate).ToString())
+                    {
+                        intLimitedEnableMailAllocate = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Forward).ToString())
+                    {
+                        intLimitedEnableMailForword = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Attach).ToString())
+                    {
+                        intLimitedEnableMailAttach = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Close).ToString())
+                    {
+                        intLimitedEnableClose = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Suplier_Guarantee_Permission).ToString())
+                    {
+                        intLimitedEnableSuplier_Guarantee_Permission = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Client_Guarantee_Permission).ToString())
+                    {
+                        intLimitedEnableClient_Guarantee_Permission = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Renew).ToString())
+                    {
+                        intLimitedEnableRenew = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+                    else if (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Reissue).ToString())
+                    {
+                        intLimitedEnableReissue = Convert.ToInt32(clsCommonLibrary.StatusAll.Active);
+                    }
+                }
+
+
+            }
+            //If node has child nodes, then enable on-demand populating
+            //   tn.PopulateOnDemand = (Convert.ToInt32(dr["childnodecount"].ToString()) > 0);
+            if (dr["USROL_CHLDRL_DEFN"].ToString() != "")
+            {
+
+                string strChildDef = dr["USROL_CHLDRL_DEFN"].ToString();
+                // Split string on spaces.
+                // ... This will separate all the words.
+                string[] strChildDefArrWords = strChildDef.Split('-');
+                foreach (string strC_Role in strChildDefArrWords)
+                {
+                    if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Add).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Add).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableAdd == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnAdd = new TreeNode();
+                        tnAdd.Text = "ADD";
+                        tnAdd.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Add).ToString();
+                        tnAdd.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnAdd);
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Modify).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Modify).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableModify == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnModify = new TreeNode();
+                        tnModify.Text = "MODIFY";
+                        tnModify.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Modify).ToString();
+                        tnModify.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnModify);
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Cancel).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Cancel).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableCancel == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnCncl = new TreeNode();
+                        tnCncl.Text = "CANCEL";
+                        tnCncl.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Cancel).ToString();
+                        tnCncl.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnCncl);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Find).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Find).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableFind == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnFind = new TreeNode();
+                        tnFind.Text = "FIND";
+                        tnFind.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Find).ToString();
+                        tnFind.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnFind);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Rate_Updation).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Rate_Updation).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableRateUpdation == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnRateUpd = new TreeNode();
+                        tnRateUpd.Text = "RATE UPDATION";
+                        tnRateUpd.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Rate_Updation).ToString();
+                        tnRateUpd.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnRateUpd);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Confirm).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Confirm).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableConfirm == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "CONFIRM";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Confirm).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Approve).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Approve).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableApprove == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "APPROVE";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Approve).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Re_Open).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Re_Open).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableReOpen == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "RE-OPEN";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Re_Open).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Return).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Return).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableReturn == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "RETURN";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Return).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Win).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Win).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableWin == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "WIN";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Win).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Loss).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Loss).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableLoss == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "LOSS";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Loss).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Allocate).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Allocate).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableAllocate == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "ALLOCATE";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Allocate).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.All_Mails).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.All_Mails).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableAllMails == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "VIEW ALL MAILS";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.All_Mails).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Allocate).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Allocate).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableMailAllocate == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "MAIL ALLOCATE";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Allocate).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Forward).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Forward).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableMailForword == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "MAIL FORWARD";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Forward).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Attach).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Attach).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableMailAttach == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnConfm = new TreeNode();
+                        tnConfm.Text = "LEAD ATTACH";
+                        tnConfm.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Mail_Attach).ToString();
+                        tnConfm.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnConfm);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Close).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Close).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableClose == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnClose = new TreeNode();
+                        tnClose.Text = "CLOSE";
+                        tnClose.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Close).ToString();
+                        tnClose.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnClose);
+
+                    }
+
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Suplier_Guarantee_Permission).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Suplier_Guarantee_Permission).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableSuplier_Guarantee_Permission == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnSuplier_Guarantee = new TreeNode();
+                        tnSuplier_Guarantee.Text = "SUPPLIER_GUARANTEE";
+                        tnSuplier_Guarantee.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Suplier_Guarantee_Permission).ToString();
+                        tnSuplier_Guarantee.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnSuplier_Guarantee);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Client_Guarantee_Permission).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Client_Guarantee_Permission).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableClient_Guarantee_Permission == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnClient_Guarantee = new TreeNode();
+                        tnClient_Guarantee.Text = "CLIENT_GUARANTEE";
+                        tnClient_Guarantee.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Client_Guarantee_Permission).ToString();
+                        tnClient_Guarantee.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnClient_Guarantee);
+
+                    }
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Renew).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Renew).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableRenew == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnRenew_Guarantee = new TreeNode();
+                        tnRenew_Guarantee.Text = "RENEW";
+                        tnRenew_Guarantee.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Renew).ToString();
+                        tnRenew_Guarantee.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnRenew_Guarantee);
+
+                    }
+                    
+                    else if ((strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Reissue).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.NOTLIMITED)) || (strC_Role == Convert.ToInt16(clsCommonLibrary.ChildRole.Reissue).ToString() && intUserLimited == Convert.ToInt32(USERLIMITED.ISLIMITED) && intLimitedEnableReissue == Convert.ToInt32(clsCommonLibrary.StatusAll.Active)))
+                    {
+                        TreeNode tnreissue = new TreeNode();
+                        tnreissue.Text = "REISSUE";
+                        tnreissue.Value = dr["USROL_ID"].ToString() + "." + Convert.ToInt16(clsCommonLibrary.ChildRole.Reissue).ToString();
+                        tnreissue.NavigateUrl = "javascript:void(0)";
+                        tn.ChildNodes.Add(tnreissue);
+
+                    }
+
+                }
+                // PopulateSubLevel(Convert.ToInt32(dr["USROL_ID"].ToString()), tn);
+
+            }
+
+            if (Convert.ToInt32(dr["childnodecount"].ToString()) > 0)
+            {
+                PopulateSubLevel(Convert.ToInt32(dr["USROL_ID"].ToString()), tn, intAppId, chAppType, charUsrolCntrl, intUserLimited, intUserId);
+
+            }
+        }
+    }
+    //for edit-read user role 0013
+    public void ReadUserRole(int jobRl, int desig)
+    {
+       
+    }
+}

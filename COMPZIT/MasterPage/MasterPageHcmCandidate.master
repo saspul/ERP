@@ -1,0 +1,431 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageHcmCandidate.master.cs" Inherits="MasterPage_MasterPageHcmCandidate" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Compzit</title>
+     <link rel="shortcut icon" href="/css/Login/image/short-icon.png"/>
+     <%-- <link rel="shortcut icon" type="image/x-icon" href="/Images/Design_Images/images/compzit.ico" />--%>
+
+    <link rel="stylesheet" type="text/css" href="/css/Design-CSS/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/Design-CSS/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/css/Design-CSS/menu.css" media="all" />
+
+
+   
+
+
+
+
+       
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+   
+    </script>
+
+    <style>
+        .cont_rght {
+            min-height: 500px;
+        }
+
+        .header {
+            background-color: white;
+        }
+
+        .bottomheader {
+            padding-bottom: 1px;
+        }
+
+        .foot h4 {
+            width: 50%;
+            text-align: right;
+        }
+
+        .foot h3 {
+            width: 50%;
+            text-align: left;
+        }
+
+        /*.mob-btn {
+            margin-left: 0px;
+            height: 30px;
+            padding-top: 4px;
+        }*/
+         .mob-btn {
+            margin-left: 0px;
+            height: 45px;
+            padding-top: 4px;
+            border-radius: 0px;
+            box-shadow: 0px 0px 3px #4a5569;
+        }
+        .bh_sub_lft h1 {
+        margin-right:80px;
+        color: #38b3a0;
+        }
+        .cont_rght {
+            padding-bottom:2%;
+            padding-top: 2%;
+        }
+        .main_table {
+        border: 1px solid #c9c9c9;
+        }
+        table.dataTable.no-footer {
+            border-bottom: 1px solid #c9c9c9;
+        }
+        table.dataTable tbody td {
+            padding-top:0px;
+            padding-bottom:0px;
+            padding-left:1%;
+            padding-right:1%;
+        }
+         #ReportTable_length select {
+            width: 50px;
+             font-weight:bold;
+             font-family: calibri;
+             color: #336B16;
+               font-size:14px;
+        }
+        #ReportTable_length  {
+              font-family:Calibri;
+               font-weight:bold;
+                  font-size:14px;
+                  padding-bottom: 0.7%;
+        }
+        #ReportTable_filter input {
+            height: 23px;
+            width: 200px;
+                 color: #336B16;
+                    font-size:14px;
+        }
+        #ReportTable_filter  {
+            font-family:Calibri;
+            font-weight:bold;
+               font-size:14px;
+          
+        }
+        #ReportTable_paginate {
+               font-family:Calibri;
+                  font-size:13px;
+            
+        }
+        #ReportTable_info {
+             font-family:Calibri;
+             font-weight: 600;
+             font-size:14px;
+            
+        }
+         #divErrorTotal {
+            border-radius: 8px;
+            background: #edf6dc;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color: #53844E;
+           margin-top:-3.5%;
+           font-family:Calibri;
+        } 
+          #divSuccessUpd {
+            border-radius: 8px;
+            background: #edf6dc;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color: #53844E;
+            margin-top: -3%;
+            margin-left: 2%;
+            width: 89.5%;
+            font-family:Calibri;
+        }
+           #divErrorRsn {
+            border-radius: 4px;
+            background: #edf6dc none repeat scroll 0% 0%;
+            color: #53844E;
+            font-size: 12.5px;
+            font-family:Calibri;
+        }
+        table.dataTable td.dataTables_empty {
+            font-family:Calibri;
+        }
+
+           input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            padding: 300em;
+            border: 1px solid #369;
+            vertical-align: middle;
+        }
+
+         input[type="checkbox"]:hover {
+            background: #bbf2cf;
+            outline: 3px solid #72c08e;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:focus {
+            background: #bbf2cf;
+            outline: 3px solid #72c08e;
+            cursor: pointer;
+        }
+        table.dataTable {
+            width: 99.9%;
+        }
+        #cphMain_divReport {
+        
+        overflow-x:auto;
+        }
+           .form1:focus {
+            /*border: 1px solid #72c08e;*/
+            border: 1px solid #bbf2cf;
+        }
+          
+           
+        .mailalrt {
+            width: 209px;
+        }
+
+        .bottomheader_sub {
+            width: 84%;
+        }
+
+        
+         #divAccntSetting {
+            visibility:hidden;
+            position:fixed;
+            z-index: 33;
+        }
+        #imgProPic:hover {
+        
+        cursor:pointer;
+        }
+          #cphMain_txtCnclReason {
+        font-family:Calibri;
+        }
+             /* Make the badge float in the top right corner of the button */
+.button__badge {
+  background-color: #fa3e3e;
+  border-radius: 3px;
+  color: white;
+ 
+  padding: 1px 3px;
+  font-size: 15px;
+  position: absolute; /* Position the badge within the relatively positioned button */
+margin-left: 1.2%;
+margin-top: -0.6%;
+font-weight: bold;
+}
+    </style>
+      <style>
+        #divMessageArea {
+            border-radius: 8px;
+            background: #fff;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color:#53844E;
+            margin-top: 0%;
+            font-family: Calibri;
+            border: 2px solid #53844E;
+        }
+
+        #imgMessageArea {
+            float: left;
+            margin-left: 1%;
+            margin-top: -0.2%;
+        }
+
+        #divErrorRsnAWMS {
+             border-radius: 4px;
+            background: #fff;
+            color: #53844E;
+            font-size: 12.5px;
+            font-family: Calibri;
+            font-weight: bold;
+            border: 2px solid #53844E;
+            margin-top: -3.5%;
+            margin-bottom: 2%;
+        }
+
+        #imgErrorRsnAWMS {
+            float: left;
+            margin-left: 1%;
+            margin-top: -0.2%;
+        }
+
+
+        .topheader {
+    background: #26ace2;
+    z-index: 102;
+}
+
+    </style>
+   
+</head>
+<body>
+
+    <div>
+
+        <div class="header">
+            <div id="divHeaderTop" class="topheader">
+
+
+
+                <div id="divheaderName" runat="server" style="color: white;font-family:Calibri;  font-weight: bold; padding-top: 1%; font-size: 18px; padding-left: 4%; padding-right: 1%; float: left; width: 36%;">
+                </div>
+
+                <div class="auto1">
+                    <%--<img src="/Images/Icons/wlcm.png" class="profile_pic" />--%>
+                     
+                   <%-- <asp:Image ID="imgProPic" class="profile_pic" runat="server" onclick="ShowAccntSetting();" />--%>
+
+
+                    <h6>Welcome<br />
+                        <span>
+                            <asp:Label ID="lblUserName" runat="server" Text="" Height="25px"></asp:Label>
+                        </span></h6>
+
+                   <%-- <div class="search1">
+                        <button class="search_btn_1"></button>
+                        <input type="text" class="search_area_1" />
+                    </div>--%>
+                </div>
+            </div>
+            <div class="bottomheader">
+                <div class="auto1">
+                    <div class="sub_logo">
+                      
+                            <img src="/Images/Design_Images/images/Compztlogo.png" />
+                    </div>
+                    <div class="bottomheader_sub">
+                        <div class="bh_sub_lft">
+                            <h1 style="margin-right: 30px;">Candidate Registration</h1>
+                            </div>
+                             <div class="mailalrt_sub">
+                                   <a href="/Security/Login.aspx">
+                                         <img src="/Images/Icons/home-32x32.png"  onclick="return UserLogout();"/>
+                                        <h3>HOME</h3>
+                                    </a>
+                                 
+                             </div>
+                           <div class="">
+                        <%--<button class="addacc">Add Account</button>--%>
+                        <button id="btnsignout" class="signout" onclick="UserLogout();" oninit="hide();">Sign out</button>
+                    </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentarea">
+            <div class="auto1">
+                <div class="cont_lft">
+                    <div class="menuarea">
+                        
+<div style="position: fixed; z-index: 27; top: 215px; box-shadow: 3px 0px 5px rgb(221, 221, 221); text-align: center; left: 0px; color: rgb(255, 255, 255); line-height: 12px; padding: 1px 1px 1px 2px; cursor: pointer;">
+
+                        <button id="btnMenuIcon" runat="server" class="mob-btn icon-bar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+    </div>
+                        <nav class="main-menu">
+                            <div runat="server" id="divmenu"></div>
+                            <div class="overlay"></div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="cont_rght">
+
+
+                    	<div id="divAccntSetting" class="mail" >
+                             <img  src="/Images/Icons/white-arrowUp-20x20.png" style="float: right; margin-left: -6.35%; margin-top: -4.5%;">
+                	<div class="top_mail_area">
+                           <asp:Image ID="imgAccntSetting"  runat="server" />
+                    	<%--<img src="/Images/Icons/wlcm.png" />--%>
+                        <h1 id="h1AccntSettingName" runat="server"></h1>
+                        <h2 id="h2AccntSettingEmail" runat="server"></h2>
+                        <button onclick="ChangePwd();">Change Password</button>
+                    </div>
+                    <div class="bottom_mail_area">
+                        <%--<button class="addacc">Add Account</button>--%>
+                        <button class="signout" onclick="UserLogout();">Sign out</button>
+                    </div>
+                </div>
+
+                    <form id="form1" runat="server">
+                        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                         <asp:HiddenField ID="hiddenHeaderColor" runat="server" />
+                          <asp:HiddenField ID="hiddenFooterColor" runat="server" />
+                           <asp:HiddenField ID="hiddenCorporateId" runat="server" />
+                           <asp:HiddenField ID="hiddenOrganizationId" runat="server" />
+                           <asp:HiddenField ID="hiddenUserId" runat="server" />
+                         <asp:HiddenField ID="hiddenMailIconVisible" runat="server" />
+                                <asp:HiddenField ID="hiddenlogout" runat="server" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="footerBottom" class="foot">
+            <div class="auto1">
+                <h3 id="divcopyright" runat="server">© 2016 Copyright</h3>
+                <%--<h4 id="divdevelop" runat="server">Developed by</h4>--%>
+            </div>
+        </div>
+
+        <script src="/JavaScript/Design-Javascript/jquery-1.11.2.min.js"></script>
+        <script src="/JavaScript/Design-Javascript/jquery.min.js"></script>
+        <!-- import -->
+        <script src="/JavaScript/Design-Javascript/bootstrap.min.js"></script>
+        <!-- import -->
+
+    <script>
+        function UserLogout() {
+            if (document.getElementById("hiddenlogout").value != "") {
+                if (confirm("Are you Sure you want to Sign Out?")) {
+
+                    window.location = "/Security/Login.aspx";
+                }
+                else
+                    return false;
+            }
+            else
+                window.location = "/Security/Login.aspx";
+        }
+        function hide() {
+           // alert("dd");
+            if (document.getElementById("hiddenlogout").value== "") {
+
+                document.getElementById("btnsignout").style.display = "none";
+            }
+        }
+        window.onload = function () {
+            hide();
+            // yourFunction(param1, param2);
+
+            var FramewrkId = '<%= Session["FRMWRK_ID"] %>';
+            var FramewrkTyp = '<%= Session["FRMWRK_TYPE"] %>';
+            if (FramewrkTyp == "1" && FramewrkId != "" && FramewrkId != null) {
+
+                //$("#divApp").hide();
+                //document.getElementById("aHome").href = "/Home/Compzit_Home/Compzit_Home_Finance.aspx";
+                //document.getElementById("aDashboard").href = "/Home/Compzit_Home/Compzit_Home_Finance.aspx";
+            }
+        };
+    </script>
+
+
+           
+
+    </div>
+
+</body>
+    
+</html>

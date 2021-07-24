@@ -1,0 +1,9 @@
+background
+#ecece6
+
+font-color
+#454b3a
+
+font-size
+15px
+

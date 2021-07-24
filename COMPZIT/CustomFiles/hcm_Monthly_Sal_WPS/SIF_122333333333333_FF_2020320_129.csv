@@ -1,0 +1,4 @@
+Employer EID,File Creation Date,File Creation Time,Payer EID,Payer QID ,Payer Bank Short Name,Payer IBAN,Salary Year and Month,Total Salaries,Total Records
+122333333333333,202003,129,122333333333333,123456,FF,67,202002,3724.49,1
+Record Sequence,Employee QID,Employee VisaID,Employee Name,Employee Bank Short Name,Employee Acoount,Salary Frequency,Number Of Working Days,NetSalary,Basic Salary,Extra Hours,Extra Income,Deductions,Payment Type,Notes/Comments,Employee ID
+1,,,TEST MSP OFFHOL,A,JUTZZZZGGGGGGN,M,20,3724.49,3931.03,0,0.00,0.00,Salary,,OILGAS011630

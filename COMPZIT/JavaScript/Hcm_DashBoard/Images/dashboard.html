@@ -1,0 +1,1171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+<link rel="stylesheet" type="text/css" href="css/menu.css" media="all" />
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!-- Custom CSS -->
+<link href="css/plugins/sb-admin.css" rel="stylesheet">
+<!-- Morris Charts CSS -->
+<link href="css/plugins/morris.css" rel="stylesheet">
+<!-- Data table CSS -->
+<link href="js/jquery.dataTables.min.js" rel="stylesheet" />
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	color: #FFF;
+}
+tr, th {
+	background-color: #15c0d2;
+}
+td, th {
+	border: none;
+	color: #FFF;
+	padding: 8px;
+}
+tr, td {
+	color: #15c0d2;
+	border: 1.5px #15c0d2 solid;
+}
+tr:nth-child(0) {
+	color: #99ca3c;
+}
+tr:nth-child(even) {
+	background-color: #FFFFFF;
+}
+tr:nth-child(odd) {
+	background-color: #d9e2f3;
+}
+#example_filter {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #666;
+	font-weight: lighter;
+	margin: 20px 0 20px 0;
+}
+tfoot {
+	display: none;
+}
+#scll_sty {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 410px;
+	height: 370px;
+}
+.scroll-y::-webkit-scrollbar-track {
+ -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+ background-color:#F5F5F5;
+}
+.scroll-y::-webkit-scrollbar {
+ width:8px;
+ background-color: #F5F5F5;
+cursor:pointer;
+}
+.scroll-y::-webkit-scrollbar-thumb {
+ background-color:#555657;
+}
+.scroll-y::-webkit-scrollbar-thumb:hover {
+ cursor:pointer;
+ background-color:#999;
+}
+.birth_day_wish_box {
+	height: 240px;
+	width: 350px;
+	background-color: #339b84;
+	margin-bottom: 20px;
+}
+.clr_change {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	margin-left: 18%;
+	margin-top: 38%;
+}
+.clr_change:hover {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.scroll-y {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height:290px;
+}
+.panel {
+	border-radius: 0px;
+	height:470px;
+}
+.panel-primary {
+	    background-color: #f3f3f3;
+		border:#666666 solid 1px;
+}
+.panel-heading {
+	border-radius: 0px;
+	text-align: center;
+	color: #CCC;
+	height:50px;
+ 	font-family:Arial, Helvetica, sans-serif;
+}
+.panel-body {
+	padding: 10px;
+    margin-top:33px;
+}
+.panel-primary > .panel-heading {
+	background-color: #555657;
+	border: none;
+}
+.panel-footer
+{
+	background-color:#666;
+	height:30px;
+	border-radius:0px;
+	margin-top:40px;
+}
+.img_bar {
+	width: 87px;
+	height: 87px;
+	border-radius: 100px;
+	margin: 8% 0 0 20%;
+	border: #FFF 1px solid;
+	float: left;
+}
+.text_br_sty {
+	text-align: center;
+	color: #FFF;
+	float: left;
+	margin: 10px 0 0 -6px;
+}
+.baloons_div {
+	margin-top: 22.5px;
+	float: left;
+}
+.bar_grah_height {
+	height: 470px;
+	background-color: #f1f1f1;
+	border: solid 1px #d2cfcf;
+	text-align: center;
+	padding: 10px;
+}
+.id_icon {
+	width: 15px;
+	height: 15px;
+	background-color: #C63;
+}
+.id_box {
+	width: 100px;
+	height: 25px;
+	float: right;
+	margin-top: 10px;
+}
+.event_calender_div {
+	width: 400px;
+	height: 280px;
+	background-color: #d0cece;
+	margin-top: 20px;
+}
+.event_head {
+	height: 50px;
+	background-color: #15c0d2;
+	text-align: center;
+}
+.event_head>span {
+	color: #FFF;
+	font-family: Microsoft Yi Baiti;
+	font-size: 28px;
+	font-weight: 500;
+	box-sizing: border-box;
+}
+.date_year_div {
+	width: 100px;
+	height: 230px;
+	background-color: #484646;
+	text-align: center;
+	float: left;
+}
+.date_year_div>span {
+	color: #FFF;
+	font-family: Microsoft Yi Baiti;
+	font-size: 34px;
+	font-weight: bold;
+	box-sizing: border-box;
+	word-break: keep-all;
+}
+.date_year_div>span>span {
+	font-size: 23px;
+	font-weight: 300;
+}
+.event_one_div {
+	width: 70%;
+	height: 60px;
+	background-color: #FFF;
+	float: left;
+	margin: 3% 0 0 3%;
+	box-shadow: #999 3px 3px 5px 1px;
+}
+.date {
+	height: 60px;
+	width: 60px;
+	background-color: #15c0d2;
+	font-family: Open Sans;
+	font-size: 42px;
+	color: #FFF;
+	float: left;
+	margin: 0;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.day_sty {
+	font-family: Open Sans;
+	font-weight: 700;
+	color: #474646;
+	font-size: 15px;
+	margin: 5px 0 0 0;
+}
+.day_comment {
+	font-weight: lighter;
+	color: #474646;
+	font-size: 13px;
+}
+.annoucment_div {
+	width: 400px;
+	height: 280px;
+	background-color: #d0cece;
+	margin-top: 20px;
+	margin-left: -20px;
+}
+.annoucment_head {
+	width: 400px;
+	height: 50px;
+	background-color: #15c0d2;
+	text-align: center;
+}
+.annoucment_head>span {
+	color: #FFF;
+	font-family: Microsoft Yi Baiti;
+	font-size: 28px;
+	font-weight: 500;
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+.annoucment_box {
+	width: 90%;
+	height: 75px;
+	background-color: #FFF;
+	float: left;
+	margin: 3% 0 0 5%;
+	box-shadow: #999 3px 3px 5px 1px;
+}
+.annoucment_box_text {
+	font-weight: 500;
+	color: #333333;
+	font-size: 13px;
+	text-align: justify;
+	font-weight: 500;
+	padding: 2%;
+}
+.visa_alert_box {
+	height: 280px;
+	width: 400px;
+	background-color: #d9d9d9;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+	margin-left: -3%;
+}
+.v_box_display {
+	display: none;
+}
+.v1_box_display {
+	display: block;
+}
+.mar_div {
+	margin-top: 20px;
+}
+.btn_visa_alert {
+	width: 115px;
+	height: 40px;
+	background-color: #15c0d2;
+	font-size: 12px;
+	font-family: Yu Gothic;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+	box-sizing: border-box;
+	color: #FFF;
+}
+.visa:hover {
+	background-color: #15c0d2;
+	border: #FFF 1px solid;
+	color: #FFF;
+}
+.natn_id {
+	background-color: #666666;
+}
+.natn_id:hover {
+	background-color: #15c0d2;
+	border: #FFF 1px solid;
+	color: #FFF;
+}
+.pass_port {
+	background-color: #5a5a5a;
+}
+.pass_port:hover {
+	background-color: #15c0d2;
+	border: #FFF 1px solid;
+	color: #FFF;
+}
+.bg-danger {
+	background-color: #09F;
+}
+.Renew {
+	width: 100px;
+	height: 50px;
+	background-color: #32ddea;
+	border: solid 1px #FFFFFF;
+	color: #FFF;
+	cursor: pointer;
+	padding: 5px;
+	margin: 2% 0 0 37%;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+.Renew:hover {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.panel2 {
+	border-radius: 0px;
+	height: 470px;
+	width: 350px;
+	margin-top: 20px;
+	margin-left: -25px;
+	display: none;
+}
+/*previous next button style*/
+
+.date_year_div a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
+}
+.date_year_div a:hover {
+	background-color: #ddd;
+	color: black;
+}
+.date_year_div .previous {
+	background-color: #f1f1f1;
+	color: black;
+}
+.date_year_div .next {
+	background-color: #15c0d2;
+	color: white;
+}
+.date_year_div .round {
+	border-radius: 50%;
+}
+ @media only screen and (max-width:1288px) {
+.bar_grah_height {
+	width: 100%;
+}
+.panel {
+	border-radius: 0px;
+	height: 470px;
+	width: 350px;
+	margin-top: 20px;
+	margin-left: -25px;
+	display: none;
+}
+.event_calender_div {
+	height: 280px;
+	background-color: #d0cece;
+	margin-top: 20px;
+}
+.event_one_div {
+	width: 60%;
+}
+.annoucment_div {
+	height: 280px;
+	background-color: #d0cece;
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-bottom: 25px;
+}
+.annoucment_box {
+	width: 90%;
+	height: 75px;
+	background-color: #FFF;
+	float: left;
+	margin: 1% 0 0 5%;
+	box-shadow: #999 3px 3px 5px 1px;
+}
+.annoucment_head {
+	width: auto;
+	height: 50px;
+	background-color: #15c0d2;
+
+	text-align: center;
+}
+.visa_alert_box {
+	height: 280px;
+	background-color: #d9d9d9;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+	margin-left: 0px;
+}
+.padding_chart {
+	padding: 20px;
+}
+.Renew {
+	width: 100px;
+	height: 50px;
+	background-color: #32ddea;
+	border: solid 1px #FFFFFF;
+	color: #FFF;
+	cursor: pointer;
+	padding: 5px;
+	margin: 0 0 0 36%;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+}
+@media only screen and (max-width:1200px) {
+.panel {
+	border-radius: 0px;
+	height: 470px;
+	width: 350px;
+	margin-top: 20px;
+	margin-left: -25px;
+	display: none;
+}
+.event_one_div {
+	width: 70%;
+}
+.event_calender_div {
+	width: auto;
+	height: 340px;
+	background-color: #d0cece;
+	margin-top: 20px;
+}
+.date_year_div {
+	width: 100px;
+	height: 290px;
+	background-color: #484646;
+	text-align: center;
+	float: left;
+}
+.annoucment_div {
+	width: auto;
+	height: 300px;
+	background-color: #d0cece;
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-bottom: 25px;
+}
+.annoucment_box {
+	width: 90%;
+	height: 75px;
+	background-color: #FFF;
+	float: left;
+	margin: 1% 0 0 5%;
+	box-shadow: #999 3px 3px 5px 1px;
+}
+.annoucment_head {
+	width: auto;
+	height: 50px;
+	background-color: #15c0d2;
+	;
+	text-align: center;
+}
+.visa_alert_box {
+	height: 280px;
+	width: auto;
+	background-color: #d9d9d9;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+	margin-left: 0px;
+}
+.padding_chart {
+	padding: 20px;
+}
+.Renew {
+	width: 100px;
+	height: 50px;
+	background-color: #32ddea;
+	border: solid 1px #FFFFFF;
+	color: #FFF;
+	cursor: pointer;
+	padding: 5px;
+	margin: 0 0 0 45%;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+}
+ @media only screen and (max-width:1000px) {
+.Renew {
+	width: 100px;
+	height: 50px;
+	background-color: #32ddea;
+	border: solid 1px #FFFFFF;
+	color: #FFF;
+	cursor: pointer;
+	padding: 5px;
+	margin: 0 0 0 44%;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+}
+ @media only screen and (max-width:800px) {
+.Renew {
+	width: 100px;
+	height: 50px;
+	background-color: #32ddea;
+	border: solid 1px #FFFFFF;
+	color: #FFF;
+	cursor: pointer;
+	padding: 5px;
+	margin: 0 0 0 42%;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+.bar_grah_height
+{
+	padding:15px;
+}
+}
+ @media only screen and (max-width:620px)
+{
+.pad_graph_chart
+{
+	padding:1px;
+}
+.bar_grah_height
+{
+	height:530px;
+}
+}
+ @media only screen and (max-width:500px) {
+.Renew {
+	width: 100px;
+	height: 50px;
+	background-color: #32ddea;
+	border: solid 1px #FFFFFF;
+	color: #FFF;
+	cursor: pointer;
+	padding: 5px;
+	margin: 0 0 0 38%;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+.row
+{
+	margin:0;
+	padding:0;
+}
+
+	
+.event_one_div {
+	width: 60%;
+	height: auto;
+}
+.event_calender_div {
+	width:auto;
+	height: 340px;
+	background-color: #d0cece;
+	margin-top: 20px;
+}
+.date_year_div {
+	width: 100px;
+	height: 290px;
+	background-color: #484646;
+	text-align: center;
+	float: left;
+}
+.annoucment_div {
+	width:auto;
+	height: 300px;
+	background-color: #d0cece;
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-bottom: 25px;
+}
+.annoucment_box {
+	width: 90%;
+	height: 75px;
+	background-color: #FFF;
+	float: left;
+	margin: 1% 0 0 5%;
+	box-shadow: #999 3px 3px 5px 1px;
+}
+.annoucment_head {
+	width: auto;
+	height: 50px;
+	background-color: #15c0d2;
+	;
+	text-align: center;
+}
+
+.btn_visa_alert {
+	width: 70%;
+	height: 40px;
+	background-color: #15c0d2;
+	font-size: 12px;
+	font-family: Yu Gothic;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+	box-sizing: border-box;
+	color: #FFF;
+}
+.visa_alert_box {
+	height: 400px;
+	width:auto;
+	background-color: #d9d9d9;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+}
+.date {
+	height: auto;
+}
+.padding_chart {
+	padding: 20px;
+}
+}
+ @media only screen and (max-width:382px) 
+ {
+
+.date_year_div {
+    width: 100%;
+    height:150px;
+    background-color: #484646;
+    text-align: center;
+    float: left;
+}
+.event_calender_div {
+    width: auto;
+    height:620px;
+    background-color:#d0cece;
+    margin-top: 20px;
+}
+.date
+{width:100%;}
+
+.event_one_div {
+    width:90%;
+    height: auto;
+}
+.Renew {
+    width: 100px;
+    height: 50px;
+    background-color: #32ddea;
+    border: solid 1px #FFFFFF;
+    color: #FFF;
+    cursor: pointer;
+    padding: 5px;
+    margin:0 0 0 33%;
+}
+
+.annoucment_box_text {
+    font-weight: 500;
+    color: #333333;
+    font-size: 13px;
+    text-align: justify;
+    font-weight: 500;
+    padding: 2%;
+}
+
+ }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="topheader" init()>
+    <div class="auto1"> <a href="" id="mailopn"><img src="images/profile_pic.png" class="profile_pic" /></a>
+      <h6>Welcome<br />
+        Jaison</h6>
+      <div class="search1">
+        <button class="search_btn_1"></button>
+        <input type="text" class="search_area_1" />
+      </div>
+    </div>
+  </div>
+  <div class="bottomheader">
+    <div class="auto1">
+      <div class="sub_logo"> <a href=""><img src="images/logo.png" /></a> </div>
+      <div class="bottomheader_sub">
+        <div class="bh_sub_lft">
+          <h1>Sales Force Automation</h1>
+          <h2><a href="">Home</a> > <a href="">Dashboard</a></h2>
+          <div class="mailalrt">
+            <div class="mailalrt_sub"> <a href=""><img src="images/mail.png" />
+              <h3>mail</h3>
+              </a> </div>
+            <div class="mailalrt_sub"> <a href=""><img src="images/alert.png" />
+              <h3>alert</h3>
+              </a> </div>
+            <div class="mailalrt_sub"> <a href=""><img src="images/tasks.png" />
+              <h3>tasks</h3>
+              </a> </div>
+          </div>
+        </div>
+        <div class="bh_sub_rght">
+          <h6><a href="">logout</a></h6>
+          <input type="text" class="datepick" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contentarea">
+  <div class="auto1">
+    <div class="cont_lft">
+      <div class="menuarea">
+        <button class="mob-btn icon-bar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <nav class="main-menu">
+          <ul class="menu">
+            <li><a href="" title="License Pack">License Pack</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li class="submenu"><a href="" title="Corporate Pack">Corporate Pack</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li class="submenu"><a href="" title="Country Master">Country Master</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li class="submenuu"><a href="" title="Test">Test</a>
+                  <ul>
+                    <li><a href="" title="Data">Data</a></li>
+                    <li><a href="" title="Data">Data</a></li>
+                    <li><a href="" title="Data">Data</a></li>
+                  </ul>
+                </li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="State Master">State Master</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="City Master">City Master</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Organization Types">Organization Types</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Organization Verification">Organization Verification</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Organization Verification">Organization Verification</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Corporate Type">Corporate Type</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Corporate Definition">Corporate Definition</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Corporate Department">Corporate Department</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Premise Definition">Premise Definition</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Premise-Area Definition">Premise-Area Definition</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Workstation Definition">Workstation Definition</a>
+              <ul>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+                <li><a href="" title="Test">Test</a></li>
+              </ul>
+            </li>
+            <li><a href="" title="Corporate Office Divisions">Corporate Office Divisions</a>
+              <ul>
+                <li><a href="" title="Test">Periodical Ledger Statement</a></li>
+                <li><a href="" title="Test">Ledger Book – Cash</a></li>
+                <li><a href="" title="Test">Ledger Book – Bank</a></li>
+                <li><a href="" title="Test">Ledger Book – Journal</a></li>
+                <li><a href="" title="Test">Trial Balance</a></li>
+                <li><a href="" title="Test">Trading, Profit & Loss Statement</a></li>
+                <li><a href="" title="Test">Balance Sheet</a></li>
+                <li><a href="" title="Test">Income & Expenditure Statement</a></li>
+                <li><a href="" title="Test">Creditor’s Outstanding Statement</a></li>
+                <li><a href="" title="Test">Supplier’s Payment Report</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="overlay"></div>
+        </nav>
+      </div>
+    </div>
+    <div class="cont_rght" style="width:100%">
+      <div class="sect250"></div>
+      
+      <!--// bar graph-->
+      <div class="row">
+      <div class="pad_graph_chart">
+        <div class="col-lg-8 bar_grah_height"> <br />
+          <h1 style="font-size:18px; color:#999; margin-top:15px;">Employee Availability</h1>
+          <br />
+          <div id="morris-bar-chart-10"> </div>
+          <div class="id_box">
+            <div class="id_icon" style="background-color:#1f77b4"></div>
+            <p style="margin-top: -19px; color:#999;">Available</p>
+          </div>
+          <div class="id_box">
+            <div class="id_icon" style="background-color:#2ca02c"></div>
+            <p style="margin-top: -19px; color:#999;">Allocated</p>
+          </div>
+          <div class="id_box">
+            <div class="id_icon" style="background-color:#ff7f0e"></div>
+            <p style="margin-top: -19px; color:#999;">ON Leave</p>
+          </div>
+          </div>
+        </div>
+        
+        <!--birth day wish-->
+        <div class="col-lg-4">
+          <div class="panel panel-primary ">
+            <div class="panel-heading">
+              <h1 style="font-size:16px; font-family:Tahoma, Geneva, sans-serif; font-weight:500; margin-top:3%;">BIRTHDAYS ARE SPECIAL DAYS</h1>
+            </div>
+            <div class="panel-body scroll-y">
+              <div class="birth_day_wish_box"> <img src="images/baloons.png" class="img-responsive baloons_div" width="69"/>
+                <div class="img_bar"> <img src="images/face.JPG" class="img-circle" width="85" /> <span class="text_br_sty"> Today <br />
+                  <span style="font-size:30px; color:#FFFFFF"> Ramo’s <br />
+                  </span> Birthday </span> </div>
+                <br />
+                <span style="color:#FFF; margin-left:5%;  font-family:Verdana, Geneva, sans-serif; font-size:12px"> 29th May 2017</span>
+                <figure>
+                <a href="#" title="Click to wish"> <img src="images/bdwish_button.png" class="clr_change"  class="img-responsive"  /> </a> </div>
+              <div class="birth_day_wish_box"> <img src="images/baloons.png" class="img-responsive baloons_div" width="69"/>
+                <div class="img_bar"> <img src="images/face.JPG" class="img-circle" width="85" /> <span class="text_br_sty"> Today <br />
+                  <span style="font-size:30px; color:#FFFFFF"> Ramo’s <br />
+                  </span> Birthday </span> </div>
+                <br />
+                <span style="color:#FFF; margin-left:5%;  font-family:Verdana, Geneva, sans-serif; font-size:12px"> 29th May 2017</span><a href="#" title="Click to wish"> <img src="images/bdwish_button.png" class="clr_change"  class="img-responsive"  /></a> </div>
+              <div class="birth_day_wish_box"> <img src="images/baloons.png" class="img-responsive baloons_div" width="69"/>
+                <div class="img_bar"><img src="images/face.JPG" class="img-circle" width="85" /><span class="text_br_sty"> Today <br />
+                  <span style="font-size:30px; color:#FFFFFF"> Ramo’s <br />
+                  </span> Birthday </span> </div>
+                <br />
+                <span style="color:#FFF; margin-left:5%;  font-family:Verdana, Geneva, sans-serif; font-size:12px"> 29th May 2017</span><a href="#" title="Click to wish"> <img src="images/bdwish_button.png"  class="clr_change"  class="img-responsive"  /> </a> </div>
+            </div>
+            <div class="panel-footer"></div>
+          </div>
+        </div>
+      </div>
+      <!--// bar graph--> 
+      
+      <!--chart-->
+      <div class="row padding_chart">
+        <table id="example" class="display" cellspacing="0"  width="100%">
+          <thead>
+            <tr>
+              <th>SL#</th>
+              <th>Employee</th>
+              <th>Designation</th>
+              <th>Division</th>
+              <th>Status</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>System Architect</td>
+              <td>Edinburgh</td>
+              <td>6</td>
+              <td>2011/04/25</td>
+              <td>$320,800</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>63</td>
+              <td>2011/07/25</td>
+              <td>$170,750</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Junior Technical Author</td>
+              <td>San Francisco</td>
+              <td>66</td>
+              <td>2009/01/12</td>
+              <td>$86,000</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Senior Javascript Developer</td>
+              <td>Edinburgh</td>
+              <td>22</td>
+              <td>2012/03/29</td>
+              <td>$433,060</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>33</td>
+              <td>2008/11/28</td>
+              <td>$162,700</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Integration Specialist</td>
+              <td>New York</td>
+              <td>61</td>
+              <td>2012/12/02</td>
+              <td>$372,000</td>
+            </tr>
+          <td>4</td>
+            <td>Senior Javascript Developer</td>
+            <td>Edinburgh</td>
+            <td>22</td>
+            <td>2012/03/29</td>
+            <td>$433,060</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>33</td>
+            <td>2008/11/28</td>
+            <td>$162,700</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Integration Specialist</td>
+            <td>New York</td>
+            <td>61</td>
+            <td>2012/12/02</td>
+            <td>$372,000</td>
+          </tr>
+          
+            <td>4</td>
+            <td>Senior Javascript Developer</td>
+            <td>Edinburgh</td>
+            <td>22</td>
+            <td>2012/03/29</td>
+            <td>$433,060</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>33</td>
+            <td>2008/11/28</td>
+            <td>$162,700</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Integration Specialist</td>
+            <td>New York</td>
+            <td>61</td>
+            <td>2012/12/02</td>
+            <td>$372,000</td>
+          </tr>
+            </tbody>
+          
+        </table>
+      </div>
+      <!--chart--> 
+      
+      <!-- event calender and announcment-->
+      <div class="row mar_div">
+        <div class="col-lg-4 ">
+          <div class="event_calender_div">
+            <div class="event_head"> <span>EVENT CALENDAR</span> </div>
+            <div class="date_year_div"> <br />
+              <a class="previous round">&#8249;</a> <br />
+              <span> JUNE <span> 2017</span> </span> <br />
+              <a  class="next round">&#8250;</a> </div>
+            <div class="ddd">
+              <div class="event_one_div"> <span class="date">06</span>
+                <div class="day_sty">&nbsp;&nbsp;&nbsp;Annuversary day</div>
+                <span class="day_comment">&nbsp;&nbsp;&nbsp;If you’re an aspiring event planner</span> </div>
+              <div class="event_one_div"> <span class="date">21</span>
+                <div class="day_sty">&nbsp;&nbsp;&nbsp;Annuversary day</div>
+                <span class="day_comment">&nbsp;&nbsp;&nbsp;If you’re an aspiring event planner</span> </div>
+              <div class="event_one_div"> <span class="date">18</span>
+                <div class="day_sty">&nbsp;&nbsp;&nbsp;Annuversary day</div>
+                <span class="day_comment">&nbsp;&nbsp;&nbsp;If you’re an aspiring event planner</span> </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 "> 
+          
+          <!--expired div-->
+          
+          <div class="col-lg-4 visa_alert_box v_box_display "> <span class="btn_visa_alert btn visa" onclick="change_clr('visa')">VISA</span> <span class="btn_visa_alert btn natn_id" onclick="change_clr('natn_id')">NATIONAL ID</span> <span class="btn_visa_alert btn pass_port" onclick ="change_clr('pass_port')">PASSPORT</span> <br />
+            <img src="images/expired.png" width="80" style="margin:20px 0 0 1px; margin-top:30px;"/> <br />
+            <span style="color:#FF0000; font-family: Microsoft Yi Baiti; font-size:30px;"> Expired</span> <br />
+            <div class="Renew"> <img src="images/renew button.png" width="20" style="margin-top:1px;" /> <br />
+              Renew</div>
+          </div>
+          
+          <!--expired div-->
+          
+          <div class="visa_alert_box v1_box_display "> <span class="btn_visa_alert btn visa" onclick="change_clr('visa')" >VISA</span> <span class="btn_visa_alert btn natn_id" onclick="change_clr('natn_id')">NATIONAL ID</span> <span class="btn_visa_alert btn pass_port" onclick="change_clr('pass_port')">PASSPORT</span> <br />
+            <img src="images/clock.png" width="80" style="margin:20px 0 0 1px; margin-top:30px;"/> <br />
+            <span style="color:#01b7b7; font-family: Microsoft Yi Baiti; font-size:20px;"> Will expired on</span> <br />
+            <span style="font-family:Yu Gothic; font-size:24px;
+                  color:#5a5a5a;">29 DECEMBER 2017</span> </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="annoucment_div">
+            <div class="annoucment_head"><span>ANNOUNCEMENT</span> <br />
+            </div>
+            <img src="images/announce_icon.png" style="margin:2% 0 0 45%"; width="40" />
+            <div class="annoucment_box">
+              <div class="annoucment_box_text"> Lorem Ipsum,is simply dummy text of the printing and typeseting industry. Lorem        Ipsum has been the   industry's standard dummy text ever since the 1500s.</div>
+            </div>
+            <div class="annoucment_box">
+              <div class="annoucment_box_text"> Lorem Ipsum,is simply dummy text of the printing and typeseting industry. Lorem        Ipsum has been the   industry's standard dummy text ever since the 1500s.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="foot">
+  <div class="auto1">
+    <h3>&copy; 2015 copyright</h3>
+    <h4>Developed by <a href="">Volviar Technologies</a></h4>
+  </div>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.min.js"></script><!-- import --> 
+
+<!-- Morris Charts JavaScript --> 
+<script src="js/plugins/morris/raphael.min.js"></script> 
+<script src="js/plugins/morris/morris.min.js"></script> 
+<script src="js/plugins/morris/morris-data.js"></script> 
+
+<!-- Flot Charts JavaScript --> 
+<!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]--> 
+<script src="js/plugins/flot/jquery.flot.js"></script> 
+<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script> 
+<script src="js/plugins/flot/jquery.flot.resize.js"></script> 
+<script src="js/plugins/flot/jquery.flot.pie.js"></script> 
+<script src="js/plugins/flot/flot-data.js"></script> 
+
+<!-- Flot Charts JavaScript --> 
+<script src="js/jquery-1.12.4.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+
+<!--$(document).ready(function() {  
+    $('#example').dataTable( {  
+    "bScrollInfinite": true,
+    "bScrollCollapse": true,
+    "sScrollY":"200px"
+    } );
+});
+
+--> 
+
+<script>
+$(document).ready(function () {
+    $('#example').dataTable({
+        "bScrollInfinite": true,
+        "bScrollCollapse": true,
+        "sScrollY": "200px",
+        "paging": false,
+        "info": false
+    });
+
+ $(".visa").on("click",function()
+ {
+	 $(".v1_box_display").css("display","none")
+	 $(".v_box_display").css("display","block")
+ }
+   );
+
+	
+	});
+	
+function change_clr(Cntrl_id)
+{
+	  $(".natn_id").css("background-color","#666666");
+	  $(".visa").css("background-color","#666666");
+	  $(".pass_port").css("background-color","#666666");
+	  
+	  $("."+Cntrl_id).css("background-color","#15c0d2");
+}
+
+
+
+</script>
+</body>
+</html>

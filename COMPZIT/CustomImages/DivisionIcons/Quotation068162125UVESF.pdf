@@ -1,0 +1,545 @@
+%PDF-1.4
+%”ÙÃ·
+% PDFsharp Version 1.32.2608.0 (verbose mode)
+% Creation date: 19-05-2016 12:00:27             
+% Creation time: 0.005 seconds                   
+% File size: 12270 bytes                         
+% Pages: 2                                       
+% Objects: 13                                    
+%--------------------------------------------------------------------------------------------------
+1 0 obj   % PdfSharp.Pdf.PdfDocumentInformation
+<<
+  /CreationDate (D:20160519120027+05'30')
+  /Creator (PDFsharp 1.32.2608-g \(www.pdfsharp.net\))
+  /Producer (PDFsharp 1.32.2608-g \(www.pdfsharp.net\))
+  /Title (My First PDF)
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+2 0 obj   % PdfSharp.Pdf.Advanced.PdfCatalog
+<<
+  /Pages 3 0 R
+  /Type /Catalog
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+3 0 obj   % PdfSharp.Pdf.PdfPages
+<<
+  /Count 2
+  /Kids [4 0 R 12 0 R]
+  /Type /Pages
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+4 0 obj   % PdfSharp.Pdf.PdfPage
+<<
+  /Contents 5 0 R
+  /Group
+  <<
+    /CS /DeviceRGB
+    /I false
+    /K false
+    /S /Transparency
+  >>
+  /MediaBox [0 0 595 842]
+  /Parent 3 0 R
+  /Resources
+  <<
+    /ExtGState
+    <<
+      /GS0 6 0 R
+      /GS1 11 0 R
+    >>
+    /Font
+    <<
+      /F0 8 0 R
+      /F1 10 0 R
+    >>
+    /ProcSet [/PDF/Text/ImageB/ImageC/ImageI]
+  >>
+  /Type /Page
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+5 0 obj   % PdfSharp.Pdf.Advanced.PdfContent
+<<
+  /Length 4267
+>>
+stream
+q
+1 0 0 -1 0 842 cm -100 Tz
+q
+BT
+/GS0 gs
+/F0 -18 Tf
+195.7886 188.0967 Td (Customer Quotation) Tj
+/F1 -9 Tf
+-155.7886 -109.0483 Td (AL-BALAGH) Tj
+55.6392 0 Td (OIL) Tj
+19.0459 0 Td (&) Tj
+9.7031 0 Td (GAS) Tj
+-84.3882 15 Td (asdff) Tj
+0 15 Td (BHUTAN) Tj
+0 125 Td (Mr.) Tj
+17.8638 0 Td (miky) Tj
+/F0 -9 Tf
+342.1362 0 Td (Our) Tj
+21.6123 0 Td (Reference) Tj
+/F1 -9 Tf
+99.0576 0 Td (916214) Tj
+-480.6699 15 Td (kl) Tj
+10.96 0 Td (house) Tj
+/F0 -9 Tf
+349.04 0 Td (Date) Tj
+/F1 -9 Tf
+101.0527 0 Td (07-05-2016) Tj
+-461.0527 15 Td (TPDY) Tj
+0 15 Td (Kochi-5) Tj
+0 15 Td (682005) Tj
+0 15 Td (INDIA) Tj
+/F0 -10 Tf
+0 41.0054 Td (Mr.) Tj
+21.4795 0 Td (miky) Tj
+ET
+1 w
+0 J
+0 j
+[]0 d
+0 0.392 0 RG
+/GS1 gs
+40 365 m
+555 365 l
+S
+BT
+/F0 -8 Tf
+45 378.043 Td (Item) Tj
+24.5234 0 Td (Name) Tj
+125.4766 0 Td (Unit) Tj
+71.2266 0 Td (Quantity) Tj
+88.2148 0 Td (Rate) Tj
+59.4102 0 Td (Tax) Tj
+36.7852 0 Td (Discount) Tj
+66.1523 0 Td (Amount) Tj
+ET
+40 390 m
+555 390 l
+S
+BT
+/F1 -6 Tf
+45 401.0322 Td (MISC10) Tj
+150 0 Td (CENTI) Tj
+20.8037 0 Td (METER) Tj
+75.5703 0 Td (1.00) Tj
+62.3711 0 Td (578.00) Tj
+55 0 Td (538.23) Tj
+67.6289 0 Td (0.00) Tj
+50.5566 0 Td (1116.23) Tj
+ET
+40 415 m
+555 415 l
+S
+BT
+45 426.0322 Td (MISC1) Tj
+150 0 Td (MAXI) Tj
+17.9033 0 Td (METER) Tj
+78.4707 0 Td (1.00) Tj
+62.3711 0 Td (324.00) Tj
+55 0 Td (139.32) Tj
+67.6289 0 Td (0.00) Tj
+54.3711 0 Td (463.32) Tj
+ET
+40 440 m
+555 440 l
+S
+BT
+45 451.0322 Td (MISC2) Tj
+150 0 Td (CENTI) Tj
+20.8037 0 Td (METER) Tj
+75.5703 0 Td (1.00) Tj
+62.3711 0 Td (432.00) Tj
+122.6289 0 Td (0.00) Tj
+54.3711 0 Td (432.00) Tj
+ET
+40 465 m
+555 465 l
+S
+BT
+45 476.0322 Td (LAMP) Tj
+150 0 Td (CENTI) Tj
+20.8037 0 Td (METER) Tj
+75.5703 0 Td (1.00) Tj
+58.5566 0 Td (4535.00) Tj
+126.4434 0 Td (0.00) Tj
+50.5566 0 Td (4535.00) Tj
+ET
+40 490 m
+555 490 l
+S
+BT
+45 501.0322 Td (LAPTOP) Tj
+150 0 Td (METER) Tj
+96.374 0 Td (1.00) Tj
+58.5566 0 Td (5646.00) Tj
+126.4434 0 Td (0.00) Tj
+50.5566 0 Td (5646.00) Tj
+ET
+40 515 m
+555 515 l
+S
+BT
+45 526.0322 Td (LEGIN) Tj
+150 0 Td (CENTI) Tj
+20.8037 0 Td (METER) Tj
+75.5703 0 Td (1.00) Tj
+58.5566 0 Td (6546.00) Tj
+126.4434 0 Td (0.00) Tj
+50.5566 0 Td (6546.00) Tj
+ET
+40 540 m
+555 540 l
+S
+BT
+45 551.0322 Td (LUK) Tj
+150 0 Td (CENTI) Tj
+20.8037 0 Td (METER) Tj
+75.5703 0 Td (1.00) Tj
+62.3711 0 Td (656.00) Tj
+122.6289 0 Td (0.00) Tj
+54.3711 0 Td (656.00) Tj
+ET
+40 565 m
+555 565 l
+S
+BT
+45 576.0322 Td (SALWAR) Tj
+150 0 Td (CENTI) Tj
+20.8037 0 Td (METER) Tj
+75.5703 0 Td (1.00) Tj
+50.9277 0 Td (334545.00) Tj
+134.0723 0 Td (0.00) Tj
+42.9277 0 Td (334545.00) Tj
+ET
+40 590 m
+555 590 l
+S
+BT
+45 601.0322 Td (AYY) Tj
+150 0 Td (MAXI) Tj
+17.9033 0 Td (METER) Tj
+78.4707 0 Td (1.00) Tj
+58.5566 0 Td (5545.00) Tj
+126.4434 0 Td (0.00) Tj
+50.5566 0 Td (5545.00) Tj
+ET
+40 615 m
+555 615 l
+S
+40 365 m
+40 615 l
+S
+190 365 m
+190 615 l
+S
+260 365 m
+260 615 l
+S
+310 365 m
+310 615 l
+S
+380 365 m
+380 615 l
+S
+435 365 m
+435 615 l
+S
+495 365 m
+495 615 l
+S
+555 365 m
+555 615 l
+S
+BT
+385 626.0322 Td (Gross) Tj
+19.2158 0 Td (Amount) Tj
+115.0859 0 Td (359484.55) Tj
+ET
+380 640 m
+555 640 l
+S
+380 615 m
+380 640 l
+S
+495 615 m
+495 640 l
+S
+555 615 m
+555 640 l
+S
+BT
+385 651.0322 Td (Bill-wise) Tj
+27.1436 0 Td (Discount) Tj
+28.2305 0 Td (Amount) Tj
+98 0 Td (0.00) Tj
+ET
+380 665 m
+555 665 l
+S
+380 640 m
+380 665 l
+S
+495 640 m
+495 665 l
+S
+555 640 m
+555 665 l
+S
+BT
+385 676.0322 Td (Net) Tj
+12.5361 0 Td (Amount) Tj
+121.7656 0 Td (359484.55) Tj
+ET
+380 690 m
+555 690 l
+S
+380 665 m
+380 690 l
+S
+495 665 m
+495 690 l
+S
+555 665 m
+555 690 l
+S
+BT
+/F0 -10 Tf
+40 725.0537 Td (Terms & Conditions) Tj
+ET
+0 0 0 RG
+40 727.5 m
+152 727.5 l
+S
+BT
+/F0 -9 Tf
+40 754.0483 Td (OFFER) Tj
+100 0 Td (:) Tj
+/F1 -9 Tf
+20 0 Td (359484.55) Tj
+52.2114 0 Td (\(As) Tj
+18.0923 0 Td (Per) Tj
+17.7935 0 Td (List) Tj
+18.8789 0 Td (Attached\)) Tj
+/F0 -9 Tf
+-226.9761 25 Td (PRICE) Tj
+100 0 Td (:) Tj
+/F1 -9 Tf
+20 0 Td (yictttttttttttttttttttttttttttttuiuio) Tj
+143.4507 0 Td (y) Tj
+8.4902 0 Td (uyuyytuyy) Tj
+50.4272 0 Td (yt) Tj
+12.0366 0 Td (ty) Tj
+12.0366 0 Td (uiti) Tj
+17.3452 0 Td (ys) Tj
+13.1792 0 Td (dsf) Tj
+16.6245 0 Td (dsf) Tj
+16.6245 0 Td (dsf) Tj
+16.6245 0 Td (dsfdf) Tj
+25.396 0 Td (dsf) Tj
+16.6245 0 Td (dsf) Tj
+16.6245 0 Td (dsf) Tj
+-365.4844 10.938 Td (dsfsdfsdfdsfsd) Tj
+67.3022 0 Td (f) Tj
+6.3281 0 Td (fbfdbgtyiuyiyuitddddddddddddddddddddyictttttttttttttttttttttt) Tj
+ET
+Q
+Q
+endstream
+endobj
+%--------------------------------------------------------------------------------------------------
+6 0 obj   % PdfSharp.Pdf.Advanced.PdfExtGState
+<<
+  /ca 1
+  /Type /ExtGState
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+7 0 obj   % PdfSharp.Pdf.Advanced.PdfFontDescriptor
+<<
+  /Ascent 1005
+  /CapHeight 727
+  /Descent -210
+  /Flags 32
+  /FontBBox [-550 -303 1707 1072]
+  /FontName /Verdana,Bold
+  /ItalicAngle 0
+  /StemV 0
+  /Type /FontDescriptor
+  /XHeight 548
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+8 0 obj   % PdfSharp.Pdf.Advanced.PdfTrueTypeFont
+<<
+  /BaseFont /Verdana,Bold
+  /Encoding /WinAnsiEncoding
+  /FirstChar 0
+  /FontDescriptor 7 0 R
+  /LastChar 255
+  /Subtype /TrueType
+  /Type /Font
+  /Widths [1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 341 402 587 867 710 1271 862 332 543 543 710 867 361 479 361 689 710 710 710 710 710 710 710 710 710 710 402 402 867 867 867 616 963 776 761 723 830 683 650 811 837 545 555 770 637 947 846 850 732 850 782 710 681 812 763 1128 763 736 691 543 689 543 867 710 710 667 699 588 699 664 422 699 712 341 402 670 341 1058 712 686 699 699 497 593 455 712 649 979 668 650 596 710 543 710 867 1000 710 1000 332 710 587 1048 710 710 710 1777 710 543 1135 1000 691 1000 1000 332 332 587 587 710 710 1000 710 963 593 543 1067 1000 596 736 341 402 710 710 710 710 543 710 710 963 597 849 867 479 963 710 587 867 597 597 710 721 710 361 710 597 597 849 1181 1181 1181 616 776 776 776 776 776 776 1093 723 683 683 683 683 545 545 545 545 830 846 850 850 850 850 850 867 850 812 812 812 812 736 734 712 667 667 667 667 667 667 1018 588 664 664 664 664 341 341 341 341 679 712 686 686 686 686 686 867 686 712 712 712 712 650 699 650]
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+9 0 obj   % PdfSharp.Pdf.Advanced.PdfFontDescriptor
+<<
+  /Ascent 1005
+  /CapHeight 727
+  /Descent -210
+  /Flags 32
+  /FontBBox [-560 -303 1447 1051]
+  /FontName /Verdana
+  /ItalicAngle 0
+  /StemV 0
+  /Type /FontDescriptor
+  /XHeight 545
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+10 0 obj   % PdfSharp.Pdf.Advanced.PdfTrueTypeFont
+<<
+  /BaseFont /Verdana
+  /Encoding /WinAnsiEncoding
+  /FirstChar 0
+  /FontDescriptor 9 0 R
+  /LastChar 255
+  /Subtype /TrueType
+  /Type /Font
+  /Widths [1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 351 393 458 818 635 1076 726 268 454 454 635 818 363 454 363 454 635 635 635 635 635 635 635 635 635 635 454 454 818 818 818 545 1000 683 685 698 770 632 574 775 751 420 454 692 556 842 748 787 603 787 695 683 616 731 683 988 685 615 685 454 454 454 818 635 635 600 623 520 623 595 351 623 632 274 344 591 274 972 632 606 623 623 426 520 394 632 591 818 591 591 525 634 454 634 818 1000 635 1000 268 635 458 818 635 635 635 1521 683 454 1069 1000 685 1000 1000 268 268 458 458 545 635 1000 635 976 520 454 981 1000 525 615 351 393 635 635 635 635 454 635 635 1000 545 644 818 454 1000 635 541 818 541 541 635 641 635 363 635 541 545 644 1000 1000 1000 545 683 683 683 683 683 683 984 698 632 632 632 632 420 420 420 420 775 748 787 787 787 787 787 818 787 731 731 731 731 615 605 620 600 600 600 600 600 600 955 520 595 595 595 595 274 274 274 274 611 632 606 606 606 606 606 818 606 632 632 632 632 591 623 591]
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+11 0 obj   % PdfSharp.Pdf.Advanced.PdfExtGState
+<<
+  /CA 1
+  /Type /ExtGState
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+12 0 obj   % PdfSharp.Pdf.PdfPage
+<<
+  /Contents 13 0 R
+  /Group
+  <<
+    /CS /DeviceRGB
+    /I false
+    /K false
+    /S /Transparency
+  >>
+  /MediaBox [0 0 595 842]
+  /Parent 3 0 R
+  /Resources
+  <<
+    /ExtGState
+    <<
+      /GS0 6 0 R
+    >>
+    /Font
+    <<
+      /F0 8 0 R
+      /F1 10 0 R
+    >>
+    /ProcSet [/PDF/Text/ImageB/ImageC/ImageI]
+  >>
+  /Type /Page
+>>
+endobj
+%--------------------------------------------------------------------------------------------------
+13 0 obj   % PdfSharp.Pdf.Advanced.PdfContent
+<<
+  /Length 1214
+>>
+stream
+q
+1 0 0 -1 0 842 cm -100 Tz
+q
+BT
+/GS0 gs
+/F0 -9 Tf
+40 79.0483 Td (PAYMENT) Tj
+100 0 Td (:) Tj
+/F1 -9 Tf
+20 0 Td (yictttttttttttttttttttttttttttttuiuio) Tj
+143.4507 0 Td (y) Tj
+8.4902 0 Td (uyuyytuyy) Tj
+50.4272 0 Td (yt) Tj
+12.0366 0 Td (ty) Tj
+12.0366 0 Td (uiti) Tj
+17.3452 0 Td (yt) Tj
+12.0366 0 Td (iyti) Tj
+16.9761 0 Td (ty) Tj
+12.0366 0 Td (ityi) Tj
+16.9761 0 Td (ty) Tj
+-301.812 10.938 Td (iuyiyuitddddddddddddddddddddyictttttttttttttttttttttttttttttuiuio) Tj
+288.5977 0 Td (y) Tj
+8.4902 0 Td (uyuyytu) Tj
+-297.0879 21.876 Td (yy) Tj
+13.8164 0 Td (yt) Tj
+12.0366 0 Td (ty) Tj
+12.0366 0 Td (uiti) Tj
+17.3452 0 Td (yt) Tj
+12.0366 0 Td (iyti) Tj
+16.9761 0 Td (ty) Tj
+12.0366 0 Td (ityi) Tj
+16.9761 0 Td (ty) Tj
+12.0366 0 Td (yictttttttttttttttttttttttttttttuiuio) Tj
+143.4507 0 Td (y) Tj
+8.4902 0 Td (uyuyytuyy) Tj
+50.4272 0 Td (yt) Tj
+12.0366 0 Td (ty) Tj
+12.0366 0 Td (uiti) Tj
+17.3452 0 Td (yt) Tj
+12.0366 0 Td (iyti) Tj
+-381.1201 10.938 Td (ty) Tj
+12.0366 0 Td (ityi) Tj
+16.9761 0 Td (ty) Tj
+12.0366 0 Td (iuyiyuitddddddddd) Tj
+/F0 -9 Tf
+-161.0493 36.248 Td (VALIDITY) Tj
+100 0 Td (:) Tj
+-100 25 Td (DELIVERY) Tj
+100 0 Td (:) Tj
+-100 25 Td (DELIVERY) Tj
+54.0352 0 Td (PERIOD) Tj
+45.9648 0 Td (:) Tj
+ET
+Q
+Q
+endstream
+endobj
+%--------------------------------------------------------------------------------------------------
+xref
+0 14
+0000000000 65535 f 
+0000000411 00000 n 
+0000000749 00000 n 
+0000000939 00000 n 
+0000001135 00000 n 
+0000001630 00000 n 
+0000006087 00000 n 
+0000006274 00000 n 
+0000006626 00000 n 
+0000008021 00000 n 
+0000008368 00000 n 
+0000009756 00000 n 
+0000009944 00000 n 
+0000010423 00000 n 
+trailer
+<<
+  /ID [<C443DD44097A96489C2606386ECFE319><C443DD44097A96489C2606386ECFE319>]
+  /Info 1 0 R
+  /Root 2 0 R
+  /Size 14
+>>
+startxref
+11828
+%%EOF

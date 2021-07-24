@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://microsoft.com/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://microsoft.com/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/webservices/">
+      <s:element name="ReadInsuranceType">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReadInsuranceTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadInsuranceTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddInsuranceProvider">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intCorpId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intOrgId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intUserId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intInsurTypeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProviderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrProviderAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddInsuranceProviderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateInsuranceProvider">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intInsureId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCorpId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intOrgId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intUserId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intInsurTypeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProviderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrProviderAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInsuranceProviderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckInsuranceProviderName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intInsure_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCorpId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intOrg_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckInsuranceProviderNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckInsuranceProviderNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadInsuranceDetailById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intInsureId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadInsuranceDetailByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadInsuranceDetailByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadInsuranceProviderListBySearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intOrg" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCorp" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCancelStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSearchField" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDatabaseField" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadInsuranceProviderListBySearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadInsuranceProviderListBySearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelInsuranceProvider">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intInsureId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intUser_Id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCancelReason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelInsuranceProviderResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReadInsuranceTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadInsuranceType" />
+  </wsdl:message>
+  <wsdl:message name="ReadInsuranceTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadInsuranceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddInsuranceProviderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddInsuranceProvider" />
+  </wsdl:message>
+  <wsdl:message name="AddInsuranceProviderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddInsuranceProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInsuranceProviderSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInsuranceProvider" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInsuranceProviderSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInsuranceProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckInsuranceProviderNameSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckInsuranceProviderName" />
+  </wsdl:message>
+  <wsdl:message name="CheckInsuranceProviderNameSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckInsuranceProviderNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadInsuranceDetailByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadInsuranceDetailById" />
+  </wsdl:message>
+  <wsdl:message name="ReadInsuranceDetailByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadInsuranceDetailByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadInsuranceProviderListBySearchSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadInsuranceProviderListBySearch" />
+  </wsdl:message>
+  <wsdl:message name="ReadInsuranceProviderListBySearchSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadInsuranceProviderListBySearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelInsuranceProviderSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelInsuranceProvider" />
+  </wsdl:message>
+  <wsdl:message name="CancelInsuranceProviderSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelInsuranceProviderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service_InsuranceProviderSoap">
+    <wsdl:operation name="ReadInsuranceType">
+      <wsdl:input message="tns:ReadInsuranceTypeSoapIn" />
+      <wsdl:output message="tns:ReadInsuranceTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInsuranceProvider">
+      <wsdl:input message="tns:AddInsuranceProviderSoapIn" />
+      <wsdl:output message="tns:AddInsuranceProviderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsuranceProvider">
+      <wsdl:input message="tns:UpdateInsuranceProviderSoapIn" />
+      <wsdl:output message="tns:UpdateInsuranceProviderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckInsuranceProviderName">
+      <wsdl:input message="tns:CheckInsuranceProviderNameSoapIn" />
+      <wsdl:output message="tns:CheckInsuranceProviderNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadInsuranceDetailById">
+      <wsdl:input message="tns:ReadInsuranceDetailByIdSoapIn" />
+      <wsdl:output message="tns:ReadInsuranceDetailByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadInsuranceProviderListBySearch">
+      <wsdl:input message="tns:ReadInsuranceProviderListBySearchSoapIn" />
+      <wsdl:output message="tns:ReadInsuranceProviderListBySearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelInsuranceProvider">
+      <wsdl:input message="tns:CancelInsuranceProviderSoapIn" />
+      <wsdl:output message="tns:CancelInsuranceProviderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service_InsuranceProviderSoap" type="tns:Service_InsuranceProviderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReadInsuranceType">
+      <soap:operation soapAction="http://microsoft.com/webservices/ReadInsuranceType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInsuranceProvider">
+      <soap:operation soapAction="http://microsoft.com/webservices/AddInsuranceProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsuranceProvider">
+      <soap:operation soapAction="http://microsoft.com/webservices/UpdateInsuranceProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInsuranceProviderName">
+      <soap:operation soapAction="http://microsoft.com/webservices/CheckInsuranceProviderName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadInsuranceDetailById">
+      <soap:operation soapAction="http://microsoft.com/webservices/ReadInsuranceDetailById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadInsuranceProviderListBySearch">
+      <soap:operation soapAction="http://microsoft.com/webservices/ReadInsuranceProviderListBySearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelInsuranceProvider">
+      <soap:operation soapAction="http://microsoft.com/webservices/CancelInsuranceProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service_InsuranceProviderSoap12" type="tns:Service_InsuranceProviderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReadInsuranceType">
+      <soap12:operation soapAction="http://microsoft.com/webservices/ReadInsuranceType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInsuranceProvider">
+      <soap12:operation soapAction="http://microsoft.com/webservices/AddInsuranceProvider" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsuranceProvider">
+      <soap12:operation soapAction="http://microsoft.com/webservices/UpdateInsuranceProvider" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInsuranceProviderName">
+      <soap12:operation soapAction="http://microsoft.com/webservices/CheckInsuranceProviderName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadInsuranceDetailById">
+      <soap12:operation soapAction="http://microsoft.com/webservices/ReadInsuranceDetailById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadInsuranceProviderListBySearch">
+      <soap12:operation soapAction="http://microsoft.com/webservices/ReadInsuranceProviderListBySearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelInsuranceProvider">
+      <soap12:operation soapAction="http://microsoft.com/webservices/CancelInsuranceProvider" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service_InsuranceProvider">
+    <wsdl:port name="Service_InsuranceProviderSoap" binding="tns:Service_InsuranceProviderSoap">
+      <soap:address location="http://localhost:2637/AWMS/AWMS_WebServices/Service_InsuranceProvider.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service_InsuranceProviderSoap12" binding="tns:Service_InsuranceProviderSoap12">
+      <soap12:address location="http://localhost:2637/AWMS/AWMS_WebServices/Service_InsuranceProvider.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

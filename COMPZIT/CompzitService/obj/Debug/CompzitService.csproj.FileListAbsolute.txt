@@ -1,0 +1,324 @@
+D:\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+D:\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+D:\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+D:\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+D:\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+D:\References_ERP\CompzitService.exe.config
+D:\References_ERP\CompzitService.exe
+D:\References_ERP\CompzitService.pdb
+E:\Compzit\References_ERP\CompzitService.exe.config
+E:\Compzit\References_ERP\CompzitService.exe
+E:\Compzit\References_ERP\CompzitService.pdb
+E:\Compzit\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+E:\Compzit\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\Compzit\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\Compzit\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\Compzit\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\References_ERP\CompzitService.exe.config
+E:\References_ERP\CompzitService.exe
+E:\References_ERP\CompzitService.pdb
+E:\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+F:\References_ERP\CompzitService.exe.config
+F:\References_ERP\CompzitService.exe
+F:\References_ERP\CompzitService.pdb
+F:\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+F:\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+F:\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+F:\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+F:\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+F:\AWMS\References_ERP\CompzitService.exe.config
+F:\AWMS\References_ERP\CompzitService.exe
+F:\AWMS\References_ERP\CompzitService.pdb
+F:\AWMS\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+F:\AWMS\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+F:\AWMS\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+F:\AWMS\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+F:\AWMS\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+F:\AWMS\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+F:\AWMS\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+F:\AWMS\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+F:\AWMS\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+F:\AWMS\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+F:\AWMS\Final Project\References_ERP\CompzitService.exe.config
+F:\AWMS\Final Project\References_ERP\CompzitService.exe
+F:\AWMS\Final Project\References_ERP\CompzitService.pdb
+F:\Compzit\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+F:\Compzit\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+F:\Compzit\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+F:\Compzit\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+F:\Compzit\Final Project\References_ERP\CompzitService.exe.config
+F:\Compzit\Final Project\References_ERP\CompzitService.exe
+F:\Compzit\Final Project\References_ERP\CompzitService.pdb
+F:\Compzit\Final Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+F:\Compzit\Final_Project\References_ERP\CompzitService.exe.config
+F:\Compzit\Final_Project\References_ERP\CompzitService.exe
+F:\Compzit\Final_Project\References_ERP\CompzitService.pdb
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+F:\Compzit\Final_Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+D:\CompzitService\obj\Debug\CompzitService.exe
+D:\CompzitService\obj\Debug\CompzitService.pdb
+D:\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+D:\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+D:\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+F:\COMPZIT FOR QC\References_ERP\CompzitService.exe.config
+F:\COMPZIT FOR QC\References_ERP\CompzitService.exe
+F:\COMPZIT FOR QC\References_ERP\CompzitService.pdb
+F:\COMPZIT FOR QC\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+F:\COMPZIT FOR QC\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+F:\COMPZIT FOR QC\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+F:\COMPZIT FOR QC\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+F:\COMPZIT FOR QC\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\integration\References_ERP\CompzitService.exe.config
+E:\integration\References_ERP\CompzitService.exe
+E:\integration\References_ERP\CompzitService.pdb
+E:\integration\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+E:\integration\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\integration\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\integration\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\integration\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+D:\work\References_ERP\CompzitService.exe.config
+D:\work\References_ERP\CompzitService.exe
+D:\work\References_ERP\CompzitService.pdb
+D:\work\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+D:\work\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+D:\work\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+D:\work\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+D:\work\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\Final\References_ERP\CompzitService.exe.config
+E:\Final\References_ERP\CompzitService.exe
+E:\Final\References_ERP\CompzitService.pdb
+E:\Final\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+E:\Final\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\Final\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\Final\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\Final\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\Final\16\References_ERP\CompzitService.exe.config
+E:\Final\16\References_ERP\CompzitService.exe
+E:\Final\16\References_ERP\CompzitService.pdb
+E:\Final\16\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+E:\Final\16\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\Final\16\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\Final\16\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\Final\16\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\CompztWelfare&Conduct\References_ERP\CompzitService.exe.config
+E:\CompztWelfare&Conduct\References_ERP\CompzitService.exe
+E:\CompztWelfare&Conduct\References_ERP\CompzitService.pdb
+E:\CompztWelfare&Conduct\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\CompztWelfare&Conduct\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\CompztWelfare&Conduct\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\CompztWelfare&Conduct\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\FINALPUBLISH\References_ERP\CompzitService.exe.config
+E:\FINALPUBLISH\References_ERP\CompzitService.exe
+E:\FINALPUBLISH\References_ERP\CompzitService.pdb
+E:\FINALPUBLISH\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+E:\FINALPUBLISH\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\FINALPUBLISH\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\FINALPUBLISH\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\FINALPUBLISH\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+C:\Users\volviar\Desktop\References_ERP\CompzitService.exe.config
+C:\Users\volviar\Desktop\Service\CompzitService\obj\Debug\CompzitService.exe
+C:\Users\volviar\Desktop\Service\CompzitService\obj\Debug\CompzitService.pdb
+C:\Users\volviar\Desktop\Service\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+C:\Users\volviar\Desktop\Service\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+C:\Users\volviar\Desktop\Service\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+D:\Release\References_ERP\CompzitService.exe.config
+D:\Release\Service\CompzitService\obj\Debug\CompzitService.exe
+D:\Release\Service\CompzitService\obj\Debug\CompzitService.pdb
+D:\Release\Service\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+D:\Release\Service\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+D:\Release\References_ERP\CompzitService.exe
+D:\Release\References_ERP\CompzitService.pdb
+D:\Release\Service\CompzitService\CompzitService.exe.config
+D:\Release\Service\CompzitService\CompzitService.exe
+D:\Release\Service\CompzitService\CompzitService.pdb
+D:\Release\Service\CompzitService\MailUtility_ERP.dll
+D:\Release\Service\CompzitService\CL_Compzit.dll
+D:\Release\Service\CompzitService\EL_Compzit.dll
+D:\Release\Service\CompzitService\HashingUtility.dll
+D:\Release\Service\CompzitService\OpenPop.dll
+D:\Release\Service\CompzitService\BL_Compzit.dll
+D:\Release\Service\CompzitService\DL_Compzit.dll
+D:\Release\Service\CompzitService\MailUtility_ERP.pdb
+D:\Release\Service\CompzitService\CL_Compzit.pdb
+D:\Release\Service\CompzitService\EL_Compzit.pdb
+D:\Release\Service\CompzitService\OpenPop.pdb
+D:\Release\Service\CompzitService\Oracle.DataAccess.dll
+D:\Release\Service\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+D:\Release\Service\CompzitService\DataLayerMailUtility.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\CompzitService.exe.config
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\CompzitService.exe
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\CompzitService.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\MailUtility_ERP.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\CL_Compzit.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\DataLayerMailUtility.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\EL_Compzit.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\HashingUtility.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\OpenPop.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\BL_Compzit.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\Oracle.DataAccess.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\DL_Compzit.dll
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\MailUtility_ERP.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\CL_Compzit.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\EL_Compzit.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\OpenPop.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\BL_Compzit.pdb
+E:\31-3-18CompztFinal\COMPZIT\CompzitService\DL_Compzit.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\CompzitService.exe.config
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\CompzitService.exe
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\CompzitService.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\MailUtility_ERP.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\CL_Compzit.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\DataLayerMailUtility.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\EL_Compzit.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\HashingUtility.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\OpenPop.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\BL_Compzit.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\Oracle.DataAccess.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\itextsharp.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\DL_Compzit.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\MailUtility_ERP.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\CL_Compzit.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\EL_Compzit.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\OpenPop.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\BL_Compzit.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\DL_Compzit.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\CompzitService.exe.config
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\CompzitService.exe
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\CompzitService.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\MailUtility_ERP.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\CL_Compzit.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\DataLayerMailUtility.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\EL_Compzit.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\HashingUtility.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\BL_Compzit.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\Oracle.DataAccess.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\itextsharp.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\MailUtility_ERP.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\CL_Compzit.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\EL_Compzit.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CompzitService\BL_Compzit.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CompzitService\HashingUtility.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\CompzitService.exe.config
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\CompzitService.exe
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\CompzitService.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\MailUtility_ERP.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\CL_Compzit.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\DataLayerMailUtility.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\EL_Compzit.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\HashingUtility.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\OpenPop.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\BL_Compzit.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\Oracle.DataAccess.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\itextsharp.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\DL_Compzit.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\MailUtility_ERP.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\CL_Compzit.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\EL_Compzit.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\HashingUtility.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\OpenPop.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\BL_Compzit.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CompzitService\DL_Compzit.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\CompzitService.exe.config
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\CompzitService.exe
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\CompzitService.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\MailUtility_ERP.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\CL_Compzit.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\DataLayerMailUtility.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\EL_Compzit.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\HashingUtility.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\OpenPop.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\BL_Compzit.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\Oracle.DataAccess.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\itextsharp.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\DL_Compzit.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\MailUtility_ERP.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\CL_Compzit.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\EL_Compzit.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\HashingUtility.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\OpenPop.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\BL_Compzit.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CompzitService\DL_Compzit.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojResolveAssemblyReference.cache
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.Cache
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\CompzitService.exe.config
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\CompzitService.exe
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\CompzitService.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\MailUtility_ERP.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\CL_Compzit.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\DataLayerMailUtility.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\EL_Compzit.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\HashingUtility.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\OpenPop.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\BL_Compzit.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\Oracle.DataAccess.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\itextsharp.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\DL_Compzit.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\MailUtility_ERP.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\CL_Compzit.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\EL_Compzit.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\HashingUtility.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\OpenPop.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\BL_Compzit.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CompzitService\DL_Compzit.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\obj\Debug\CompzitService.csprojAssemblyReference.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\obj\Debug\CompzitService.ProjectInstaller.resources
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.GenerateResource.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.CoreCompileInputs.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\obj\Debug\CompzitService.csproj.CopyComplete
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\CompzitService.exe.config
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\obj\Debug\CompzitService.exe
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\obj\Debug\CompzitService.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\CompzitService.exe
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\CompzitService.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\CL_Compzit.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\DataLayerMailUtility.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\EL_Compzit.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\HashingUtility.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\OpenPop.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\BL_Compzit.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\Oracle.DataAccess.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\itextsharp.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\DL_Compzit.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\MailUtility_ERP.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\CL_Compzit.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\EL_Compzit.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\HashingUtility.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\OpenPop.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\BL_Compzit.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CompzitService\DL_Compzit.pdb

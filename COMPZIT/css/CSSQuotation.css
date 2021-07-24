@@ -1,0 +1,174 @@
+﻿body {
+    font-family:Calibri;
+}
+  #divErrorRsnReopenReason {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -2%;
+            font-family: Calibri;
+        }
+ /*--------------------------------------------------for modal Reopen Reason------------------------------------------------------*/
+             .modalReopenReason {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            margin-top: 15%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+            margin-left:22%
+
+        }
+
+        /* Modal Content */
+        .modal-contentReopenReason {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeReopenReason {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeReopenReason:hover,
+            .closeReopenReason:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerReopenReason {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyReopenReason {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerReopenReason {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+           /*--------------------------------------------------for modal Mail------------------------------------------------------*/
+        /*Modal*/
+        .modalMail {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        .ui-effects-wrapper {
+            /*left:1px !important;*/
+            /*top:-10px !important;*/
+            /*bottom:10px !important;*/
+        }
+        /* Modal Content */
+        .modal-contentMail {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -40px;
+                opacity: 0.5;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -40px;
+                opacity: 0.5;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        /* The Close Button */
+        .closeMail {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeMail:hover,
+            .closeMail:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerMail {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyMail {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerMail {
+            padding: 1.5% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+          #divErrorRsnMail {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -4%;
+            font-family: Calibri;
+        }

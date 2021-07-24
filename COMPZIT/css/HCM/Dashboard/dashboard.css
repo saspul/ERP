@@ -1,0 +1,589 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+h3
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#999;
+}
+
+p,span
+{font-family:Calibri;}
+.employee_div
+{
+	height:auto;
+	background-color:#e8e7e7;
+	padding:20px;
+	z-index:500;
+}
+.employee_re_div_01
+{
+	height:200px;
+	background:url(/Images/HCM/hcm_dashboard/img_010.PNG) repeat-x;
+	border-radius:10px;
+	margin-left:3%;
+}
+.employee_re_div_02
+{
+	height:200px;
+	background:url(/Images/HCM/hcm_dashboard/img_020.PNG) repeat-x #194887;
+	border-radius:12px;
+	margin-left:3%;
+}
+.employee_re_div_03
+{
+	height:200px;
+	background:url(/Images/HCM/hcm_dashboard/img_030.PNG) repeat-x;
+	border-radius:12px;
+	margin-left:3%;
+}
+.employee_re_div_04
+{
+	height:200px;
+	background:url(/Images/HCM/hcm_dashboard/img_040.PNG) repeat-x;
+	border-radius:12px;
+	margin-left:3%;
+}
+.employee_re_div_05
+{
+	height:200px;
+	background:url(/Images/HCM/hcm_dashboard/img_050.PNG) repeat-x;
+	border-radius:12px;
+	margin-left:3%;
+}
+.employee_div > div > p
+{
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	margin-top:5%;
+	color:#FFF;
+} 
+
+.employee_div > div > h5
+{
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-top:15%;
+	font-weight:lighter;
+} 
+
+.green
+{color:#00899b;}
+.dark_blue
+{color:#184989;}
+.orange
+{color:#ed6113;}
+.light_blue
+{color:#069bbd;}
+.magenta
+{color:#762b93}
+
+
+.employee_div > div > label
+{
+	font-size:30px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.employee_div > div > a > img:hover 
+{
+-webkit-transform: scale(0.8);
+-ms-transform: scale(0.8);
+transform: scale(0.8);
+transition: 1s ease;
+cursor:pointer;
+}
+.medical_div
+{
+    padding:0px;
+	box-shadow:1px 1px 5px #CCCCCC;
+	margin-top: 2%;
+/*	background-color:#099;
+*/	float:left;
+/*	width:100%;*/
+  height:310px;
+}
+.medical_div > .medical_header
+{
+	height:40px;
+	background-color:#09d76f;
+	margin-bottom:20px;
+}
+.medical_div > div > h3
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:lighter;
+	margin-top:9%;
+}
+.medical_header > img
+{margin-left:1%;float:left;}
+.medical_header > span
+{
+	font-family:Arial, Helvetica, sans-serif;
+	float:left;
+	margin:1%;
+	color:#FFF;
+	font-weight:bold;
+}
+.clearance_div
+{
+	float:left;
+	margin-top:1%;
+
+}
+.clearance_header_div
+{
+	background-color:#183f74;
+	height:33px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	border-bottom: 1px solid;
+}
+.clearance_header_div > span
+{
+	font-weight:bold;
+	float:left;
+	margin:2%;
+	font-size: 14px;
+}
+.clearance_header_div > img
+{
+	float:left;
+}
+.box_div
+{
+	    width: 40%;
+    height: 75px;
+    background-color: #FFF;
+    float: left;
+    margin: 7px 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2c568f;
+    padding: 3px;
+    box-shadow: 0px 1px 1px 1px #464343;
+    padding-top: 8px;
+    font-size: 12px;
+}
+.box_div_2
+{
+	width:23%;
+	height:105px;
+	background-color:#FFF;
+	float:left;
+	margin:5px 5px;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#6b6b6b;
+	font-weight:bold;
+	padding:3px;
+	box-shadow:0px 1px 2px 0px #46434387;
+	border-bottom:solid 5px #09d76f;
+}
+.on:hover
+{
+-webkit-transform: scale(0.8);
+-ms-transform: scale(0.8);
+transform: scale(0.8);
+transition: 1s ease;
+cursor:pointer;
+}
+.box_div > label
+{
+	font-size:21px;
+	font-weight:bold;
+}
+.box_div > h1
+{ 
+      font-size: 20px;
+    padding-bottom: 5px;
+}
+.box_div_2 > p
+{
+	font-size:13px;
+    margin-top: 15%;
+	padding-bottom: 9px;
+}
+.box_div_2 > label
+{font-size:22px;}
+.red
+{color:#fd4e4e;}
+.yellow{color:#ffc000;}
+.bg_fly
+{
+	background-image:url(/Images/HCM/hcm_dashboard/fly_bg.png);
+	width:33%;
+	height:290px;
+	text-align:center;
+	margin-top:2%;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	box-shadow:1px 1px 5px #CCCCCC;
+	float:left;
+	cursor:pointer;
+}
+.bg_fly:hover
+{ 
+opacity:0.8;
+}
+.bg_fly > h1
+{
+	font-weight:lighter;
+	font-size:22px;
+}
+.bg_fly > label
+{
+	font-size:60px;font-weight:lighter;
+}
+.bg_fly > img
+{
+	margin-top:9%;
+}
+.fly_tic_box
+{
+	height:200px;
+background:url(/Images/HCM/hcm_dashboard/fly_bg_small.png) center center no-repeat;
+text-align:center;
+margin-top:17px;
+color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+}
+.fly_tic_box > img
+{
+	margin-top:15%;
+}
+.fly_tic_box > label
+{
+	font-size:30px;
+	margin-top:5%;
+}
+.air_port_box
+{
+	background: url(/Images/HCM/hcm_dashboard/AIR_BIG_ICON.png) center center no-repeat;
+    width:42%;
+    height: 148px;
+    text-align: center;
+    padding: 10px;
+    margin: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+}
+.air_port_box > img
+{
+	margin-top:9%;
+}
+.air_port_box > p
+{
+	font-size:17px;
+	margin-top:10px;
+}
+.air_port_box > label
+{
+	font-size:29px;
+	font-weight:bold;
+}
+.sm_box
+{
+	width:15px;
+	height:15px;
+	float:left;
+/*	margin-top: 293px;*/
+	
+}
+.sm_bg_01
+{
+	background-color:#2c568f;
+}
+.sm_bg_02
+{
+	background-color:#f57a34;
+}
+.sm_bg_03
+{
+	background-color:#09d76f;
+}
+.flight_div
+{
+	background-color:#FFFFFF;
+	box-shadow:1px 1px 5px #CCCCCC;
+	height: 247px;
+}
+.airport_div
+{
+	background-color:#FFFFFF;
+	box-shadow:1px 1px 5px #CCCCCC;
+	    height: 185px;
+}
+.clearance_header_div > p
+{
+	padding:15px;
+	font-weight:bold;
+}
+.accomodation_head
+{background-color:#2c568f;
+height:41   px;
+float:left;
+width:100%;
+margin-top:3%;}
+
+.accomodation_div
+{
+	margin-bottom:3%;
+}
+.emp_box
+{width:10px;
+	height:10px;position:absolute;margin:3px;}
+.chan_graph > ul
+{
+	float:right;
+}	
+.chan_graph > ul > li
+{
+	list-style:none;
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:10px;
+	font-size:12px;
+
+}	
+.chan_graph > ul > li > a
+{
+	color:#999;
+}
+.chan_graph > ul > li > a:hover
+{
+	border-bottom:solid 2px #99ca3c;
+	color:#99ca3c;
+}
+
+.chan_graph > ul > li .active{border-bottom:solid 2px #99ca3c;}
+@media only screen and (min-device-width:990px) and (max-width:1340px)
+{
+	.employee_div > div > p{font-size:11px;}
+	.employee_div > div > h5{font-size:11px;}
+	.box_div_2{width:16%;}
+}
+
+@media only screen and (max-width:1154px)
+{
+	.air_port_box{width:43%;}
+}
+
+@media only screen and (max-width:991px)
+{
+	.employee_re_div_01 , .employee_re_div_02 , .employee_re_div_03 , .employee_re_div_04
+	{
+		margin-left:0px;
+		margin-top:3%;
+	}
+	.employee_div > div > h5{margin-top:5%;}
+	.employee_div > div > p{font-size:18px;}
+	.employee_re_div_05{width:100%;margin-top:3%;margin-left:0px;}
+	.employee_div > .employee_re_div_05 > p {margin-top:1%;}
+	.employee_div > .employee_re_div_05 > h5 {margin-top:3%;}
+    .medical_div{width:100%;}
+	.medical_div > div > h3{margin-bottom:25px;}
+	.clearance_div{padding-left:0;}
+	.box_div{margin: 5px 34px;}
+	.clearance_header_div{height:53px;}
+	.box_div_2 > p {
+    font-size:11px;
+    margin-top: 10%;
+}.box_div_2{margin: 5px 4%;}
+.bg_fly{background-image:none;background-color:#1e639e;width:100%;}
+.bg_fly > img {
+    margin-top: 2%;
+}
+}
+
+@media only screen and (min-device-width:523px) and (max-width:769px)
+{
+	.employee_div > div > p{margin-top:1%}
+	.employee_re_div_05 > h5{margin-top:1%;}
+	.employee_div > .employee_re_div_05 > h5 {margin-top:5%;}
+	.box_div_2 {
+    margin: 5px 0%;
+}
+	
+}
+@media only screen and (max-width:770px)
+{
+ .clearance_div{width:100%;padding-left:0;}
+ .medical_div
+{
+	height:auto;
+}
+.box_div_2 > p{margin-top:3%;}
+.box_div_2{width:100%;}
+.air_port_box{width:100%}
+.flight_div{height:auto;}
+.fly_tic_box > img {
+    margin-top: 5%;
+}
+.fly_tic_box > label {
+    font-size: 35px;}
+.fly_tic_box{margin-bottom:20px}	
+.airport_div{height:auto;}
+.dis_none{display:none;}
+}
+@media only screen and (max-width:990px)
+{
+.box_div {
+    width: 89%;}.dis_none{display:none;}
+}
+@media only screen and (max-width:530px)
+{
+.box_div_2 {
+    margin: 5px 0%;
+}
+}
+@media only screen and (max-width:500px)
+{
+	.bargraph_dis_none{display:none;}
+}
+@media only screen and (max-width:430px)
+{
+  .employee_div > div > h5{margin-top:13%;}	
+  .employee_div > div > p {  font-size: 15px;}
+  .employee_div > .employee_re_div_05 > h5 {margin-top: 17%;}
+  .box_div{margin: 5px 16px;}
+  .air_port_box{margin:3px}
+ .accomodation_div
+{
+	margin-bottom:3%;
+}
+.box_div_2 {
+    margin: 5px 0%;
+}
+}
+
+.total-no
+{
+	float:right;
+	font-size:14px;
+	color:#999;
+}
+
+@media print {
+@page{width:1500px;margin:0px;  size: A4;}
+body{font-size:10pt}
+.employee_re_div_01, .employee_re_div_02, .employee_re_div_03, .employee_re_div_04, .employee_re_div_05
+{
+	width:120px;
+	float:left;
+	margin:0;
+	padding:0;
+	margin-left:2%;
+}
+
+.employee_div > div > h5 {
+    font-size:10px;
+	margin-top:18px;
+}
+.clearance_div{width:100%;margin-top:120px;}
+.martop-print {margin-top:30px;}
+.employee_div > div > p
+{font-size:12px;}
+#graph1 > svg {width:100%;}
+.medical_div{width:100%;}
+.medical_div > .col-md-4
+{float:left;}
+.bottomheader{display:none;}
+.topheader {
+    padding: 19px 0px 19px;
+}
+.bg_fly{width:100%;background-image:none;background-color:#1e639e;}
+.fly_tic_box
+{
+	float:left;
+	margin-left:7%;
+	width:160px;
+}
+.air_port_box
+{float:left;}
+.mar-top-air-div
+{
+	margin-top:180px;
+}
+.foot
+{
+ display:none;
+}
+}
+.modal-box {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width:100%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+  position:fixed;
+
+}
+@media (min-width: 32em) {
+
+.modal-box { width: 70%; }
+}
+
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom:2px solid #74237a;
+  background-color:#74237a;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}
+.modal-box header h3{color:#FFF;}
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 { margin: 0; }
+
+.modal-box .modal-body { padding: 2em 1.5em; }
+
+.modal-box footer,
+.modal-box .modal-footer {
+  padding:20px;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:900;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.3) !important;
+  position:fixed;
+}
+
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+ 

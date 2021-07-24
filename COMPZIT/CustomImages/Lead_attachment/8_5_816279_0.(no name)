@@ -1,0 +1,13 @@
+Reporting-MTA: dns;AMXPR05MB181.eurprd05.prod.outlook.com
+Received-From-MTA: dns;06DemoCompany
+Arrival-Date: Sat, 30 Jul 2016 12:11:05 +0000
+
+Final-Recipient: rfc822;asd6e65@gmail.com
+Action: failed
+Status: 5.1.1
+Diagnostic-Code: smtp;550-5.1.1 The email account that you tried to reach does not exist. Please try
+ 550-5.1.1 double-checking the recipient's email address for typos or
+ 550-5.1.1 unnecessary spaces. Learn more at
+ 550 5.1.1  https://support.google.com/mail/answer/6596 v132si13827222oig.158 - gsmtp
+Remote-MTA: dns;mx.google.com
+

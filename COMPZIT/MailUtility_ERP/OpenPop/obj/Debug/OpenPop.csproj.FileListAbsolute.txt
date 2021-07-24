@@ -1,0 +1,6 @@
+E:\Compzit\References_ERP\OpenPop.dll
+E:\Compzit\References_ERP\OpenPop.pdb
+E:\Compzit\References_ERP\OpenPop.xml
+E:\OpenPop.NET 2.0.5\OpenPop.NET 2.0.5\source\OpenPOP\obj\Debug\OpenPop.csprojResolveAssemblyReference.cache
+E:\OpenPop.NET 2.0.5\OpenPop.NET 2.0.5\source\OpenPOP\obj\Debug\OpenPop.dll
+E:\OpenPop.NET 2.0.5\OpenPop.NET 2.0.5\source\OpenPOP\obj\Debug\OpenPop.pdb

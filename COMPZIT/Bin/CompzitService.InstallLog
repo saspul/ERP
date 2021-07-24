@@ -1,0 +1,149 @@
+﻿Installing assembly 'E:\References_ERP\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\References_ERP\CompzitService.InstallLog
+   assemblypath = E:\References_ERP\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'E:\References_ERP\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\References_ERP\CompzitService.InstallLog
+   assemblypath = E:\References_ERP\CompzitService.exe
+Installing assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Creating EventLog source CompzitMailClient in log Application...
+Rolling back assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Restoring event log to previous state for source CompzitMailClient.
+Installing assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Creating EventLog source CompzitMailClient in log Application...
+Rolling back assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Restoring event log to previous state for source CompzitMailClient.
+Installing assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Installing assembly 'F:\Compzit\Final_Project\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\Compzit\Final_Project\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = F:\Compzit\Final_Project\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'F:\Compzit\Final_Project\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\Compzit\Final_Project\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = F:\Compzit\Final_Project\COMPZIT\Bin\CompzitService.exe
+Installing assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'E:\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\COMPZIT\Bin\CompzitService.exe
+Installing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Creating EventLog source CompzitMailClient in log Application...
+Rolling back assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Restoring event log to previous state for source CompzitMailClient.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Creating EventLog source CompzitMailClient in log Application...
+Rolling back assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Restoring event log to previous state for source CompzitMailClient.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Installing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Installing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.InstallLog
+   assemblypath = E:\31-3-18CompztFinal\COMPZIT\Bin\CompzitService.exe

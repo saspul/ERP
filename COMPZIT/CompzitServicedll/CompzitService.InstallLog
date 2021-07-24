@@ -1,0 +1,13 @@
+﻿Installing assembly 'E:\References_ERP\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\References_ERP\CompzitService.InstallLog
+   assemblypath = E:\References_ERP\CompzitService.exe
+Installing service CompzitMailClient...
+Service CompzitMailClient has been successfully installed.
+Creating EventLog source CompzitMailClient in log Application...
+Committing assembly 'E:\References_ERP\CompzitService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\References_ERP\CompzitService.InstallLog
+   assemblypath = E:\References_ERP\CompzitService.exe

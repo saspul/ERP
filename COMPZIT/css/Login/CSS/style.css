@@ -1,0 +1,260 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+*
+{
+	margin:0;
+	padding:0;
+}
+body
+{
+   background:url(/css/Login//image/bg.PNG) no-repeat;
+   background-attachment:fixed;
+   background-size:cover;
+   height:100%;
+}
+.align-01
+{
+	margin:0;
+	padding:0;
+}
+
+.bluee
+{
+	background-color:rgba(255, 255, 255, 0.7);
+	margin:0 auto;
+	margin-top:40px;
+	height:545px;
+}
+.white-box
+{
+	width:100%;
+	height:100px;
+	background-color:#FFF;
+	text-align:center;
+}
+
+#myDIV
+{
+	display:none;
+}
+
+input[type="text"],input[type="password"]{ color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+:focus{outline: none;}
+
+.hover-text{float: left; width:80%; margin:15px 10%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"],input[type="password"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;background-color: transparent;}
+
+.effect-1, 
+.effect-2, 
+.effect-3{border: 0; padding: 7px 0; border-bottom: 1px solid #ccc;}
+
+.effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color:#00aeff; transition: 0.4s;}
+.effect-1:focus ~ .focus-border{width: 100%; transition: 0.4s;}
+
+.input-group-addon {
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+     background-color:transparent; 
+	 border:none;
+    border-bottom:1px solid #ced4da;
+}
+.checkbox-1
+{
+margin-left: 11%;
+/*width:80%;
+*/color:gray;
+height:21px;
+}
+.rem-div
+{
+	color:#999;
+	margin-left:3%;
+}
+.btn-change9 {
+	height: 50px;
+	width:100%;
+	background:#00aeff;
+	color:#FFF;
+	float: left;
+	border: 0px;
+	box-shadow: 0 0 1px #ccc;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: linear;
+	box-shadow: 0px 0 0 #31708f inset;
+	cursor:pointer;
+}
+.btn-change9:hover {
+	-webkit-box-shadow: -500px 0 0 #FFFFFF inset;
+	color:#00aeff;
+}
+.sign-in {
+    width: 80%;
+    border-radius: 0px;
+    margin-left: 10%;
+}
+.sign-in-10{
+    width: 80%;
+    border-radius: 0px;
+    margin-left:10%;
+}
+
+.btn-change10 {
+	height: 50px;
+	width:35%;
+	background:#046ea0;
+	color:#FFF;
+	float: left;
+	border: 0px;
+	box-shadow: 0 0 1px #ccc;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: linear;
+	box-shadow: 0px 0 0 #31708f inset;
+	cursor:pointer;
+}
+.btn-change10:hover {
+	-webkit-box-shadow: -500px 0 0 #FFFFFF inset;
+	color:#046ea0;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+/* SQUARED THREE */
+.squaredThree {
+	width: 20px;	
+/*	margin: 20px auto;*/
+	position: relative;
+}
+
+.squaredThree label {
+	cursor: pointer;
+	position: absolute;
+	width:17px;
+	height:17px;
+	top: 0;
+	border-radius: 4px;
+
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+
+	background: -webkit-linear-gradient(top, #bcb7b7 0%, #45484d 100%);
+	background: -moz-linear-gradient(top, #bcb7b7 0%, #45484d 100%);
+	background: -o-linear-gradient(top, #bcb7b7 0%, #45484d 100%);
+	background: -ms-linear-gradient(top, #bcb7b7 0%, #45484d 100%);
+	background: linear-gradient(top, #bcb7b7 0%, #45484d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+
+.squaredThree label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top:5px;
+	left:4px;
+	border: 3px solid #fcfff4;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.squaredThree label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+
+.squaredThree input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+
+/**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+position: absolute;
+bottom: 111%;
+left: 26%;
+margin-bottom: 5px;
+margin-left: -80px;
+padding: 7px;
+width: 241px;
+border-radius: 3px;
+background-color: #000;
+background-color: hsl(199.2, 95.1%, 32.2%);
+color: #fff;
+content: attr(data-tooltip);
+text-align: center;
+font-size: 14px;
+line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom:111%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top:5px solid hsl(199.2, 95.1%, 32.2%);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+@media only screen and (max-width:600px;)
+{
+[data-tooltip]::before
+{
+}
+}

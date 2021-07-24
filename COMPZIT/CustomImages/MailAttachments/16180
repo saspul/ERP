@@ -1,0 +1,9 @@
+Reporting-MTA: dns;AMXPR05MB181.eurprd05.prod.outlook.com
+Received-From-MTA: dns;AVSERVER
+Arrival-Date: Mon, 1 Aug 2016 09:11:13 +0000
+
+Final-Recipient: rfc822;trdm@albalagh.com
+Action: failed
+Status: 5.1.10
+Diagnostic-Code: smtp;550 5.1.10 RESOLVER.ADR.RecipientNotFound; Recipient not found by SMTP address lookup
+

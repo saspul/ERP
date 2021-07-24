@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageCompzitModal.master.cs" Inherits="MasterPage_MasterPageCompzitModal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        function MM_swapImgRestore() { //v3.0
+            var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+        }
+        function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+            }
+        }
+
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+            if (!x && d.getElementById) x = d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+            var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2) ; i += 3)
+                if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+        }
+</script>
+
+<link rel="shortcut icon" href="/Images/New Images/images/com.ico" type="image/x-icon"/>
+
+<!--------jQuery------->
+<script src="/css/New%20Plugins/libs/jquery-2.1.1.min.js"></script>
+<!--------jQuery------->
+
+<!--------bootstrap------->
+<script type="text/javascript" src="/js/New js/js/ajax.js"></script>
+<script type="text/javascript" src="/js/New js/js/boot.min.js"></script>
+<!--------bootstrap------->
+
+<!--------bootstrap------->
+<link rel="stylesheet" type="text/css" href="/js/New js/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/js/New js/bootstrap/css/bootstrap.min.css"/>
+<!--------bootstrap------->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"/>
+
+<!---Font_Awesome_section_opened----------->
+  <link rel="stylesheet" type="text/css" href="/css/New css/font_awe/css/font-awesome.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/New css/font_awe/css/font-awesome.min.css"/>
+<!---Font_Awesome_section_closed----------->
+
+<!--------css_Included------->
+<link href="/css/New%20css/style_afs1.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/New css/afsdez.css"/>
+<link rel="stylesheet" type="text/css" href="/css/New css/rec.css"/>
+<link rel="stylesheet" type="text/css" href="/css/New css/respon.css"/>
+<!--------css_Included_closed------->
+
+
+<style>
+  .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{padding:3px!important;}
+</style>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body onload="MM_preloadImages('/Images/New Images/images/btn_h.png')">
+
+<div class="wrapper wr2 wr_fls"><!--wrapper_open-->
+
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+<div class="footer" style="display:none;">
+  <p class="tr_l foot_l up_cs"><i class="ft_ico"><asp:Image  id="imgAppFooter" runat="server" /></i><label id="divFootAppName" runat="server" style="padding-left: 1px;"></label></p>
+  <p class="p_col1"><img src="/Images/New Images/images/logo.png" class="img_foot"></p>
+  <p class="pull-right tr_c foot_l " id="divdevelop" runat="server"></p>
+</div>
+
+</div><!--wrapper_closed-->
+
+<!--------Message modal------->
+<div class="modal fade" id="ezAlerts" tabindex="-1" role="dialog" aria-labelledby="lblMsg" aria-hidden="true" style="z-index: 2147483647;">
+  <div id="ezAlerts-dialog" class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div id="ezAlerts-header" class="modal-header mo_hd1">
+        <h5 id="ezAlerts-title" class="modal-title"></h5>
+        <button id="close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="ezAlerts-body" class="modal-body">
+        <div id="ezAlerts-message" ></div>
+      </div>
+      <div id="ezAlerts-footer" class="modal-footer mo_ft1"></div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+    function ezBSAlert(options) {
+        var deferredObject = $.Deferred();
+        var defaults = {
+            type: "alert", //alert, prompt,confirm 
+            modalSize: 'modal-lg', //modal-sm, modal-lg
+            okButtonText: 'Ok',
+            cancelButtonText: 'Cancel',
+            yesButtonText: 'Yes',
+            noButtonText: 'No',
+            headerText: 'Attention',
+            messageText: 'Message',
+            alertType: 'default', //default, primary, success, info, warning, danger
+            inputFieldType: 'text', //could ask for number,email,etc
+        }
+        $.extend(defaults, options);
+
+        var _show = function () {
+
+            var headClass = "navbar-default";
+            switch (defaults.alertType) {
+                case "primary":
+                    headClass = "alert-primary";
+                    break;
+                case "success":
+                    headClass = "alert-success";
+                    break;
+                case "info":
+                    headClass = "alert-info";
+                    break;
+                case "warning":
+                    headClass = "alert-warning";
+                    break;
+                case "danger":
+                    headClass = "alert-danger";
+                    break;
+            }
+
+            $('#ezAlerts-title').text(defaults.headerText);
+            $('#ezAlerts-message').html(defaults.messageText);
+
+            var keyb = "false", backd = "static";
+            var calbackParam = "";
+            switch (defaults.type) {
+                case 'alert':
+                    keyb = "true";
+                    backd = "true";
+                    $('#ezAlerts-footer').html('<button id="ezok-btn" class="btn btn-' + defaults.alertType + '">' + defaults.okButtonText + '</button>').on('click', ".btn", function () {
+                        calbackParam = true;
+                        $('#ezAlerts').modal('hide');
+                    });
+                    break;
+                case 'confirm':
+                    var btnhtml = '<button id="ezok-btn" class="btn btn-primary">' + defaults.yesButtonText + '</button>';
+                    if (defaults.noButtonText && defaults.noButtonText.length > 0) {
+                        btnhtml += '<button id="ezclose-btn" class="btn btn-default">' + defaults.noButtonText + '</button>';
+                    }
+                    $('#ezAlerts-footer').html(btnhtml).on('click', 'button', function (e) {
+                        if (e.target.id === 'ezok-btn') {
+                            calbackParam = true;
+                            $('#ezAlerts').modal('hide');
+                        } else if (e.target.id === 'ezclose-btn') {
+                            calbackParam = false;
+                            $('#ezAlerts').modal('hide');
+                        }
+                    });
+                    break;
+                case 'prompt':
+                    $('#ezAlerts-message').html(defaults.messageText + '<br /><br /><div class="form-group"><input type="' + defaults.inputFieldType + '" class="form-control" id="prompt" /></div>');
+                    $('#ezAlerts-footer').html('<button class="btn btn-primary">' + defaults.okButtonText + '</button>').on('click', ".btn", function () {
+                        calbackParam = $('#prompt').val();
+                        $('#ezAlerts').modal('hide');
+                    });
+                    break;
+            }
+
+            $('#ezAlerts').modal({
+                show: false,
+                backdrop: backd,
+                keyboard: keyb,
+                timeout: 40,
+            }).on('hidden.bs.modal', function (e) {
+                deferredObject.resolve(calbackParam);
+            }).on('shown.bs.modal', function (e) {
+                //btn foucs
+
+                if (defaults.type == "confirm" || defaults.type == "alert") {
+                    $('#ezok-btn').focus();
+                }
+
+                if ($('#prompt').length > 0) {
+                    $('#prompt').focus();
+                }
+            }).modal('show');
+        }
+
+        _show();
+        return deferredObject.promise();
+    }
+
+    </script>
+
+
+</body>
+</html>

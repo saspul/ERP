@@ -1,0 +1,2694 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/MasterPageCompzit_Hcm.master" AutoEventWireup="true" CodeFile="gen_UserRegistration.aspx.cs" Inherits="Master_gen_UserRegistration_gen_UserRegistration" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="Server">
+    <%--date--%>
+    <link href="../../css/Date/StyleSheetDate2.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="../../css/Date/StyleSheetDate.css" />
+    <script language="javascript" type="text/javascript">
+        var submit = 0;
+        function CheckIsRepeat() {
+            if (++submit > 1) {
+
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function CheckSubmitZero() {
+            submit = 0;
+        }
+    </script>
+    <script>
+        //start-0006
+        var confirmbox = 0;
+        
+        function IncrmntConfrmCounter() {
+            confirmbox++;    
+        }
+        function ConfirmMessage() {
+            if (confirmbox > 0) {
+                if (confirm("Are You Sure You Want To Leave This Page?")) {
+                    window.location.href="gen_UserRegistrationList.aspx";
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                window.location.href="gen_UserRegistrationList.aspx";
+
+            }
+        }
+        //stop-0006
+    </script>
+    <%-- for file upload css --%>
+    <style>
+        #scrollToTop {
+            cursor: pointer;
+            background-color: #97c83a;
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            color: #fff;
+            font-size: 16pt;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            border-radius: 35px;
+        }
+
+        .dropdown-menu {
+            z-index: 100;
+        }
+        /*005 start*/
+        .modalLoadingMail {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 19%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 90%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+            padding-left: 45%; /* Location of the box */
+        }
+        /*for file upload*/
+        /*input[type="file"] {*/
+        .fileUpload {
+            margin-left: -17%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .custom-file-upload {
+            margin-left: 18%;
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 2px 4px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            font-family: Calibri;
+            background: white;
+        }
+        /*//0013*/
+         #cphMain_divCheckBox label {
+            /*float: right;*/
+            margin-bottom: 0px;
+            color: #16682a;
+            font-family: Calibri;
+            font-size: 15px;
+        }
+        #cphMain_divCheckBox label.hover{
+             color: #1acc45;
+        }
+        #cphMain_divCheckBox input[type="checkbox"] {
+            float: left;
+            margin: 3px 8px 3px 3px;
+        }
+         .eachform h2 {
+                margin: 6px 0 6px;
+            }
+        #divCheckBox {
+             float: right;
+             width: 53%;
+            max-height: 100px;
+             overflow: auto;
+             border: 1px solid;
+             border-color: #90a8b0;
+             background-color: #f9f9f9;
+              overflow-x: auto;
+    white-space: nowrap;
+
+         }
+    </style>
+     <link href="../../css/Accordiondemo.css" type="text/css" rel="stylesheet" />
+    <script src="../../JavaScript/jquery1.11.1_min.js"></script>
+    <%--	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>--%>
+
+    <script src="../../JavaScript/accordion/accordion.js"></script>
+    <%--for image delete description position--%>
+    <script>
+        function ImagePosition(object,obj2)
+        {
+            var $Mo = jQuery.noConflict();
+            
+            var offset = $Mo("#" + object).offset();
+           
+            var posY = 0;
+            var posX = 0;
+            posY = offset.top;
+            
+            posX = offset.left
+
+            if(object=='ClearImage')
+            {
+                posX = 7.1;
+            }
+            else if (object=='ClearLicenseCopy')
+            {
+                posX = 47;
+            }
+            var d = document.getElementById(obj2);
+            d.style.position = "absolute";
+            d.style.left = posX + '%';
+            if(object=='ClearImage')
+            {
+                d.style.top = posY -52 +'px';
+            } 
+            else if (object=='ClearLicenseCopy')
+            {
+                d.style.top = posY +27 +'px';
+            }
+        }
+
+    </script>
+
+    <%-- for show password  --%>
+    <script>
+
+        // var labelForStyle = '<label for="file' + counter + '" class="custom-file-upload" > <img src="../../Images/Icons/cloud_upload.jpg"></img>Upload File</label>';
+        //  div.innerHTML = labelForStyle+'<input  id="file' + counter + '" name = "file' + counter +
+
+        //                 '" type="file" />';
+
+
+        function alertJobRolChange(){
+           
+          
+                if (confirm("Are You Sure You Want To Change The Job Role?")) {
+                    return true;
+                }
+                else {
+                   
+                    return false;
+                }
+           
+           
+        }
+        function onChanging(){
+            
+            IncrmntConfrmCounter();
+            if(document.getElementById("<%= cbxPswdVisible.ClientID %>").checked  == true)
+            {
+                document.getElementById("<%= txtUsrPwd.ClientID %>").type = 'text';
+                document.getElementById("<%= txtUsrConPwd.ClientID %>").type = 'text';
+                 
+            }
+            else
+            {  document.getElementById("<%= txtUsrPwd.ClientID %>").type = 'password';
+                document.getElementById("<%= txtUsrConPwd.ClientID %>").type = 'password';
+                 
+            }
+            return false;
+        }
+    </script>
+    <style>
+        .form-tooltip {
+            display: table-cell;
+            visibility: hidden;
+            position: absolute;
+            box-sizing: content-box;
+            height: 0;
+            margin-left: 33%;
+            margin-top: 2.5%;
+            /*margin-bottom: -8px;*/
+            cursor: help;
+            width: 235px;
+            word-break: break-all;
+            word-wrap: break-word;
+            padding: 4px 5px;
+            background: #bbb;
+            color: #fff;
+            font-weight: 600;
+            font-size: 12px;
+            /*line-height: 16px;*/
+            font-family: Calibri;
+        }
+
+        :focus + .form-tooltip {
+            margin-bottom: 0;
+            height: auto;
+            visibility: visible;
+        }
+    </style>
+    <style>
+        /* Styles the thumbnail */
+        a.lightbox img {
+            height: 150px;
+            border: 3px solid white;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            margin: 94px 20px 20px 20px;
+        }
+
+        /* Styles the lightbox, removes it from sight and adds the fade-in transition */
+        .lightbox-target {
+            position: fixed;
+            top: -100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            width: 60%;
+            opacity: 0;
+            -webkit-transition: opacity .5s ease-in-out;
+            -moz-transition: opacity .5s ease-in-out;
+            -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+            overflow: hidden;
+        }
+
+            /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+            .lightbox-target img {
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                max-height: 0%;
+                max-width: 0%;
+                border: 3px solid white;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                box-sizing: border-box;
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+            }
+
+        /* Styles the close link, adds the slide down transition */
+        a.lightbox-close {
+            display: block;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            background: white;
+            color: black;
+            text-decoration: none;
+            position: absolute;
+            top: -80px;
+            right: 0;
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+        }
+
+            /* Provides part of the "X" to eliminate an image from the close link */
+            a.lightbox-close:before {
+                content: "";
+                display: block;
+                height: 30px;
+                width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top: 10px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            /* Provides part of the "X" to eliminate an image from the close link */
+            a.lightbox-close:after {
+                content: "";
+                display: block;
+                height: 30px;
+                width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top: 10px;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+        /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+        .lightbox-target:target {
+            opacity: 1;
+            top: 0;
+            bottom: 0;
+            z-index: 3;
+            right: 18%;
+            z-index: 102;
+        }
+
+            .lightbox-target:target img {
+                max-height: 100%;
+                max-width: 80%;
+            }
+
+            .lightbox-target:target a.lightbox-close {
+                top: 0px;
+            }
+    </style>
+
+    <style>
+        .fillform {
+            width: 100%;
+        }
+
+        .subform {
+            float: left;
+            margin-left: 38.8%;
+        }
+
+        .fillform p {
+            color: red;
+            margin-top: 5%;
+            margin-left: 40%;
+        }
+
+        .fillform h2 {
+        }
+
+      
+         #cphMain_divCompzitModuleList label {
+            float: left;
+            margin-bottom: 0px;
+            color: #16682a;
+            font-family: Calibri;
+            font-size: 15px;
+        }
+
+        #cphMain_divCompzitModuleList input[type="checkbox"] {
+            float: left;
+            margin: 3px 8px 3px 3px;
+        }
+        #cphMain_mydiv {
+            background: #F3FFEF;
+            text-align: left;
+            overflow: auto;
+            margin-left: 18%;
+            max-height: 220px;
+        }
+
+        #divDpartmnt {
+            text-align: left;
+            overflow: auto;
+            margin-left: 18%;
+            max-height: 220px;
+            font-family: Calibri;
+            box-shadow: 0px 0px 3px rgb(3, 185, 57);
+            border-radius: 7px;
+            background: #edf6dc;
+            font-weight: bold;
+            font-size: 15px;
+            color: #4b7206;
+            padding: 0px 19px 0px;
+        }
+
+        #divDivision {
+            text-align: left;
+            overflow: auto;
+            margin-left: 18%;
+            max-height: 220px;
+            font-family: Calibri;
+            box-shadow: 0px 0px 3px rgb(3, 185, 57);
+            border-radius: 7px;
+            background: #edf6dc;
+            font-weight: bold;
+            font-size: 15px;
+            color: #4b7206;
+            padding: 0px 19px 0px;
+        }
+        /*//0013*/
+        #userRolTre {
+            text-align: left;
+            overflow: auto;
+            margin-left: 18%;
+            max-height: 220px;
+            font-family: Calibri;
+            box-shadow: 0px 0px 3px rgb(3, 185, 57);
+            border-radius: 7px;
+            background: #edf6dc;
+            font-weight: bold;
+            font-size: 15px;
+            color: #4b7206;
+            padding: 0px 19px 0px;
+        }
+        a {
+            color: #4abe66;
+        }
+
+            a:hover {
+                color: #08661f;
+            }
+        /*//0013*/
+        #divSubBus {
+            text-align: left;
+            overflow: auto;
+            margin-left: 18%;
+            max-height: 220px;
+            font-family: Calibri;
+            box-shadow: 0px 0px 3px rgb(3, 185, 57);
+            border-radius: 7px;
+            background: #edf6dc;
+            font-weight: bold;
+            font-size: 15px;
+            color: #4b7206;
+            padding: 0px 19px 0px;
+        }
+        .accordion-section-title {
+            color: #c9f9d5;
+        }
+
+            .accordion-section-title:hover {
+                color: #e2f3c7;
+            }
+        #cphMain_cbxlCorporateDvsn label {
+            cursor: pointer;
+        }
+
+        .imgDescription {
+            position: absolute;
+            /*top: 511px;
+            left: 6.5%;*/
+            background: rgba(123, 150, 100, 0.7);
+            visibility: hidden;
+            opacity: 0;
+            padding: 0.1%;
+            font-family: Calibri;
+            /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+        }
+
+        .imgWrap:hover .imgDescription {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .caption {
+            font-family: Calibri;
+            font-size: 18px;
+            float: left;
+            text-align: left;
+            color: rgb(81, 107, 36);
+            padding: 0;
+            margin: 0px -1.2% 1.3%;
+            line-height: 1;
+            font-weight: normal;
+        }
+    </style>
+
+     <%-- javascript for tree--%>
+
+    <script src="../../../JavaScript/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var $Tf = jQuery.noConflict();
+
+        $Tf(function () {
+
+            $Tf("[id*=TreeViewCompzit_SalesAutomation] input[type=checkbox]").bind("click", function () {
+                IncrmntConfrmCounter();
+                var Ftable = $Tf(this).closest("table");
+                if (Ftable.next().length > 0 && Ftable.next()[0].tagName == "DIV") {
+                    //Is Parent CheckBox
+                    var FchildDiv = Ftable.next();
+                    var isChecked = $Tf(this).is(":checked");
+                    $Tf("input[type=checkbox]", FchildDiv).each(function () {
+                        if (isChecked) {
+                            $Tf(this).attr("checked", "checked");
+
+                        } else {
+                            $Tf(this).removeAttr("checked");
+
+                        }
+                    });
+
+
+
+                    var FparentDIV = $Tf(this).closest("DIV");
+                    if ($Tf("input[type=checkbox]:checked", FparentDIV).length > 0) {
+
+                        $Tf("input[type=checkbox]", FparentDIV.prev()).attr("checked", "checked");
+
+
+                        var FrootDiv = FparentDIV.parent();
+                        $Tf("input[type=checkbox]", FrootDiv.prev()).attr("checked", "checked");
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", FparentDIV.prev()).removeAttr("checked");
+                        var FrootDiv = FparentDIV.parent();
+                        var FrootparentDIV = $Tf(FrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", FrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", FrootDiv.prev()).removeAttr("checked");
+                            var FrootrootDiv = FrootparentDIV.parent();
+
+                            var FrootrootparentDIV = $Tf(FrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", FrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", FrootrootDiv.prev()).removeAttr("checked");
+                                var FrootrootrootDiv = FrootrootparentDIV.parent();
+
+                                var FrootrootrootparentDIV = $Tf(FrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", FrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", FrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+
+                } else {
+
+
+                    //Is Child CheckBox
+                    var FparentDIV = $Tf(this).closest("DIV");
+
+
+                    if ($Tf("input[type=checkbox]:checked", FparentDIV).length > 0) {
+                        $Tf("input[type=checkbox]", FparentDIV.prev()).attr("checked", "checked");
+                        var FrootDiv = FparentDIV.parent();
+                        $Tf("input[type=checkbox]", FrootDiv.prevUntil()).attr("checked", "checked");
+                        var FrootparentDIV = $Tf(FrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", FrootparentDIV).length > 0) {
+                            $Tf("input[type=checkbox]", FrootparentDIV.prev()).attr("checked", "checked");
+                            var FrootrootDiv = FrootparentDIV.parent();
+                            $Tf("input[type=checkbox]", FrootrootDiv.prev()).attr("checked", "checked");
+                        }
+                        else {
+
+                        }
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", FparentDIV.prev()).removeAttr("checked");
+                        var FrootDiv = FparentDIV.parent();
+                        var FrootparentDIV = $Tf(FrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", FrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", FrootDiv.prev()).removeAttr("checked");
+                            var FrootrootDiv = FrootparentDIV.parent();
+
+                            var FrootrootparentDIV = $Tf(FrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", FrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", FrootrootDiv.prev()).removeAttr("checked");
+                                var FrootrootrootDiv = FrootrootparentDIV.parent();
+
+                                var FrootrootrootparentDIV = $Tf(FrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", FrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", FrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+
+
+        })
+
+
+        $Tf(function () {
+
+            $Tf("[id*=TreeViewCompzit_AppAdminstration] input[type=checkbox]").bind("click", function () {
+                IncrmntConfrmCounter();
+                var Ntable = $Tf(this).closest("table");
+                if (Ntable.next().length > 0 && Ntable.next()[0].tagName == "DIV") {
+                    //Is Parent CheckBox
+                    var NchildDiv = Ntable.next();
+                    var isChecked = $Tf(this).is(":checked");
+                    $Tf("input[type=checkbox]", NchildDiv).each(function () {
+                        if (isChecked) {
+                            $Tf(this).attr("checked", "checked");
+
+                        } else {
+                            $Tf(this).removeAttr("checked");
+
+                        }
+                    });
+
+
+
+                    var NparentDIV = $Tf(this).closest("DIV");
+                    if ($Tf("input[type=checkbox]:checked", NparentDIV).length > 0) {
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).attr("checked", "checked");
+                        var NrootDiv = NparentDIV.parent();
+                        $Tf("input[type=checkbox]", NrootDiv.prev()).attr("checked", "checked");
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).removeAttr("checked");
+                        var NrootDiv = NparentDIV.parent();
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", NrootDiv.prev()).removeAttr("checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+
+                            var NrootrootparentDIV = $Tf(NrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", NrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", NrootrootDiv.prev()).removeAttr("checked");
+                                var NrootrootrootDiv = NrootrootparentDIV.parent();
+
+                                var NrootrootrootparentDIV = $Tf(NrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", NrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", NrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+
+                } else {
+
+
+                    //Is Child CheckBox
+                    var NparentDIV = $Tf(this).closest("DIV");
+
+
+                    if ($Tf("input[type=checkbox]:checked", NparentDIV).length > 0) {
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).attr("checked", "checked");
+                        var NrootDiv = NparentDIV.parent();
+                        $Tf("input[type=checkbox]", NrootDiv.prev()).attr("checked", "checked");
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                            $Tf("input[type=checkbox]", NrootparentDIV.prev()).attr("checked", "checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+                            $Tf("input[type=checkbox]", NrootrootDiv.prev()).attr("checked", "checked");
+                        }
+                        else {
+
+                        }
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).removeAttr("checked");
+                        var NrootDiv = NparentDIV.parent();
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", NrootDiv.prev()).removeAttr("checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+
+                            var NrootrootparentDIV = $Tf(NrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", NrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", NrootrootDiv.prev()).removeAttr("checked");
+                                var NrootrootrootDiv = NrootrootparentDIV.parent();
+
+                                var NrootrootrootparentDIV = $Tf(NrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", NrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", NrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+
+
+        })
+
+
+        $Tf(function () {
+
+            $Tf("[id*=TreeViewCompzit_AutoWorkshopManagement] input[type=checkbox]").bind("click", function () {
+                IncrmntConfrmCounter();
+                var Ntable = $Tf(this).closest("table");
+                if (Ntable.next().length > 0 && Ntable.next()[0].tagName == "DIV") {
+                    //Is Parent CheckBox
+                    var NchildDiv = Ntable.next();
+                    var isChecked = $Tf(this).is(":checked");
+                    $Tf("input[type=checkbox]", NchildDiv).each(function () {
+                        if (isChecked) {
+                            $Tf(this).attr("checked", "checked");
+
+                        } else {
+                            $Tf(this).removeAttr("checked");
+
+                        }
+                    });
+
+
+
+                    var NparentDIV = $Tf(this).closest("DIV");
+                    if ($Tf("input[type=checkbox]:checked", NparentDIV).length > 0) {
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).attr("checked", "checked");
+                        var NrootDiv = NparentDIV.parent();
+                        $Tf("input[type=checkbox]", NrootDiv.prev()).attr("checked", "checked");
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).removeAttr("checked");
+                        var NrootDiv = NparentDIV.parent();
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", NrootDiv.prev()).removeAttr("checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+
+                            var NrootrootparentDIV = $Tf(NrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", NrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", NrootrootDiv.prev()).removeAttr("checked");
+                                var NrootrootrootDiv = NrootrootparentDIV.parent();
+
+                                var NrootrootrootparentDIV = $Tf(NrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", NrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", NrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+
+                } else {
+
+
+                    //Is Child CheckBox
+                    var NparentDIV = $Tf(this).closest("DIV");
+
+
+                    if ($Tf("input[type=checkbox]:checked", NparentDIV).length > 0) {
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).attr("checked", "checked");
+                        var NrootDiv = NparentDIV.parent();
+                        $Tf("input[type=checkbox]", NrootDiv.prev()).attr("checked", "checked");
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                            $Tf("input[type=checkbox]", NrootparentDIV.prev()).attr("checked", "checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+                            $Tf("input[type=checkbox]", NrootrootDiv.prev()).attr("checked", "checked");
+                        }
+                        else {
+
+                        }
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).removeAttr("checked");
+                        var NrootDiv = NparentDIV.parent();
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", NrootDiv.prev()).removeAttr("checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+
+                            var NrootrootparentDIV = $Tf(NrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", NrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", NrootrootDiv.prev()).removeAttr("checked");
+                                var NrootrootrootDiv = NrootrootparentDIV.parent();
+
+                                var NrootrootrootparentDIV = $Tf(NrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", NrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", NrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+
+
+        })
+
+        //FOR GMS
+        $Tf(function () {
+
+            $Tf("[id*=TreeViewCompzit_GuaranteeManagement] input[type=checkbox]").bind("click", function () {
+                IncrmntConfrmCounter();
+                var Ntable = $Tf(this).closest("table");
+                if (Ntable.next().length > 0 && Ntable.next()[0].tagName == "DIV") {
+                    //Is Parent CheckBox
+                    var NchildDiv = Ntable.next();
+                    var isChecked = $Tf(this).is(":checked");
+                    $Tf("input[type=checkbox]", NchildDiv).each(function () {
+                        if (isChecked) {
+                            $Tf(this).attr("checked", "checked");
+
+                        } else {
+                            $Tf(this).removeAttr("checked");
+
+                        }
+                    });
+
+
+
+                    var NparentDIV = $Tf(this).closest("DIV");
+                    if ($Tf("input[type=checkbox]:checked", NparentDIV).length > 0) {
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).attr("checked", "checked");
+                        var NrootDiv = NparentDIV.parent();
+                        $Tf("input[type=checkbox]", NrootDiv.prev()).attr("checked", "checked");
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).removeAttr("checked");
+                        var NrootDiv = NparentDIV.parent();
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", NrootDiv.prev()).removeAttr("checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+
+                            var NrootrootparentDIV = $Tf(NrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", NrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", NrootrootDiv.prev()).removeAttr("checked");
+                                var NrootrootrootDiv = NrootrootparentDIV.parent();
+
+                                var NrootrootrootparentDIV = $Tf(NrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", NrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", NrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+
+                } else {
+
+
+                    //Is Child CheckBox
+                    var NparentDIV = $Tf(this).closest("DIV");
+
+
+                    if ($Tf("input[type=checkbox]:checked", NparentDIV).length > 0) {
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).attr("checked", "checked");
+                        var NrootDiv = NparentDIV.parent();
+                        $Tf("input[type=checkbox]", NrootDiv.prev()).attr("checked", "checked");
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                            $Tf("input[type=checkbox]", NrootparentDIV.prev()).attr("checked", "checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+                            $Tf("input[type=checkbox]", NrootrootDiv.prev()).attr("checked", "checked");
+                        }
+                        else {
+
+                        }
+                    }
+                    else {
+
+                        $Tf("input[type=checkbox]", NparentDIV.prev()).removeAttr("checked");
+                        var NrootDiv = NparentDIV.parent();
+                        var NrootparentDIV = $Tf(NrootDiv).closest("DIV");
+                        if ($Tf("input[type=checkbox]:checked", NrootparentDIV).length > 0) {
+                        }
+                        else {
+                            $Tf("input[type=checkbox]", NrootDiv.prev()).removeAttr("checked");
+                            var NrootrootDiv = NrootparentDIV.parent();
+
+                            var NrootrootparentDIV = $Tf(NrootrootDiv).closest("DIV");
+                            if ($Tf("input[type=checkbox]:checked", NrootrootparentDIV).length > 0) {
+                            }
+                            else {
+                                $Tf("input[type=checkbox]", NrootrootDiv.prev()).removeAttr("checked");
+                                var NrootrootrootDiv = NrootrootparentDIV.parent();
+
+                                var NrootrootrootparentDIV = $Tf(NrootrootrootDiv).closest("DIV");
+                                if ($Tf("input[type=checkbox]:checked", NrootrootrootparentDIV).length > 0) {
+                                }
+                                else {
+                                    $Tf("input[type=checkbox]", NrootrootrootDiv.prev()).removeAttr("checked");
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+
+
+        })
+    </script>
+    <script>
+     function ClickCompzitModule() {
+
+            IncrmntConfrmCounter();
+
+            document.getElementById('divAccordionAppAdmin').style.display = "none";
+            document.getElementById('divAccordionSFA').style.display = "none";
+            document.getElementById('divAccordionAWMS').style.display = "none";
+            document.getElementById('divAccordionGMS').style.display = "none";
+            var CHK = document.getElementById("<%=cbxlCompzitModules.ClientID%>");
+
+            var checkbox = CHK.getElementsByTagName("input");
+
+            var label = CHK.getElementsByTagName("label");
+
+            for (var i = 0; i < checkbox.length; i++) {
+
+                if (checkbox[i].checked) {
+
+                    //  alert("Selected = " + checkbox[i].value);
+                    if (checkbox[i].value.toString() == '1')//IF APP ADMINISTRATION
+                    {
+                        document.getElementById('divAccordionAppAdmin').style.display = "";
+
+                    }
+                    else if (checkbox[i].value.toString() == '2')//IF SALES FORCE AUTOMATION 
+                    {
+                        document.getElementById('divAccordionSFA').style.display = "";
+
+                    }
+                    else if (checkbox[i].value.toString() == '3')//IF AUTO WORKSHOP MANAGEMENT
+                    {
+                        document.getElementById('divAccordionAWMS').style.display = "";
+
+                    }
+                    else if (checkbox[i].value.toString() == '4')//IF AUTO WORKSHOP MANAGEMENT
+                    {
+                        document.getElementById('divAccordionGMS').style.display = "";
+
+                    }
+                }
+
+            }
+            return false;
+
+        }
+    
+    </script>
+    <%--005 start--%>
+    <script src="../../../JavaScript/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+
+
+        var $noCon = jQuery.noConflict();
+        $noCon(window).load(function () {
+            // Run code
+            //   alert('loaded statr'); 
+
+
+            if (document.getElementById("<%=hiddenConfirmValue.ClientID%>").value != "") {
+             
+                IncrmntConfrmCounter();
+            }
+            document.getElementById('divAccordionAppAdmin').style.display = "none";
+            document.getElementById('divAccordionSFA').style.display = "none";
+            document.getElementById('divAccordionAWMS').style.display = "none";
+            document.getElementById('divAccordionGMS').style.display = "none";
+
+
+            var CHK = document.getElementById("<%=cbxlCompzitModules.ClientID%>");
+
+            var checkbox = CHK.getElementsByTagName("input");
+
+            var label = CHK.getElementsByTagName("label");
+
+            for (var i = 0; i < checkbox.length; i++) {
+
+                if (checkbox[i].checked) {
+                    
+                    //  alert("Selected = " + checkbox[i].value);
+                    if (checkbox[i].value.toString() == '1')//IF APP ADMINISTRATION
+                    {
+                        document.getElementById('divAccordionAppAdmin').style.display = "";
+
+                    }
+                    else if (checkbox[i].value.toString() == '2')//IF SALES FORCE AUTOMATION 
+                    {
+                        document.getElementById('divAccordionSFA').style.display = "";
+
+                    }
+                    else if (checkbox[i].value.toString() == '3')//IF AUTO WORKSHOP MANAGEMENT
+                    {
+                        document.getElementById('divAccordionAWMS').style.display = "";
+
+                    }
+                    else if (checkbox[i].value.toString() == '4')//IF GUARANTEE MANAGEMENT
+                    {
+                        document.getElementById('divAccordionGMS').style.display = "";
+
+                    }
+                }
+
+            }
+            document.getElementById("myModalLoadingMail").style.display = "none";
+            
+            document.getElementById("freezelayer").style.display = "none";
+
+          
+            // alert(document.getElementById("<%=divLoginDetailsSection.ClientID%>").innerHTML);
+            if(document.getElementById("<%=divLoginDetailsSection.ClientID%>").style.display!="none" )
+            {
+                if(document.getElementById("<%=cbxMustLogin.ClientID%>").checked)
+                {
+                    document.getElementById('divLoginDetailsContent').style.display = "block";
+                    document.getElementById('lblEmployeeCode').innerText="Employee Code*";
+                    document.getElementById('lblEmail').innerText="Email*";
+                }
+                else
+                {
+                   
+                    document.getElementById('divLoginDetailsContent').style.display = "none";
+                    document.getElementById('lblEmployeeCode').innerText="Employee Code";
+                    document.getElementById('lblEmail').innerText="Email";
+                
+                }
+            
+            }
+            if(document.getElementById("<%=divAutoWorkshopSection.ClientID%>").style.display!="none")
+            {
+                if(document.getElementById("<%=cbxMustAutoWorkshop.ClientID%>").checked)
+                {
+                    document.getElementById('divAutoWorkshopContent').style.display = "block";
+                }
+                else
+                { 
+                    document.getElementById('divAutoWorkshopContent').style.display = "none";
+                
+                }
+                var LicenseTypeSlctdValues=document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value;
+                if(LicenseTypeSlctdValues!="")
+                {
+                    var LicTypes = LicenseTypeSlctdValues.split(",");
+                    //  alert('bla' +PreviousSlctdValues);
+                    //    alert(LicTypes.length);
+                    for (i = 0; i < LicTypes.length; i++) {
+                        if(LicTypes[i].toString() !="")
+                        {
+                            if( document.getElementById("divImageLicenseType-" + LicTypes[i]))
+                            {
+                                document.getElementById("divImageLicenseType-" + LicTypes[i]).style.border = ".5px solid";
+                                document.getElementById("divImageLicenseType-" + LicTypes[i]).style.backgroundColor = "rgb(56, 255, 128)";              
+                
+                            }
+
+                        }
+                    }
+                }
+            }
+            //  alert('load end');
+        });
+    </script>
+    <script type="text/javascript">
+        function PartialLoad() {
+
+            document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value="";
+            if (document.getElementById("<%=hiddenConfirmValue.ClientID%>").value != "") {
+             
+                IncrmntConfrmCounter();
+            }
+
+            document.getElementById("myModalLoadingMail").style.display = "none";
+            
+            document.getElementById("freezelayer").style.display = "none";
+
+          
+            // alert(document.getElementById("<%=divLoginDetailsSection.ClientID%>").innerHTML);
+            if(document.getElementById("<%=divLoginDetailsSection.ClientID%>").style.display!="none" )
+            {
+                if(document.getElementById("<%=cbxMustLogin.ClientID%>").checked)
+                {
+                    document.getElementById('divLoginDetailsContent').style.display = "block";
+                    document.getElementById('lblEmployeeCode').innerText="Employee Code*";
+                    document.getElementById('lblEmail').innerText="Email*";
+                }
+                else
+                {
+                   
+                    document.getElementById('divLoginDetailsContent').style.display = "none";
+                    document.getElementById('lblEmployeeCode').innerText="Employee Code";
+                    document.getElementById('lblEmail').innerText="Email";
+                
+                }
+            
+            }
+            if(document.getElementById("<%=divAutoWorkshopSection.ClientID%>").style.display!="none")
+            {
+                if(document.getElementById("<%=cbxMustAutoWorkshop.ClientID%>").checked)
+                {
+                    document.getElementById('divAutoWorkshopContent').style.display = "block";
+                }
+                else
+                { 
+                    document.getElementById('divAutoWorkshopContent').style.display = "none";
+                
+                }
+            
+            }
+        }
+        function DuplicationName() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=txtLoginName.ClientID%>").style.borderColor = "Red";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Duplication Error!. Employee Login Name Can’t be Duplicated.";
+        }
+        function DuplicationEmail() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=txtUsrEmail.ClientID%>").style.borderColor = "Red";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Duplication Error!. Employee Email Can’t be Duplicated.";
+        }
+        function DuplicationEmpCode() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=txtEmployeeCode.ClientID%>").style.borderColor = "Red";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Duplication Error!. Employee Code Can’t be Duplicated.";
+        }
+        function EmptyCorporate() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=ddlUsrCorporate.ClientID%>").style.borderColor = "Red";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Some of the information you entered is not correct or missing. Please check the highlighted fields below.";
+        }
+        function EmptyDepartment() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            //0013
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Please Select One Department.";
+        }
+
+     
+
+        function SuccessConfirmation() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Employee Details Inserted Successfully.";
+        }
+        function SuccessDep() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Please Select One Department.";
+        }
+        function SuccessUpdation() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Employee Details Updated Successfully.";
+        }
+        function MailsendFail() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Employee Details Inserted Successfully.The Mail Sending To Employee Failed.";
+        }
+        function MailsendFailReviewMailStng() {
+            document.getElementById('divErrorTotal').style.visibility = "visible";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Employee Details Inserted Successfully. Review Your Mail Settings For Sending Mail.";
+        }
+        //005 start
+        function ShowLoading() {
+           
+            document.getElementById("myModalLoadingMail").style.display = "block";
+
+            document.getElementById("freezelayer").style.display = "";
+        }
+        function HideLoading() {
+            document.getElementById("myModalLoadingMail").style.display = "none";
+
+            document.getElementById("freezelayer").style.display = "none";
+        }
+       
+
+        function ValidateFileUpload() {
+            document.getElementById('divErrorTotal').style.visibility = "hidden";
+            document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "";
+            var fuData = document.getElementById("<%=FileUploadProPic.ClientID%>");
+            var FileUploadPath = fuData.value;
+            var  hiddnImage= document.getElementById("<%=hiddenUserImage.ClientID%>").value;//it has value when editing if previously stored image
+            var hidnImageSize = document.getElementById("<%=hiddenUserImageSize.ClientID%>").value;
+           
+            if (FileUploadPath == '' &&hiddnImage=="") {
+                //if (confirm("Are you sure you  want to Save without uploading Image of Employee?")) {
+
+                //    return true;
+                //}
+                //else {
+                //    return false;
+                //}
+                return true;
+
+            } else {
+                if (FileUploadPath == '')
+                {
+                    return true;
+                }
+                else
+                {
+                    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+
+
+
+                    if (Extension == "gif" || Extension == "png" || Extension == "bmp"
+                                || Extension == "jpeg" || Extension == "jpg") {
+
+
+                        if (fuData.files && fuData.files[0]) {
+
+                            var size = fuData.files[0].size;
+                            var convertToKb = hidnImageSize/1000;
+                            if (size > hidnImageSize) {
+                                alert(" Sorry Maximum file size exceeds. Please Upload Image of less size than " + convertToKb + "KB !.");
+                                document.getElementById("<%=FileUploadProPic.ClientID%>").focus();
+                                return false;
+                            } else { return true;
+                                //var reader = new FileReader();
+
+                                //reader.onload = function (e) {
+                                //    $('#blah').attr('src', e.target.result);
+                                //}
+
+                                //reader.readAsDataURL(fuData.files[0]);
+                            }
+                        }
+
+                    }
+                
+
+
+                    else {
+                        document.getElementById('divErrorTotal').style.visibility = "visible";
+                        document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "The specified file could not be uploaded. Image type not supported. Allowed types are png, jpeg, gif";
+               
+                        return false;
+                    }
+                }
+            }
+        }
+
+        function ReplaceTagOnBlur(obj)
+        {
+        
+        
+            var WithoutReplace = document.getElementById(obj).value;
+            var replaceText1 = WithoutReplace.replace(/</g, "");
+            var replaceText2 = replaceText1.replace(/>/g, "");
+            document.getElementById(obj).value = replaceText2;
+        
+        }
+        function ReplaceTagAndAtOnBlur(obj)
+        {
+        
+        
+            var WithoutReplace = document.getElementById(obj).value;
+            var replaceText1 = WithoutReplace.replace(/</g, "");
+            var replaceText2 = replaceText1.replace(/>/g, "");
+            var replaceText3 = replaceText2.replace(/@/g, "");
+            document.getElementById(obj).value = replaceText3;
+        
+        }
+
+        function Validation() {
+           
+            var LoginMust=false;
+            var AutoWrkShopMust=false;
+            var ret = true;
+            var Editing=false;
+           
+            if (CheckIsRepeat() == true) {
+            }
+            else {
+                ret = false;
+                return ret;
+            }
+            
+            if(document.getElementById("<%=hiddenUserEditId.ClientID%>").value.trim()!="")
+            {
+                Editing=true;
+            
+            }
+            
+            document.getElementById("<%=txtUsrName.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=ddlUsrDsgn.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=ddlJobRole.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=txtJoiningDate.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=ddlEmpType.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=txtNationalIdNmbr.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=txtEmployeeCode.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=txtUsrMob.ClientID%>").style.borderColor = "";
+            document.getElementById("<%=txtUsrEmail.ClientID%>").style.borderColor = "";
+           
+            if(document.getElementById("<%=divLoginDetailsSection.ClientID%>").style.display!="none" )
+            { 
+                if(document.getElementById("<%=cbxMustLogin.ClientID%>").checked)
+                {
+                    LoginMust=true;
+                    document.getElementById("<%=txtLoginName.ClientID%>").style.borderColor = "";
+                    if(Editing==false)
+                    {
+                        document.getElementById("<%=txtUsrConPwd.ClientID%>").style.borderColor = "";
+                        document.getElementById("<%=txtUsrPwd.ClientID%>").style.borderColor = "";
+                        document.getElementById('PwdMsg').style.visibility = "hidden";
+                        document.getElementById('ErrorMsgUsrConPwd').style.visibility = "hidden";
+                    }
+                }
+                              
+            }
+            if(document.getElementById("<%=divAutoWorkshopSection.ClientID%>").style.display!="none")
+            {
+                if(document.getElementById("<%=cbxMustAutoWorkshop.ClientID%>").checked)
+                {   AutoWrkShopMust=true;
+                    document.getElementById("<%=txtLicenceNumbr.ClientID%>").style.borderColor = "";
+                document.getElementById("<%=txtLicenseExpDate.ClientID%>").style.borderColor = "";
+                    document.getElementById("<%=ddlAccommodatn.ClientID%>").style.borderColor = "";
+                    document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").style.borderColor = "";
+                    document.getElementById("<%=divLicenseType.ClientID%>").style.borderColor = "";
+                }
+               
+            
+            }
+
+           
+          
+          
+            var UsrName = document.getElementById("<%=txtUsrName.ClientID%>").value.trim();  
+            var Dsgn = document.getElementById("<%=ddlUsrDsgn.ClientID%>");
+            var Role = document.getElementById("<%=ddlJobRole.ClientID%>").value;
+           
+           
+            var DsgnText = Dsgn.options[Dsgn.selectedIndex].text.trim();
+            var DropdownListEmpType = document.getElementById('<%=ddlEmpType.ClientID %>');
+            var SelectedValueEmpType = DropdownListEmpType.value;
+            var JoiningDate = document.getElementById("<%=txtJoiningDate.ClientID%>").value.trim();
+           
+            var Mobile = document.getElementById("<%=txtUsrMob.ClientID%>").value.trim();
+            document.getElementById('ErrorMsgUsrMob').style.visibility = "hidden";
+            var Email = document.getElementById("<%=txtUsrEmail.ClientID%>");
+            document.getElementById('ErrorMsgUsrEmail').style.visibility = "hidden";
+            
+            var mobileregular = /^(\+91-|\+91|0)?\d{10,50}$/;
+
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            var minNumberofChars = 6;
+            var maxNumberofChars = 16;
+            //var regularExpression = /(?=.*\d)(?=.*[~!@#$%^&*])(?=.*[a-z])|(?=.*[A-Z])[0-9!@#$%^&*].{6,16}/;
+            var regularExpression = /(?=.*\d)(?=.*[~!@#$%^&*])(?=.*[A-Za-z]).{6,16}/;
+            //var regularExpression = /(?=.*\d)(?=.*[~!@#$%^&*])(?=.*[a-z])|(?=.*[A-Z])[0-9!@#$%^&*].{6,16}/
+       
+           
+           
+            
+            var flagAutoWrkShop=true; 
+            
+
+            if(AutoWrkShopMust==true)
+            {
+                var DrvngLicNo= document.getElementById("<%=txtLicenceNumbr.ClientID%>").value.trim();
+                var LicExpDate = document.getElementById("<%=txtLicenseExpDate.ClientID%>").value.trim();              
+                var FupLicCopy = document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").value.trim();             
+                var LicTypeId = document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value.trim();
+
+                if (LicTypeId == "") 
+                {
+
+                    document.getElementById("<%=divLicenseType.ClientID%>").style.borderColor = "Red";
+                    document.getElementById("<%=divLicenseType.ClientID%>").focus();
+                    flagAutoWrkShop=false;
+                }
+                if( document.getElementById("<%=hiddenUserLicenseCopy.ClientID%>").value=="" && document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").value=="")
+                {
+                   
+                    document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").style.borderColor = "Red";
+                         document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").focus();
+                         document.getElementById("<%=lblLicenseCopy.ClientID%>").style.color="red";
+                         document.getElementById("<%=lblLicenseCopy.ClientID%>").textContent = "Please Upload License Copy";
+                         flagAutoWrkShop=false;
+                     }
+                     if (LicExpDate == "")
+                     {
+
+                         document.getElementById("<%=txtLicenseExpDate.ClientID%>").style.borderColor = "Red";
+                   document.getElementById("<%=txtLicenseExpDate.ClientID%>").focus();
+                   flagAutoWrkShop=false;
+               }
+               if (DrvngLicNo == "")
+               {
+                   document.getElementById("<%=txtLicenceNumbr.ClientID%>").style.borderColor = "Red";
+                    document.getElementById("<%=txtLicenceNumbr.ClientID%>").focus();
+                    flagAutoWrkShop=false;
+                }
+                    
+            }
+
+           
+            var flagLogin=true; 
+          
+           
+            if(LoginMust==true)
+            {
+                var LogName = document.getElementById("<%=txtLoginName.ClientID%>").value.trim();
+                 var EmpCode = document.getElementById("<%=txtEmployeeCode.ClientID%>").value.trim();
+                 var Pwd ="";
+                 var ConPwd ="";
+
+                 if(Editing==false)
+                 {
+                     Pwd = document.getElementById("<%=txtUsrPwd.ClientID%>").value.trim();
+             
+                    ConPwd = document.getElementById("<%=txtUsrConPwd.ClientID%>").value.trim();
+
+                }
+
+                if(Editing==false)
+                {
+                    if (!regularExpression.test(Pwd)) {
+                       
+                        document.getElementById("<%=txtUsrPwd.ClientID%>").focus();
+                        document.getElementById("<%=txtUsrPwd.ClientID%>").style.borderColor = "Red";
+                        flagLogin=false;
+                    }
+                    if (Pwd.length < minNumberofChars || Pwd.length > maxNumberofChars) {
+                      
+                        document.getElementById("<%=txtUsrPwd.ClientID%>").style.borderColor = "Red";
+                        document.getElementById("<%=txtUsrPwd.ClientID%>").focus();
+                        flagLogin=false;
+                    }
+                    if (ConPwd != Pwd) {
+                        var ErrorMsg = document.getElementById('ErrorMsgUsrConPwd').style.visibility = "visible";
+                        var OrgConPwdFocus = document.getElementById("<%=txtUsrConPwd.ClientID%>").focus();
+                        document.getElementById("<%=txtUsrConPwd.ClientID%>").style.borderColor = "Red";
+                        flagLogin=false;
+                    }
+                }
+                if (LogName == "") {
+
+                    document.getElementById("<%=txtLoginName.ClientID%>").style.borderColor = "Red";
+                    document.getElementById("<%=txtLoginName.ClientID%>").focus();
+                    flagLogin=false;
+                }
+               
+                if (Email.value == "") {
+                    document.getElementById("<%=txtUsrEmail.ClientID%>").style.borderColor = "Red";
+                    document.getElementById("<%=txtUsrEmail.ClientID%>").focus();
+                    flagLogin=false;
+                }
+                if (EmpCode == "") {
+
+                    document.getElementById("<%=txtEmployeeCode.ClientID%>").style.borderColor = "Red";
+                    document.getElementById("<%=txtEmployeeCode.ClientID%>").focus();
+                    flagLogin=false;
+                }
+            
+            }
+            
+            //  alert('activeViewIndex');
+            var activeViewIndex = <%=mvUsrCorporate.ActiveViewIndex %>;
+           
+            
+            var flagactiveindexCorpControl=0;
+            //0013-1
+            if(activeViewIndex==1)
+            {
+                if(DsgnText != "--SELECT--")
+                {
+               
+                    var bus = document.getElementById("<%=ddlUsrCorporate.ClientID%>").value;
+                
+                    if(bus=="--SELECT--")
+                    { 
+                        document.getElementById("<%=ddlUsrCorporate.ClientID%>").style.borderColor="red";
+                        document.getElementById('divErrorTotal').style.visibility = "visible";
+                        document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Some of the information you entered is not correct or missing. Please check the highlighted fields below.";
+                        ret=false;
+                    }
+                    //0013 radio
+               
+                }
+            }
+           
+              
+           
+            if (UsrName == "" ||  DsgnText == "--SELECT--" || SelectedValueEmpType == "--SELECT--"||SelectedValueEmpType=="" ||JoiningDate=="" ||Role=="--Select Job Role--"||Role=="--No Job Role Avilable--"||  flagactiveindexCorpControl==1 ||flagLogin==false||flagAutoWrkShop==false) {
+                
+                document.getElementById('divErrorTotal').style.visibility = "visible";
+                document.getElementById("<%=lblErrorTotal.ClientID%>").innerHTML = "Some of the information you entered is not correct or missing. Please check the highlighted fields below.";
+             
+                
+
+                if ((!filter.test(Email.value)) && (Email.value.trim()!= "")) {
+                   
+                    var ErrorMsg = document.getElementById('ErrorMsgUsrEmail').style.visibility = "visible";
+                    //  EmailAdd = "";
+                    document.getElementById("<%=txtUsrEmail.ClientID%>").focus();
+                        document.getElementById("<%=txtUsrEmail.ClientID%>").style.borderColor = "Red";
+                        ret = false;
+                    }
+
+                    if (Mobile.length != 0) {
+                        if (!mobileregular.test(Mobile)) {
+                            var ErrorMsg = document.getElementById('ErrorMsgUsrMob').style.visibility = "visible";
+                            var OrgMobileFocus = document.getElementById("<%=txtUsrMob.ClientID%>").focus();
+                        document.getElementById("<%=txtUsrMob.ClientID%>").style.borderColor = "Red";
+                        ret = false;
+                    }
+                }
+                if (SelectedValueEmpType == "--SELECT--"||SelectedValueEmpType=="") {
+
+                    document.getElementById("<%=ddlEmpType.ClientID%>").focus();             
+                            document.getElementById("<%=ddlEmpType.ClientID%>").style.borderColor = "Red";
+                            ret = false;
+                        }
+                        if (JoiningDate == "") {
+
+                            document.getElementById("<%=txtJoiningDate.ClientID%>").style.borderColor = "Red";
+                           document.getElementById("<%=txtJoiningDate.ClientID%>").focus();
+                           ret = false;
+                       }
+                        
+                       if (DsgnText == "--SELECT--") {
+                           document.getElementById("<%=ddlUsrDsgn.ClientID%>").focus();
+                
+                            document.getElementById("<%=ddlUsrDsgn.ClientID%>").style.borderColor = "Red";
+                            ret = false;
+                       }
+               
+                        if(DsgnText!= "--SELECT--")
+                        {
+                           
+                            if(Role=="--Select Job Role--"||Role=="--No Job Role Avilable--")
+                            {
+                                document.getElementById("<%=ddlJobRole.ClientID%>").style.borderColor = "Red";
+                                ret = false;
+                            }
+                           
+                        }
+                        if (UsrName == "") {
+
+                 
+                            document.getElementById("<%=txtUsrName.ClientID%>").style.borderColor = "Red";
+                            var OrgnTypeFocus = document.getElementById("<%=txtUsrName.ClientID%>").focus();
+                            ret = false;
+                        }
+             
+                        if(flagactiveindexCorpControl==1)
+                        {
+                            ret=false;
+                        }
+                        if(flagLogin==false)
+                        {
+                            ret=false;
+                        }
+                        if(flagAutoWrkShop==false)
+                        {
+                            ret=false;
+                        }
+            }
+            
+                    if(ret==true)
+                    {
+                        if (ValidateFileUpload() == true) {
+                            ret=true;
+                        }
+                        else {
+
+                            ret= false;
+                        }
+                    }
+                    if (ret == false)
+                    {
+                        CheckSubmitZero();
+
+                    }
+            
+                    if(ret==true)
+                    {
+                        if(Editing==false)//adding
+                        {
+                            ShowLoading();
+                        }
+
+                    }
+                    return ret;
+            
+                }
+
+
+
+        
+
+
+
+
+                function ClearDivDisplayImage() {
+          
+                    IncrmntConfrmCounter();
+           
+                    var hidnImageSize = document.getElementById("<%=hiddenUserImageSize.ClientID%>").value;
+            
+                    var fuData = document.getElementById("<%=FileUploadProPic.ClientID%>");
+                    var size = fuData.files[0].size;
+                    var convertToKb = hidnImageSize/1000;
+                    if (size > hidnImageSize) {
+                        document.getElementById("<%=FileUploadProPic.ClientID%>").value="";
+                document.getElementById("<%=Label1.ClientID%>").textContent="No File Selected";
+                alert(" Sorry Maximum file size exceeds. Please Upload Image of size less than " + convertToKb + "KB !.");
+                //return false;
+            }
+            else{
+                
+                if (document.getElementById("<%=FileUploadProPic.ClientID%>").value != "") {
+                    document.getElementById("<%=Label1.ClientID%>").textContent = document.getElementById("<%=FileUploadProPic.ClientID%>").value;
+                    document.getElementById("<%=divImageDisplay.ClientID%>").innerHTML="";
+                    document.getElementById("<%=hiddenUserImage.ClientID%>").value="";
+                }
+               
+                //    return true;
+            
+            }
+        }
+        function ClearDivDisplayLicenseCopy() {
+          
+            IncrmntConfrmCounter();
+           
+        
+            
+            var fuData = document.getElementById("<%=FileUploadLicenseCopy.ClientID%>");
+           
+          
+            
+                
+            if (document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").value != "") {
+                document.getElementById("<%=lblLicenseCopy.ClientID%>").style.color="black";
+                document.getElementById("<%=lblLicenseCopy.ClientID%>").textContent = document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").value;
+                document.getElementById("<%=divLicenseCopyDisplay.ClientID%>").innerHTML="";
+                document.getElementById("<%=hiddenUserLicenseCopy.ClientID%>").value="";
+            }
+               
+            //    return true;
+            
+            
+        }
+        function ClearImage() {
+            if( document.getElementById("<%=hiddenUserImage.ClientID%>").value!="" || document.getElementById("<%=FileUploadProPic.ClientID%>").value!="")
+            {
+                if (confirm("Do You Want To Remove Selected Employee Photo?")) {
+                    IncrmntConfrmCounter();
+                    document.getElementById("<%=FileUploadProPic.ClientID%>").value="";
+                    document.getElementById("<%=hiddenUserImage.ClientID%>").value="";
+                    document.getElementById("<%=divImageDisplay.ClientID%>").innerHTML="";
+                    document.getElementById("<%=Label1.ClientID%>").textContent="No File Selected";
+                    //  alert("Image has been Removed Sucessfully. ");
+                }
+                else {
+                    
+                }
+              
+            }
+        }
+        function ClearLicenseCopy() {
+            if( document.getElementById("<%=hiddenUserLicenseCopy.ClientID%>").value!="" || document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").value!="")
+            {
+                if (confirm("Do You Want To Remove Selected License Copy?")) {
+                    IncrmntConfrmCounter();
+                    document.getElementById("<%=FileUploadLicenseCopy.ClientID%>").value="";
+                    document.getElementById("<%=hiddenUserLicenseCopy.ClientID%>").value="";                   
+                    document.getElementById("<%=divLicenseCopyDisplay.ClientID%>").innerHTML="";
+                    document.getElementById("<%=lblLicenseCopy.ClientID%>").style.color="black";
+                    document.getElementById("<%=lblLicenseCopy.ClientID%>").textContent="No File Selected";
+                    //  alert("Image has been Removed Sucessfully. ");
+                }
+                else {
+                    
+                }
+              
+            }
+        }
+
+
+    </script>
+    <script type="text/javascript">
+        // for not allowing <> tags
+        function isTag(evt) {
+
+            evt = (evt) ? evt : window.event;
+            var keyCodes = evt.keyCode ? evt.keyCode : evt.which ? evt.which : evt.charCode;
+            if (keyCodes == 13) {
+                return false;
+            }
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            var ret = true;
+            if (charCode == 60 || charCode == 62) {
+                ret = false;
+            }
+            return ret;
+        }
+        // for not allowing <> and @ tags
+        function isTagAndAT(evt) {
+
+            evt = (evt) ? evt : window.event;
+            var keyCodes = evt.keyCode ? evt.keyCode : evt.which ? evt.which : evt.charCode;
+            if (keyCodes == 13) {
+                return false;
+            }
+            if (keyCodes == 64) {
+                return false;
+            }
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            var ret = true;
+            if (charCode == 60 || charCode == 62) {
+                ret = false;
+            }
+            return ret;
+        }
+        // for not allowing enter
+        function DisableEnter(evt) {
+
+            evt = (evt) ? evt : window.event;
+            var keyCodes = evt.keyCode ? evt.keyCode : evt.which ? evt.which : evt.charCode;
+            if (keyCodes == 13) {
+                return false;
+            }
+        }
+        function controlTab(obj, event) {
+            var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+            if (keyCode == 9) {
+                document.getElementById(obj).focus();
+                return false;
+            }
+
+            else {
+                return true;
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var keyCodes = evt.keyCode ? evt.keyCode : evt.which ? evt.which : evt.charCode;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            //enter
+            if (keyCodes == 13) {
+                // return false;
+            }
+                //0-9
+            else if (keyCodes >= 48 && keyCodes <= 57) {
+                return true;
+            }
+                //numpad 0-9
+            else if (keyCodes >= 96 && keyCodes <= 105) {
+                return true;
+            }
+                //left arrow key,right arrow key,home,end ,delete,UP ARROW ,DOWN ARROW
+            else if (keyCodes == 37 || keyCodes == 39 || keyCodes == 36 || keyCodes == 35 || keyCodes == 46|| keyCodes == 38 || keyCodes == 40) {
+                return true;
+
+            }
+            else {
+                var ret = true;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+
+
+                    ret = false;
+                }
+                return ret;
+            }
+        }
+
+        function BlurNotNumber(obj) {
+            var txt = document.getElementById(obj).value;
+
+            if (txt != "") {
+
+                if (isNaN(txt)) {
+                    document.getElementById(obj).value = "";
+                    document.getElementById(obj).focus();
+                    return false;
+
+                }
+
+
+            }
+        }
+
+        function Password_Strength( event) {
+
+            var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+            var charCode = (event.which) ? event.which : event.keyCode;
+            var OrgPwd = document.getElementById("<%=txtUsrPwd.ClientID%>").value;
+            var ErrorMsg = document.getElementById('PwdMsg').style.visibility = "hidden";
+            if (keyCode == 13) {
+               
+                return false;
+            }
+           
+          
+            if (charCode == 60 || charCode == 62) {
+                return false;
+            }
+         
+
+
+            else {
+                if (Pwd.length >= 6 && OrgPwd.length < 10) {
+
+                    document.getElementById('PwdMsg').style.visibility = "visible";
+                    document.getElementById('PwdMsg').style.color = "red";
+                    document.getElementById('PwdMsg').innerHTML = "WEAK";
+                    return true;
+                }
+                if (Pwd.length >= 10 && OrgPwd.length < 13) {
+                    document.getElementById('PwdMsg').style.visibility = "visible";
+                    document.getElementById('PwdMsg').style.color = "orange";
+                    document.getElementById('PwdMsg').innerHTML = "MEDUIM";
+                    return true;
+                }
+                if (Pwd.length >= 13) {
+                    document.getElementById('PwdMsg').style.visibility = "visible";
+                    document.getElementById('PwdMsg').style.color = "green";
+                    document.getElementById('PwdMsg').innerHTML = "STRONG";
+                    return true;
+                }
+                return true;
+            }
+        }
+
+        function SelectLicenseType(LicenseTypId) {
+            var  blCheckedPrevious=false;
+            var PreviousSlctdValues=document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value;
+            var LicTypes = PreviousSlctdValues.split(",");
+            //  alert('bla' +PreviousSlctdValues);
+            //    alert(LicTypes.length);
+            for (i = 0; i < LicTypes.length; i++) {
+                if(LicTypes[i].toString()==LicenseTypId.toString() && LicTypes[i].toString() !="")
+                {
+                    blCheckedPrevious=true;
+                    document.getElementById("divImageLicenseType-" + LicenseTypId).style.border = ".5px solid";
+                    document.getElementById("divImageLicenseType-" + LicenseTypId).style.borderColor = "#ceb6b6";
+                    document.getElementById("divImageLicenseType-" + LicenseTypId).style.backgroundColor = "";
+                
+                }
+            }
+           
+
+            // var oldImage = document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value;
+            //if (oldImage != "") {
+            //    document.getElementById("divImageLicenseType-" + oldImage).style.border = ".5px solid";
+            //    document.getElementById("divImageLicenseType-" + oldImage).style.borderColor = "#ceb6b6";
+            //    document.getElementById("divImageLicenseType-" + oldImage).style.backgroundColor = "";
+            //}
+            if(blCheckedPrevious==false)
+            {// if not selected previously
+                document.getElementById("divImageLicenseType-" + LicenseTypId).style.border = ".5px solid";
+                document.getElementById("divImageLicenseType-" + LicenseTypId).style.backgroundColor = "rgb(56, 255, 128)";
+                if(document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value=="")
+                {
+                    document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value = LicenseTypId+",";
+                }
+                else
+                {
+                    document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value = document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value+LicenseTypId+",";
+            
+                }
+            }
+            else
+            {
+            
+                var replacedValue = PreviousSlctdValues.replace(LicenseTypId+",",""); 
+                document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value=replacedValue;
+            
+            }
+
+            
+        }
+
+        function testLicenseType()
+        {
+        
+            alert( document.getElementById("<%=hiddenLicenseTypeId.ClientID%>").value);
+            return false;
+        }
+
+        function ShowHideDiv(obj) {
+            if(obj=="cphMain_cbxMustLogin")
+            {
+                if(document.getElementById(obj).checked)
+                {
+                    document.getElementById('divLoginDetailsContent').style.display = "block";
+                    document.getElementById('lblEmployeeCode').innerText="Employee Code*";
+                    document.getElementById('lblEmail').innerText="Email*";
+                    lblEmployeeCode
+                }
+                else
+                {
+                    alert('If you are not selecting this Section then information in this Section will not be saved or updated !');
+                    document.getElementById('divLoginDetailsContent').style.display = "none";
+                    document.getElementById('lblEmployeeCode').innerText="Employee Code";
+                    document.getElementById('lblEmail').innerText="Email";
+                }
+            
+            }
+            else if(obj=="cphMain_cbxMustAutoWorkshop")
+            {
+                if(document.getElementById(obj).checked)
+                {
+                    document.getElementById('divAutoWorkshopContent').style.display = "block";
+                }
+                else
+                {    alert('If you are not selecting this Section then information in this Section will not be saved or updated !');
+                    document.getElementById('divAutoWorkshopContent').style.display = "none";
+                
+                }
+            
+            }
+            
+      
+        }
+
+       
+    </script>
+    <%-- new --%>
+    <style>
+        .subform label {
+            float: right;
+            color: #697259;
+            font-size: 13pt;
+            font-family: Calibri;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        #cphMain_divAdd {
+            position: fixed;
+            right: 4%;
+            /*padding-left: 76%;*/
+        }
+    </style>
+
+    <style>
+        #cphMain_divLicenseType {
+            width: 69%;
+            margin-top: 1%;
+            height: 98%;
+            border: 0.5px solid;
+            border-color: #9BE3B1;
+            overflow: auto;
+        }
+
+        .divImageLicenseType {
+            /*height: 70px;*/
+            border: 1px solid;
+            border-color: #005C56;
+            margin: 3px;
+            font-size: 15px;
+            min-width: 32%;
+            max-width: 98.5%;
+            overflow-wrap: break-word;
+        }
+
+            .divImageLicenseType:hover {
+                background-color: #9BE3B1;
+            }
+    </style>
+    <script type="text/javascript">
+        var $GoTop = jQuery.noConflict();
+        $GoTop(function () {
+            $GoTop('#scrollToTop').bind("click", function () {
+                $GoTop('html, body').animate({ scrollTop: 0 }, 500);
+
+                return false;
+            });
+        });
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="Server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:HiddenField ID="hiddenLicenseTypeId" runat="server" />
+    <asp:HiddenField ID="hiddenUserImageSize" runat="server" />
+    <asp:HiddenField ID="hiddenUserImage" runat="server" />
+    <asp:HiddenField ID="hiddenUserLicenseCopy" runat="server" />
+    <asp:HiddenField ID="hiddenUserEditId" runat="server" />
+    <asp:HiddenField ID="hiddenDsgnContrl" runat="server" />
+    <asp:HiddenField ID="hiddenImageName" runat="server" />
+    <asp:HiddenField ID="hiddenLicenseCopyName" runat="server" />
+    <asp:HiddenField ID="hiddenConfirmValue" runat="server" />
+    <asp:HiddenField ID="HiddenJobrole" runat="server" />
+
+    <div class="cont_rght">
+        <div id="divErrorTotal" style="visibility: hidden">
+            <asp:Label ID="lblErrorTotal" runat="server"></asp:Label>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <div class="fillform">
+            <div id="divReportCaption" style="font-size: 24px; font-weight: bold; color: rgb(83, 101, 51); font-family: Calibri">
+                <asp:Label ID="lblEntry" runat="server"></asp:Label>
+            </div>
+            <br />
+            <br />
+
+            <div id="divList" class="list" onclick="ConfirmMessage();" runat="server" style="position: fixed; right: 5%; top: 42%; height: 26.5px;">
+
+                <%-- <a href="gen_UserRegistrationList.aspx">
+                    <img src="../../Images/BigIcons/List.png" alt="List" />
+                </a>--%>
+            </div>
+
+            <div class="eachform " style="width: 45%;">
+
+                <h2 style="margin-top: 1%;">Employee Name*</h2>
+
+                <asp:TextBox ID="txtUsrName" class="form1" runat="server" MaxLength="100" Height="30px" Width="250px" Style="text-transform: uppercase" onblur="ReplaceTagOnBlur('cphMain_txtUsrName');" ></asp:TextBox>
+
+                <p class="error" id="P1" style="visibility: hidden">Please enter </p>
+
+            </div>
+
+
+            <div class="eachform " style="float: right; width: 50%;">
+
+                <h2 style="margin-top: 1%;">Designation*</h2>
+                <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>--%>
+                <asp:DropDownList ID="ddlUsrDsgn" Width="268px" class="form1" runat="server" Height="30px" AutoPostBack="True" OnSelectedIndexChanged="ddlUsrDsgn_SelectedIndexChanged"></asp:DropDownList>
+                <%--</ContentTemplate>
+                        </asp:UpdatePanel>--%>
+                <p class="error" id="P2" style="visibility: hidden">Please enter </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="eachform" style="width: 45%;">
+                <h2 style="margin-top: 1%;">Joining Date*</h2>
+
+                <div id="datetimepicker" class="input-append date" style="float: right;">
+                    <asp:TextBox ID="txtJoiningDate" class="form1" placeholder="DD-MM-YYYY" MaxLength="20" runat="server" Height="30px" Width="218px" Style="margin-top: 0%; float: left"></asp:TextBox>
+
+                    <img class="add-on" src="../../../Images/Icons/CalandarIcon.png" style="height: 22px; width: 22px; cursor: pointer;" />
+
+                    <script type="text/javascript"
+                        src="../../JavaScript/Date/JavaScriptDate1_8_3.js">
+                    </script>
+                    <script type="text/javascript"
+                        src="../../JavaScript/Date/JavaScriptDate2_2_2_bootstap.js">
+                    </script>
+                    <script type="text/javascript"
+                        src="../../JavaScript/Date/bootstrap-datepicker.js">
+                    </script>
+                    <script type="text/javascript"
+                        src="../../JavaScript/Date/bootstrap-datepicker_pt_br.js">
+                    </script>
+                    <script type="text/javascript">
+                        var $noC = jQuery.noConflict();
+                        $noC('#datetimepicker').datetimepicker({
+                            format: 'dd-MM-yyyy',
+                            language: 'en',
+                            pickTime: false
+                            //  startDate: new Date(),
+                        });
+
+                    </script>
+
+
+
+
+                    <p style="visibility: hidden">Please enter</p>
+                </div>
+            </div>
+            <%--    0013--%>
+            <div class="eachform" style="float: right; width: 50%;">
+
+                <h2 style="margin-top: 1%;">Role*</h2>
+
+                <asp:DropDownList ID="ddlJobRole" Width="268px" class="form1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlJobRole_SelectedIndexChanged"  Height="30px"></asp:DropDownList>
+                <p style="visibility: hidden">Please enter</p>
+            </div>
+            <%--    0013--%>
+
+            <div class="eachform" style="width: 45%;">
+
+                <h2 style="margin-top: 1%;">National ID Number</h2>
+
+                <asp:TextBox ID="txtNationalIdNmbr" class="form1" runat="server" MaxLength="100" Height="30px" Width="250px" onblur="ReplaceTagOnBlur('cphMain_txtNationalIdNmbr');"></asp:TextBox>
+                <p style="visibility: hidden">Please enter</p>
+            </div>
+
+            <div class="eachform" style="float: right; width: 50%;">
+
+                <h2 style="margin-top: 1%;">Employee Type*</h2>
+
+                <asp:DropDownList ID="ddlEmpType" Width="268px" class="form1" runat="server" Height="30px"></asp:DropDownList>
+                <p style="visibility: hidden">Please enter</p>
+            </div>
+
+             <div class="eachform" style="width: 45%;">
+
+                <h2 style="margin-top: 1%;">Mobile </h2>
+                <asp:TextBox ID="txtUsrMob" class="form1" runat="server" MaxLength="50" Height="30px" Width="250px" Style="text-transform: uppercase"></asp:TextBox>
+
+                <p class="error" id="ErrorMsgUsrMob" style="visibility: hidden; font-family: Calibri; font-size: small;">Please enter valid Mobile Number</p>
+
+            </div>
+            
+
+            <div class="eachform " style="float: right; width: 50%;">
+
+                <h2 id="lblEmployeeCode" style="margin-top: 2%;">Employee Code</h2>
+
+                <asp:TextBox ID="txtEmployeeCode" class="form1" runat="server" MaxLength="5" Height="30px" Width="250px" Style="text-transform: uppercase" onblur="ReplaceTagOnBlur('cphMain_txtEmployeeCode');"></asp:TextBox>
+
+                <p class="error" id="P4" style="visibility: hidden">Please enter </p>
+
+            </div>
+
+           
+
+            <div class="eachform" style="float: right; width: 50%;">
+
+                <h2 id="lblEmail" style="margin-top: 1%;">Email</h2>
+
+                <asp:TextBox ID="txtUsrEmail" class="form1" runat="server" MaxLength="100" Height="30px" Width="250px" onblur="ReplaceTagOnBlur('cphMain_txtUsrEmail');" style="margin-right: 10%;"></asp:TextBox>
+
+                <p class="error" id="ErrorMsgUsrEmail" style="visibility: hidden; padding-left: 6%; font-family: Calibri; font-size: small;">Please enter valid email address</p>
+
+            </div>
+
+
+            <%-- division file upload --%>
+
+            <div class="eachform" style="width: 45%; height: 50px;">
+
+
+                <h2 style="margin-top: 1%;">Upload Photo</h2>
+                <label for="cphMain_FileUploadProPic" class="custom-file-upload" tabindex="0">
+                    <img src="../../Images/Icons/cloud_upload.jpg" />Upload File</label>
+                <%--<input id="file" name = "file" type="file" onchange="ClearDivDisplayImage()" accept="image/png, image/gif, image/jpeg" />--%>
+
+                <asp:FileUpload ID="FileUploadProPic" class="fileUpload" runat="server" Style="height: 30px; display: none;" onchange="ClearDivDisplayImage()" Accept="image/png, image/gif, image/jpeg" />
+
+
+                <div id="divImageEdit" runat="server" style="float: right; width: 54%; height: 20px; margin-top: 1%;margin-right:7%;">
+                    <div class="imgWrap">
+                        <img id="ClearImage" src="../../Images/Icons/clear-image-green.png" alt="Clear" onclick="ClearImage()" onmouseover="ImagePosition('ClearImage','RemovePhoto');" style="cursor: pointer; float: right;" />
+                        <p id="RemovePhoto" class="imgDescription" style="color: white">Remove Selected Photo</p>
+                    </div>
+                    <div id="divImageDisplay" runat="server">
+                    </div>
+                </div>
+                <asp:Label ID="Label1" runat="server" Text="No File selected" Style="font-family: Calibri; font-size: medium;"></asp:Label>
+            </div>
+
+            <div class="eachform" style="float: right; width: 50%; margin-top: 5px;">
+                <h2 style="width: 42%;">Use this email as "From mail" while sending*</h2>
+                    <%--<h2 style="margin-left: -19.8%;margin-top: 3.3%;">while sending*</h2>--%>
+                <div class="subform" style="margin-left: 3.3%; margin-top: -0.7%">
+
+                    <asp:CheckBox ID="cbxMailSendStatus" Text="Yes" runat="server" Checked="false" class="form2" />
+                    <%--<h3>Active</h3>--%>
+                </div>
+            </div>
+
+            <div class="eachform" style="width: 45%; margin-top: 0px;">
+                <h2>Status*</h2>
+                <div class="subform" style="margin-left: 28.2%;">
+
+                    <asp:CheckBox ID="cbxStatus" Text="Active" runat="server" Checked="true" class="form2" />
+                    <%--<h3>Active</h3>--%>
+                </div>
+            </div>
+            <div class="eachform " style="float: right; width: 50%;">
+
+                <h2 style="margin-top: 0%;">Read Mail From This Mail*</h2>
+
+                <div class="subform" style="margin-left: 8.6%;">
+
+                    <asp:CheckBox ID="cbxReadMail" Text="Yes" runat="server" Checked="false" class="form2" />
+                    <%--<h3>Active</h3>--%>
+                </div>
+
+            </div>
+
+
+
+
+
+            <asp:UpdatePanel ID="UpdatePanelSingleCorporate" runat="server" style="margin-top: 2%;">
+                <ContentTemplate>
+
+                    <asp:MultiView ID="mvUsrCorporate" runat="server">
+
+                        <asp:View ID="vMultiple" runat="server">
+                            <div class="eachform">
+                                <h2 style="margin-top: 1%;">Corporate Office</h2>
+                                <div runat="server" id="mydiv" style="font-family: Calibri;">
+
+
+
+                                    <asp:CheckBoxList ID="cbxlCorporateOffc" runat="server" CellPadding="10" class="form2"></asp:CheckBoxList>
+                                </div>
+                            </div>
+                        </asp:View>
+                        <asp:View ID="vSingle" runat="server">
+
+
+                            <div class="eachform" style="width: 45%;">
+
+
+
+                                <h2 style="margin-top: 1%;">Corporate Office*</h2>
+                                <%--<h2 style="margin-top: 1%;">Main Business Units*</h2>--%>
+
+                                <asp:DropDownList ID="ddlUsrCorporate" runat="server" AutoPostBack="True" class="form1" OnSelectedIndexChanged="ddlUsrCorporate_SelectedIndexChanged" Width="268px" Height="30px">
+                                </asp:DropDownList>
+
+                                <p class="error" id="ErrorMsgUsrCorporate" style="visibility: hidden">Please select</p>
+
+                            </div>
+                            <div id="divDept" runat="server">
+                            <div class="eachform" id="DeptDiv" style="float: right; width: 100%;">
+
+                                <h2 style="margin-top: 1%;">Corporate Department*</h2>
+                                <%--<h2 style="margin-top: 1%;">Department*</h2>--%>
+                                <div id="divDpartmnt">
+                                     <asp:RadioButtonList ID="rbtnCropDept" runat="server" CellPadding="10" class="form2"></asp:RadioButtonList>
+                                </div>
+                                <%--<asp:DropDownList ID="ddlDepartment" Width="268px" Height="30px" class="form1" runat="server"></asp:DropDownList>--%>
+
+                                <p class="error" id="ErrorMsgDepartment" style="visibility: hidden;margin-top:-0.5%;">Please select</p>
+
+                            </div>
+                             </div>
+
+                        </asp:View>
+                    </asp:MultiView>
+                    <div id="divDiv" runat="server">
+                        <div class="eachform" id="CorpDiv" runat="server">
+                            <h2 id="H1" runat="server" style="margin-top: 1%;">Corporate Division</h2>
+                            <%--<h2 id="H1" runat="server" style="margin-top: 1%;">Sub Business Unit</h2>--%>
+                            <div id="divDivision">
+
+
+
+                                <asp:CheckBoxList ID="cbxlCorporateDvsn" runat="server" CellPadding="10" class="form2"></asp:CheckBoxList>
+                            </div>
+                        </div>
+                    </div>
+                   <%-- 0013--%>
+                    <div id="bussiDiv" runat="server">
+                      <div id="divBusi" class="eachform" style="width: 100%; padding-top:15px;" runat="server">
+               <h2 style="margin-top: 1%;">Sub Business Units</h2>
+                <div id="divSubBus">
+
+                    
+                    <asp:CheckBoxList ID="cbxBussiness" runat="server" CellPadding="10" class="form2"></asp:CheckBoxList>
+                    
+                </div>
+            </div>
+                        </div>
+
+
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <%--0013--%>
+             <div class="eachform">
+                <h2>Compzit Modules</h2>
+                <div class="subform" id="divCompzitModuleList" style="margin-left: 5.4%; width: 52%;" runat="server">
+
+                    <asp:CheckBoxList ID="cbxlCompzitModules" runat="server" onchange=" return ClickCompzitModule();">
+                    </asp:CheckBoxList>
+
+
+                </div>
+                <div id="divCompzitModuleNoList" runat="server" style="margin-left: 47.4%; color: #3b5113; font-family: Calibri;">
+                    <asp:Label ID="Label2" runat="server" Text="No Modules Available."></asp:Label>
+
+
+
+                </div>
+            </div>
+
+            <div class="eachform" style="display:none;">
+                <h2>Status*</h2>
+                <div class="subform" style="margin-left: 39.3%;">
+
+                    <asp:CheckBox ID="CheckBox1" Text="" runat="server" Checked="true" class="form2" />
+                    <h3 style="margin-top: 2%;">Active</h3>
+
+                </div>
+
+            </div>
+
+            <h2 style="font-size: 17px;">Select the User role *</h2>
+            <div class="eachform">
+
+
+
+                <div class="accordion" style="font-family: Calibri;">
+                    <div class="accordion-section" id="divAccordionAppAdmin">
+                        <a class="accordion-section-title" href="#accordion-1">APP ADMINISTRATION</a>
+
+                        <div id="accordion-1" class="accordion-section-content">
+                            <div id="divCompzit_AppAdminstration" runat="server">
+
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <%--<h1>ONLINE</h1>--%>
+
+                                                    <asp:TreeView ID="TreeViewCompzit_AppAdminstration" runat="server"
+                                                        ShowCheckBoxes="All" ExpandDepth="0" CssClass="MyTreeView" Target="_self">
+                                                    </asp:TreeView>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <br />
+                            </div>
+                        </div>
+                        <!--end .accordion-section-content-->
+                    </div>
+                    <!--end .accordion-section-->
+
+                    <div class="accordion-section" id="divAccordionSFA">
+                        <a class="accordion-section-title" href="#accordion-2">SALES FORCE AUTOMATION</a>
+                        <div id="accordion-2" class="accordion-section-content">
+                            <div id="divAccordionCompzit_SalesAutomation" runat="server">
+                                <div>
+                                    <div>
+                                        <%--<h1>ONLINE</h1>--%>
+                                        <asp:TreeView ID="TreeViewCompzit_SalesAutomation" runat="server"
+                                            ShowCheckBoxes="All" ExpandDepth="0" CssClass="MyTreeView">
+                                        </asp:TreeView>
+
+                                    </div>
+
+                                </div>
+                                <br />
+
+                            </div>
+                        </div>
+                        <!--end .accordion-section-content-->
+                    </div>
+                    <!--end .accordion-section-->
+
+                    <div class="accordion-section" id="divAccordionAWMS">
+                        <a class="accordion-section-title" href="#accordion-3">AUTO WORKSHOP MANAGEMENT SYSTEM</a>
+                        <div id="accordion-3" class="accordion-section-content">
+                            <div id="divAccordionCompzit_AutoWorkshopManagement" runat="server">
+                                <div>
+                                    <div>
+                                        <%--<h1>ONLINE</h1>--%>
+                                        <asp:TreeView ID="TreeViewCompzit_AutoWorkshopManagement" runat="server"
+                                            ShowCheckBoxes="All" ExpandDepth="0" CssClass="MyTreeView">
+                                        </asp:TreeView>
+
+                                    </div>
+
+                                </div>
+                                <br />
+
+                            </div>
+                        </div>
+                        <!--end .accordion-section-content-->
+                    </div>
+                                         <div class="accordion-section" id="divAccordionGMS">
+                        <a class="accordion-section-title" href="#accordion-4">GUARANTEE MANAGEMENT SYSTEM</a>
+                        <div id="accordion-4" class="accordion-section-content">
+                            <div id="divAccordionCompzit_GuaranteeManagement" runat="server">
+                                <div>
+                                    <div>
+                                        <%--<h1>ONLINE</h1>--%>
+                                        <asp:TreeView ID="TreeViewCompzit_GuaranteeManagement" runat="server"
+                                            ShowCheckBoxes="All" ExpandDepth="0" CssClass="MyTreeView">
+                                        </asp:TreeView>
+
+                                    </div>
+
+                                </div>
+                                <br />
+
+                            </div>
+                        </div>
+                        <!--end .accordion-section-content-->
+                    </div>
+                    <!--end .accordion-section-->
+                </div>
+                <!--end .accordion-->
+
+               
+                <%--<br />--%>
+            </div>
+           <%-- <div id="divAllocateAll" runat="server" class="eachform" style="display:none;">
+                <h2>Allocate Selected Roles to Existing Users </h2>
+                <div class="subform" style="padding-left: 7%; margin-top: -4%;">
+
+                    <asp:CheckBox ID="CbxAllocateAll" runat="server" Checked="false" class="form2" />
+                    <h3 style="margin-top: 2%;">Allocate</h3>
+                </div>
+
+            </div>--%>
+            <br />
+
+            <div id="divLoginDetailsSection" runat="server" style="border: 1px solid #cad1be; padding: 1% 2% 3% 2%; margin-top: 0%;">
+
+                <div id="divLoginDetailsHeader" style="width: 100%; float: left;">
+
+                    <asp:CheckBox ID="cbxMustLogin" Text="Login Details" runat="server" Checked="false" class="caption" onclick="ShowHideDiv('cphMain_cbxMustLogin')" />
+
+                </div>
+
+                <div id="divLoginDetailsContent" style="display: none;">
+
+                    <div class="eachform " style="width: 45%;">
+
+                        <h2 style="margin-top: 2%;">Login Name*</h2>
+
+                        <asp:TextBox ID="txtLoginName" class="form1" runat="server" MaxLength="100" Height="30px" Width="250px" Style="text-transform: uppercase" onblur="ReplaceTagAndAtOnBlur('cphMain_txtLoginName');"></asp:TextBox>
+
+                        <p class="error" id="P3" style="visibility: hidden">Please enter </p>
+
+                    </div>
+
+                    <%-- //005 start--%>
+
+                    <div class="eachform" style="float: right; width: 50%;">
+
+                        <div class="subform" style="margin-left: 42.8%; margin-top: -0.7%">
+
+                            <asp:CheckBox ID="cbxLimitedUser" Text="Limited User" runat="server" Checked="true" class="form2" />
+                            <asp:CheckBox ID="cbxPswExpiry" Text="Enforce Password Expiration" runat="server" Checked="true" class="form2" />
+                            <%--<h3>Active</h3>--%>
+                            <%--<p style="visibility: hidden">Please enter</p>--%>
+                        </div>
+
+                    </div>
+
+                    <div id="divPassword" runat="server" class="eachform" style="width: 45%;">
+                        <h2 style="margin-top: 2%;">Password*</h2>
+
+                        <asp:TextBox ID="txtUsrPwd" class="form1" runat="server" MaxLength="16" Height="30px" Width="250px" oncopy="return false" TextMode="Password" onblur="ReplaceTagOnBlur('cphMain_txtUsrPwd');"></asp:TextBox>
+
+                        <div class='form-tooltip'>Password Must Contain 6-16 Characters with atleast one number, special character & alphabet</div>
+                        <p class="error" id="PwdMsg" style="visibility: hidden; font-family: Calibri;"></p>
+                    </div>
+
+                    <div id="divCPassword" runat="server" class="eachform" style="float: right; width: 50%; margin-top: 0%;">
+
+                        <h2 style="margin-top: 2%;">Confirm Password*</h2>
+
+                        <asp:TextBox ID="txtUsrConPwd" class="form1" runat="server" MaxLength="16" Height="30px" onPaste="return false" Width="250px" TextMode="Password" onblur="ReplaceTagOnBlur('cphMain_txtUsrConPwd');"></asp:TextBox>
+
+                        <p class="error" id="ErrorMsgUsrConPwd" style="visibility: hidden; padding-left: 6%; font-family: Calibri; font-size: small;">Both passwords must be equal</p>
+
+                    </div>
+                    <div class="eachform" style="margin-top: -2%;" id="divShowPassword" runat="server">
+                        <h2 style="margin-left: 16.4%;"></h2>
+                        <div style="font-family: Calibri; color: #697259;">
+                            <asp:CheckBox ID="cbxPswdVisible" Text="Show Password" runat="server" class="form2" onchange="return onChanging();" />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="divAutoWorkshopSection" runat="server" style="border: 1px solid #cad1be; padding: 1% 2% 3% 2%; margin-top: 2%;">
+
+                <div id="divAutoWorkshopHeader" style="width: 100%; float: left;">
+
+                    <asp:CheckBox ID="cbxMustAutoWorkshop" Text="Auto Workshop Related Information" runat="server" Checked="false" class="caption" onclick="ShowHideDiv('cphMain_cbxMustAutoWorkshop');" />
+
+                </div>
+
+                <div id="divAutoWorkshopContent" style="display: none;">
+
+                    <div class="eachform " style="width: 45%;">
+
+                        <h2 style="margin-top: 2%;">Driving License No.*</h2>
+
+                        <asp:TextBox ID="txtLicenceNumbr" class="form1" runat="server" MaxLength="100" Height="30px" Width="250px" Style="text-transform: uppercase" onblur="ReplaceTagOnBlur('cphMain_txtLicenceNumbr');"></asp:TextBox>
+
+                        <p class="error" id="P5" style="visibility: hidden">Please enter </p>
+
+                    </div>
+
+
+                    <div class="eachform " style="float: right; width: 50%;">
+
+                        <h2 style="margin-top: 1%;">License Expiry Date*</h2>
+
+                        <div id="dateLicenseExpDate" class="input-append date" style="float: right;">
+                            <asp:TextBox ID="txtLicenseExpDate" class="form1" placeholder="DD-MM-YYYY" MaxLength="20" runat="server" Height="30px" Width="218px" Style="margin-top: 0%; float: left"></asp:TextBox>
+
+                            <img class="add-on" src="../../../Images/Icons/CalandarIcon.png" style="height: 22px; width: 22px; cursor: pointer;" />
+
+                            <script type="text/javascript"
+                                src="../../JavaScript/Date/JavaScriptDate1_8_3.js">
+                            </script>
+                            <script type="text/javascript"
+                                src="../../JavaScript/Date/JavaScriptDate2_2_2_bootstap.js">
+                            </script>
+                            <script type="text/javascript"
+                                src="../../JavaScript/Date/bootstrap-datepicker.js">
+                            </script>
+                            <script type="text/javascript"
+                                src="../../JavaScript/Date/bootstrap-datepicker_pt_br.js">
+                            </script>
+                            <script type="text/javascript">
+                                var $noC = jQuery.noConflict();
+                                $noC('#dateLicenseExpDate').datetimepicker({
+                                    format: 'dd-MM-yyyy',
+                                    language: 'en',
+                                    pickTime: false
+                                    // startDate: new Date(),
+                                });
+
+                            </script>
+
+
+
+
+                            <p style="visibility: hidden">Please enter</p>
+                        </div>
+
+                    </div>
+                    <asp:UpdatePanel ID="UpdatePanelAutoWorkShopAccommodation" runat="server" style="margin-top: 2%;">
+                        <ContentTemplate>
+                            <div class="eachform" style="width: 45%;">
+                                <h2 style="margin-top: 1%;">Accommodation</h2>
+
+                                <asp:DropDownList ID="ddlAccommodatn" Width="268px" class="form1" runat="server" Height="30px"></asp:DropDownList>
+                                <p style="visibility: hidden">Please enter</p>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <div class="eachform" style="float: right; width: 50%; margin-top: 0%;">
+                        <h2>Allow Duty Roster*</h2>
+                        <div class="subform" style="margin-left: 14.5%;">
+
+                            <asp:CheckBox ID="cbxDutyRoster" Text="Yes" runat="server" Checked="false" class="form2" />
+                            <%--<h3>Active</h3>--%>
+                        </div>
+                    </div>
+                    <asp:UpdatePanel ID="UpdatePanelAutoWorkShop" runat="server" style="margin-top: 2%;">
+                        <ContentTemplate>
+
+                            <div class="eachform" style="width: 48%; margin-top: 0px;">
+                                <h2 style="margin-top: 1%;">Upload License Copy*</h2>
+                                <label for="cphMain_FileUploadLicenseCopy" class="custom-file-upload" tabindex="0" style="margin-left: 1.8%;">
+                                    <img src="../../Images/Icons/cloud_upload.jpg" />Upload File</label>
+                                <%--<input id="file" name = "file" type="file" onchange="ClearDivDisplayImage()" accept="image/png, image/gif, image/jpeg" />--%>
+
+                                <asp:FileUpload ID="FileUploadLicenseCopy" class="fileUpload" runat="server" Style="height: 30px; display: none;" onchange="ClearDivDisplayLicenseCopy()" />
+
+
+                                <div id="divLicenseEdit" runat="server" style="float: right; width: 54%; height: 20px; margin-top: 1%;margin-right:11%;">
+                                    <div class="imgWrap">
+                                        <img id="ClearLicenseCopy" src="../../Images/Icons/clear-image-green.png" alt="Clear" onclick="ClearLicenseCopy()" onmouseover="ImagePosition('ClearLicenseCopy','RemoveLicenseCopy');" style="cursor: pointer; float: right;" />
+                                        <p id="RemoveLicenseCopy" class="imgDescription" style="color: white; margin-left: 0%; margin-top: 0%;">Remove Selected License Copy</p>
+                                    </div>
+                                    <div id="divLicenseCopyDisplay" runat="server">
+                                    </div>
+                                </div>
+                                <asp:Label ID="lblLicenseCopy" runat="server" Text="No File selected" Style="font-family: Calibri; font-size: medium;"></asp:Label>
+
+
+                            </div>
+
+
+                            <div id="divLicenseTypeContainer" class="eachform" style="width: 100%; height: 163px; min-height: 85px; margin-top: 0%;">
+                                <h2 style="margin-top: 1%;">Select License Type* </h2>
+                                <%--<label id="lblLicenseType">Select Vehicle Class* </label>--%>
+                                <div class="subform" style="margin-left: 2.5%;" id="divLicenseType" runat="server">
+                                </div>
+                            </div>
+
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+
+
+
+
+
+            <br />
+
+            <div class="eachform">
+                <div class="subform" style="width: 38%;">
+
+
+                    <asp:Button ID="btnUpdate" runat="server" class="save" Text="Update" OnClick="btnUpdate_Click" OnClientClick="return Validation(); " />
+                    <asp:Button ID="btnUpdateClose" runat="server" class="save" Text="Update & Close" OnClick="btnUpdate_Click" OnClientClick="return Validation(); " />
+                    <asp:Button ID="btnAdd" runat="server" class="save" Text="Save" OnClientClick="return Validation(); " OnClick="btnAdd_Click" />
+                    <asp:Button ID="btnAddClose" runat="server" class="save" Text="Save & Close" OnClientClick="return Validation(); " OnClick="btnAdd_Click" />
+                    <asp:Button ID="btnCancel" runat="server" class="cancel" Text="Cancel" PostBackUrl="gen_UserRegistrationList.aspx" />
+                    <%--<asp:Button ID="Button1" runat="server" class="cancel" Text="test" OnClientClick="return testLicenseType();" />--%>
+                </div>
+            </div>
+
+            <div style="float: right;" align="right">
+                <a href="javascript:;" id="scrollToTop" title="Goto Top">&#x25B2;</a>
+            </div>
+            <!-- The Modal Loading MAIL -->
+            <div id="myModalLoadingMail" class="modalLoadingMail">
+
+                <!-- Modal content -->
+                <div>
+
+                    <img src="../../Images/Other Images/LoadingMail.gif" style="width: 12%;" />
+
+
+                </div>
+
+            </div>
+
+
+            <div style="width: 100% !important; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #3a3a3a; filter: Alpha(Opacity=90); -moz-opacity: 0.2; opacity: 0.4; z-index: 29; height: auto !important;"
+                class="freezelayer" id="freezelayer">
+            </div>
+            <%--test modal stop--%>
+        </div>
+
+    </div>
+     <%-- //0013--%>
+    <style>
+        input[type="radio"] {
+    display:inline;
+}
+    </style>
+</asp:Content>

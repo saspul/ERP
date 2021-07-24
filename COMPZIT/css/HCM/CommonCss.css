@@ -1,0 +1,159 @@
+﻿ #divGreySection {
+            background-color: #efefef;
+            border: 1px solid;
+            border-color: #cfcfcf;
+            padding: 15px;
+            height: auto;
+            margin-top: 4%;
+            width: 100%;
+        }
+
+        #divMessageArea {
+            border-radius: 8px;
+            background: #fff;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color: #53844E;
+            margin-top: 0%;
+            font-family: Calibri;
+            border: 2px solid #53844E;
+        }
+
+        .cont_rght {
+            width: 98%;
+        }
+
+        #imgMessageArea {
+            float: left;
+            margin-left: 1%;
+            margin-top: -0.2%;
+        }
+        /*--------------------------------------------------for modal Cancel Reason------------------------------------------------------*/
+        .modalCancelView {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 23%;
+            top: 30%;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+        }
+
+
+        /* Modal Content */
+        .modal-CancelView {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+
+        /* The Close Button */
+        .closeCancelView {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeCancelView:hover,
+            .closeCancelView:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerCancelView {
+            /*padding: 1% 1%;*/
+            background-color: #91a172;
+            color: white;
+        }
+
+        .modal-bodyCancelView {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerCancelView {
+            padding: 2% 1%;
+            background-color: #91a172;
+            color: white;
+        }
+
+        #divErrorRsnAWMS {
+            border-radius: 4px;
+            background: #fff;
+            color: #53844E;
+            font-size: 12.5px;
+            font-family: Calibri;
+            font-weight: bold;
+            border: 2px solid #53844E;
+            margin-top: -3.5%;
+            margin-bottom: 2%;
+        }
+
+        .btnsave {
+            float: left;
+            font-family: Calibri;
+            color: #000;
+            font-size: 14px;
+            padding: 3px 42px 3px 38px;
+            margin: 0 0 7px;
+        }
+#main
+{
+    margin-left: 0px;
+}
+.formdiv
+{
+    width: 100%;
+    float: left;
+    margin-top: 21px;
+}
+.lblh2
+{
+    float: left;
+width: 27%;
+font-family: Calibri;
+font-size: 17px;
+
+text-align: left;
+color: #909c7b;
+padding: 0;
+margin: 6px 0 6px;
+line-height: 1;
+font-weight: normal;
+float: left;
+}
+.pageh2
+{
+
+    font-size: 24px;
+font-weight: bold;
+color: rgb(83, 101, 51);
+font-family: Calibri;
+}.add {
+    background: url(/Images/BigIcons/AddNew.png) no-repeat 0 0;
+    width: 90px;
+}.list {
+    background: url(/Images/BigIcons/listNew.png) no-repeat 0 0;
+    width: 90px;
+}  .list:hover {
+       opacity: 0.9;
+        cursor: pointer;
+        background: url(/Images/BigIcons/listNew.png) no-repeat 0 0px;
+    }
+     .add:hover {
+        cursor: pointer;
+        background: url(/Images/BigIcons/AddNew.png) no-repeat 0 0px;
+         opacity: 0.9;
+    }
+

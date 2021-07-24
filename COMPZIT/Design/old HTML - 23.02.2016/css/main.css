@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+ font-family: OpenSans Light;
+ src: url("OpenSans-Light.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: OpenSans Light;
+ src: url("OpenSans-Light.ttf") /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+ font-family: OpenSans Semibold;
+ src: url("OpenSans-Semibold.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: OpenSans Semibold;
+ src: url("OpenSans-Semibold.ttf") /* TTF file for CSS3 browsers */
+}
+
+
+
+
+body{margin:0; padding:0; background:#1f1f1f}
+h1, h2, h3, h4, h5, h6, p, a{text-decoration:none; padding:0; margin:0}
+
+.bodyarea{width:100%; height:auto; background:url(../images/bg.jpg) no-repeat center top; display:inline-block}
+.auto{width:1313px; margin: auto}
+.loginarea{width:517px; display:inline-block; float:right; margin: 39px 235px 110px 0}
+.logo{width:100%}
+.logo_img{float:left; margin:0 0 50px 0}
+.txt{margin:0 0 23px 0}
+
+.login{width:517px; background:rgba(255, 255, 255, .35); display:inline-block; padding:36px 0 38px}
+.login h1{font-family:OpenSans Light; font-size:27px; color:#fff; margin:0 0 20px 178px; width:74px}
+
+.eachfield { display: inline-block; margin: 0 145px 10px 102px; width: 270px;}
+.eachfield h2{font-family:OpenSans Light; font-size:15.4px; color:#fff; float:left; margin:0}
+.rginput{float:right; width:183px; height:24px; border:1px solid #fff; background:none; color:#fff; padding-left:6px}
+.close{float:right; height:24px; width:86px; background:url(../images/close.png)}
+.close:hover{background:url(../images/close.png) repeat 0 24px}
+
+.submit_btn{float:right; height:24px; width:86px; background:url(../images/login.png); border:none; cursor:pointer; margin:0 20px 0 0}
+.submit_btn:hover{ background:url(../images/login.png) repeat 0 24px;}
+
+.footer{width:100%; display:inline-block; background:rgba(0, 0, 0, .5)}
+.footer h3{font-family:OpenSans Light; font-size:13px; color:#fff; padding:31px 0 29px; margin:0}
+.footer h3 a{font-family:OpenSans Light; font-size:13px; color:#fff; padding:0; text-decoration:none}
+.footer h3 a:hover{color:#dedede; padding:0; text-decoration:underline}
+
+
+/*sub-1*/
+
+.header{display:inline-block; width:100%}
+.auto1{width:1296px; margin:auto}
+.topheader{display:inline-block; width:100%; background:#99ca3c; padding:11px 0 8px}
+.bottomheader{display:inline-block; width:100%; background-image:linear-gradient(to bottom, #ffffff 0%, #e3e2e2 100%); background-repeat:repeat; padding:14px 0 17px}
+
+.profile_pic{width:37px; border:1px solid #fff; float:right}
+.topheader h6{font-family:Calibri; font-size:12px; float:right; text-align:right; color:#fff; padding:0; margin:15px 7px 0 0;
+ line-height:1; font-weight:lighter}
+
+.search1{display:inline-block; width:245px; float:right; margin:3px 98px 0 0; padding:0}
+.search_btn_1{float:left; width:26px; height:26px; background:url(../images/search_btn_headr.png); cursor:pointer;border:none; 
+padding:0; margin:0}
+.search_area_1{float:left; width:206px; height:26px; border:none; background:#fff; color:#999; padding:0px 5px; margin:0 0 0 1px}
+
+.sub_logo{background-image:linear-gradient(to bottom, #ffffff 30%, #e3e2e2 100%); background-repeat:repeat;position:absolute;float:left;
+margin:14px 0 0 }
+.sub_logo img{width:151px; float:left; padding:24px 57px 33px 58px} 
+
+.bottomheader_sub{width:989px; float:right; display:inline-block}
+.bh_sub_lft{width:auto; float:left; display:inline-block}
+.bh_sub_lft h1{font-family:Calibri; font-size:24px; float:left; text-align:left; color:#008641; padding:0; margin:17px 33px 0 0;
+ line-height:1; font-weight:normal}
+.bh_sub_lft h2{font-family:Calibri; font-size:14px; float:left; text-align:left; color:#8d8d8f; padding:8px 0 0 28px; margin:17px 0 0;
+ line-height:1; font-weight:normal; background:url(../images/home_bg.png) no-repeat 0 0}
+.bh_sub_lft h2 a{ color:#8d8d8f; padding:0; margin: 0; text-decoration:none}
+.bh_sub_lft h2 a:hover{text-decoration:underline}
+
+.mailalrt{display: inline-block; width:142px; margin:0 0 0 80px }
+.mailalrt_sub{display:inline-block; width:47px; float:left; text-align:center}
+.mailalrt_sub img{width:32px; text-align:center}
+.mailalrt_sub h3{font-family:Calibri; font-size:13px; text-transform:uppercase; margin:0; padding:0;width:100%; text-align:center;
+color:#8d8d8f}
+
+.bh_sub_rght{float:right; display:inline-block}
+.bh_sub_rght h6{font-family:Calibri; font-size:13px;  margin:27px 0 0 ; padding:0; float:right;color:#838383; font-weight:lighter}
+.bh_sub_rght h6 a{color:#838383; font-weight:lighter;text-decoration:none}
+.bh_sub_rght h6 a:hover{text-decoration:underline}
+
+.datepick{ width:140px; height:34px; border:none; padding:0 0 0 39px; background:url(../images/datepick_bg.png); margin:9px 12px 0 0;
+color:#fff; font-weight:bold}
+
+.contentarea{width:100%; background:#fff; display:inline-block}
+.cont_lft{  width:266px;display:inline-block; float:left; background:#34495e; height:100%}
+.cont_rght{ width:989px;display:inline-block; float:right;padding:57px 0 0 0}
+
+.main_table{width:100%; height:36px; margin:0 0 35px; border-bottom:1px solid #c9c9c9;}
+.main_table_head{width:100%; border: 1px solid #9ba48b; background:#9ba48b; color:#fff; font-size:13px; text-align:left; height:36px}
+.th1{width:21px; padding:0 0 0 014px; border-right:1px solid #b5bca9; font-family:Calibri; font-weight:lighter}
+.th2{width:364px; padding:0 0 0 014px; border-right:1px solid #b5bca9; font-family:Calibri; font-weight:lighter}
+.th3{width:214px; padding:0 0 0 014px; border-right:1px solid #b5bca9; font-family:Calibri; font-weight:lighter}
+.th4{width:233px; padding:0 0 0 014px; border-right:1px solid #b5bca9; font-family:Calibri; font-weight:lighter}
+.th5{width:33px; padding:0 0 0 014px; border-right:1px solid #b5bca9; font-family:Calibri; font-weight:lighter}
+.th6{width:34px; padding:0 0 0 014px; border-right:none;  font-family:Calibri; font-weight:lighter}
+
+.dark_row{width:100%; height:36px;  border: 1px solid #c9c9c9;  background:#dededd;  font-size:13px; color:#5c5c5e}
+.light_row{width:100%; height:36px; border: 1px solid #c9c9c9; background:#fff;  font-size:13px; color:#5c5c5e}
+.td1{width:21px; padding:0 0 0 014px; border-right:1px solid #c9c9c9; border-left:1px solid #c9c9c9; font-family:Calibri; font-weight:lighter}
+.td2{width:364px; padding:0 0 0 014px; border-right:1px solid #c9c9c9; font-family:Calibri; font-weight:lighter}
+.td3{width:214px; padding:0 0 0 014px; border-right:1px solid #c9c9c9; font-family:Calibri; font-weight:lighter}
+.td4{width:233px; padding:0 0 0 014px; border-right:1px solid #c9c9c9; font-family:Calibri; font-weight:lighter}
+.td5{width:33px; padding:0 0 0 014px; border-right:1px solid #c9c9c9; font-family:Calibri; font-weight:lighter}
+.td6{width:34px; padding:0 0 0 014px; border-right:1px solid #c9c9c9;  font-family:Calibri; font-weight:lighter}
+
+.searchlist_btn_lft{float:left; font-family:OpenSans Semibold; color:#FFFFFF; font-size:14.66px; padding:3px 42px 3px 38px; background:url(../images/search_list.png) no-repeat 0 0; margin:0 0 7px}
+.searchlist_btn_rght{float:right; font-family:OpenSans Semibold; color:#FFFFFF; font-size:14.66px; padding:3px 81px 3px 18px; background:#9ba48b; margin:0 0 7px}
+
+.mainheading{float:left; font-family:Calibri; font-size:20px; margin:0 0 8px; padding:0; color:#7f8672;font-weight:lighter; width:100%}
+.subheading1{float:left; font-family:Calibri; font-size:17px; margin:0 0 8px; padding:0; color:#7f8672;font-weight:lighter; width:100%}
+.subheading2{float:left; font-family:Calibri; font-size:15px; margin:0 0 8px; padding:0; color:#7f8672;font-weight:lighter; width:100%}
+
+
+.subtable{ width:100%; border-left:1px solid #7f8672; border-top:1px solid #7f8672; margin:0 0 8px}
+.sub_table_head{ height:27px}
+.sub_th1{width:10%;  border-right:1px solid #7f8672; border-bottom:1px solid #7f8672}
+.sub_th2{ width:90%;  border-right:1px solid #7f8672; border-bottom:1px solid #7f8672}
+
+.cont_rght h2{font-family:Calibri; font-size:20px; float:left; text-align:left; color:#909c7b; padding:0; margin: 0 0 6px;
+ line-height:1; font-weight:normal}
+
+.pagination{float:right; display:inline-block; padding:0; margin:0 0 10px}
+.pagination ul{float:left; display:inline; padding:0; margin:0}
+.pagination ul li{float:left; display:inline; font-family:Arial; font-size:12px; font-weight:normal; border:1px solid #c4d0b1;
+ background:linear-gradient(to bottom, #eff2ea 0%, #d2dbc4 100%); margin:0; margin-left:4px !important; padding:1px 4px}
+.pagination ul li a{color:#6f824f;}
+.pagination ul li:hover{background:#eff2ea}
+.page_selected{background:#6f824f !important}
+.page_selected a{ color:#eff2ea !important}
+
+.foot{display:inline-block; width:100%; background:#34495e; padding:23px 0 26px; margin:0}
+.foot h1{font-family:Calibri; font-size:12px; margin:0 0 8px 266px; padding:0; color:#fff;font-weight:normal; width:160px}
+.foot h1 a{color:#fff;font-weight:normal;}
+.foot h1 a:hover{color:#fff;font-weight:normal; text-decoration:underline}
+.foot h2{font-family:Calibri; font-size:11px; margin:0 0 8px 266px; padding:0; color:#fff;font-weight:normal; width:160px}
+
+
+
+.menu0{ display: inline-block; float:left; width: 266px;}
+
+.sidenav { display:none}
+.nav_bttn_bt{ display: none;}
+.menu_bar {	margin:0px;}
+.menu_bar ul{font-family:Calibri; font-size:14px; color: #fff; margin:0; padding:0 0 70px;}
+.menu_bar li{float:none; list-style:inside; padding:10px 0px 11px 20px; list-style-image:url(../images/list-img.png);
+ background:url(../images/ulli_bg.png)}
+.menu_bar ul a{color: #fff; padding:0 8px 0 0}
+.menu_bar ul a:hover{ text-decoration:underline}
+.nav_bttn_bt {	font-family: calibri;	font-size: 18px;	color: #78a200;}
+
+
+
+/*=================================================Push Menu section==============================================*/
+.sidenav {  height: 100%; width: 0; position: fixed; z-index: 1002; top: 0;left: 0; background-color: #34495e ;overflow-x: hidden; overflow-y: hidden;
+transition: 0.5s;    padding-top: 60px; box-shadow: 5px 0 8px 0 #000000;}
+
+.sidenav a { padding: 8px 8px 8px 32px; font-family:Calibri; text-decoration: none;font-size:18px;  color: #ffffff; display: block;    transition: 0.3s}
+
+.sidenav a:hover, .offcanvas a:focus{    color: #000;}
+.closebtn {    position: absolute;    top: 0;    right: 25px;    font-size: 25px !important;    margin-left: 50px;}
+
+/*=================================================Push Menu section==============================================*/
+
+
+
+@media screen and (max-width: 800px){/*min-width:701*/
+.sidenav{display:block;}
+.nav_bttn_bt { display:block;}
+}
+
+
+/*login 2*/
+.login2{width:100%; display:inline-block; text-align:center}
+.login2 img{width:; margin:40px auto 0; text-align:center; float:none}
+
+.app_sales{width:835px; display:inline-block; text-align:center; margin:137px 0 220px}
+.sales{width:408px; margin:0; float:left}
+.app_admin{width:408px; margin:0 15px 0 0 !important; float:left}
+
+
+
+/*sub-2*/
+.packs{width:100%; display:inline-block;margin:0 0 10px}
+.lic_pack{ width:226px; height:125px; float:left; margin:0 13px 0 0; background:url(../images/lic_pack.png) repeat 0 0}
+.corp_pack{width:226px; height:125px; float:left; margin:0 13px 0 0; background:url(../images/corp_pack.png) repeat 0 0}
+.master{width:226px; height:125px; float:left; margin:0 13px 0 0; background:url(../images/master.png) repeat 0 0}
+.workstn{width:226px; height:125px; float:left; margin:0 0 0 0; background:url(../images/workstn.png) repeat 0 0}
+.lic_pack:hover{ background:url(../images/lic_pack.png) repeat 0 125px}
+.corp_pack:hover{background:url(../images/corp_pack.png) repeat 0 125px}
+.master:hover{background:url(../images/master.png) repeat 0 125px}
+.workstn:hover{background:url(../images/workstn.png) repeat 0 125px}

@@ -1,0 +1,90 @@
+﻿body {
+    font-family:Calibri;
+}
+.btn-primary {
+    background-color: #337ab7;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+ .col-md-offset-4 {
+        margin-left: 23.3%;
+    }
+
+    .col-md-4 {
+        width: 53.3%;
+    }
+@media (min-width:768px) {
+    .col-md-offset-4 {
+        margin-left: 30%;
+    }
+
+    .col-md-4 {
+        width: 40%;
+    }
+}
+@media (min-width:992px) {
+    .col-md-offset-4 {
+        margin-left: 33.33333333%;
+    }
+
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+}
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-info.active, .btn-info.focus, .btn-info:active, .btn-info:focus, .btn-info:hover, .open > .dropdown-toggle.btn-info {
+    color: #fff;
+    /*background-color: #31b0d5;*/
+    background-color:#74AA12;
+    border-color: #269abc;
+}
+.btn-info {
+    color: #fff;
+    /*background-color: #5bc0de;*/
+     background-color:#87D200;
+    border-color: #46b8da;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}

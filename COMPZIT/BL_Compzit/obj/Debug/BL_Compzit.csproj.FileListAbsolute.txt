@@ -1,0 +1,262 @@
+D:\References_ERP\BL_Compzit.dll
+D:\References_ERP\BL_Compzit.pdb
+D:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+D:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+D:\Project\References_ERP\BL_Compzit.dll
+D:\Project\References_ERP\BL_Compzit.pdb
+D:\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+D:\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+D:\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\Compzit\References_ERP\BL_Compzit.dll
+E:\Compzit\References_ERP\BL_Compzit.pdb
+E:\Compzit\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\Compzit\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\Compzit\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+D:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+F:\AWMS\References_ERP\BL_Compzit.dll
+F:\AWMS\References_ERP\BL_Compzit.pdb
+F:\AWMS\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+F:\AWMS\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+F:\AWMS\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+F:\References_ERP\BL_Compzit.dll
+F:\References_ERP\BL_Compzit.pdb
+F:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+F:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+F:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+F:\AWMS\Final Project\References_ERP\BL_Compzit.dll
+F:\AWMS\Final Project\References_ERP\BL_Compzit.pdb
+F:\AWMS\Final Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+F:\AWMS\Final Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+F:\AWMS\Final Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+F:\Compzit\Final_Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+F:\Compzit\Final_Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+F:\Compzit\Final_Project\References_ERP\BL_Compzit.dll
+F:\Compzit\Final_Project\References_ERP\BL_Compzit.pdb
+F:\Compzit\Final_Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\References_ERP\BL_Compzit.dll
+E:\References_ERP\BL_Compzit.pdb
+E:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+F:\COMPZIT FOR QC\References_ERP\BL_Compzit.dll
+F:\COMPZIT FOR QC\References_ERP\BL_Compzit.pdb
+F:\COMPZIT FOR QC\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+F:\COMPZIT FOR QC\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+F:\COMPZIT FOR QC\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\integration\References_ERP\BL_Compzit.dll
+E:\integration\References_ERP\BL_Compzit.pdb
+E:\integration\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\integration\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\integration\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\COMPZIT FOR QC\References_ERP\BL_Compzit.dll
+E:\COMPZIT FOR QC\References_ERP\BL_Compzit.pdb
+E:\COMPZIT FOR QC\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\COMPZIT FOR QC\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\COMPZIT FOR QC\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+D:\work\References_ERP\BL_Compzit.dll
+D:\work\References_ERP\BL_Compzit.pdb
+D:\work\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+D:\work\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+D:\work\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\24-10-17 Ajin Compzit\References_ERP\BL_Compzit.dll
+E:\24-10-17 Ajin Compzit\References_ERP\BL_Compzit.pdb
+E:\24-10-17 Ajin Compzit\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\24-10-17 Ajin Compzit\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\24-10-17 Ajin Compzit\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\26-10-17 Compzit for qc Share\References_ERP\BL_Compzit.dll
+E:\26-10-17 Compzit for qc Share\References_ERP\BL_Compzit.pdb
+E:\26-10-17 Compzit for qc Share\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\26-10-17 Compzit for qc Share\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\26-10-17 Compzit for qc Share\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\Final\References_ERP\BL_Compzit.dll
+E:\Final\References_ERP\BL_Compzit.pdb
+E:\Final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\Final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\Final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\14-11-17 Payroll final\References_ERP\BL_Compzit.dll
+E:\14-11-17 Payroll final\References_ERP\BL_Compzit.pdb
+E:\14-11-17 Payroll final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\14-11-17 Payroll final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\14-11-17 Payroll final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\COMPZIT\COMPZIT-15th Nov\References_ERP\BL_Compzit.dll
+E:\COMPZIT\COMPZIT-15th Nov\References_ERP\BL_Compzit.pdb
+E:\COMPZIT\COMPZIT-15th Nov\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\COMPZIT\COMPZIT-15th Nov\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\COMPZIT\COMPZIT-15th Nov\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\Final\16\References_ERP\BL_Compzit.dll
+E:\Final\16\References_ERP\BL_Compzit.pdb
+E:\Final\16\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\Final\16\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\Final\16\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\NEW 26 2.42 PM\References_ERP\BL_Compzit.dll
+E:\NEW 26 2.42 PM\References_ERP\BL_Compzit.pdb
+E:\NEW 26 2.42 PM\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\NEW 26 2.42 PM\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\NEW 26 2.42 PM\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+F:\NEW 26 2.42 PM\References_ERP\BL_Compzit.dll
+F:\NEW 26 2.42 PM\References_ERP\BL_Compzit.pdb
+F:\NEW 26 2.42 PM\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+F:\NEW 26 2.42 PM\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+F:\NEW 26 2.42 PM\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+\\192.168.0.102\Share\Payroll\New 27-02-2018\References_ERP\BL_Compzit.dll
+\\192.168.0.102\Share\Payroll\New 27-02-2018\References_ERP\BL_Compzit.pdb
+\\192.168.0.102\Share\Payroll\New 27-02-2018\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+\\192.168.0.102\Share\Payroll\New 27-02-2018\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+\\192.168.0.102\Share\Payroll\New 27-02-2018\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\CompztWelfare&Conduct\References_ERP\BL_Compzit.dll
+E:\CompztWelfare&Conduct\References_ERP\BL_Compzit.pdb
+E:\CompztWelfare&Conduct\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\CompztWelfare&Conduct\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\26-03-2018 Compzit final\References_ERP\BL_Compzit.dll
+E:\26-03-2018 Compzit final\References_ERP\BL_Compzit.pdb
+E:\26-03-2018 Compzit final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\26-03-2018 Compzit final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\26-03-2018 Compzit final\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\26-3-18\References_ERP\BL_Compzit.dll
+E:\26-3-18\References_ERP\BL_Compzit.pdb
+E:\26-3-18\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\26-3-18\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\26-3-18\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\31-3-18CompztFinal\References_ERP\BL_Compzit.dll
+E:\31-3-18CompztFinal\References_ERP\BL_Compzit.pdb
+E:\31-3-18CompztFinal\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\31-3-18CompztFinal\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\31-3-18CompztFinal\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\compzitFinal\References_ERP\BL_Compzit.dll
+E:\compzitFinal\References_ERP\BL_Compzit.pdb
+E:\compzitFinal\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\compzitFinal\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\compzitFinal\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\COMPZIT\COMPZIT - 29-12-2018\References_ERP\BL_Compzit.dll
+E:\COMPZIT\COMPZIT - 29-12-2018\References_ERP\BL_Compzit.pdb
+E:\COMPZIT\COMPZIT - 29-12-2018\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\COMPZIT\COMPZIT - 29-12-2018\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+D:\Working\COMPZIT\References_ERP\BL_Compzit.dll
+D:\Working\COMPZIT\References_ERP\BL_Compzit.pdb
+D:\Working\COMPZIT\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+D:\Working\COMPZIT\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+D:\Working\COMPZIT\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\Finance\New folder\References_ERP\BL_Compzit.dll
+E:\Finance\New folder\References_ERP\BL_Compzit.pdb
+E:\Finance\New folder\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\Finance\New folder\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\Finance\New folder\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\Finance\20-2\References_ERP\BL_Compzit.dll
+E:\Finance\20-2\References_ERP\BL_Compzit.pdb
+E:\Finance\20-2\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\Finance\20-2\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\Finance\20-2\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\Finance\23-5\References_ERP\BL_Compzit.dll
+E:\Finance\23-5\References_ERP\BL_Compzit.pdb
+E:\Finance\23-5\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\Finance\23-5\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\Finance\23-5\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\26-07-2019 COMPZIT\References_ERP\BL_Compzit.dll
+E:\26-07-2019 COMPZIT\References_ERP\BL_Compzit.pdb
+E:\26-07-2019 COMPZIT\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\26-07-2019 COMPZIT\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\COMPZIT\COMPZIT - FINAL\References_ERP\BL_Compzit.dll
+E:\COMPZIT\COMPZIT - FINAL\References_ERP\BL_Compzit.pdb
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\Bin\BL_Compzit.dll
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\Bin\BL_Compzit.pdb
+E:\COMPZIT\COMPZIT - FINAL\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+E:\COMPZIT FINAL\References_ERP\BL_Compzit.dll
+E:\COMPZIT FINAL\References_ERP\BL_Compzit.pdb
+E:\COMPZIT FINAL\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+E:\COMPZIT FINAL\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+E:\COMPZIT FINAL\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\user\CompzitNew\Project\References_ERP\BL_Compzit.dll
+C:\Users\user\CompzitNew\Project\References_ERP\BL_Compzit.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\user\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\varsh\Compzit\Project\References_ERP\BL_Compzit.dll
+C:\Users\varsh\Compzit\Project\References_ERP\BL_Compzit.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\CompzitNew\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\CompzitNew\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit27\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit27\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit27\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\Compzit27\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit27\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\CompzitFinal\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\CompzitFinal\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\CompzitFinal\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\CompzitFinal\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\CompzitFinal\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\com\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\com\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\com\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\com\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\com\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit10\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit10\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit10\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\Compzit10\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit10\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\BL_Compzit.dll
+C:\Users\Amal\CompzitN\Compzit\Project\References_ERP\BL_Compzit.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit16j\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit16j\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit16j\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\Compzit16j\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit16j\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit22\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit22\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Compzit22\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\Compzit22\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Compzit22\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\Amal\Compzit\Project\References_ERP\BL_Compzit.dll
+C:\Users\Amal\Compzit\Project\References_ERP\BL_Compzit.pdb
+C:\Users\Amal\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\Amal\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\Amal\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\software-demo\CompzitNew\Project\References_ERP\BL_Compzit.dll
+C:\Users\software-demo\CompzitNew\Project\References_ERP\BL_Compzit.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+D:\Games\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+D:\Games\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+D:\Games\Compzit\Project\References_ERP\BL_Compzit.dll
+D:\Games\Compzit\Project\References_ERP\BL_Compzit.pdb
+D:\Games\Compzit\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\Amal\Compzit\Compzit-master\Project\References_ERP\BL_Compzit.dll
+C:\Users\Amal\Compzit\Compzit-master\Project\References_ERP\BL_Compzit.pdb
+C:\Users\Amal\Compzit\Compzit-master\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\Amal\Compzit\Compzit-master\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\Amal\Compzit\Compzit-master\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Com18\Project\References_ERP\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Com18\Project\References_ERP\BL_Compzit.pdb
+C:\Users\02-VOLVIAR\Com18\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\02-VOLVIAR\Com18\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\02-VOLVIAR\Com18\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\BL_Compzit.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\BL_Compzit.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csprojAssemblyReference.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csproj.CoreCompileInputs.cache
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\BL_Compzit.dll
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\BL_Compzit.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.csproj.CopyComplete
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\BL_Compzit\obj\Debug\BL_Compzit.pdb

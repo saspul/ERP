@@ -1,0 +1,431 @@
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 980px) {
+
+.content_area {
+    float: right;
+    height: auto;
+    width: 75%;
+}
+.breadcrumb_txt {
+    float: left;
+    height: auto;
+    text-align: left;
+    width: 40%;
+}
+.marq_txt {
+    float: right;
+    height: auto;
+    margin-top: 10px;
+    text-align: right;
+    width: 60%;
+}
+
+
+} /*980closing*/
+
+@media screen and (max-width: 800px) {
+/*navigation*/
+.navigatn nav ul li ul {
+    box-shadow: none;
+}
+
+.navigatn .menubtn{
+		display: block;
+		float: right;
+		margin: 5px 0 10px;
+		transition: all 300ms ease-in-out 0s;
+		-webkit-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-ms-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		}
+	.navigatn .menubtn:hover{
+		cursor: pointer;
+		}
+	.navigatn nav span{
+		display: block;
+		}
+	.navigatn nav span{
+		position: relative;
+		float: right;
+		padding: 10px;
+		}
+	.navigatn nav span:hover{
+		cursor: pointer;
+		}
+	.navigatn nav ul,
+	.navigatn nav ul > ul{
+		display: none;
+		float:left;
+		width:100%;
+		}
+	.navigatn nav ul li {
+		border-right:none;
+		}
+	.navigatn nav ul li a.sf-with-ul:after {
+		content:'';
+		}
+	.navigatn nav ul li ul,
+	.navigatn nav ul li ul li{
+		width: 100%;
+		}
+	.navigatn nav ul li ul a{
+		border-bottom:none;
+		}
+	.navigatn nav ul ul,
+	.navigatn nav ul li{
+		width:100%;
+		}
+	.navigatn nav ul li a{
+		padding:0.5em 1em 0.5em 1em;
+		float: left;
+		}
+	.navigatn nav ul li ul a{
+		padding: 0.5em 1em 0.5em 2em;
+		}
+	.navigatn nav ul ul li ul a{
+		padding: 0.5em 1em 0.5em 3em;
+		}
+	.navigatn nav ul ul ul li ul a{
+		padding: 0.5em 1em 0.5em 4em;
+		}
+	.navigatn nav ul li ul,
+	.navigatn nav ul li ul ul,
+	.navigatn nav ul li:hover ul ul,
+	.navigatn nav ul li:hover ul ul ul,
+	.navigatn nav ul li.sfhover ul ul,
+	.navigatn nav ul li.sfhover ul ul ul,
+	.navigatn nav ul li:hover ul,
+	.navigatn nav ul li li:hover ul,
+	.navigatn nav ul li li li:hover ul,
+	.navigatn nav ul li.sfhover ul,
+	.navigatn nav ul li li.sfhover ul,
+	.navigatn nav ul li li li.sfhover ul {
+		position: relative;
+		display: none;
+		margin: 0 0 0 0;
+		left: 0em; /* using left instead of display because display: none isn't read by screen readers */
+		}
+
+	/*----------------------------------
+		MOBILE COLORS
+	-----------------------------------*/
+	.navigatn nav{
+		background: none;
+		}
+	.navigatn .menubtn {
+    opacity: 1;
+    z-index: 9999999;
+}
+	.navigatn .menubtn:hover,
+	.navigatn .menuOpen{
+		
+ 		opacity: 1;
+		margin-bottom:10px;
+		}
+	/*Plus icon*/
+	.navigatn nav span{
+		background: #487f73;
+		color:#fff;
+		}
+	.navigatn nav span:hover{
+		background: #355951;
+		}
+	/*Top Nav background*/
+	.navigatn nav ul ul,
+	.navigatn nav ul li{
+		background: #eeeeee;
+		border-bottom: 1px solid #d8d8d8;
+		}
+	/*Sub-Nav background*/
+	.navigatn nav ul li ul li{
+		background: #ccc;
+		}
+	/*Sub-Nav borders*/
+	.navigatn nav ul li ul li{
+		border-bottom:1px solid #e5e5e5;
+		}
+	/*sub, sub-Nav background*/
+	.navigatn nav ul ul ul li{
+		background: #ccc;
+		}
+	
+	.navigatn ul li.menuOpen >span{
+		background: #055c48;
+	}
+	/*Sub-Nav Item when open*/
+	.navigatn ul ul li.menuOpen,
+	.navigatn ul ul li.menuOpen:hover{
+		background:#95c3b9;
+		}
+	/*Sub, Sub-Nav Item when open*/
+	.navigatn ul ul ul li.menuOpen,
+	.navigatn ul ul ul li.menuOpen:hover{
+		background:#cdebf7;
+		}
+
+
+
+
+	
+.content_area {
+    float: right;
+    height: auto;
+    width: 68%;
+}
+.navigatn nav ul a {
+    color: #595959;
+}
+} /*800closing*/
+@media screen and (max-width: 768px) {
+
+.content_area {
+    float: left;
+    height: auto;
+    width: 100%;
+}
+
+} /*768closing*/
+@media screen and (max-width: 767px) {
+	.navbar-brand {
+    float: left;
+    height: auto;
+    padding: 10px 10px 10px 0;
+    width: 300px;
+}
+.welcome_area {
+    color: #4abe66;
+    float: right;
+    height: auto;
+    line-height: 54px;
+    width: auto;
+}
+.nav > li {
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #c5c5c5;
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+#bs-example-navbar-collapse-1 ul{
+	background-color: #eee;
+    float: left;
+    height: auto !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.navbar-collapse {
+    border-top: 0 none;
+    box-shadow: none;
+    float: left;
+    overflow-x: visible;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    z-index: 999;
+}
+.navbar-nav > li > a {
+    color: #383838;
+    line-height:34px;
+    padding: 0 0 0 0px;
+}
+
+} /*767closing*/
+
+@media screen and (max-width: 640px) {
+
+
+.header_msg_area {
+    float: right;
+    margin-top: 6px;
+    width: auto;
+}
+.user_info .image img {
+    vertical-align: top;
+}
+} /*640 closing */
+
+@media screen and (max-width: 480px) {
+.navbar-brand {
+    float: left;
+    height: auto;
+    padding: 10px 10px 10px 0;
+    width: 246px;
+}
+.welcome_area {
+    color: #4abe66;
+    float: right;
+    height: auto;
+    line-height: 48px;
+    width: auto;
+}
+.header_msg_area{
+	width:auto;
+	float:right;
+	margin-top: 4px;
+	font-size:12px;
+}
+.marq_txt {
+    float: right;
+    height: auto;
+    margin-bottom: 14px;
+    margin-top: 0;
+    text-align: right;
+    width: 100%;
+}
+.breadcrumb_txt {
+    float: left;
+    height: auto;
+    text-align: left;
+    width: 100%;
+}
+.tab-content > .tab-pane {
+    background-color: #FFFFFF;
+    box-shadow: -1px 0 8px 1px #DDDDDD;
+    height: auto;
+
+    min-height: 400px;
+    overflow: hidden;
+    padding: 18px 5px;
+    width: 100%;
+}
+.user_info {
+    float: right;
+    margin-top: 3px;
+    width: auto;
+}
+} /*480closing*/
+@media screen and (max-width: 360px) {
+.navbar-brand {
+    float: left;
+    height: auto;
+    padding: 10px 11px 10px 0;
+    width: 202px;
+}
+.welcome_area2 {
+    color: #4abe66;
+    float: right;
+    height: auto;
+    line-height: 17px;
+    width: auto;
+}
+.welcome_area {
+    color: #4abe66;
+    float: right;
+    font-size: 12px;
+    height: auto;
+    line-height: 42px;
+    text-align: center;
+    width: auto;
+}
+
+
+} /*360closing*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 389px) {
+.navbar-brand {
+    float: left;
+    height: auto;
+    padding: 3px 0;
+    width: 280%;
+}
+.welcome_area {
+    color: #4ABE66;
+    float: right;
+    height: auto;
+    line-height: 25px;
+    text-align: center;
+    width: 48%;
+}
+.user_info {
+    float: left;
+    margin-top: 3px;
+    width: auto;
+}
+.welcome_area2 {
+    color: #4abe66;
+    float: right;
+    height: auto;
+    line-height: 16px;
+    margin-bottom: 3px;
+    text-align: center;
+    width: 100%;
+}
+
+.logout {
+    color: #a1a1a1;
+    float: right;
+    text-align: center;
+    width: 100%;
+}
+.header_msg_area {
+    float: right;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    width: 100%;
+}
+}
+@media screen and (max-width: 320px) {
+.navbar-brand {
+    float: left;
+    height: auto;
+    padding: 3px 0;
+    width: 34%;
+}
+.welcome_area {
+    color: #4ABE66;
+    float: right;
+    height: auto;
+    line-height: 25px;
+    text-align: center;
+    width: 62%;
+}
+.user_info {
+    float: right;
+    margin-top: 3px;
+    width: auto;
+}
+.welcome_area2 {
+    color: #4abe66;
+    float: right;
+    height: auto;
+    line-height: 16px;
+    margin-bottom: 3px;
+    text-align: center;
+    width: 100%;
+}
+
+.logout {
+    color: #a1a1a1;
+    float: right;
+    text-align: center;
+    width: 100%;
+}
+.header_msg_area {
+    float: right;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    width: 100%;
+}
+footer .copyright {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+footer .dvlpdBy {
+    float: right;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+
+} /*320closing*/

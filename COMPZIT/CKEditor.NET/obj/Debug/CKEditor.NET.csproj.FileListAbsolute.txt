@@ -1,0 +1,87 @@
+E:\Gulf Adventures\CMS\ckeditor_aspnet\CKEditor.NET\bin\Debug\CKEditor.NET.dll
+E:\Gulf Adventures\CMS\ckeditor_aspnet\CKEditor.NET\bin\Debug\CKEditor.NET.pdb
+E:\Gulf Adventures\CMS\ckeditor_aspnet\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+E:\Gulf Adventures\CMS\ckeditor_aspnet\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+E:\Compzit\References_ERP\CKEditor.NET.dll
+E:\Compzit\References_ERP\CKEditor.NET.pdb
+D:\References_ERP\CKEditor.NET.dll
+D:\References_ERP\CKEditor.NET.pdb
+D:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+D:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+D:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+E:\References_ERP\CKEditor.NET.dll
+E:\References_ERP\CKEditor.NET.pdb
+E:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+E:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+F:\References_ERP\CKEditor.NET.dll
+F:\References_ERP\CKEditor.NET.pdb
+F:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+F:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+F:\AWMS\References_ERP\CKEditor.NET.dll
+F:\AWMS\References_ERP\CKEditor.NET.pdb
+F:\AWMS\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+F:\AWMS\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+F:\AWMS\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+F:\AWMS\Final Project\References_ERP\CKEditor.NET.dll
+F:\AWMS\Final Project\References_ERP\CKEditor.NET.pdb
+F:\AWMS\Final Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+F:\AWMS\Final Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+F:\AWMS\Final Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+E:\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+F:\COMPZIT FOR QC\References_ERP\CKEditor.NET.dll
+F:\COMPZIT FOR QC\References_ERP\CKEditor.NET.pdb
+F:\COMPZIT FOR QC\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+F:\COMPZIT FOR QC\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+D:\work\References_ERP\CKEditor.NET.dll
+D:\work\References_ERP\CKEditor.NET.pdb
+D:\work\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+D:\work\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+D:\work\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+E:\Final\References_ERP\CKEditor.NET.dll
+E:\Final\References_ERP\CKEditor.NET.pdb
+E:\Final\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+E:\Final\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+E:\Final\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+E:\Final\16\References_ERP\CKEditor.NET.dll
+E:\Final\16\References_ERP\CKEditor.NET.pdb
+E:\Final\16\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+E:\Final\16\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+E:\Final\16\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+E:\CompztWelfare&Conduct\References_ERP\CKEditor.NET.dll
+E:\CompztWelfare&Conduct\References_ERP\CKEditor.NET.pdb
+E:\CompztWelfare&Conduct\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+E:\CompztWelfare&Conduct\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+E:\CompztWelfare&Conduct\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+E:\31-3-18CompztFinal\References_ERP\CKEditor.NET.dll
+E:\31-3-18CompztFinal\References_ERP\CKEditor.NET.pdb
+E:\31-3-18CompztFinal\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+E:\31-3-18CompztFinal\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+E:\31-3-18CompztFinal\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+C:\Users\user\CompzitNew\Project\References_ERP\CKEditor.NET.dll
+C:\Users\user\CompzitNew\Project\References_ERP\CKEditor.NET.pdb
+C:\Users\user\CompzitNew\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+C:\Users\user\CompzitNew\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+C:\Users\user\CompzitNew\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+C:\Users\varsh\Compzit\Project\References_ERP\CKEditor.NET.dll
+C:\Users\varsh\Compzit\Project\References_ERP\CKEditor.NET.pdb
+C:\Users\varsh\Compzit\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+C:\Users\varsh\Compzit\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+C:\Users\varsh\Compzit\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+C:\Users\Amal\CompzitN\Compzit\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+C:\Users\software-demo\CompzitNew\Project\References_ERP\CKEditor.NET.dll
+C:\Users\software-demo\CompzitNew\Project\References_ERP\CKEditor.NET.pdb
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+C:\Users\software-demo\CompzitNew\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\CKEditor.NET.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\References_ERP\CKEditor.NET.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
+C:\Users\Sugith\ConstructionERP15-3-2021\Compzit-master\Compzit-master\Project\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\CKEditor.NET.dll
+D:\ERP P Construction Project\ConstERP 170321\References_ERP\CKEditor.NET.pdb
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csprojAssemblyReference.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.csproj.CoreCompileInputs.cache
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+D:\ERP P Construction Project\ConstERP 170321\COMPZIT\CKEditor.NET\obj\Debug\CKEditor.NET.pdb

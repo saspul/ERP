@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{874AA314-3DB9-4977-AA7C-5CBBD5F72D87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BL_Compzit</RootNamespace>
+    <AssemblyName>BL_Compzit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\References_ERP\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CL_Compzit">
+      <HintPath>..\Bin\CL_Compzit.dll</HintPath>
+    </Reference>
+    <Reference Include="DL_Compzit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References_ERP\DL_Compzit.dll</HintPath>
+    </Reference>
+    <Reference Include="EL_Compzit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References_ERP\EL_Compzit.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References_ERP\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusineesLayer_FMS\clsBL_Tax_CollectedAt_Source.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessAccountGroup.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessBalanceSheet.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessCustomer_Outstanding.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessJournal.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayerBudget.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayerCostGrpPerfAnalysis.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayerFinanceHome.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayerLedger.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayerLedgerStatmnt.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayerSupplier.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayer_Account_Close.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayer_Cost_Center.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayer_DayBook.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayer_Receipt_Account.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLayer_Trial_Bal.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLyer_Cost_Group.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessLyer_Tax_CollectedAt_Source.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessOutstandingAgeing.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessPostdated_Cheque.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessProfitAndLossAccount.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusinessSales.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusiness_Account_Setting.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusiness_BankReconciliation.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusiness_Cheque_template.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusiness_PaymentAccount.cs" />
+    <Compile Include="BusineesLayer_FMS\clsBusiness_purchaseMaster.cs" />
+    <Compile Include="BusineesLayer_FMS\cls_Business_Audit_Closeing.cs" />
+    <Compile Include="BusineesLayer_FMS\cls_Business_Credit_Note.cs" />
+    <Compile Include="BusineesLayer_FMS\cls_Business_Debit_Note.cs" />
+    <Compile Include="BusineesLayer_FMS\cls_Business_SupplierOutstanding.cs" />
+    <Compile Include="BusineesLayer_HCM\businessLayer_AccntSetting.cs" />
+    <Compile Include="BusineesLayer_HCM\clcBusiness_Crtfct_Verfctn_Process.cs" />
+    <Compile Include="BusineesLayer_HCM\clcBusiness_Joining_Intimation.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBuisnesslayerOpeningLeaveAlloc.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessAttendanceReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessCandidate_ShortList.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessEmpAcessMgmt.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessEmployeeAddDedReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessEmployee_DeductionDetails_Report.cs" />
+    <Compile Include="BusineesLayer_HCM\ClsBusinessExpiryNotificationReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessImmigrationTasks.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessImmigratnRound.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessInterviewEvaltnReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerAppointmentLtrParameter.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerCandidateOtherDetails.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerCandidateSelection.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerClearanceFormStaff.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerClearanceFormWorker.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerConsultancyMaster.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerDutyRejoin.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerEmployeeDailyWorkHour.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerEmployeeDeductn.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerEmployeeDetailsReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerEmployeeSponsor.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerEndOfServiceLeaveStlmnt.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerExitPartialProcess.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerExitProcess.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerImgrtnAsgnmnt.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerImmigration.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerInterviewCategory.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerInterviewProcess.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerJobDetails.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerJoiningWorker.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerLeaveSettlmt.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerManpowerRecruitment.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerManpwr_Reqmt_Status_Report.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerManualAddDedEntry.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerNoticePeriod.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerOnBoardingPartialProcess.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerPayroll.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerPayslipGeneratn.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerQualification.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerResignation.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerSalaryCertificate.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerSalaryStatement.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerStaffFamilyDtls.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerStaffImmigration.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerVisaProfession.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayerVisaType.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayer_Exit_Intrvw_Process.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayer_Exit_Intrvw_Qstn.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayer_JobNotification.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayer_OnBoard_Status_Report.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayer_payment_Closing.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLayer_VisaBundleReports.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLeaveApplicationReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLeaveApplicationStsReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessLeaveRequest.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessManpwrJobAssignemntReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessMonthlySalaryStatement.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessRequirementAllocation.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessSalaryEntryProcess.cs" />
+    <Compile Include="BusineesLayer_HCM\ClsBusinessStaffPersonalDtls.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessVisaQuotaStatusReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusinessWelfareServiceTransaction.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Accommodation_Category.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Accomodation_Report.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Arrivl_Confrmtn.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Candidate_Login.cs" />
+    <Compile Include="BusineesLayer_HCM\ClsBusiness_Employee_Recruitment_Report.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Emp_Conduct_Incident.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Emp_Perfomance_Evaluation.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Emp_Perfomance_Template.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Emp_Welfare_Service.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Emp_Welfare_Service_Category.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Exit_Procedure_List.cs" />
+    <Compile Include="BusineesLayer_HCM\ClsBusiness_Experiance_Certificate.cs" />
+    <Compile Include="BusineesLayer_HCM\ClsBusiness_HCM_Reports.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_ImmigrationTaskReport.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Interview_Panel.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_JobCostSummary_Report.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Job_Description_Master.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_LeaveFacltyAssmntList.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Leave_PartialProcess.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Leave_Type.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Memo_Reason.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Mnthly_WPS_List.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_OnBoardingProcess.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_OverTime_Category.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Payroll_Report.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_Pay_Grade_Master.cs" />
+    <Compile Include="BusineesLayer_HCM\ClsBusiness_Performance_Evaluation_Analysis.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_UserRol_ChilDefntion.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusiness_visa_quota_info.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBusnssLyr_gen_Interview_Temp.cs" />
+    <Compile Include="BusineesLayer_HCM\clsBussiness_Emp_Transfer.cs" />
+    <Compile Include="BusineesLayer_HCM\ClsBussiness_Passport_Handover_Sts.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Bulk_LabourCard_Print.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Certificate_Bundel_Template.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Issue_performance.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Leave_Approval.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Mess_Bill.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Mess_Exemption.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Monthly_Salary_Process.cs" />
+    <Compile Include="BusineesLayer_HCM\cls_Business_Resignation_Approval.cs" />
+    <Compile Include="BusineesLayer_HCM\Cls_Business_Staff_Contact_Details.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerDutyOff.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerDutyRoster.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerDutyRosterReports.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerHolidayMaster.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerInsuranceAndPermitExp.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerInsuranceCoverageType.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerInsuranceProvider.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerJobMaster.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerJobShdl.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerTimeSheetReport.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerTrafficViolation.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerTrafficViolationReport.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerTrafficViolationSettlement.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerVehicleClass.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerVehicleMaster.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerVehicleStatusMaster.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerWaterBilling.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerWaterCard.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusinessLayerWaterCardRecharge.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBusniessLayerFuelType.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBussinesLayerVehicleStatusMngmnt.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBussinessLayerLeaveAllocationMaster.cs" />
+    <Compile Include="BusinessLayer_AWMS\clsBussinessLayerLeaveTypeMaster.cs" />
+    <Compile Include="BusinessLayer_GMS\classBusinessLayerContractCategory.cs" />
+    <Compile Include="BusinessLayer_GMS\classBusinessLayerContractMaster.cs" />
+    <Compile Include="BusinessLayer_GMS\classBusinessLayerGuaranteType.cs" />
+    <Compile Include="BusinessLayer_GMS\classBusinessLayerJobCategory.cs" />
+    <Compile Include="BusinessLayer_GMS\classBusinessLayerNotifi_Temp.cs" />
+    <Compile Include="BusinessLayer_GMS\classBusinessLayerRequestForGrnte.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusinessLayerBankGuarantee.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusinessLayerGmsReports.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusinessLayerGms_Home.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusinessLayerInsReports.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusinessLayerInsuranceMaster.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusinessLayerInsuranceReports.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusinessLayerInsuranceTypMaster.cs" />
+    <Compile Include="BusinessLayer_GMS\clsBusiness_Template_Mail_Service.cs" />
+    <Compile Include="BusinessLayer_PMS\clsBusinessLayerApprovalAssign.cs" />
+    <Compile Include="BusinessLayer_PMS\clsBusinessLayerApprovalset.cs" />
+    <Compile Include="BusinessLayer_PMS\clsBusinessLayerChargeHeads.cs" />
+    <Compile Include="BusinessLayer_PMS\clsBusinessLayerPMS.cs" />
+    <Compile Include="BusinessLayer_PMS\clsBusinessLayerPurchaseOrder.cs" />
+    <Compile Include="BusinessLayer_PMS\clsBusinessLayerVendorCategory.cs" />
+    <Compile Include="BusinessLayer_PMS\clsBusinessLayerWarehouse.cs" />
+    <Compile Include="clsBusineesLayerException.cs" />
+    <Compile Include="clsBusinessLayer.cs" />
+    <Compile Include="clsBusinessLayerAccommodation.cs" />
+    <Compile Include="clsBusinessLayerAccommodationType.cs" />
+    <Compile Include="clsBusinessLayerApproval.cs" />
+    <Compile Include="clsBusinessLayerApprovalConsole.cs" />
+    <Compile Include="clsBusinessLayerApprovalHierarchyTemp.cs" />
+    <Compile Include="clsBusinessLayerAppSetting.cs" />
+    <Compile Include="clsBusinessLayerBank.cs" />
+    <Compile Include="clsBusinessLayerCategory.cs" />
+    <Compile Include="clsBusinessLayerChangePassword.cs" />
+    <Compile Include="clsBusinessLayerCityMaster.cs" />
+    <Compile Include="clsBusinesslayerComplaint.cs" />
+    <Compile Include="clsBusinessLayerContactDtls.cs" />
+    <Compile Include="clsBusinesslayerCorpDept.cs" />
+    <Compile Include="clsBusinessLayerCorpDivision.cs" />
+    <Compile Include="clsBusinesslayerCorporateOffice.cs" />
+    <Compile Include="clsBusinessLayerCorporatePack.cs" />
+    <Compile Include="clsBusinessLayerCountry.cs" />
+    <Compile Include="clsBusinessLayerCustomer.cs" />
+    <Compile Include="clsBusinessLayerCustomerGroup.cs" />
+    <Compile Include="clsBusinessLayerDashboard.cs" />
+    <Compile Include="clsBusinessLayerDependent.cs" />
+    <Compile Include="clsBusinessLayerDesignation.cs" />
+    <Compile Include="clsBusinessLayerEmpRoleAllocation.cs" />
+    <Compile Include="clsBusinessLayerEmpSalary.cs" />
+    <Compile Include="clsBusinessLayerHelpDoc.cs" />
+    <Compile Include="clsBusinessLayerItemGrp.cs" />
+    <Compile Include="clsBusinessLayerJobRole.cs" />
+    <Compile Include="clsBusinessLayerLeadCreation.cs" />
+    <Compile Include="clsBusinessLayerLeadIndividual.cs" />
+    <Compile Include="clsBusinessLayerLeadRate.cs" />
+    <Compile Include="clsBusinessLayerLicensePack.cs" />
+    <Compile Include="clsBusinessLayerLicenseType.cs" />
+    <Compile Include="clsBusinessLayerLogin.cs" />
+    <Compile Include="clsBusinessLayerMail.cs" />
+    <Compile Include="clsBusinessLayerMailConsole.cs" />
+    <Compile Include="clsBusinessLayerMenu.cs" />
+    <Compile Include="clsBusinessLayerOrganization.cs" />
+    <Compile Include="clsBusinessLayerOrgParking.cs" />
+    <Compile Include="clsBusinessLayerOrgType.cs" />
+    <Compile Include="clsBusinesslayerOrgVerification.cs" />
+    <Compile Include="clsBusinessLayerPartner.cs" />
+    <Compile Include="clsBusinessLayerPersonalDtls.cs" />
+    <Compile Include="clsBusinessLayerPrdctBrand.cs" />
+    <Compile Include="clsbusinesslayerPremise.cs" />
+    <Compile Include="clsBusinessLayerProductGrp.cs" />
+    <Compile Include="clsBusinessLayerProductMaster.cs" />
+    <Compile Include="clsBusinessLayerProductRateAmendment.cs" />
+    <Compile Include="clsBusinesslayerProject.cs" />
+    <Compile Include="clsBusinessLayerQuotation.cs" />
+    <Compile Include="clsBusinessLayerRecentMenu.cs" />
+    <Compile Include="clsBusinessLayerReportBuilder.cs" />
+    <Compile Include="clsBusinessLayerReports.cs" />
+    <Compile Include="clsBusinesslayerResetPassword.cs" />
+    <Compile Include="clsBusinessLayerStateMaster.cs" />
+    <Compile Include="clsBusinessLayerTaxMaster.cs" />
+    <Compile Include="clsBusinessLayerTeamHierarchy.cs" />
+    <Compile Include="clsBusinessLayerTermsTemplate.cs" />
+    <Compile Include="clsBusinessLayerTimeslot.cs" />
+    <Compile Include="clsBusinessLayerUomMaster.cs" />
+    <Compile Include="clsBusinessLayerUserRegisteration.cs" />
+    <Compile Include="clsBusinessLayerWorkArea.cs" />
+    <Compile Include="ClsBusinessLayerWorkExperience.cs" />
+    <Compile Include="clsBusinessLayerWorkStation.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BL_Compzit.dll" />
+    <Content Include="bin\Debug\BL_Compzit.pdb" />
+    <Content Include="obj\Debug\BL_Compzit.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\BL_Compzit.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

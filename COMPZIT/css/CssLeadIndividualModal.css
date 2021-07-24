@@ -1,0 +1,1206 @@
+﻿body {
+    font-family:Calibri;
+}
+/*---------------start lead user image--------------*/
+        /* Styles the thumbnail */
+        a.lightbox img {
+            height: 150px;
+            border: 3px solid white;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            /*margin: 94px 20px 20px 20px;*/
+        }
+
+        /* Styles the lightbox, removes it from sight and adds the fade-in transition */
+        .lightbox-target {
+            position: fixed;
+            top: -100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            width: 60%;
+            opacity: 0;
+            -webkit-transition: opacity .5s ease-in-out;
+            -moz-transition: opacity .5s ease-in-out;
+            -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+            overflow: hidden;
+        }
+
+            /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+            .lightbox-target img {
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                max-height: 0%;
+                max-width: 0%;
+                border: 3px solid white;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                box-sizing: border-box;
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+            }
+
+        /* Styles the close link, adds the slide down transition */
+        a.lightbox-close {
+            display: block;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            background: white;
+            color: black;
+            text-decoration: none;
+            position: absolute;
+            top: -80px;
+            right: 0;
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+        }
+
+            /* Provides part of the "X" to eliminate an image from the close link */
+            a.lightbox-close:before {
+                content: "";
+                display: block;
+                height: 30px;
+                width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top: 10px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            /* Provides part of the "X" to eliminate an image from the close link */
+            a.lightbox-close:after {
+                content: "";
+                display: block;
+                height: 30px;
+                width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top: 10px;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+        /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+        .lightbox-target:target {
+            opacity: 1;
+            top: 0;
+            bottom: 0;
+            z-index: 33;
+            right: 18%;
+        }
+
+            .lightbox-target:target img {
+                max-height: 100%;
+                max-width: 80%;
+            }
+
+            .lightbox-target:target a.lightbox-close {
+                top: 0px;
+            }
+   
+/*---------------end lead user image--------------*/
+
+/*goto top*/
+
+        #scrollToTop {
+            cursor: pointer;
+            background-color: #97c83a;
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            color: #fff;
+            font-size: 16pt;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            border-radius: 35px;
+        }
+/*have to start test*/
+.main_tableTask {
+    width: 96%;
+    height: 36px;
+    margin: 0 2% 35px;
+    /*border-bottom: 1px solid #c9c9c9;*/
+    border: 1px solid #c9c9c9;
+}
+.main_table {
+            width: 96%;
+            height: 36px;
+            margin: 0 2% 35px;
+            border-bottom: 1px solid #c9c9c9;
+        }
+
+        .form1 {
+            width: 282px;
+            height: 30px;
+            padding: 0px 8px;
+            border: 1px solid #cfcccc;
+            float: right;
+            color: #000;
+            font-size: 13px;
+        }
+
+
+        .fillform {
+            width: 100%;
+        }
+
+        .subform {
+            float: left;
+            margin-left: 38.8%;
+        }
+
+        /**/ ss .aspNetDisabled {
+            margin-left: -31%;
+        }
+
+
+        input[type=text][disabled="disabled"] {
+            /*margin-left: 28.5% !important;*/
+            height: 25px !important;
+        }
+
+        select[disabled="disabled"] {
+            margin-left: 31% !important;
+            width: 358px!important;
+            height: 30px !important;
+        }
+
+        .CustDesig {
+            height: 32px;
+            width: 49px;
+            margin-left: 11%;
+        }
+
+        .cont_rght {
+            width: 95%;
+        }
+
+     
+
+        .leads_form {
+            /*padding: 26px 0 16px !important;*/
+        }
+
+      
+        .error {
+            padding-top: 5%;
+            padding-left: 27%;
+            color: red;
+            font-family: calibri;
+            font-size: smaller;
+        }
+
+        .leads_form_left {
+            float: none !important;
+        }
+
+        .leads_field_dd {
+            -moz-appearance: -moz-gtk-info-bar;
+        }
+
+        .leads_field_txtarea {
+            resize: none;
+        }
+
+        .leads_field_txtarea2 {
+            resize: none;
+        }
+
+        /*.leads_field {
+            border: 1px solid #97c83a;
+        }*/
+
+            .leads_field:focus {
+                box-shadow: 0px 0px 4px 2.5px #bbf2cf;
+            }
+
+        /*.leads_form {
+            background: #edf6dc;
+            border: 1px solid #97c83a;
+        }*/
+
+        .table-condensed {
+            font-family: Calibri;
+        }
+
+
+        .fillform {
+            width: 100%;
+        }
+
+        .subform {
+            float: left;
+            margin-left: 38.8%;
+        }
+
+        .leads_field:focus {
+            box-shadow: 0px 0px 4px 2.5px #bbf2cf;
+            border: 1px solid #bbf2cf;
+        }
+
+
+
+        .leads_form {
+            font-family: Calibri;
+            padding-bottom: 2%;
+            overflow-x: auto;
+        }
+
+        .leads_field_txtarea2 {
+            width: 99.5% !important;
+            resize: none;
+        }
+
+        .leads_des {
+            margin: 2% 2% 0.5%;
+            width: 96%;
+        }
+
+      
+
+        input[type="radio"] {
+            display: inline;
+        }
+
+            input[type="radio"]:hover, input[type="radio"]:focus {
+                box-shadow: 0px 0px 4px 2.5px #bbf2cf;
+                border: 1px solid #bbf2cf;
+            }
+
+        .leads_field {
+            height: 25px;
+        }
+
+        .leads_form h3 {
+            font-size: 15px;
+        }
+
+        .cont_rght {
+            width: 95%;
+        }
+
+            .cont_rght h2 {
+                float: none;
+            }
+
+
+a:hover {
+color:#97c83a;
+}
+/*have to stop test*/
+ #divErrorRsnAllocate {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -2%;
+            font-family: Calibri;
+        }
+  #divErrorRsnLossReason {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -2%;
+            font-family: Calibri;
+        }
+  #divErrorRsnTask {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -2%;
+            font-family: Calibri;
+        }
+     #divErrorRsnCancelTask {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -2%;
+            font-family: Calibri;
+        }
+         #divErrorRsnFollowUp {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -2%;
+            font-family: Calibri;
+        }
+         #divErrorRsnMail {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -4%;
+            font-family: Calibri;
+        }
+#divErrorRsnQtnAttchmntAdditional {
+    border-radius: 8px;
+    background: #edf6dc;
+    padding: 0% 0% 0% 0%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    color: #53844E;
+    margin-top: -1.5%;
+    font-family: Calibri;
+    font-family: Calibri;
+    float: left;
+    width: 98%;
+}
+              #divErrorRsnQtnAttchmntSupplierQuote {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -1.5%;
+            font-family: Calibri;
+        }
+                 #divErrorRsnQtnAttchmntTender {
+            border-radius: 8px;
+            background: #edf6dc;
+           padding: 1% 1% 1% 1%;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            color: #53844E;
+            margin-top: -1.5%;
+            font-family: Calibri;
+        }
+           
+           
+           /*for file upload and achor related to mail*/
+        .AnchorAttachmntEdit {
+            color: #537e00;
+        }
+
+        /*for file upload*/
+        input[type="file"] {
+            position: relative;
+            z-index: 1;
+            margin-left: -78px;
+            display: none;
+        }
+
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 3px 8px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            background: white;
+        }
+
+
+       
+        /*--------------------------------------------------for modal Mail------------------------------------------------------*/
+        /*Modal*/
+        .modalMail {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        .ui-effects-wrapper {
+            /*left:1px !important;*/
+            /*top:-10px !important;*/
+            /*bottom:10px !important;*/
+        }
+        /* Modal Content */
+        .modal-contentMail {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -40px;
+                opacity: 0.5;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -40px;
+                opacity: 0.5;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        /* The Close Button */
+        .closeMail {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeMail:hover,
+            .closeMail:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerMail {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyMail {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerMail {
+            padding: 1.5% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+            /*--------------------------------------------------for modal FollowUp------------------------------------------------------*/
+             .modalFollowUp {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentFollowUp {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeFollowUp {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeFollowUp:hover,
+            .closeFollowUp:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerFollowUp {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyFollowUp {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerFollowUp {
+            padding: 1.5% 1%;
+            background-color: #02ae0a;
+            color: white;
+        } /*--------------------------------------------------for modal Task------------------------------------------------------*/
+             .modalTask {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentTask {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeTask {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeTask:hover,
+            .closeTask:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerTask {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyTask {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerTask {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+        /*--------------------------------------------------for modal CancelTask------------------------------------------------------*/
+             .modalCancelTask {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentCancelTask {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeCancelTask {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeCancelTask:hover,
+            .closeCancelTask:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerCancelTask {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyCancelTask {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerCancelTask {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+        /*--------------------------------------------------for modal Loss Reason------------------------------------------------------*/
+             .modalLossReason {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentLossReason {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeLossReason {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeLossReason:hover,
+            .closeLossReason:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerLossReason {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyLossReason {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerLossReason {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+
+
+            /*--------------------------------------------------for modal Allocate------------------------------------------------------*/
+             .modalAllocate {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 50%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentAllocate {
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeAllocate {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeAllocate:hover,
+            .closeAllocate:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerAllocate {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyAllocate {
+            padding: 4% 4% 7% 4%;
+        }
+
+        .modal-footerAllocate {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+             /*--------------------------------------------------for modal Loading Mail------------------------------------------------------*/
+             .modalLoadingMail {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 30; /* Sit on top */
+            padding-top: 19%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 90%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+            padding-left: 45%; /* Location of the box */
+        }
+
+        /* Modal Content */
+        .modal-contentLoadingMail{
+            /*position: relative;*/
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+ 
+          /*--------------------------------------------------The Modal Qtn Attachment Additional------------------------------------------------------*/
+             .modalQtnAttchmntAdditional {
+            display: none; /* Hidden by default */
+            position: absolute; /* move with the rest body */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 60%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentQtnAttchmntAdditional {
+            background-color:#fcfff4;
+            margin: auto;
+            padding: 0;
+            width: 97%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           float:left;
+        }
+
+     
+        /* The Close Button */
+        .closeQtnAttchmntAdditional {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeQtnAttchmntAdditional:hover,
+            .closeQtnAttchmntAdditional:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+.modal-headerQtnAttchmntAdditional {
+    padding: .5% 1%;
+    background-color: #02ae0a;
+    color: white;
+    float: left;
+    width: 98%;
+}
+
+.modal-bodyQtnAttchmntAdditional {
+    float: left;
+    width: 92%;
+    padding: 2% 4% 2% 4%;
+}
+
+.modal-footerQtnAttchmntAdditional {
+    padding: 2% 1%;
+    background-color: #02ae0a;
+    color: white;
+    float: left;
+    width: 98%;
+}
+
+
+        
+          /*--------------------------------------------------The Modal Qtn Attachment Supplier Quotes------------------------------------------------------*/
+             .modalQtnAttchmntSupplierQuote {
+            display: none; /* Hidden by default */
+            position: absolute; /* move with the rest body */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 60%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentQtnAttchmntSupplierQuote {
+            /*position: relative;*/
+            background-color:#fcfff4;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeQtnAttchmntSupplierQuote {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeQtnAttchmntSupplierQuote:hover,
+            .closeQtnAttchmntSupplierQuote:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerQtnAttchmntSupplierQuote {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyQtnAttchmntSupplierQuote {
+            padding: 2% 4% 2% 4%;
+        }
+
+        .modal-footerQtnAttchmntSupplierQuote {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+
+         /*--------------------------------------------------The Modal Qtn Attachment Tender Files------------------------------------------------------*/
+             .modalQtnAttchmntTender {
+            display: none; /* Hidden by default */
+            position: absolute; /* move with the rest body */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 60%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentQtnAttchmntTender {
+            /*position: relative;*/
+            background-color: #fcfff4;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 95.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeQtnAttchmntTender {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeQtnAttchmntTender:hover,
+            .closeQtnAttchmntTender:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerQtnAttchmntTender {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyQtnAttchmntTender {
+            padding: 2% 4% 2% 4%;
+        }
+
+        .modal-footerQtnAttchmntbtnUploadQtnAttchTender {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        
+         /*--------------------------------------------------The Modal Qtn Attachment Additional Files view------------------------------------------------------*/
+             .modalQtnAttchmntAdditionalFileView {
+            display: none; /* Hidden by default */
+            position: absolute; /* move with the rest body */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 60%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentQtnAttchmntAdditionalFileView {
+            /*position: relative;*/
+            background-color: #fcfff4;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 60.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeQtnAttchmntAdditionalFileView {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeQtnAttchmntAdditionalFileView:hover,
+            .closeQtnAttchmntAdditionalFileView:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerQtnAttchmntAdditionalFileView {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyQtnAttchmntAdditionalFileView {
+            padding: 4% 6% 2% 6%;
+        }
+
+        .modal-footerQtnAttchmntAdditionalFileView {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+         /*--------------------------------------------------The Modal Qtn Attachment Supplier quotes view------------------------------------------------------*/
+             .modalQtnAttchmntSupplierQuoteView {
+            display: none; /* Hidden by default */
+            position: absolute; /* move with the rest body */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 60%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentQtnAttchmntSupplierQuoteView {
+            /*position: relative;*/
+            background-color: #fcfff4;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width:60.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeQtnAttchmntSupplierQuoteView {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeQtnAttchmntSupplierQuoteView:hover,
+            .closeQtnAttchmntSupplierQuoteView:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerQtnAttchmntSupplierQuoteView {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyQtnAttchmntSupplierQuoteView {
+            padding: 4% 6% 2% 6%;
+        }
+
+        .modal-footerQtnAttchmntSupplierQuoteView {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+         /*--------------------------------------------------The Modal Qtn Attachment Tender view------------------------------------------------------*/
+             .modalQtnAttchmntTenderView {
+            display: none; /* Hidden by default */
+            position: absolute; /* move with the rest body */
+            z-index: 30; /* Sit on top */
+            padding-top: 0%; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 60%; /* Full width */
+            /*height: 58%;*/ /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: transparent;
+
+        }
+
+        /* Modal Content */
+        .modal-contentQtnAttchmntTenderView {
+            /*position: relative;*/
+            background-color:#fcfff4;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 60.6%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+           
+        }
+
+     
+        /* The Close Button */
+        .closeQtnAttchmntTenderView {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .closeQtnAttchmntTenderView:hover,
+            .closeQtnAttchmntTenderView:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-headerQtnAttchmntTenderView {
+            padding: 1% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+
+        .modal-bodyQtnAttchmntTenderView {
+            padding: 4% 6% 2% 6%;
+        }
+
+        .modal-footerQtnAttchmntTenderView {
+            padding: 2% 1%;
+            background-color: #02ae0a;
+            color: white;
+        }
+.wickedpicker {
+z-index:35;
+}

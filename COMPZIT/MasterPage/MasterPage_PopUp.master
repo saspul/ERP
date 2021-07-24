@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_PopUp.master.cs" Inherits="MasterPage_MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   <meta charset="utf-8">
+    <title>Promitz</title>
+    <meta http-equiv="Content-Encoding" content="gzip" />
+
+    <link rel="shortcut icon" href="../images/promitz_001.ico" />
+
+
+    <meta http-equiv="Accept-Encoding" content="gzip, deflate" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta http-equiv="Content-Encoding" content="gzip" />
+    <meta http-equiv="Accept-Encoding" content="gzip, deflate" />
+
+  <%--  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>--%>
+    <link href="../css/RobotoFont.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../css/stylesheet.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/responsive_stylesheet.css" rel="stylesheet" type="text/css">
+    <link src="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+
+    <%--<link rel="icon" href="" type="image/x-icon">--%>
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+
+
+    <script type="text/javascript">
+
+        //(function () {
+        //    if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        //        var msViewportStyle = document.createElement("style");
+        //        msViewportStyle.appendChild(
+        //            document.createTextNode("@-ms-viewport{width:auto!important}")
+        //        );
+        //        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        //    }
+        //})();
+        </script>
+      
+    <asp:ContentPlaceHolder id="cphHead" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div>
+          <header class="header_main">
+                <div class="header_top">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a href="#">
+                                <img src="../../Images/Compztlogo.png"></a>
+                        </div>
+                       
+                    </div>
+                </div>
+                
+               
+            </header>
+            <section>
+                <div class="container">
+        <asp:ContentPlaceHolder id="cphMain" runat="server" >
+        
+        </asp:ContentPlaceHolder>
+     </div>
+            </section>
+            <footer>
+                <div class="container">
+                    <span id="divcopyright" runat="server" class="copyright">© 2015 Copyright</span>
+                    <span id="divdevelop" runat="server" class="dvlpdBy">Developed by</span>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+
+<script src="../../JavaScript/jquery.min.js"></script>
+<script src="../../JavaScript/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- dropdown -->
+
+<script src="../../JavaScript/superfish.js"></script>
+<script src="../../JavaScript/easyaspie.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.navigatn nav').easyPie();
+    });
+</script>
+
+</html>
